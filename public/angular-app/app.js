@@ -10,18 +10,31 @@ function config($routeProvider) {
   })
   .when('/bloodbank', {
     templateUrl : 'angular-app/bb-login/web_login.html',
-    controller : logincontroler,
+    controller : logincontroller,
     controllerAs : 'vm'
   })
-  .when('/bloodbank/:bankID',{
+  .when('/bloodbank/home',{
     templateUrl : 'angular-app/bb-main/bb-main.html',
     controller : mainbbcontroller,
     controllerAs: 'vm'
   })
-  .when('/list', {
+  .when('/bloodbank/list', {
     templateUrl : 'angular-app/bb-list/bb-list.html',
     controller : listcontroller,
     controllerAs: 'vm'
-  });
+  })
+  .when('/hospital', {
+    templateUrl : 'angular-app/hosp-login/web_hosp_login.html',
+    controller : hosplogincontroller,
+    controllerAs : 'vm'
+  })
+  .when('/hospital/:hospID', {
+    templateUrl : 'angular-app/hosp-main/web_hosp_home.html',
+    controller : mainhospcontroller,
+    controllerAs: 'vm'
+  })
+
+
+
 
 }
