@@ -1,7 +1,7 @@
 angular.module('bbApp')
-.controller('logincontroler',logincontroler);
+.controller('logincontroller',logincontroller);
 
-function logincontroler($route,$http,$location) {
+function logincontroller($route,$http,$location) {
   var vm = this;
 
   vm.login = function(){
@@ -14,10 +14,10 @@ function logincontroler($route,$http,$location) {
 
     $http.post('/api/bloodbank/login',postdata)
     .then(function(response){
-      console.log(response);
       if(response.status == 200){
         vm.bank = response.data._id;
-        $location.path('/bloodbank/'+vm.bank);
+        bb_id = vm.bank;
+        $location.path('/bloodbank/home');
       }
 
     })
