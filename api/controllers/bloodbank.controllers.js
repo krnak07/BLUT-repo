@@ -88,6 +88,8 @@ function addbloodgroups(bank) {
 
 module.exports.blooadbankAddOne = function(req,res){
 
+    var d = new Date();
+
     bloodbank
         .findOne({name : req.body.name})
         .exec(function(err,bank){
@@ -115,7 +117,8 @@ module.exports.blooadbankAddOne = function(req,res){
                                           phoneNo : req.body.phone,
                                           email : req.body.email,
                                           password  : req.body.password,
-                                          liscense : req.body.liscense
+                                          liscense : req.body.liscense,
+                                          createdOn : d,
                                         },function(err,bank) {
                                             if(err){
                                                 res
@@ -177,6 +180,7 @@ function updatebloodunits(req,res,bank,bg,unit) {
 
 module.exports.donate = function(req,res){
   var bId = req.params.bankID;
+  var d = new Date();
 
   bloodbank
       .findById(bId)
@@ -201,7 +205,7 @@ module.exports.donate = function(req,res){
                   pro.lastdonation.push({
                     venue_id : bId,
                     venue_name : bank.name,
-                    dateofdonation : req.body.dateofdonation,
+                    dateofdonation : d,
                     quantity : parseInt(req.body.units)
                   });
 
@@ -219,7 +223,7 @@ module.exports.donate = function(req,res){
                       bank.donations.push({
                           donor_name : pro.firstname,
                           phoneNo : pro.phoneNo,
-                          dateofdonation : req.body.dateofdonation,
+                          dateofdonation : d,
                           bloodgroup : pro.bloodgroup,
                           unitsofblood : parseInt(req.body.units)
 

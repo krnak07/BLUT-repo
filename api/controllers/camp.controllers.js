@@ -7,6 +7,8 @@ var profile = mongoose.model('profile');
 module.exports.addNewCamp = function(req, res) {
 
   var id = req.params.bankID;
+  var d = new Date();
+  var dof = new Date(req.body.dof);
 
   console.log('Camp Created to Bank : ', id);
 
@@ -25,10 +27,11 @@ module.exports.addNewCamp = function(req, res) {
             .create({
                 name : req.body.name,
                 location : req.body.location,
-                dateofhost: req.body.dof,
+                dateofhost: dof,
                 phoneNo : req.body.phoneNo,
                 hosting: id,
-                bloodbank : bankk.name
+                bloodbank : bankk.name,
+                createdOn : d
             },function(err,cam) {
                 if(err)
                 {
@@ -53,6 +56,7 @@ module.exports.addNewcampdonor = function(req, res) {
 
   var bId = req.params.bankID;
   var cId = req.params.campID;
+  var d = new Date();
 
     bloodbank
         .findById(bId)
@@ -96,7 +100,7 @@ module.exports.addNewcampdonor = function(req, res) {
                                         cam.campdonor.push({
                                             donor_name : pro.firstname,
                                             phoneNo : pro.phoneNo,
-                                            dateofdonation : req.body.dateofdonation,
+                                            dateofdonation : d,
                                             bloodgroup : pro.bloodgroup,
                                             unitsofblood : parseInt(req.body.units)
 
@@ -104,7 +108,7 @@ module.exports.addNewcampdonor = function(req, res) {
                                         pro.lastdonation.push({
                                             venue_id : cam._id,
                                             venue_name : cam.name,
-                                            dateofdonation : req.body.dateofdonation,
+                                            dateofdonation : d,
                                             quantity : parseInt(req.body.units)
                                         });
 

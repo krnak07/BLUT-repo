@@ -11,6 +11,8 @@ auth = firebase.auth();
 
 module.exports.profilesignup = function(req,res){
 
+    var d =new Date();
+
     profile
         .findOne({email : req.body.email})
         .exec(function(err,pro){
@@ -28,7 +30,6 @@ module.exports.profilesignup = function(req,res){
                             auth.signInWithEmailAndPassword(req.body.email, req.body.password)
                                 .then(function () {
                                     var user = auth.currentUser;
-                                    console.log("User created : ",req.body.name);
                                     profile
                                         .create({
                                           firstname : req.body.fname,
@@ -42,7 +43,8 @@ module.exports.profilesignup = function(req,res){
                                           state : req.body.state,
                                           bloodgroup: req.body.bg.toUpperCase(),
                                           bloodgrpCerti : req.body.bgc,
-                                          totalunits : 0
+                                          totalunits : 0,
+                                          createdOn : d,
                                         },function(err,pro) {
                                             if(err){
                                                 res
@@ -55,6 +57,7 @@ module.exports.profilesignup = function(req,res){
                                               });
                                                 user.sendEmailVerification()
                                                     .then(function () {
+                                                      console.log("User created : ",req.body.name);
                                                         res
                                                             .status(200)
                                                             .json(pro);

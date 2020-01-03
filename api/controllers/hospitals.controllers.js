@@ -9,6 +9,8 @@ auth = firebase.auth();
 
 module.exports.hospitalSignup = function(req,res){
 
+    var d = new Date();
+
     hospitals
         .findOne({name : req.body.name})
         .exec(function(err,bank){
@@ -35,7 +37,8 @@ module.exports.hospitalSignup = function(req,res){
                                           state : req.body.state,
                                           phoneNo : req.body.phone,
                                           email : req.body.email,
-                                          liscense : req.body.liscense
+                                          liscense : req.body.liscense,
+                                          createdOn : d,
                                         },function(err,hosp) {
                                             if(err){
                                                 res
@@ -179,6 +182,7 @@ module.exports.hospitalGetnearbyDonors = function(req,res){
 
 module.exports.donation = function(req,res){
   var hid = req.params.hospID;
+  var d = new Date();
 
   hospitals
       .findById(hid)
@@ -203,7 +207,7 @@ module.exports.donation = function(req,res){
                   pro.lastdonation.push({
                     venue_id : hid,
                     venue_name : hosp.name,
-                    dateofdonation : req.body.dateofdonation,
+                    dateofdonation : d,
                     quantity : parseInt(req.body.units)
                   });
 
@@ -218,11 +222,10 @@ module.exports.donation = function(req,res){
 
                     }
                     else{
-                      console.log(proupdated);
                       hosp.donations.push({
                           donor_name : pro.firstname,
                           phoneNo : pro.phoneNo,
-                          dateofdonation : req.body.dateofdonation,
+                          dateofdonation : d,
                           bloodgroup : pro.bloodgroup,
                           unitsofblood : parseInt(req.body.units)
 
@@ -249,6 +252,48 @@ module.exports.donation = function(req,res){
 
                 }
               })
+        }
+      })
+
+};
+
+module.exports.test_1 = function(req,res){
+  bId = req.params.hospID;
+
+  hospitals
+      .findById(bId)
+      .exec(function(err,bank){
+        if(err){
+          res
+              .status(400)
+              .json(err)
+        }
+        else{
+          res
+              .status(200)
+              .json(bank)
+        }
+      })
+};
+
+
+
+module.exports.test_2 = function(req,res){
+  var hid = req.params.hospID;
+
+  hospitals
+      .findById(hid)
+      .select('donations')
+      .exec(function(err,hosp){
+        if(err){
+          res
+              .status(400)
+              .json(err)
+        }
+        else{
+          var d = new Date().toLocaleDateString("en-US");
+          console.log(hosp.donations[0].dateofdonation.toLocaleDateString("en-US"));
+
         }
       })
 
