@@ -22,7 +22,7 @@ var bankdonor = new mongoose.Schema({
     required : true
   },
   dateofdonation : {
-    type : String,
+    type : Date,
     required : true
   },
 
@@ -68,6 +68,10 @@ var bloodbankSchema = new mongoose.Schema({
   liscense : {
     type : String,
     required : true,
+  },
+  createdOn :{
+    type :Date,
+    required : true
   },
   BloodAvailability : [bloodlistSchema],
   donations : [bankdonor],

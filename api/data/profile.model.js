@@ -11,7 +11,7 @@ var lastdonated = new mongoose.Schema({
     required : true
   },
   dateofdonation : {
-    type : String,
+    type : Date,
     required : true
   },
   quantity : {
@@ -67,6 +67,10 @@ var profileSchema = new mongoose.Schema({
   },
   totalunits : {
     type : Number
+  },
+  createdOn :{
+    type :Date,
+    required : true
   },
   lastdonation : [lastdonated]
 

@@ -11,7 +11,7 @@ var campDonorSchema = new mongoose.Schema({
         required : true
     },
     dateofdonation : {
-      type : String,
+      type : Date,
       required : true
     },
     bloodgroup : {
@@ -38,7 +38,7 @@ var campSchema = new mongoose.Schema({
         required : true
     },
     dateofhost : {
-        type : String,
+        type : Date,
         required : true
     },
     hosting  : {
@@ -47,6 +47,10 @@ var campSchema = new mongoose.Schema({
     },
     bloodbank : {
       type :String,
+      required : true
+    },
+    createdOn : {
+      type : Date,
       required : true
     },
     campdonor : [campDonorSchema]

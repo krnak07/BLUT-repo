@@ -10,7 +10,7 @@ var hospdonor = new mongoose.Schema({
     required : true
   },
   dateofdonation : {
-    type : String,
+    type : Date,
     required : true
   },
 
@@ -51,6 +51,10 @@ var hospitalSchema = new mongoose.Schema({
     liscense : {
         type : String,
         required : true,
+    },
+    createdOn :{
+      type :Date,
+      required : true
     },
     donations : [hospdonor],
 
