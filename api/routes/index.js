@@ -75,6 +75,9 @@ router
 
 //test
 router
+    .route('/hospital/:hospID/test')
+    .get(ctrlhosp.test_1);
+router
     .route('/bloodbank/:bankID/test')
     .get(ctrlbloodbank.test_1);
 
