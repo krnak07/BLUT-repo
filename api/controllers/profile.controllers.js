@@ -129,22 +129,37 @@ module.exports.profilelogin = function(req,res) {
 
 module.exports.checkprofile = function(req,res) {
 
+  var d = new Date();
+
   profile
-  .find({phoneNo : req.query.ph})
+  .findOne({phoneNo : req.query.ph})
   .exec(function(err,pro){
       if(err){
           res
               .status(400)
-              .json({"message":"False"});
+              .json(err);
       }
       else {
-        if (pro == null)
+        if(pro == null)
         {
-          console.log('yep');
+          res
+          .status(200)
+              .json(pro)
         }
-        res
+        else {
+          var nd = new Date(pro.nextdonationDate);
+          if(d<nd){
+            res
+            .status(206)
+            .json(pro);
+          }
+          else {
+            res
             .status(200)
-            .json(pro); //logged in user details
+            .json(pro);
+          }
+        }
+
       }
 
   });

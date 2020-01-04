@@ -184,6 +184,7 @@ module.exports.donation = function(req,res){
   var hid = req.params.hospID;
   var d = new Date();
 
+
   hospitals
       .findById(hid)
       .exec(function(err,hosp){
@@ -204,51 +205,61 @@ module.exports.donation = function(req,res){
                 }
                 else
                 {
-                  pro.lastdonation.push({
-                    venue_id : hid,
-                    venue_name : hosp.name,
-                    dateofdonation : d,
-                    quantity : parseInt(req.body.units)
-                  });
-
-                  pro.totalunits += parseInt(req.body.units);
-                  //updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
-
-                  pro.save(function(err,proupdated) {
-                    if(err){
-                      res
-                          .status(400)
-                          .json(err)
-
+                    var nd = new Date(pro.nextdonationDate);
+                    if(d<nd){
+                        res
+                            .status(206)
+                            .json({"Message" : "Cannot Donate as next donation date is not reached"});
                     }
-                    else{
-                      hosp.donations.push({
-                          donor_name : pro.firstname,
-                          phoneNo : pro.phoneNo,
-                          dateofdonation : d,
-                          bloodgroup : pro.bloodgroup,
-                          unitsofblood : parseInt(req.body.units)
+                    else {
+                        var nd = new Date(d);
+                        nd.setDate(d.getDate() + 56);
+                        pro.lastdonatedDate = d;
+                        pro.lastdonatedVenue = hosp.name;
+                        pro.nextdonationDate = nd;
+                        pro.donationhistory.push({
+                            venue_id : hid,
+                            venue_name : hosp.name,
+                            dateofdonation : d,
+                            quantity : parseInt(req.body.units)
+                        });
 
-                      });
-                      hosp.save(function(err,updatedhosp){
-                          if(err){
-                              res
-                                  .status(400)
-                                  .json(err)
-                          }
-                          else{
-                              res
-                                  .status(200)
-                                  .json(updatedhosp)
-                          }
-                      });
+                        pro.totalunits += parseInt(req.body.units);
+                        //updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
 
+                        pro.save(function(err,proupdated) {
+                            if(err){
+                                res
+                                    .status(400)
+                                    .json(err)
+
+                            }
+                            else{
+                                hosp.donationhistory.push({
+                                    donor_name : pro.firstname,
+                                    phoneNo : pro.phoneNo,
+                                    dateofdonation : d,
+                                    bloodgroup : pro.bloodgroup,
+                                    unitsofblood : parseInt(req.body.units)
+
+                                });
+                                hosp.save(function(err,updatedhosp){
+                                    if(err){
+                                        res
+                                            .status(400)
+                                            .json(err)
+                                    }
+                                    else{
+                                        res
+                                            .status(200)
+                                            .json(updatedhosp)
+                                    }
+                                });
+
+                            }
+
+                        });
                     }
-
-                  });
-
-
-
 
                 }
               })
@@ -283,7 +294,7 @@ module.exports.test_2 = function(req,res){
 
   hospitals
       .findById(hid)
-      .select('donations')
+      .select('donationhistory')
       .exec(function(err,hosp){
         if(err){
           res

@@ -20,7 +20,7 @@ router
 
 //Bloodbank
 router
-    .route('/bloodbank/create')
+    .route('/bloodbank/signup')
     .post(ctrlbloodbank.blooadbankAddOne);
 router
     .route('/bloodbank')
@@ -80,5 +80,8 @@ router
 router
     .route('/bloodbank/:bankID/test')
     .get(ctrlbloodbank.test_1);
+router
+    .route('/hospitals/:hospID/test')
+    .post(ctrlhosp.test_2);
 
 module.exports = router;

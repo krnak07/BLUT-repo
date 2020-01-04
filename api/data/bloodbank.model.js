@@ -74,7 +74,7 @@ var bloodbankSchema = new mongoose.Schema({
     required : true
   },
   BloodAvailability : [bloodlistSchema],
-  donations : [bankdonor],
+  donationhistory : [bankdonor],
 
 
 });

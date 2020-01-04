@@ -53,7 +53,7 @@ var campSchema = new mongoose.Schema({
       type : Date,
       required : true
     },
-    campdonor : [campDonorSchema]
+    donationhistory : [campDonorSchema]
 });
 
 

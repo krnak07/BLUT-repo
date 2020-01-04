@@ -56,7 +56,7 @@ var hospitalSchema = new mongoose.Schema({
       type :Date,
       required : true
     },
-    donations : [hospdonor],
+    donationhistory : [hospdonor],
 
 });
 

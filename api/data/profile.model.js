@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.set('useCreateIndex',true);
 
-var lastdonated = new mongoose.Schema({
+var donated = new mongoose.Schema({
   venue_name : {
     type: String,
     required: true
@@ -72,7 +72,21 @@ var profileSchema = new mongoose.Schema({
     type :Date,
     required : true
   },
-  lastdonation : [lastdonated]
+
+  lastdonatedDate : {
+    type : Date,
+    required : false
+  },
+  nextdonationDate : {
+    type : Date,
+    required : false
+  },
+  lastdonatedVenue : {
+    type : String,
+    required : false
+  },
+
+  donationhistory : [donated]
 
 
 });

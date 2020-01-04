@@ -10,7 +10,7 @@ module.exports.addNewCamp = function(req, res) {
   var d = new Date();
   var dof = new Date(req.body.dof);
 
-  console.log('Camp Created to Bank : ', id);
+
 
   bloodbank
   .findById(id)
@@ -41,6 +41,7 @@ module.exports.addNewCamp = function(req, res) {
                 }
                 else
                 {
+                  console.log('Camp Created to Bank : ', id);
                     res
                         .status(200)
                         .json(cam)
@@ -97,42 +98,56 @@ module.exports.addNewcampdonor = function(req, res) {
                                     }
                                     else
                                     {
-                                        cam.campdonor.push({
-                                            donor_name : pro.firstname,
-                                            phoneNo : pro.phoneNo,
-                                            dateofdonation : d,
-                                            bloodgroup : pro.bloodgroup,
-                                            unitsofblood : parseInt(req.body.units)
+                                        var nd = new Date(pro.nextdonationDate);
+                                        if(d<nd){
+                                            res
+                                                .status(206)
+                                                .json({"Message" : "Cannot Donate as next donation date is not reached"});
+                                        }
+                                        else {
+                                            cam.donationhistory.push({
+                                                donor_name : pro.firstname,
+                                                phoneNo : pro.phoneNo,
+                                                dateofdonation : d,
+                                                bloodgroup : pro.bloodgroup,
+                                                unitsofblood : parseInt(req.body.units)
 
-                                        });
-                                        pro.lastdonation.push({
-                                            venue_id : cam._id,
-                                            venue_name : cam.name,
-                                            dateofdonation : d,
-                                            quantity : parseInt(req.body.units)
-                                        });
+                                            });
+                                            var nd = new Date(d);
+                                            nd.setDate(d.getDate() + 56);
+                                            pro.lastdonatedDate = d;
+                                            pro.lastdonatedVenue = cam.name;
+                                            pro.nextdonationDate = nd;
+                                            pro.donationhistory.push({
+                                                venue_id : cam._id,
+                                                venue_name : cam.name,
+                                                dateofdonation : d,
+                                                quantity : parseInt(req.body.units)
+                                            });
 
-                                        pro.totalunits += parseInt(req.body.units);
+                                            pro.totalunits += parseInt(req.body.units);
 
-                                        pro.save(function(err,proupdated) {
+                                            pro.save(function(err,proupdated) {
 
-                                        });
+                                            });
 
-                                        cam.save(function(err,camupdated){
-                                            if(err)
-                                            {
-                                                res
-                                                    .status(400)
-                                                    .json(err)
-                                            }
-                                            else
-                                            {
-                                                res
-                                                    .status(200)
-                                                    .json(camupdated)
-                                            }
+                                            cam.save(function(err,camupdated){
+                                                if(err)
+                                                {
+                                                    res
+                                                        .status(400)
+                                                        .json(err)
+                                                }
+                                                else
+                                                {
+                                                    res
+                                                        .status(200)
+                                                        .json(camupdated)
+                                                }
 
-                                        });
+                                            });
+                                        }
+
 
 
                                     }
@@ -151,18 +166,20 @@ module.exports.getAllDonors = function(req, res) {
 
     camp
         .findById(cId)
-        .select('campdonor')
+        .select('donationhistory')
         .exec(function(err,cam){
            //console.log(cam.campdonor[1]['bloodgroup']);
            if(err)
            {
-
+             res
+             .status(400)
+             .json(err)
            }
            else
            {
                res
                    .status(200)
-                   .json(cam.campdonor)
+                   .json(cam.donationhistory)
            }
         });
 

@@ -114,7 +114,7 @@ module.exports.blooadbankAddOne = function(req,res){
                                           address : req.body.addr,
                                           city : req.body.city,
                                           state : req.body.state,
-                                          phoneNo : req.body.phone,
+                                          phoneNo : req.body.phoneNo,
                                           email : req.body.email,
                                           password  : req.body.password,
                                           liscense : req.body.liscense,
@@ -202,51 +202,61 @@ module.exports.donate = function(req,res){
                 }
                 else
                 {
-                  pro.lastdonation.push({
-                    venue_id : bId,
-                    venue_name : bank.name,
-                    dateofdonation : d,
-                    quantity : parseInt(req.body.units)
-                  });
-
-                  pro.totalunits += parseInt(req.body.units);
-                  updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
-
-                  pro.save(function(err,proupdated) {
-                    if(err){
-                      res
-                          .status(400)
-                          .json(err)
-
+                    var nd = new Date(pro.nextdonationDate);
+                    if(d<nd){
+                        res
+                            .status(206)
+                            .json({"Message" : "Cannot Donate as next donation date is not reached"});
                     }
-                    else{
-                      bank.donations.push({
-                          donor_name : pro.firstname,
-                          phoneNo : pro.phoneNo,
-                          dateofdonation : d,
-                          bloodgroup : pro.bloodgroup,
-                          unitsofblood : parseInt(req.body.units)
+                    else {
+                        var nd = new Date(d);
+                        nd.setDate(d.getDate() + 56);
+                        pro.lastdonatedDate = d;
+                        pro.lastdonatedVenue = bank.name;
+                        pro.nextdonationDate = nd;
+                        pro.donationhistory.push({
+                            venue_id : bId,
+                            venue_name : bank.name,
+                            dateofdonation : d,
+                            quantity : parseInt(req.body.units)
+                        });
 
-                      });
-                      bank.save(function(err,updatedbank){
-                          if(err){
-                              res
-                                  .status(400)
-                                  .json(err)
-                          }
-                          else{
-                              res
-                                  .status(200)
-                                  .json(updatedbank)
-                          }
-                      });
+                        pro.totalunits += parseInt(req.body.units);
+                        updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
 
+                        pro.save(function(err,proupdated) {
+                            if(err){
+                                res
+                                    .status(400)
+                                    .json(err)
+
+                            }
+                            else{
+                                bank.donationhistory.push({
+                                    donor_name : pro.firstname,
+                                    phoneNo : pro.phoneNo,
+                                    dateofdonation : d,
+                                    bloodgroup : pro.bloodgroup,
+                                    unitsofblood : parseInt(req.body.units)
+
+                                });
+                                bank.save(function(err,updatedbank){
+                                    if(err){
+                                        res
+                                            .status(400)
+                                            .json(err)
+                                    }
+                                    else{
+                                        res
+                                            .status(200)
+                                            .json(updatedbank)
+                                    }
+                                });
+
+                            }
+
+                        });
                     }
-
-                  });
-
-
-
 
                 }
               })
@@ -260,7 +270,7 @@ module.exports.getAllDonations = function(req,res) {
 
   bloodbank
       .findById(bId)
-      .select('donations')
+      .select('donationhistory')
       .exec(function(err,bank){
         if(err){
           res
