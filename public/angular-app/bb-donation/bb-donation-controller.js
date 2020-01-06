@@ -46,11 +46,12 @@ function bbdonationcontroller($http,$routeParams,$location) {
             alert('Cannot Donate');
         }
         else{
+            var id = sessionStorage.getItem('id');
             var postdata = {
                 phoneNo : vm.phoneNo,
                 units : vm.dunits
             };
-            $http.post('/api/bloodbank/'+bb_id+'/donate',postdata)
+            $http.post('/api/bloodbank/'+id+'/donate',postdata)
                 .then(function(response){
                     if(response.status == 200){
                         dt = vm.phoneNo+" : Donated "+vm.dunits+" units of Blood";
