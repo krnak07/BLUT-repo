@@ -1,13 +1,13 @@
 .mediaViewInfo {
-	--web-view-name: web-hosp-login;
-	--web-view-id: web_hosp_login;
+	--web-view-name: web-bb-login;
+	--web-view-id: web_bb_login;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
 :root {
-	--web-view-ids: web_hosp_login;
+	--web-view-ids: web_bb_login;
 }
 * {
 	margin: 0;
@@ -15,24 +15,25 @@
 	box-sizing: border-box;
 	border: none;
 }
-#web_hosp_login {
+#web_bb_login {
 	position: absolute;
 	width: 1920px;
 	height: 975px;
 	background-color: rgba(225,83,83,1);
 	overflow: hidden;
-	--web-view-name: web-hosp-login;
-	--web-view-id: web_hosp_login;
+	--web-view-name: web-bb-login;
+	--web-view-id: web_bb_login;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
 .Rectangle_14 {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 	position: absolute;
 	overflow: visible;
-	width: 513px;
-	height: 975px;
+	width: 531px;
+	height: 993px;
 	left: 1407px;
 	top: 0px;
 }
@@ -77,59 +78,35 @@
 	top: 517px;
 	overflow: visible;
 }
-#cardiogram {
-	position: absolute;
-	width: 31px;
-	height: 32px;
-	left: 1538px;
-	top: 428px;
-	overflow: visible;
-}
 #Component_15___1 {
 	position: absolute;
-	width: 277.5px;
-	height: 69.5px;
-	left: 1525px;
-	top: 299px;
+	width: 270.5px;
+	height: 62.5px;
+	left: 1527px;
+	top: 301px;
 	overflow: visible;
 }
 #name {
 	position: absolute;
-	width: 68px;
-	height: 68px;
+	width: 62px;
+	height: 62px;
 	left: 0px;
 	top: 0px;
 	overflow: visible;
 }
-#Hospitals {
+#Bloodbank {
 	position: absolute;
-	left: 74.5px;
-	top: 2.5px;
+	left: 71.5px;
+	top: 6.5px;
 	overflow: visible;
-	width: 204px;
+	width: 200px;
 	white-space: nowrap;
 	text-align: left;
 	font-family: Segoe UI;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 50px;
+	font-size: 42px;
 	color: rgba(53,49,49,1);
-}
-.usr_input {
-	position: absolute;
-	overflow: visible;
-	width: 210px;
-	height: 32px;
-	left: 1576px;
-	top: 428px;
-}
-.pass_input {
-	position: absolute;
-	overflow: visible;
-	width: 210px;
-	height: 32px;
-	left: 1576px;
-	top: 516px;
 }
 #login_btn {
 	position: absolute;
@@ -153,6 +130,30 @@
 	height: 36px;
 	left: 17px;
 	top: 17px;
+	overflow: visible;
+}
+.usr_input {
+	position: absolute;
+	overflow: visible;
+	width: 210px;
+	height: 32px;
+	left: 1576px;
+	top: 428px;
+}
+.pass_input {
+	position: absolute;
+	overflow: visible;
+	width: 210px;
+	height: 32px;
+	left: 1576px;
+	top: 516px;
+}
+#blood {
+	position: absolute;
+	width: 31px;
+	height: 32px;
+	left: 1538px;
+	top: 428px;
 	overflow: visible;
 }
 #madeby {

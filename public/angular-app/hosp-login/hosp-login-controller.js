@@ -8,6 +8,7 @@ function hosplogincontroller($route,$http,$location) {
       email : vm.u_input,
       password : vm.p_input
     };
+    console.log(postdata);
 
   if (vm.loginForm.$valid){
 

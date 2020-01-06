@@ -38,34 +38,13 @@
 	top: 216px;
 	overflow: visible;
 }
-#___with____by_FAM_ILY {
-	position: absolute;
-	left: 773px;
-	top: 902px;
-	overflow: visible;
-	width: 375px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 35px;
-	color: rgba(49,49,49,1);
-}
-#Group_1_n {
-	position: absolute;
-	width: 308px;
-	height: 36px;
-	left: 806px;
-	top: 717px;
-	overflow: visible;
-}
 #bloodbank_btn {
 	position: absolute;
 	width: 140.254px;
-	left: 0px;
-	top: 0px;
+	left: 806px;
+	top: 717px;
 	overflow: visible;
+	cursor: pointer;
 }
 .Rectangle_4 {
 	position: absolute;
@@ -100,12 +79,12 @@
 #hospital_btn {
 	position: absolute;
 	width: 141px;
-	height: 36px;
-	left: 167px;
-	top: 0px;
+	left: 973px;
+	top: 717px;
 	overflow: visible;
+	cursor: pointer;
 }
-.Rectangle_4_t {
+.Rectangle_4_u {
 	position: absolute;
 	overflow: visible;
 	width: 141px;
@@ -133,5 +112,35 @@
 	height: 21px;
 	left: 113px;
 	top: 8px;
+	overflow: visible;
+}
+#madeby {
+	position: absolute;
+	width: 375px;
+	height: 47px;
+	left: 773px;
+	top: 902px;
+	overflow: visible;
+}
+#with____by_FAM_ILY {
+	position: absolute;
+	left: 59px;
+	top: 0px;
+	overflow: visible;
+	width: 317px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#ID045_coding_grey3 {
+	position: absolute;
+	width: 45px;
+	height: 35.793px;
+	left: 0px;
+	top: 5.5px;
 	overflow: visible;
 }

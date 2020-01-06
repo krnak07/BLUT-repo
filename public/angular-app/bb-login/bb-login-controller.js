@@ -15,8 +15,7 @@ function logincontroller($route,$http,$location) {
     $http.post('/api/bloodbank/login',postdata)
     .then(function(response){
       if(response.status == 200){
-        vm.bank = response.data._id;
-        bb_id = vm.bank;
+        sessionStorage.setItem('id',response.data._id);
         $location.path('/bloodbank/home');
       }
 

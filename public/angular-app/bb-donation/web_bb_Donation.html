@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-bb-Donation</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/bb-donation/web_bb_Donation.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/bb-donation/web_bb_Donation.js"></script>
+</head>
+<body>
+<div id="web_bb_Donation">
+	<svg class="Rectangle_15">
+		<rect fill="rgba(225,83,83,1)" id="Rectangle_15" rx="0" ry="0" x="0" y="0" width="330" height="75">
+		</rect>
+	</svg>
+	<img id="Group_1" src="angular-app/bb-donation/Group_1.png" srcset="angular-app/bb-donation/Group_1.png 1x, angular-app/bb-donation/Group_1@2x.png 2x">
+	<div id="BLUT_v1_0_0">
+		<span>BLUT </span><span style="font-size:20px;">v1.0.0</span>
+	</div>
+	<svg class="Rectangle_24">
+		<rect fill="rgba(225,83,83,1)" id="Rectangle_24" rx="0" ry="0" x="0" y="0" width="135" height="75">
+		</rect>
+	</svg>
+	<div id="ID11_07_AM">
+		<span>11:07 AM</span>
+	</div>
+	<div id="ID11_07_1999">
+		<span>11/07/1999</span>
+	</div>
+	<button id="home_btn" class="home_btn" ng-click="vm.goHome()">
+		<img id="home" src="angular-app/bb-donation/home.png" srcset="angular-app/bb-donation/home.png 1x, angular-app/bb-donation/home@2x.png 2x">
+	</button>
+	<button id="refresh_btn" class="refresh_btn" ng-click="vm.refres()">
+		<img id="update_arrows" src="angular-app/bb-donation/update_arrows.png" srcset="angular-app/bb-donation/update_arrows.png 1x, angular-app/bb-donation/update_arrows@2x.png 2x">
+	</button>
+	<button id="BA_btn" class="BA_btn" ng-click="vm.BA()">
+		<svg class="Rectangle_16">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_16" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Blood_Availability">
+			<span>Blood Availability</span>
+		</div>
+		<img id="ID018_flask" src="angular-app/bb-donation/ID018_flask.png" srcset="angular-app/bb-donation/ID018_flask.png 1x, angular-app/bb-donation/ID018_flask@2x.png 2x">
+	</button>
+	<button id="donation_btn" class="donation_btn" ng-click="vm.donation()">
+		<svg class="Rectangle_17">
+			<rect fill="rgba(245,245,245,1)" id="Rectangle_17" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Donations">
+			<span>Donations</span>
+		</div>
+		<img id="ID008_donor_1" src="angular-app/bb-donation/ID008_donor_1.png" srcset="angular-app/bb-donation/ID008_donor_1.png 1x, angular-app/bb-donation/ID008_donor_1@2x.png 2x">
+	</button>
+	<div id="bloodbank_name" class="bloodbank_name">
+		<svg class="Rectangle_23">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_23" rx="0" ry="0" x="0" y="0" width="465" height="75">
+			</rect>
+		</svg>
+		<div id="Hospitals">
+			<span>Hospitals</span>
+		</div>
+		<img id="ID019_hospital" src="angular-app/bb-donation/ID019_hospital.png" srcset="angular-app/bb-donation/ID019_hospital.png 1x, angular-app/bb-donation/ID019_hospital@2x.png 2x">
+	</div>
+	<button id="camp_btn" class="camp_btn" ng-click="vm.camp()">
+		<svg class="Rectangle_18">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_18" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Camps">
+			<span>Camps</span>
+		</div>
+		<img id="blood" src="angular-app/bb-donation/blood.png" srcset="angular-app/bb-donation/blood.png 1x, angular-app/bb-donation/blood@2x.png 2x">
+	</button>
+	<button id="okay_btn" class="okay_btn" ng-click="vm.donate_okay()">
+		<svg class="Rectangle_4">
+			<rect fill="rgba(255,255,255,1)" stroke="rgba(224,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_4" rx="18" ry="18" x="0" y="0" width="99" height="36">
+			</rect>
+		</svg>
+		<div id="Okay">
+			<span>Okay</span>
+		</div>
+	</button>
+	<button id="cancel_btn" class="cancel_btn" ng-click="vm.donate_cancel()">
+		<svg class="Rectangle_5">
+			<rect fill="rgba(255,255,255,1)" stroke="rgba(224,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_5" rx="18" ry="18" x="0" y="0" width="99" height="36">
+			</rect>
+		</svg>
+		<div id="cancel">
+			<span>cancel</span>
+		</div>
+	</button>
+	<button id="check_btn" class="check_btn" ng-click="vm.donate_check()">
+		<svg class="Rectangle_13">
+			<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_13" rx="18" ry="18" x="0" y="0" width="99" height="36">
+			</rect>
+		</svg>
+		<div id="Check">
+			<span>Check</span>
+		</div>
+	</button>
+	<div id="phone_inp" class="phone_inp">
+		<svg class="Rectangle_2">
+			<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="21" ry="21" x="0" y="0" width="277" height="42">
+			</rect>
+		</svg>
+		<img id="phone_call" src="angular-app/bb-donation/phone_call.png" srcset="angular-app/bb-donation/phone_call.png 1x, angular-app/bb-donation/phone_call@2x.png 2x">
+		<input type="text" class="usr_input" ng-model="vm.phoneNo">
+			<rect fill="rgba(255,255,255,1)" id="usr_input" rx="0" ry="0" x="0" y="0" width="214" height="32">
+			</rect>
+	</div>
+	<div id="unit_inp" class="unit_inp">
+		<svg class="Rectangle_3">
+			<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_3" rx="21" ry="21" x="0" y="0" width="277" height="42">
+			</rect>
+		</svg>
+		<img id="science" src="angular-app/bb-donation/science.png" srcset="angular-app/bb-donation/science.png 1x, angular-app/bb-donation/science@2x.png 2x">
+		<input type="text" class="usr_input_bu" ng-model="vm.dunits">
+			<rect fill="rgba(255,255,255,1)" id="usr_input_bu" rx="0" ry="0" x="0" y="0" width="214" height="32">
+			</rect>
+	</div>
+	<svg class="Rectangle_25">
+		<rect fill="rgba(245,245,245,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_25" rx="13" ry="13" x="0" y="0" width="369" height="45">
+		</rect>
+	</svg>
+	<svg class="Rectangle_26">
+		<rect fill="rgba(245,245,245,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_26" rx="13" ry="13" x="0" y="0" width="369" height="45">
+		</rect>
+	</svg>
+	<svg class="Rectangle_27">
+		<rect fill="rgba(245,245,245,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_27" rx="13" ry="13" x="0" y="0" width="369" height="45">
+		</rect>
+	</svg>
+	<div id="NAME_______________________">
+		<span>NAME                     : </span>
+	</div>
+	<div id="Blood_Group_____________">
+		<span>Blood Group          :  </span>
+	</div>
+	<div id="Eligible_to_Donate____">
+		<span>Eligible to Donate :  </span>
+	</div>
+	<div id="Kiran_A_K">
+		<span>{{vm.dname}}</span>
+	</div>
+	<div id="B_">
+		<span>{{vm.bg}}</span>
+	</div>
+	<div id="YES">
+		<span>{{vm.el}}</span>
+	</div>
+	<div id="madeby">
+		<div id="with____by_FAM_ILY">
+			<span>with ❤️ by </span><span style="font-style:normal;font-weight:bold;">FAM-ILY</span>
+		</div>
+		<img id="ID045_coding_grey3" src="angular-app/bb-donation/ID045_coding_grey3.png" srcset="angular-app/bb-donation/ID045_coding_grey3.png 1x, angular-app/bb-donation/ID045_coding_grey3@2x.png 2x">
+	</div>
+</div>
+</body>
+</html>

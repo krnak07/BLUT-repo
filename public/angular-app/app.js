@@ -9,12 +9,12 @@ function config($routeProvider) {
     controllerAs: 'vm'
   })
   .when('/bloodbank', {
-    templateUrl : 'angular-app/bb-login/web_login.html',
+    templateUrl : 'angular-app/bb-login/web_bb_login.html',
     controller : logincontroller,
     controllerAs : 'vm'
   })
   .when('/bloodbank/home',{
-    templateUrl : 'angular-app/bb-main/bb-main.html',
+    templateUrl : 'angular-app/bb-home/web_bb_home.html',
     controller : mainbbcontroller,
     controllerAs: 'vm'
   })
@@ -23,6 +23,11 @@ function config($routeProvider) {
     controller : listcontroller,
     controllerAs: 'vm'
   })
+      .when('/bloodbank/donation', {
+        templateUrl : 'angular-app/bb-donation/web_bb_Donation.html',
+        controller : bbdonationcontroller,
+        controllerAs: 'vm'
+      })
   .when('/hospital', {
     templateUrl : 'angular-app/hosp-login/web_hosp_login.html',
     controller : hosplogincontroller,
