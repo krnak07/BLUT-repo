@@ -45,6 +45,9 @@ function bbdonationcontroller($http,$routeParams,$location) {
         else if(vm.el == 'NO'){
             alert('Cannot Donate');
         }
+        else if(vm.dunits == null){
+            alert('Enter Units');
+        }
         else{
             var id = sessionStorage.getItem('id');
             var postdata = {
@@ -64,7 +67,7 @@ function bbdonationcontroller($http,$routeParams,$location) {
                     }
                 })
                 .catch(function(err){
-                    alert(err.data)
+                    alert("error in donation")
                 });
         }
     };
