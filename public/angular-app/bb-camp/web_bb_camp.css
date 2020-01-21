@@ -1,0 +1,1117 @@
+.mediaViewInfo {
+	--web-view-name: web-bb-camp;
+	--web-view-id: web_bb_camp;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_bb_camp;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_bb_camp {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-bb-camp;
+	--web-view-id: web_bb_camp;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+.Rectangle_15 {
+	position: absolute;
+	overflow: visible;
+	width: 220px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Group_1 {
+	position: absolute;
+	width: 168px;
+	height: 61.436px;
+	left: 26px;
+	top: 7px;
+	overflow: visible;
+}
+#bloodbank_name {
+	position: absolute;
+	width: 380px;
+	height: 75px;
+	left: 1540px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_23 {
+	position: absolute;
+	overflow: visible;
+	width: 380px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Hospitals {
+	position: absolute;
+	left: 57.5px;
+	top: 18px;
+	overflow: visible;
+	width: 132px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#ID019_hospital {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 10px;
+	top: 15px;
+	overflow: visible;
+}
+#home_btn {
+	position: absolute;
+	width: 23px;
+	left: 1871px;
+	top: 7px;
+	overflow: visible;
+	cursor: pointer;
+}
+#home {
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#refresh_btn {
+	position: absolute;
+	width: 25px;
+	left: 1838px;
+	top: 6px;
+	overflow: visible;
+	cursor: pointer;
+}
+#update_arrows {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#BA_btn {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 220px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_16 {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Blood_Availability {
+	position: absolute;
+	left: 64px;
+	top: 18px;
+	overflow: visible;
+	width: 250px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#ID018_flask {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 17px;
+	top: 15px;
+	overflow: visible;
+}
+#donation_btn {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 880px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_17 {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Donations {
+	position: absolute;
+	left: 116px;
+	top: 18px;
+	overflow: visible;
+	width: 146px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#ID008_donor_1 {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 69px;
+	top: 15px;
+	overflow: visible;
+}
+#camp_btn {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 1210px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_18 {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Camps {
+	position: absolute;
+	left: 142px;
+	top: 18px;
+	overflow: visible;
+	width: 95px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(225,83,83,1);
+}
+#blood {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 95px;
+	top: 15px;
+	overflow: visible;
+}
+#req_button {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 550px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_16_bn {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Requests {
+	position: absolute;
+	left: 128px;
+	top: 18px;
+	overflow: visible;
+	width: 127px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#important {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 77px;
+	top: 15px;
+	overflow: visible;
+}
+.Rectangle_34 {
+	filter: drop-shadow(0px 0px 36px rgba(0, 0, 0, 0.161));
+	position: absolute;
+	overflow: visible;
+	width: 1976px;
+	height: 861px;
+	left: 26px;
+	top: 112px;
+}
+.Line_8 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 2px;
+	left: 26.5px;
+	top: 204.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_11 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 244.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_32 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 484.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_20 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 364.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_31 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 604.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_37 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 744.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_13 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 304.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_30 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 544.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_19 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 424.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_29 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 664.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_34 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 804.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_9 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 224.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_28 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 464.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_18 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 344.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_27 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 584.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_38 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 724.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_14 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 284.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_26 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 524.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_17 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 404.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_25 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 644.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_35 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 784.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_10 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 264.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_24 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 504.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_16 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 384.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_23 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 624.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_36 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 764.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_12 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 324.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_22 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 564.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_39 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 704.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_15 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 444.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_21 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 684.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_33 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 824.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_40 {
+	overflow: visible;
+	position: absolute;
+	width: 1867.5px;
+	height: 1px;
+	left: 26.5px;
+	top: 844.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#CAMP_LIST {
+	position: absolute;
+	left: 50.5px;
+	top: 110px;
+	overflow: visible;
+	width: 207px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(53,49,49,1);
+}
+#Kiran {
+	position: absolute;
+	left: 52px;
+	top: 205px;
+	overflow: visible;
+	width: 38px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#Tunits {
+	position: absolute;
+	width: 75px;
+	height: 57px;
+	left: 1812px;
+	top: 167px;
+	overflow: visible;
+}
+#Group_4 {
+	position: absolute;
+	width: 75px;
+	height: 29px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Units {
+	position: absolute;
+	left: 26px;
+	top: 1px;
+	overflow: visible;
+	width: 50px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(53,49,49,1);
+}
+#ID036_blood_bag {
+	position: absolute;
+	width: 29px;
+	height: 29px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#ID0_5 {
+	position: absolute;
+	left: 27.5px;
+	top: 37px;
+	overflow: visible;
+	width: 22px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#ID07_11_1999 {
+	position: absolute;
+	left: 414px;
+	top: 205px;
+	overflow: visible;
+	width: 83px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#Group_9 {
+	position: absolute;
+	width: 77px;
+	height: 29px;
+	left: 417px;
+	top: 166px;
+	overflow: visible;
+}
+#Date {
+	position: absolute;
+	left: 33px;
+	top: 1px;
+	overflow: visible;
+	width: 45px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(53,49,49,1);
+}
+#time_and_date {
+	position: absolute;
+	width: 29px;
+	height: 29px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Group_10 {
+	position: absolute;
+	width: 88.5px;
+	height: 29px;
+	left: 51px;
+	top: 166px;
+	overflow: visible;
+}
+#Name {
+	position: absolute;
+	left: 32.5px;
+	top: 2px;
+	overflow: visible;
+	width: 57px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(53,49,49,1);
+}
+#blood_c {
+	position: absolute;
+	width: 29px;
+	height: 29px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Group_8 {
+	position: absolute;
+	width: 111.652px;
+	height: 29px;
+	left: 576px;
+	top: 166px;
+	overflow: visible;
+}
+#placeholder {
+	position: absolute;
+	width: 29px;
+	height: 29px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Location {
+	position: absolute;
+	left: 30.652px;
+	top: 1.5px;
+	overflow: visible;
+	width: 82px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(53,49,49,1);
+}
+#Erode {
+	position: absolute;
+	left: 581.5px;
+	top: 205px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#minus_red {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 1505px;
+	top: 117px;
+	overflow: visible;
+}
+#plus_red {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 965px;
+	top: 117px;
+	overflow: visible;
+}
+#Oneg {
+	position: absolute;
+	width: 40px;
+	height: 63px;
+	left: 1708px;
+	top: 161px;
+	overflow: visible;
+}
+#ID029_blood_type_3 {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#ID0_5_da {
+	position: absolute;
+	left: 9.5px;
+	top: 43px;
+	overflow: visible;
+	width: 22px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#Opos {
+	position: absolute;
+	width: 40px;
+	height: 63px;
+	left: 1168px;
+	top: 161px;
+	overflow: visible;
+}
+#ID029_blood_type_3_dc {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#ID0_5_dd {
+	position: absolute;
+	left: 9.5px;
+	top: 43px;
+	overflow: visible;
+	width: 22px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#Bneg {
+	position: absolute;
+	width: 40px;
+	height: 63px;
+	left: 1438px;
+	top: 161px;
+	overflow: visible;
+}
+#ID027_blood_type_1 {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#ID0_5_dg {
+	position: absolute;
+	left: 9.5px;
+	top: 43px;
+	overflow: visible;
+	width: 22px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#Bpos {
+	position: absolute;
+	width: 40px;
+	height: 64px;
+	left: 898px;
+	top: 161px;
+	overflow: visible;
+}
+#ID027_blood_type_1_di {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#ID0_5_dj {
+	position: absolute;
+	left: 9.5px;
+	top: 44px;
+	overflow: visible;
+	width: 22px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#ABneg {
+	position: absolute;
+	width: 40px;
+	height: 63px;
+	left: 1573px;
+	top: 161px;
+	overflow: visible;
+}
+#ID028_blood_type_2 {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#ID0_5_dm {
+	position: absolute;
+	left: 9.5px;
+	top: 43px;
+	overflow: visible;
+	width: 22px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#ABpos {
+	position: absolute;
+	width: 40px;
+	height: 64px;
+	left: 1033px;
+	top: 161px;
+	overflow: visible;
+}
+#ID028_blood_type_2_do {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#ID0_5_dp {
+	position: absolute;
+	left: 9.5px;
+	top: 44px;
+	overflow: visible;
+	width: 22px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#Aneg {
+	position: absolute;
+	width: 40px;
+	height: 63px;
+	left: 1303px;
+	top: 161px;
+	overflow: visible;
+}
+#ID026_blood_type {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#ID0_5_ds {
+	position: absolute;
+	left: 9.5px;
+	top: 43px;
+	overflow: visible;
+	width: 22px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#Apos {
+	position: absolute;
+	width: 40px;
+	height: 64px;
+	left: 763px;
+	top: 161px;
+	overflow: visible;
+}
+#ID026_blood_type_du {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#ID0_5_dv {
+	position: absolute;
+	left: 9.5px;
+	top: 44px;
+	overflow: visible;
+	width: 22px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#createnew {
+	position: absolute;
+	width: 94px;
+	height: 30px;
+	left: 1818px;
+	top: 38px;
+	overflow: visible;
+}
+.Rectangle_36 {
+	filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.161));
+	position: absolute;
+	overflow: visible;
+	width: 154px;
+	height: 90px;
+	left: 0px;
+	top: 0px;
+}
+#edit {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 6px;
+	top: 3px;
+	overflow: visible;
+}
+#CREATE {
+	position: absolute;
+	left: 35px;
+	top: 5px;
+	overflow: visible;
+	width: 55px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(53,49,49,1);
+}
+#left_arrow {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 1828px;
+	top: 118px;
+	overflow: visible;
+}
+#right_arrow__2_ {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 1858px;
+	top: 118px;
+	overflow: visible;
+}
+#madeby {
+	position: absolute;
+	width: 373px;
+	height: 47px;
+	left: 774px;
+	top: 922px;
+	overflow: visible;
+}
+#with____by_FAM_ILY {
+	position: absolute;
+	left: 57px;
+	top: 0px;
+	overflow: visible;
+	width: 317px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#programming_grey {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 0px;
+	top: 2px;
+	overflow: visible;
+}

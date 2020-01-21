@@ -31,14 +31,14 @@ module.exports.hospitalSignup = function(req,res){
                                     console.log("User created : ",req.body.name);
                                     hospitals
                                         .create({
-                                          name : req.body.name,
-                                          address : req.body.addr,
-                                          city : req.body.city,
-                                          state : req.body.state,
-                                          phoneNo : req.body.phone,
-                                          email : req.body.email,
-                                          liscense : req.body.liscense,
-                                          createdOn : d,
+                                            name : req.body.name,
+                                            address : req.body.addr,
+                                            city : req.body.city,
+                                            state : req.body.state,
+                                            phoneNo : req.body.phoneNo,
+                                            email : req.body.email,
+                                            liscense : req.body.liscense,
+                                            createdOn : d,
                                         },function(err,hosp) {
                                             if(err){
                                                 res
@@ -46,9 +46,9 @@ module.exports.hospitalSignup = function(req,res){
                                                     .json(err)
                                             }
                                             else {
-                                              user.updateProfile({
-                                                  displayName: hosp.id,
-                                              });
+                                                user.updateProfile({
+                                                    displayName: hosp.id,
+                                                });
                                                 user.sendEmailVerification()
                                                     .then(function () {
                                                         res
@@ -268,6 +268,27 @@ module.exports.donation = function(req,res){
 
 };
 
+module.exports.getAlldonors = function(req,res){
+    hid = req.params.hospID;
+    hospitals
+        .findById(hid)
+        .select('donationhistory')
+        .exec(function(err,hosp){
+            if(err){
+                res
+                    .status(400)
+                    .json(err);
+            }
+
+            else{
+                res
+                    .status(200)
+                    .json(hosp);
+
+
+            }
+        });
+};
 module.exports.test_1 = function(req,res){
   bId = req.params.hospID;
 

@@ -1,0 +1,284 @@
+.mediaViewInfo {
+	--web-view-name: web-camp-selection;
+	--web-view-id: web_camp_selection;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_camp_selection;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_camp_selection {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-camp-selection;
+	--web-view-id: web_camp_selection;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+.Rectangle_15 {
+	position: absolute;
+	overflow: visible;
+	width: 330.2px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Group_1 {
+	position: absolute;
+	width: 168.3px;
+	height: 60.477px;
+	left: 81px;
+	top: 7px;
+	overflow: visible;
+}
+#BA_btn {
+	position: absolute;
+	width: 330.2px;
+	height: 75px;
+	left: 330px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_4 {
+	overflow: visible;
+	position: absolute;
+	width: 330.2px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Blood_Availability {
+	position: absolute;
+	left: 64.2px;
+	top: 18px;
+	overflow: visible;
+	width: 250px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#ID018_flask {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 17px;
+	top: 15px;
+	overflow: visible;
+}
+#donation_btn {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 660px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_17 {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Donations {
+	position: absolute;
+	left: 116px;
+	top: 18px;
+	overflow: visible;
+	width: 146px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#ID008_donor_1 {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 69px;
+	top: 15px;
+	overflow: visible;
+}
+#hospname {
+	position: absolute;
+	width: 930.7px;
+	height: 75px;
+	left: 989px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_18 {
+	position: absolute;
+	overflow: visible;
+	width: 930.7px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Hospitals {
+	position: absolute;
+	left: 68px;
+	top: 18px;
+	overflow: visible;
+	width: 132px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#ID019_hospital {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 21px;
+	top: 15px;
+	overflow: visible;
+}
+#Select_a_CAMP {
+	position: absolute;
+	left: 621px;
+	top: 332px;
+	overflow: visible;
+	width: 679px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 100px;
+	color: rgba(49,49,49,1);
+}
+#camp_name {
+	position: absolute;
+	width: 536px;
+	height: 50px;
+	left: 692px;
+	top: 495px;
+	overflow: visible;
+}
+.Rectangle_30 {
+	filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.361));
+	position: absolute;
+	overflow: visible;
+	width: 554px;
+	height: 69px;
+	left: 0px;
+	top: 0px;
+}
+#triangle {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 500px;
+	top: 10px;
+	overflow: visible;
+}
+#home_btn {
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	left: 1870px;
+	top: 26px;
+	overflow: visible;
+}
+#home {
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#refresh_btn {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 1837px;
+	top: 25px;
+	overflow: visible;
+}
+#update_arrows {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#madeby {
+	position: absolute;
+	width: 373px;
+	height: 47px;
+	left: 774px;
+	top: 922px;
+	overflow: visible;
+}
+#with____by_FAM_ILY {
+	position: absolute;
+	left: 57px;
+	top: 0px;
+	overflow: visible;
+	width: 317px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#programming_grey {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 0px;
+	top: 2px;
+	overflow: visible;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 536px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.camp_name{
+	display: inline;
+}
+
+.dropdown-content a:hover {background-color: #E15353;}
+
+.camp_name:hover .dropdown-content {display: block;}

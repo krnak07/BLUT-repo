@@ -24,6 +24,16 @@ var campDonorSchema = new mongoose.Schema({
         required : true
     }
 });
+var bloodlistSchema = new mongoose.Schema({
+    bloodType : {
+        type : String,
+        required : true
+    },
+    quantity : {
+        type : Number,
+        required : true
+    }
+});
 var campSchema = new mongoose.Schema({
     name : {
         type : String,
@@ -53,6 +63,7 @@ var campSchema = new mongoose.Schema({
       type : Date,
       required : true
     },
+    BloodAvailability : [bloodlistSchema],
     donationhistory : [campDonorSchema]
 });
 

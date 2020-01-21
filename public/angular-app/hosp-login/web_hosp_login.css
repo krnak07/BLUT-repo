@@ -28,13 +28,14 @@
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
-.Rectangle_14 {
-	position: absolute;
+.Path_7 {
 	overflow: visible;
+	position: absolute;
 	width: 513px;
 	height: 975px;
 	left: 1407px;
 	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
 }
 #Group_1 {
 	position: absolute;
@@ -157,15 +158,15 @@
 }
 #madeby {
 	position: absolute;
-	width: 375px;
+	width: 373px;
 	height: 47px;
-	left: 515px;
+	left: 516px;
 	top: 902px;
 	overflow: visible;
 }
 #with____by_FAM_ILY {
 	position: absolute;
-	left: 59px;
+	left: 57px;
 	top: 0px;
 	overflow: visible;
 	width: 317px;
@@ -177,11 +178,11 @@
 	font-size: 35px;
 	color: rgba(49,49,49,1);
 }
-#ID045_coding_grey3 {
+#programming_grey {
 	position: absolute;
 	width: 45px;
-	height: 35.793px;
+	height: 45px;
 	left: 0px;
-	top: 5.5px;
+	top: 2px;
 	overflow: visible;
 }

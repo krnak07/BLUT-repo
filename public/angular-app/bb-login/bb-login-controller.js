@@ -16,6 +16,7 @@ function logincontroller($route,$http,$location) {
     .then(function(response){
       if(response.status == 200){
         sessionStorage.setItem('id',response.data._id);
+        sessionStorage.setItem('bank_name',response.data.name);
         $location.path('/bloodbank/home');
       }
 

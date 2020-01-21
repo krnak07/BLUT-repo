@@ -47,3 +47,4 @@ require('./bloodbank.model');
 require('./profile.model');
 require('./hospitals.model');
 require('./camp.model');
+require('./organisation.model')

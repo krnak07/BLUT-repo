@@ -36,6 +36,37 @@ var bankdonor = new mongoose.Schema({
   }
 });
 
+var campdonor = new mongoose.Schema({
+  name : {
+    type : String,
+    required : true
+  },
+  dateofdonation : {
+    type : Date,
+    requierd  : true
+  },
+  bloodlist : [bloodlistSchema]
+});
+
+var donation = new mongoose.Schema({
+  name : {
+    type : String,
+    required : true
+  },
+  dateofdonation: {
+    type : Date,
+    required : true
+  },
+  bloodgroup : {
+    type : String,
+    required : true
+  },
+  unitsofblood : {
+    type: Number,
+    required : true
+  }
+});
+
 var bloodbankSchema = new mongoose.Schema({
   name:{
     type : String,
@@ -67,14 +98,15 @@ var bloodbankSchema = new mongoose.Schema({
   },
   liscense : {
     type : String,
-    required : true,
   },
   createdOn :{
     type :Date,
     required : true
   },
   BloodAvailability : [bloodlistSchema],
-  donationhistory : [bankdonor],
+  donordonationhistory : [bankdonor],
+  campdonationhistory : [campdonor],
+  donatedhistory : [donation]
 
 
 });

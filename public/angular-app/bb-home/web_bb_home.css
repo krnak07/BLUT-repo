@@ -31,32 +31,18 @@
 .Rectangle_15 {
 	position: absolute;
 	overflow: visible;
-	width: 330px;
+	width: 220px;
 	height: 75px;
 	left: 0px;
 	top: 0px;
 }
 #Group_1 {
 	position: absolute;
-	width: 168.3px;
-	height: 60.477px;
-	left: 81px;
+	width: 168px;
+	height: 61.436px;
+	left: 26px;
 	top: 7px;
 	overflow: visible;
-}
-#BLUT_v1_0_0 {
-	position: absolute;
-	left: 898.5px;
-	top: 936px;
-	overflow: visible;
-	width: 125px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 25px;
-	color: rgba(49,49,49,1);
 }
 #Bloodbank__Management_Suite {
 	position: absolute;
@@ -72,47 +58,49 @@
 	font-size: 75px;
 	color: rgba(225,83,83,1);
 }
-.Rectangle_24 {
+#bloodbank_name {
+	position: absolute;
+	width: 380px;
+	height: 75px;
+	left: 1540px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_23 {
 	position: absolute;
 	overflow: visible;
-	width: 135px;
+	width: 380px;
 	height: 75px;
-	left: 1785px;
+	left: 0px;
 	top: 0px;
 }
-#ID11_07_AM {
+#Hospitals {
 	position: absolute;
-	left: 1819px;
-	top: 2px;
+	left: 57.5px;
+	top: 18px;
 	overflow: visible;
-	width: 69px;
+	width: 132px;
 	white-space: nowrap;
 	text-align: left;
 	font-family: Segoe UI;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 30px;
 	color: rgba(245,245,245,1);
 }
-#ID11_07_1999 {
+#ID019_hospital {
 	position: absolute;
-	left: 1812px;
-	top: 22px;
+	width: 45px;
+	height: 45px;
+	left: 10px;
+	top: 15px;
 	overflow: visible;
-	width: 83px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 15px;
-	color: rgba(245,245,245,1);
 }
 #home_btn {
 	position: absolute;
 	width: 23px;
-	left: 1858px;
-	top: 47px;
+	left: 1871px;
+	top: 26px;
 	overflow: visible;
 	cursor: pointer;
 }
@@ -127,8 +115,8 @@
 #refresh_btn {
 	position: absolute;
 	width: 25px;
-	left: 1825px;
-	top: 46px;
+	left: 1838px;
+	top: 25px;
 	overflow: visible;
 	cursor: pointer;
 }
@@ -144,7 +132,7 @@
 	position: absolute;
 	width: 330px;
 	height: 75px;
-	left: 330px;
+	left: 220px;
 	top: 0px;
 	overflow: visible;
 	cursor: pointer;
@@ -183,7 +171,7 @@
 	position: absolute;
 	width: 330px;
 	height: 75px;
-	left: 660px;
+	left: 880px;
 	top: 0px;
 	overflow: visible;
 	cursor: pointer;
@@ -218,49 +206,11 @@
 	top: 15px;
 	overflow: visible;
 }
-#bloodbank_name {
-	position: absolute;
-	width: 465px;
-	height: 75px;
-	left: 1320px;
-	top: 0px;
-	overflow: visible;
-}
-.Rectangle_23 {
-	position: absolute;
-	overflow: visible;
-	width: 465px;
-	height: 75px;
-	left: 0px;
-	top: 0px;
-}
-#Hospitals {
-	position: absolute;
-	left: 57.5px;
-	top: 18px;
-	overflow: visible;
-	width: 132px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 30px;
-	color: rgba(245,245,245,1);
-}
-#ID019_hospital {
-	position: absolute;
-	width: 45px;
-	height: 45px;
-	left: 10px;
-	top: 15px;
-	overflow: visible;
-}
 #camp_btn {
 	position: absolute;
 	width: 330px;
 	height: 75px;
-	left: 990px;
+	left: 1210px;
 	top: 0px;
 	overflow: visible;
 	cursor: pointer;
@@ -295,17 +245,56 @@
 	top: 15px;
 	overflow: visible;
 }
+#req_button {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 550px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_16_bo {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Requests {
+	position: absolute;
+	left: 128px;
+	top: 18px;
+	overflow: visible;
+	width: 127px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#important {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 77px;
+	top: 15px;
+	overflow: visible;
+}
 #madeby {
 	position: absolute;
-	width: 375px;
+	width: 373px;
 	height: 47px;
-	left: 773px;
-	top: 889.5px;
+	left: 774px;
+	top: 922px;
 	overflow: visible;
 }
 #with____by_FAM_ILY {
 	position: absolute;
-	left: 59px;
+	left: 57px;
 	top: 0px;
 	overflow: visible;
 	width: 317px;
@@ -317,11 +306,11 @@
 	font-size: 35px;
 	color: rgba(49,49,49,1);
 }
-#ID045_coding_grey3 {
+#programming_grey {
 	position: absolute;
 	width: 45px;
-	height: 35.793px;
+	height: 45px;
 	left: 0px;
-	top: 5.5px;
+	top: 2px;
 	overflow: visible;
 }

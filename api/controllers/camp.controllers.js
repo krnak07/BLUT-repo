@@ -4,6 +4,38 @@ var camp = mongoose.model('camp')
 var bloodbank = mongoose.model('bloodbank');
 var profile = mongoose.model('profile');
 
+
+function addbloodgroups(cam) {
+    bloodgroup = ["A+","A-","B+","B-","O+","O-","AB+","AB-"];
+    var i= 0;
+    while(i<bloodgroup.length)
+    {
+        cam.BloodAvailability.push({
+            bloodType: bloodgroup[i],
+            quantity: 0
+
+        });
+
+        cam.save(function(err,bankupdated)
+        { });
+
+        i+=1;
+    }
+};
+function updatebloodunits(req,res,cam,bg,unit) {
+    var i = 0;
+    while(i<cam.BloodAvailability.length)
+    {
+        if(cam.BloodAvailability[i].bloodType == bg)
+        {
+            cam.BloodAvailability[i].quantity += unit;
+        }
+        i+=1;
+    }
+
+
+
+}
 module.exports.addNewCamp = function(req, res) {
 
   var id = req.params.bankID;
@@ -42,6 +74,7 @@ module.exports.addNewCamp = function(req, res) {
                 else
                 {
                   console.log('Camp Created to Bank : ', id);
+                    addbloodgroups(cam);
                     res
                         .status(200)
                         .json(cam)
@@ -126,6 +159,7 @@ module.exports.addNewcampdonor = function(req, res) {
                                             });
 
                                             pro.totalunits += parseInt(req.body.units);
+                                            updatebloodunits(req,res,cam,pro.bloodgroup,parseInt(req.body.units));
 
                                             pro.save(function(err,proupdated) {
 
@@ -185,6 +219,103 @@ module.exports.getAllDonors = function(req, res) {
 
 };
 
+function updatecampblooddetails(bank,cam,res){
+    bloodgroup = ["A+","A-","B+","B-","O+","O-","AB+","AB-"];
+    var i= 0;
+    bloodbank
+        .findById(bank.id)
+        .select('campdonationhistory')
+        .exec(function(err,bb){
+            if(err){
+                res
+                    .status(400)
+                    .json(err)
+            }
+            else{
+                while(i<bloodgroup.length)
+                {
+                    bb.campdonationhistory[bb.campdonationhistory.length-1].bloodlist.push({
+                        bloodType: bloodgroup[i],
+                        quantity: cam.BloodAvailability[i].quantity
+                    });
+                    i+=1;
+                }
+
+                bb.save(function(err,updatebb){
+                    if(err){
+                        res
+                            .status(400)
+                            .json(err)
+                    }
+                    else{ }
+                });
+            }
+        });
+}
+
+module.exports.closecamp = function(req,res){
+    var bId = req.params.bankID;
+    var cId = req.params.campID;
+    var d = new Date();
+    bloodbank
+        .findById(bId)
+        .exec(function(err,bb){
+            if(err)
+            {
+                res
+                    .status(400)
+                    .json(err)
+            }
+            else
+            {
+                camp
+                    .findById(cId)
+                    .exec(function(err,cam){
+                        if(err)
+                        {
+                            res
+                                .status(400)
+                                .json(err)
+                        }
+                        else if(cam.hosting != bId)
+                        {
+                            res
+                                .status(400)
+                                .json({"INVALID" : "Bloodbank Not associated with camp"})
+                        }
+                        else
+                        {
+
+                            bb.campdonationhistory.push({
+                                name : cam.name,
+                                dateofdonation : d
+                            });
+
+                            var i = 0;
+                            while(i<bb.BloodAvailability.length)
+                            {
+                                bb.BloodAvailability[i].quantity += cam.BloodAvailability[i].quantity;
+                                i+=1;
+                            }
+                            bb.save(function(err,upbb){
+                                if(err){
+                                    res
+                                        .status(400)
+                                        .json(err)
+                                }
+                                else{ updatecampblooddetails(upbb,cam,res); }
+                            });
+
+                            res
+                                .status(200)
+                                .json(bb)
+
+                        }
+                    });
+            }
+        });
+
+};
 module.exports.getOneCamp = function(req, res) {
   var bId = req.params.bankID;
   var camp_name = req.query.name;
@@ -256,5 +387,37 @@ module.exports.getAllcamps = function(req,res) {
 
                    });
            }
+        });
+};
+module.exports.getOnecamp = function(req,res) {
+    var bId = req.params.bankID;
+    var cId = req.params.campID;
+
+    bloodbank
+        .findById(bId)
+        .exec(function(err,bb){
+            if(err){
+                res
+                    .status(400)
+                    .json(err)
+            }
+            else{
+                camp
+                    .findById(cId)
+                    .exec(function(err,cam){
+                        if(err){
+                            res
+                                .status(400)
+                                .json(err)
+
+                        }
+                        else{
+                            res
+                                .status(200)
+                                .json(cam)
+                        }
+
+                    });
+            }
         });
 };

@@ -4,13 +4,9 @@ angular.module('bbApp')
 function mainbbcontroller($http,$routeParams,$location) {
   var vm = this;
   var id = sessionStorage.getItem('id');
+  vm.name = sessionStorage.getItem('bank_name');
   if(!id==''){
-    $http.get('/api/bloodbank/'+id+'/test').then(function(response) {
-      vm.dat = response.data._id;
-      vm.name = response.data.name;
-      vm.phone = response.data.phoneNo;
-      vm.email = response.data.email;
-      vm.license = response.data.liscense;
+    $http.get('/api/bloodbank/'+id).then(function(response) {
     })
         .catch(function(error){
           if(error.status == 404){
@@ -26,7 +22,7 @@ function mainbbcontroller($http,$routeParams,$location) {
 
 
   vm.ba = function(){
-    console.log('ba');
+    $location.path('/bloodbank/blood_availability');
   };
 
   vm.donation = function(){
@@ -34,7 +30,7 @@ function mainbbcontroller($http,$routeParams,$location) {
   };
 
   vm.camp = function(){
-    console.log('camp');
+    $location.path('/bloodbank/camp');
   };
 
   vm.goHome = function(){

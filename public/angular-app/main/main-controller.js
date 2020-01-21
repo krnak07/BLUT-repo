@@ -9,4 +9,7 @@ function maincontroller($location){
   vm.hospital = function(){
     $location.path('/hospital');
   };
+  vm.camps = function(){
+    $location.path('/camp');
+  };
 }

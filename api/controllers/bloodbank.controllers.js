@@ -1,7 +1,11 @@
 var mongoose = require('mongoose');
+var request = require("request");
 var firebase = require('firebase');
+require('firebase/storage');
+require('firebase/messaging');
 var bloodbank = mongoose.model('bloodbank');
 var profile = mongoose.model('profile');
+var hospitals = mongoose.model('hospital');
 
 const firebaseConfig = {
   apiKey: "AIzaSyARrRzk-qumZ7fAHD6y9NpTrEaT2q8lD5k",
@@ -12,7 +16,8 @@ const firebaseConfig = {
   messagingSenderId: "715930854454",
   appId: "1:715930854454:web:b4f14841505dee51"
 };
-var app = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+
 var auth = firebase.auth();
 
 
@@ -69,7 +74,7 @@ module.exports.bloodbankGetAll = function(req,res) {
 };
 
 function addbloodgroups(bank) {
-    bloodgroup = ["A+","A-","B+","O+","O-"];
+    bloodgroup = ["A+","A-","B+","B-","O+","O-","AB+","AB-"];
     var i= 0;
     while(i<bloodgroup.length)
     {
@@ -132,7 +137,7 @@ module.exports.blooadbankAddOne = function(req,res){
                                                 user.sendEmailVerification()
                                                     .then(function () {
                                                         res
-                                                            .status(200)
+                                                            .status(201)
                                                             .json(bank);
                                                     });
                                                     addbloodgroups(bank);
@@ -178,7 +183,7 @@ function updatebloodunits(req,res,bank,bg,unit) {
 
 }
 
-module.exports.donate = function(req,res){
+module.exports.donordonate = function(req,res){
   var bId = req.params.bankID;
   var d = new Date();
 
@@ -232,7 +237,7 @@ module.exports.donate = function(req,res){
 
                             }
                             else{
-                                bank.donationhistory.push({
+                                bank.donordonationhistory.push({
                                     donor_name : pro.firstname,
                                     phoneNo : pro.phoneNo,
                                     dateofdonation : d,
@@ -265,12 +270,12 @@ module.exports.donate = function(req,res){
 
 };
 
-module.exports.getAllDonations = function(req,res) {
+module.exports.getAllDonorDonations = function(req,res) {
   bId = req.params.bankID;
 
   bloodbank
       .findById(bId)
-      .select('donationhistory')
+      .select('donordonationhistory')
       .exec(function(err,bank){
         if(err){
           res
@@ -283,23 +288,181 @@ module.exports.getAllDonations = function(req,res) {
               .json(bank)
         }
       })
+};
+
+function checkbloodavailablity(bank,bg,units) {
+    var i = 0;
+    while(i<bank.BloodAvailability.length)
+    {
+        if(bank.BloodAvailability[i].bloodType == bg)
+        {
+            if(bank.BloodAvailability[i].quantity>=units){
+                bank.BloodAvailability[i].quantity -= units;
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        i+=1;
+    }
+}
+module.exports.hospitaldonate = function(req,res){
+    var bId = req.params.bankID;
+    var d = new Date();
+
+    bloodbank
+        .findById(bId)
+        .exec(function(err,bank){
+            if(err){
+                res
+                    .status(400)
+                    .json(err)
+            }
+            else{
+                hospitals
+                    .findById(req.body.hosp_id)
+                    .exec(function(err,hosp){
+                        if(err){
+                            res
+                                .status(400)
+                                .json(err)
+                        }
+                        else{
+                            if(checkbloodavailablity(bank,req.body.bg,parseInt(req.body.units))){
+                                hosp.bloodbankdonationhistory.push({
+                                    name : bank.name,
+                                    dateofdonation : d,
+                                    bloodgroup : req.body.bg,
+                                    unitsofblood : parseInt(req.body.units)
+                                });
+                                hosp.save(function(err,uphosp){
+                                    if(err){
+                                        res
+                                            .status(400)
+                                            .json(err)
+                                    }
+                                    else{
+                                        bank.donatedhistory.push({
+                                            name : hosp.name,
+                                            dateofdonation : d,
+                                            bloodgroup : req.body.bg,
+                                            unitsofblood : parseInt(req.body.units)
+                                        });
+                                        bank.save(function(err,upbank){
+                                            if(err){
+                                                res
+                                                    .status(400)
+                                                    .json(err)
+                                            }
+                                            else{
+                                                res
+                                                    .status(200)
+                                                    .json(upbank)
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                            else{
+                                res
+                                    .status(400)
+                                    .json({"Message" : "Not Enough Blood"})
+                            }
+
+
+                        }
+                    })
+            }
+        })
+};
+module.exports.bb = function(req,res){
+    var bid = req.params.bankID;
+    bloodbank
+        .findById(bid)
+        .exec(function(err,bb){
+            if(err){
+
+            }
+            else{
+                res
+                    .status(200)
+                    .json(bb)
+            }
+        })
 };
 
 module.exports.test_1 = function(req,res){
-  bId = req.params.bankID;
 
-  bloodbank
-      .findById(bId)
-      .exec(function(err,bank){
-        if(err){
-          res
-              .status(400)
-              .json(err)
-        }
-        else{
-          res
-              .status(200)
-              .json(bank)
-        }
-      })
+    var options = {
+        method: 'POST',
+        url: 'https://aadhaarnumber-verify.p.rapidapi.com/Uidverify',
+        qs: {
+            uidnumber: '368116792602',
+            clientid: '111',
+            method: 'uidverify',
+            txn_id: '123456'
+        },
+        headers: {
+            'x-rapidapi-host': 'aadhaarnumber-verify.p.rapidapi.com',
+            'x-rapidapi-key': '99a0ac0e75msh71c954386d154c5p1e3512jsn5ba9fc4e38ab',
+            'content-type': 'application/x-www-form-urlencoded'
+        },
+        form: {}
+    };
+
+    request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+
+        console.log(body);
+    });
 };
+
+module.exports.test_2=function(req,res){
+    const msg = firebase.messaging();
+    msg.usePublicVapidKey('BDnKskUcVoeK8-w_mMStz6Dx5L2Yye1vN-J1sQZvecgb6cKIJjunsjjOjaBwybzI8BrT8r4ZLdI8-j1o6XIVDaU');
+    Notification.requestPermission()
+        .then(function(permission){
+            if(permission == 'granted'){
+                console.log('Permission granted')
+
+            }
+            else{
+                console.log('unable to get permission');
+            }
+        })
+        .catch(function(){
+            console.log('error');
+        })
+    /*msg.getToken()
+        .then(function(curToken){
+            if(curToken) {
+                sendTokenToServer(curToken);
+                updateUIForPushEnabled(currentToken);
+            }
+            else{
+                console.log('no ID token Available, Request permission to generate one');
+                updateUIForPushPermissionRequired();
+                setTokenSentToServer(false);
+            }
+
+        })
+        .catch(function(err){
+            console.log('An error occurred while retrieving token. ', err);
+            showToken('Error retrieving Instance ID token. ', err);
+            setTokenSentToServer(false);
+        });
+
+    msg.onTokenRefresh(function(){
+        msg.getToken()
+            .then(function(refreshToken){
+                console.log('Token refreshed.');
+                setTokenSentToServer(false);
+                sendTokenToServer(refreshedToken);
+            })
+            .catch(function (err) {
+                console.log('Unable to retrieve refreshed token ', err);
+                showToken('Unable to retrieve refreshed token ', err);
+            })
+    });*/
+}

@@ -29,28 +29,37 @@ router
     .route('/bloodbank/login')
     .post(ctrlbloodbank.bloodbankGetOne);
 router
-    .route('/bloodbank/:bankID/donate')
-    .post(ctrlbloodbank.donate);
+    .route('/bloodbank/:bankID')
+    .get(ctrlbloodbank.bb);
+router
+    .route('/bloodbank/:bankID/donor_donate')
+    .post(ctrlbloodbank.donordonate);
+router
+    .route('/bloodbank/:bankID/hospital_donate')
+    .post(ctrlbloodbank.hospitaldonate);
 router
     .route('/bloodbank/:bankID/alldonations')
-    .get(ctrlbloodbank.getAllDonations);
+    .get(ctrlbloodbank.getAllDonorDonations);
 
 //Camps
 router
     .route('/bloodbank/:bankID/camp_new')
     .post(ctrlcamp.addNewCamp);
 router
-    .route('/bloodbank/:bankID/camps/getone')
-    .get(ctrlcamp.getOneCamp);
-router
     .route('/bloodbank/:bankID/allcamps')
     .get(ctrlcamp.getAllcamps);
+router
+    .route('/bloodbank/:bankID/camps/:campID')
+    .get(ctrlcamp.getOnecamp);
 router
     .route('/bloodbank/:bankID/camps/:campID/donors')
     .get(ctrlcamp.getAllDonors);
 router
     .route('/bloodbank/:bankID/camps/:campID/donation')
     .post(ctrlcamp.addNewcampdonor);
+router
+    .route('/bloodbank/:bankID/camps/:campID/close')
+    .post(ctrlcamp.closecamp);
 
 //Hospitals
 router
@@ -68,6 +77,10 @@ router
 router
     .route('/hospitals/:hospID/donate')
     .post(ctrlhosp.donation);
+router
+    .route('/hospitals/:hospID/donors')
+    .get(ctrlhosp.getAlldonors);
+
 
 
 
@@ -78,8 +91,8 @@ router
     .route('/hospital/:hospID/test')
     .get(ctrlhosp.test_1);
 router
-    .route('/bloodbank/:bankID/test')
-    .get(ctrlbloodbank.test_1);
+    .route('/bloodbank/test')
+    .post(ctrlbloodbank.test_2);
 router
     .route('/hospitals/:hospID/test')
     .post(ctrlhosp.test_2);

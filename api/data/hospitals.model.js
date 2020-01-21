@@ -23,6 +23,25 @@ var hospdonor = new mongoose.Schema({
     required : true
   }
 });
+
+var bbdonation = new mongoose.Schema({
+    name : {
+        type: String,
+        requierd: true
+    },
+    dateofdonation : {
+        type : Date,
+        required : true
+    },
+    bloodgroup : {
+        type : String,
+        required : true
+    },
+    unitsofblood : {
+        type: Number,
+        required : true
+    }
+});
 var hospitalSchema = new mongoose.Schema({
     name:{
         type : String,
@@ -57,6 +76,7 @@ var hospitalSchema = new mongoose.Schema({
       required : true
     },
     donationhistory : [hospdonor],
+    bloodbankdonationhistory : [bbdonation],
 
 });
 

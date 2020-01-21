@@ -1,0 +1,902 @@
+.mediaViewInfo {
+	--web-view-name: web-bb-BA;
+	--web-view-id: web_bb_BA;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_bb_BA;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_bb_BA {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-bb-BA;
+	--web-view-id: web_bb_BA;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+.Rectangle_15 {
+	position: absolute;
+	overflow: visible;
+	width: 220px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Group_1 {
+	position: absolute;
+	width: 168px;
+	height: 61.436px;
+	left: 26px;
+	top: 7px;
+	overflow: visible;
+}
+#bloodbank_name {
+	position: absolute;
+	width: 380px;
+	height: 75px;
+	left: 1540px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_23 {
+	position: absolute;
+	overflow: visible;
+	width: 380px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Hospitals {
+	position: absolute;
+	left: 57.5px;
+	top: 18px;
+	overflow: visible;
+	width: 132px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#ID019_hospital {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 10px;
+	top: 15px;
+	overflow: visible;
+}
+#home_btn {
+	position: absolute;
+	width: 23px;
+	left: 1871px;
+	top: 26px;
+	overflow: visible;
+	cursor: pointer;
+}
+#home {
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#refresh_btn {
+	position: absolute;
+	width: 25px;
+	left: 1838px;
+	top: 25px;
+	overflow: visible;
+	cursor: pointer;
+}
+#update_arrows {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#BA_btn {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 220px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_16 {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Blood_Availability {
+	position: absolute;
+	left: 64px;
+	top: 18px;
+	overflow: visible;
+	width: 250px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(225,83,83,1);
+}
+#ID018_flask {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 17px;
+	top: 15px;
+	overflow: visible;
+}
+#donation_btn {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 880px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_17 {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Donations {
+	position: absolute;
+	left: 116px;
+	top: 18px;
+	overflow: visible;
+	width: 146px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#ID008_donor_1 {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 69px;
+	top: 15px;
+	overflow: visible;
+}
+#camp_btn {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 1210px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_18 {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Camps {
+	position: absolute;
+	left: 142px;
+	top: 18px;
+	overflow: visible;
+	width: 95px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#blood {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 95px;
+	top: 15px;
+	overflow: visible;
+}
+#req_button {
+	position: absolute;
+	width: 330px;
+	height: 75px;
+	left: 550px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_16_bn {
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+}
+#Requests {
+	position: absolute;
+	left: 128px;
+	top: 18px;
+	overflow: visible;
+	width: 127px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#important {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 77px;
+	top: 15px;
+	overflow: visible;
+}
+#BG {
+	position: absolute;
+	width: 1832px;
+	height: 685px;
+	left: 44px;
+	top: 134px;
+	overflow: visible;
+}
+#O_ {
+	position: absolute;
+	width: 208px;
+	height: 378px;
+	left: 1578px;
+	top: 1px;
+	overflow: visible;
+}
+#A_ {
+	position: absolute;
+	width: 217px;
+	height: 378px;
+	left: 42px;
+	top: 6px;
+	overflow: visible;
+}
+#A__bt {
+	position: absolute;
+	width: 211px;
+	height: 378px;
+	left: 266px;
+	top: 6px;
+	overflow: visible;
+}
+#B_ {
+	position: absolute;
+	width: 211px;
+	height: 369px;
+	left: 485px;
+	top: 6px;
+	overflow: visible;
+}
+#B__bv {
+	position: absolute;
+	width: 204px;
+	height: 378px;
+	left: 707px;
+	top: 6px;
+	overflow: visible;
+}
+#O__bw {
+	position: absolute;
+	width: 210px;
+	height: 378px;
+	left: 1354px;
+	top: 1px;
+	overflow: visible;
+}
+#drug {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 0px;
+	top: 385px;
+	overflow: visible;
+}
+#drug_by {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 221px;
+	top: 385px;
+	overflow: visible;
+}
+#drug_bz {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 440px;
+	top: 385px;
+	overflow: visible;
+}
+#drug_b {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 659px;
+	top: 385px;
+	overflow: visible;
+}
+#drug_ca {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 879px;
+	top: 385px;
+	overflow: visible;
+}
+#drug_cb {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 1096px;
+	top: 385px;
+	overflow: visible;
+}
+#drug_cc {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 1309px;
+	top: 385px;
+	overflow: visible;
+}
+#drug_cd {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 1532px;
+	top: 385px;
+	overflow: visible;
+}
+#Aneg_lvl {
+	position: absolute;
+	width: 92px;
+	height: 120.4px;
+	left: 136px;
+	top: 506px;
+	overflow: visible;
+}
+#ID7 {
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(36,32,33,1);
+}
+.Rectangle_29 {
+	position: absolute;
+	overflow: visible;
+	width: 92px;
+	height: 105.4px;
+	left: 0px;
+	top: 15px;
+}
+#UNITS {
+	position: absolute;
+	left: 31px;
+	top: 84px;
+	overflow: visible;
+	width: 31px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ID2450_ml {
+	position: absolute;
+	left: 27px;
+	top: 100px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ABneg_lvl {
+	position: absolute;
+	width: 92px;
+	height: 120.4px;
+	left: 1015px;
+	top: 506px;
+	overflow: visible;
+}
+#ID7_cb {
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(36,32,33,1);
+}
+.Rectangle_29_cc {
+	position: absolute;
+	overflow: visible;
+	width: 92px;
+	height: 105.4px;
+	left: 0px;
+	top: 15px;
+}
+#UNITS_cd {
+	position: absolute;
+	left: 31px;
+	top: 84px;
+	overflow: visible;
+	width: 31px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ID2450_ml_ce {
+	position: absolute;
+	left: 27px;
+	top: 100px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#Oneg_lvl {
+	position: absolute;
+	width: 92px;
+	height: 120.4px;
+	left: 1445px;
+	top: 506px;
+	overflow: visible;
+}
+#ID7_cg {
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(36,32,33,1);
+}
+.Rectangle_29_ch {
+	position: absolute;
+	overflow: visible;
+	width: 92px;
+	height: 105.4px;
+	left: 0px;
+	top: 15px;
+}
+#UNITS_ci {
+	position: absolute;
+	left: 31px;
+	top: 84px;
+	overflow: visible;
+	width: 31px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ID2450_ml_cj {
+	position: absolute;
+	left: 27px;
+	top: 100px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#Bneg_lvl {
+	position: absolute;
+	width: 92px;
+	height: 120.4px;
+	left: 575px;
+	top: 506px;
+	overflow: visible;
+}
+#ID7_cl {
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(36,32,33,1);
+}
+.Rectangle_29_cm {
+	position: absolute;
+	overflow: visible;
+	width: 92px;
+	height: 105.4px;
+	left: 0px;
+	top: 15px;
+}
+#UNITS_cn {
+	position: absolute;
+	left: 31px;
+	top: 84px;
+	overflow: visible;
+	width: 31px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ID2450_ml_co {
+	position: absolute;
+	left: 27px;
+	top: 100px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#Apos_lvl {
+	position: absolute;
+	width: 92px;
+	height: 120.4px;
+	left: 357px;
+	top: 506px;
+	overflow: visible;
+}
+#ID7_cq {
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(36,32,33,1);
+}
+.Rectangle_29_cr {
+	position: absolute;
+	overflow: visible;
+	width: 92px;
+	height: 105.4px;
+	left: 0px;
+	top: 15px;
+}
+#UNITS_cs {
+	position: absolute;
+	left: 31px;
+	top: 84px;
+	overflow: visible;
+	width: 31px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ID2450_ml_ct {
+	position: absolute;
+	left: 27px;
+	top: 100px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ABpos_lvl {
+	position: absolute;
+	width: 92px;
+	height: 120.4px;
+	left: 1233px;
+	top: 506px;
+	overflow: visible;
+}
+#ID7_cv {
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(36,32,33,1);
+}
+.Rectangle_29_cw {
+	position: absolute;
+	overflow: visible;
+	width: 92px;
+	height: 105.4px;
+	left: 0px;
+	top: 15px;
+}
+#UNITS_cx {
+	position: absolute;
+	left: 31px;
+	top: 84px;
+	overflow: visible;
+	width: 31px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ID2450_ml_cy {
+	position: absolute;
+	left: 27px;
+	top: 100px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#Opos_lvl {
+	position: absolute;
+	width: 92px;
+	height: 120.4px;
+	left: 1667px;
+	top: 506px;
+	overflow: visible;
+}
+#ID7_c {
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(36,32,33,1);
+}
+.Rectangle_29_c {
+	position: absolute;
+	overflow: visible;
+	width: 92px;
+	height: 105.4px;
+	left: 0px;
+	top: 15px;
+}
+#UNITS_c {
+	position: absolute;
+	left: 31px;
+	top: 84px;
+	overflow: visible;
+	width: 31px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ID2450_ml_c {
+	position: absolute;
+	left: 27px;
+	top: 100px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#Bpos_lvl {
+	position: absolute;
+	width: 92px;
+	height: 120.4px;
+	left: 796px;
+	top: 506px;
+	overflow: visible;
+}
+#ID7_da {
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(36,32,33,1);
+}
+.Rectangle_29_da {
+	position: absolute;
+	overflow: visible;
+	width: 92px;
+	height: 105.4px;
+	left: 0px;
+	top: 15px;
+}
+#UNITS_da {
+	position: absolute;
+	left: 31px;
+	top: 84px;
+	overflow: visible;
+	width: 31px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#ID2450_ml_da {
+	position: absolute;
+	left: 27px;
+	top: 100px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(36,32,33,1);
+}
+#AB_ {
+	position: absolute;
+	width: 211px;
+	height: 378px;
+	left: 924px;
+	top: 0px;
+	overflow: visible;
+}
+#AB__da {
+	position: absolute;
+	width: 207px;
+	height: 378px;
+	left: 1143px;
+	top: 1px;
+	overflow: visible;
+}
+#madeby {
+	position: absolute;
+	width: 373px;
+	height: 47px;
+	left: 774px;
+	top: 922px;
+	overflow: visible;
+}
+#with____by_FAM_ILY {
+	position: absolute;
+	left: 57px;
+	top: 0px;
+	overflow: visible;
+	width: 317px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#programming_grey {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 0px;
+	top: 2px;
+	overflow: visible;
+}

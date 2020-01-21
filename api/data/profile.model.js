@@ -63,7 +63,6 @@ var profileSchema = new mongoose.Schema({
   },
   bloodgrpCerti : {
     type : String, //file Upload
-    required : true
   },
   totalunits : {
     type : Number

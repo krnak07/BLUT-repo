@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-hosp-Donation</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/hosp-donation/web_hosp_Donation.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/hosp-donation/web_hosp_Donation.js"></script>
+</head>
+<body>
+<div id="web_hosp_Donation">
+	<div id="Group_6">
+		<button id="okay_btn" class="okay_btn" ng-click="vm.donate_okay()">
+			<svg class="Rectangle_4">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(224,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_4" rx="18" ry="18" x="0" y="0" width="99" height="36">
+				</rect>
+			</svg>
+			<div id="Okay">
+				<span>Okay</span>
+			</div>
+		</button>
+		<button id="cancel_btn" class="cancel_btn" ng-click="vm.donate_cancel()">
+			<svg class="Rectangle_5">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(224,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_5" rx="18" ry="18" x="0" y="0" width="99" height="36">
+				</rect>
+			</svg>
+			<div id="cancel">
+				<span>cancel</span>
+			</div>
+		</button>
+		<button id="check_btn" class="check_btn" ng-click="vm.donate_check()">
+			<svg class="Rectangle_13">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_13" rx="18" ry="18" x="0" y="0" width="99" height="36">
+				</rect>
+			</svg>
+			<div id="Check">
+				<span>Check</span>
+			</div>
+		</button>
+		<div id="phone_inp" class="phone_inp">
+			<svg class="Rectangle_2">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="21" ry="21" x="0" y="0" width="277" height="42">
+				</rect>
+			</svg>
+			<img id="phone_call" src="angular-app/hosp-donation/phone_call.png" srcset="angular-app/hosp-donation/phone_call.png 1x, angular-app/hosp-donation/phone_call@2x.png 2x">
+			<input type="text" class="usr_input" ng-model="vm.phoneNo">
+				<rect fill="rgba(255,255,255,1)" id="usr_input" rx="0" ry="0" x="0" y="0" width="214" height="32">
+				</rect>
+			</input>
+		</div>
+		<div id="unit_inp" class="unit_inp">
+			<svg class="Rectangle_3">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_3" rx="21" ry="21" x="0" y="0" width="277" height="42">
+				</rect>
+			</svg>
+			<img id="science" src="angular-app/hosp-donation/science.png" srcset="angular-app/hosp-donation/science.png 1x, angular-app/hosp-donation/science@2x.png 2x">
+			<input type="text" class="usr_input_bh" ng-model="vm.dunits">
+				<rect fill="rgba(255,255,255,1)" id="usr_input_bh" rx="0" ry="0" x="0" y="0" width="214" height="32">
+				</rect>
+			</input>
+		</div>
+		<svg class="Rectangle_25">
+			<rect fill="rgba(245,245,245,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_25" rx="13" ry="13" x="0" y="0" width="369" height="45">
+			</rect>
+		</svg>
+		<svg class="Rectangle_26">
+			<rect fill="rgba(245,245,245,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_26" rx="13" ry="13" x="0" y="0" width="369" height="45">
+			</rect>
+		</svg>
+		<svg class="Rectangle_27">
+			<rect fill="rgba(245,245,245,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_27" rx="13" ry="13" x="0" y="0" width="369" height="45">
+			</rect>
+		</svg>
+		<div id="NAME_______________________">
+			<span>NAME                     : </span>
+		</div>
+		<div id="Blood_Group_____________">
+			<span>Blood Group          :  </span>
+		</div>
+		<div id="Eligible_to_Donate____">
+			<span>Eligible to Donate :  </span>
+		</div>
+		<div id="Kiran_A_K">
+			<span>{{vm.dname}}</span>
+		</div>
+		<div id="B_">
+			<span>{{vm.bg}}</span>
+		</div>
+		<div id="YES">
+			<span>{{vm.el}}</span>
+		</div>
+	</div>
+	<svg class="Rectangle_15">
+		<rect fill="rgba(225,83,83,1)" id="Rectangle_15" rx="0" ry="0" x="0" y="0" width="220" height="75">
+		</rect>
+	</svg>
+	<img id="Group_1" src="angular-app/hosp-donation/Group_1.png" srcset="angular-app/hosp-donation/Group_1.png 1x, angular-app/hosp-donation/Group_1@2x.png 2x">
+	<button id="donation_btn" class="donation_btn">
+		<svg class="Rectangle_17">
+			<rect fill="rgba(245,245,245,1)" id="Rectangle_17" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Donations">
+			<span>Donations</span>
+		</div>
+		<img id="ID008_donor_1" src="angular-app/hosp-donation/ID008_donor_1.png" srcset="angular-app/hosp-donation/ID008_donor_1.png 1x, angular-app/hosp-donation/ID008_donor_1@2x.png 2x">
+	</button>
+	<button id="BB_btn" class="BB_btn" ng-click="vm.BB()">
+		<svg class="Rectangle_16">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_16" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Bloodbanks">
+			<span>Bloodbanks</span>
+		</div>
+		<img id="blood" src="angular-app/hosp-donation/blood.png" srcset="angular-app/hosp-donation/blood.png 1x, angular-app/hosp-donation/blood@2x.png 2x">
+	</button>
+	<div id="Hospital_NAME" class="Hospital_NAME">
+		<svg class="Rectangle_23">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_23" rx="0" ry="0" x="0" y="0" width="380" height="75">
+			</rect>
+		</svg>
+		<div id="Hospitals">
+			<span>{{vm.hosp_name}}</span>
+		</div>
+		<img id="hospital_4" src="angular-app/hosp-donation/hospital_4.png" srcset="angular-app/hosp-donation/hospital_4.png 1x, angular-app/hosp-donation/hospital_4@2x.png 2x">
+	</div>
+	<button id="home_btn" class="home_btn" ng-click="vm.goHome()">
+		<img id="home" src="angular-app/hosp-donation/home.png" srcset="angular-app/hosp-donation/home.png 1x, angular-app/hosp-donation/home@2x.png 2x">
+	</button>
+	<button id="refresh_btn" class="refresh_btn" ng-click="vm.refres()">
+		<img id="update_arrows" src="angular-app/hosp-donation/update_arrows.png" srcset="angular-app/hosp-donation/update_arrows.png 1x, angular-app/hosp-donation/update_arrows@2x.png 2x">
+	</button>
+	<button id="donor_btn" class="donor_btn" ng-click="vm.donor()">
+		<svg class="Rectangle_18">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_18" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Donors">
+			<span>Donors</span>
+		</div>
+		<img id="ID007_donor" src="angular-app/hosp-donation/ID007_donor.png" srcset="angular-app/hosp-donation/ID007_donor.png 1x, angular-app/hosp-donation/ID007_donor@2x.png 2x">
+	</button>
+	<div id="req_btn" class="req_btn">
+		<svg class="Rectangle_16_ce">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_16_ce" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Request">
+			<span>Request</span>
+		</div>
+		<img id="mail" src="angular-app/hosp-donation/mail.png" srcset="angular-app/hosp-donation/mail.png 1x, angular-app/hosp-donation/mail@2x.png 2x">
+	</div>
+	<div id="madeby">
+		<div id="with____by_FAM_ILY">
+			<span>with ❤️ by </span><span style="font-style:normal;font-weight:bold;">FAM-ILY</span>
+		</div>
+		<img id="programming_grey" src="angular-app/hosp-donation/programming_grey.png" srcset="angular-app/hosp-donation/programming_grey.png 1x, angular-app/hosp-donation/programming_grey@2x.png 2x">
+	</div>
+	<div id="Group_14">
+		<svg class="Rectangle_34">
+			<rect fill="rgba(255,255,255,1)" id="Rectangle_34" rx="0" ry="0" x="0" y="0" width="822" height="753">
+			</rect>
+		</svg>
+		<svg class="Line_8" viewBox="0 0 822 2">
+			<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_8" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_11" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_11" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_32" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_32" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_20" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_20" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_31" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_31" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_37" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_37" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_13" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_13" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_30" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_30" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_19" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_19" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_29" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_29" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_34" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_34" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_9" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_9" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_28" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_28" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_18" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_18" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_27" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_27" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_38" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_38" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_14" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_14" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_26" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_26" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_17" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_17" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_25" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_25" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_35" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_35" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_10" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_10" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_24" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_24" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_16" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_16" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_23" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_23" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_36" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_36" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_12" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_12" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_22" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_22" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_39" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_39" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_15" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_15" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_21" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_21" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_33" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_33" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<svg class="Line_40" viewBox="0 0 822 1">
+			<path fill="transparent" stroke="rgba(146,146,146,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_40" d="M 0 0 L 822 0">
+			</path>
+		</svg>
+		<div id="DONOR_LIST">
+			<span>DONOR LIST</span>
+		</div>
+		<div id="Group_4">
+			<div id="Unit">
+				<span>Unit</span>
+			</div>
+			<img id="ID036_blood_bag" src="angular-app/hosp-donation/ID036_blood_bag.png" srcset="angular-app/hosp-donation/ID036_blood_bag.png 1x, angular-app/hosp-donation/ID036_blood_bag@2x.png 2x">
+		</div>
+		<div id="Date">
+			<span>Date</span>
+		</div>
+		<div id="Group_2">
+			<div id="Phone_No">
+				<span>Phone No</span>
+			</div>
+			<img id="phone_receiver" src="angular-app/hosp-donation/phone_receiver.png" srcset="angular-app/hosp-donation/phone_receiver.png 1x, angular-app/hosp-donation/phone_receiver@2x.png 2x">
+		</div>
+		<div id="Group_3">
+			<div id="Name">
+				<span>Name</span>
+			</div>
+			<img id="stick_man" src="angular-app/hosp-donation/stick_man.png" srcset="angular-app/hosp-donation/stick_man.png 1x, angular-app/hosp-donation/stick_man@2x.png 2x">
+		</div>
+		<div id="Group_1_du">
+			<div id="Bloodgroup">
+				<span>Bloodgroup</span>
+			</div>
+			<img id="ID025_immune_system" src="angular-app/hosp-donation/ID025_immune_system.png" srcset="angular-app/hosp-donation/ID025_immune_system.png 1x, angular-app/hosp-donation/ID025_immune_system@2x.png 2x">
+		</div>
+		<div id="Kiran">
+			<p ng-repeat="x in vm.dat">{{x.donor_name}}<br></p>
+		</div>
+		<div id="B__dy">
+			<p ng-repeat="x in vm.dat">{{x.bloodgroup}}<br></p>
+		</div>
+		<div id="ID0_5">
+			<p ng-repeat="x in vm.dat">{{x.unitsofblood}}<br></p>
+		</div>
+		<div id="ID07_11_1999">
+			<p ng-repeat="x in vm.da track by $index">{{x}}<br></p>
+		</div>
+		<div id="ID9487291799">
+			<p ng-repeat="x in vm.dat">{{x.phoneNo}}<br></p>
+		</div>
+		<img id="time_and_date" src="angular-app/hosp-donation/time_and_date.png" srcset="angular-app/hosp-donation/time_and_date.png 1x, angular-app/hosp-donation/time_and_date@2x.png 2x">
+		<img id="left_arrow" src="angular-app/hosp-donation/left_arrow.png" srcset="angular-app/hosp-donation/left_arrow.png 1x, angular-app/hosp-donation/left_arrow@2x.png 2x">
+		<img id="right_arrow__2_" src="angular-app/hosp-donation/right_arrow__2_.png" srcset="angular-app/hosp-donation/right_arrow__2_.png 1x, angular-app/hosp-donation/right_arrow__2_@2x.png 2x">
+	</div>
+</div>
+</body>
+</html>

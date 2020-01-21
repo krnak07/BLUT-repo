@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-camp-selection</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/camp-selection/web_camp_selection.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/camp-selection/web_camp_selection.js"></script>
+</head>
+<body>
+<div id="web_camp_selection">
+	<svg class="Rectangle_15">
+		<rect fill="rgba(225,83,83,1)" id="Rectangle_15" rx="0" ry="0" x="0" y="0" width="330.2" height="75">
+		</rect>
+	</svg>
+	<img id="Group_1" src="angular-app/camp-selection/Group_1.png" srcset="angular-app/camp-selection/Group_1.png 1x, angular-app/camp-selection/Group_1@2x.png 2x">
+	<div id="BA_btn" class="BA_btn">
+		<svg class="Path_4" viewBox="0 0 330.2 75">
+			<path fill="rgba(225,83,83,1)" id="Path_4" d="M 0 0 L 330.2000122070313 0 L 330.2000122070313 75 L 0 75 L 0 0 Z">
+			</path>
+		</svg>
+		<div id="Blood_Availability">
+			<span>Blood Availability</span>
+		</div>
+		<img id="ID018_flask" src="angular-app/camp-selection/ID018_flask.png" srcset="angular-app/camp-selection/ID018_flask.png 1x, angular-app/camp-selection/ID018_flask@2x.png 2x">
+	</div>
+	<div id="donation_btn" class="donation_btn">
+		<svg class="Rectangle_17">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_17" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Donations">
+			<span>Donations</span>
+		</div>
+		<img id="ID008_donor_1" src="angular-app/camp-selection/ID008_donor_1.png" srcset="angular-app/camp-selection/ID008_donor_1.png 1x, angular-app/camp-selection/ID008_donor_1@2x.png 2x">
+	</div>
+	<div id="hospname" class="hospname">
+		<svg class="Rectangle_18">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_18" rx="0" ry="0" x="0" y="0" width="930.7" height="75">
+			</rect>
+		</svg>
+		<div id="Hospitals">
+			<span>{{vm.bank_name}}</span>
+		</div>
+		<img id="ID019_hospital" src="angular-app/camp-selection/ID019_hospital.png" srcset="angular-app/camp-selection/ID019_hospital.png 1x, angular-app/camp-selection/ID019_hospital@2x.png 2x">
+	</div>
+	<div id="Select_a_CAMP">
+		<span>Select a CAMP</span>
+	</div>
+	<div id="camp_name" class="camp_name">
+		<svg class="Rectangle_30">
+			<rect fill="rgba(245,245,245,1)" stroke="rgba(49,49,49,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_30" rx="0" ry="0" x="0" y="0" width="536" height="50">
+				<div class='dropdown-content'>
+					<div ng-repeat="x in vm.data">
+						<a href="#!/camp/{{x._id}}">{{x.name}}</a>
+					</div>
+
+				</div>
+			</rect>
+		</svg>
+		<img id="triangle" src="angular-app/camp-selection/triangle.png" srcset="angular-app/camp-selection/triangle.png 1x, angular-app/camp-selection/triangle@2x.png 2x">
+	</div>
+	<div id="home_btn" class="home_btn">
+		<img id="home" src="angular-app/camp-selection/home.png" srcset="angular-app/camp-selection/home.png 1x, angular-app/camp-selection/home@2x.png 2x">
+	</div>
+	<div id="refresh_btn" class="refresh_btn">
+		<img id="update_arrows" src="angular-app/camp-selection/update_arrows.png" srcset="angular-app/camp-selection/update_arrows.png 1x, angular-app/camp-selection/update_arrows@2x.png 2x">
+	</div>
+	<div id="madeby">
+		<div id="with____by_FAM_ILY">
+			<span>with ❤️ by </span><span style="font-style:normal;font-weight:bold;">FAM-ILY</span>
+		</div>
+		<img id="programming_grey" src="angular-app/camp-selection/programming_grey.png" srcset="angular-app/camp-selection/programming_grey.png 1x, angular-app/camp-selection/programming_grey@2x.png 2x">
+	</div>
+</div>
+</body>
+</html>
