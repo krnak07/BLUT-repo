@@ -16,6 +16,9 @@ function hospdonorscontroller($http,$routeParams,$location,$route){
     vm.BB = function(){
         $location.path('/hospital/bloodbanks');
     };
+    vm.request = function(){
+        $location.path('/hospital/request');
+    }
     vm.goHome = function () {
         $location.path('/hospital/home');
     };

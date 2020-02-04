@@ -93,6 +93,9 @@ function hospdonationcontroller($http,$routeParams,$location,$route){
     vm.donor = function () {
         $location.path('/hospital/donor');
     };
+    vm.request = function(){
+        $locatino.path('/hospital/request');
+    };
 
     vm.goHome = function () {
         $location.path('/hospital/home');

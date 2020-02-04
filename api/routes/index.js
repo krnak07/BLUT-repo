@@ -40,6 +40,12 @@ router
 router
     .route('/bloodbank/:bankID/alldonations')
     .get(ctrlbloodbank.getAllDonorDonations);
+router
+    .route('/bloodbank/tokenregister')
+    .post(ctrlbloodbank.tokenregister);
+router
+    .route('/bloodbank/requests')
+    .post(ctrlbloodbank.requests);
 
 //Camps
 router
@@ -80,6 +86,9 @@ router
 router
     .route('/hospitals/:hospID/donors')
     .get(ctrlhosp.getAlldonors);
+router
+    .route('/hospitals/request')
+    .post(ctrlhosp.requests);
 
 
 
@@ -92,7 +101,7 @@ router
     .get(ctrlhosp.test_1);
 router
     .route('/bloodbank/test')
-    .post(ctrlbloodbank.test_2);
+    .get(ctrlbloodbank.test_1);
 router
     .route('/hospitals/:hospID/test')
     .post(ctrlhosp.test_2);

@@ -1,11 +1,15 @@
 var mongoose = require('mongoose');
 var request = require("request");
 var firebase = require('firebase');
+var serviceAccount = require('C:\\Users\\admin\\Downloads\\blut-110799-firebase-adminsdk-h7frz-7d77f4b9e4.json');
 require('firebase/storage');
 require('firebase/messaging');
+var admin = require('firebase-admin');
 var bloodbank = mongoose.model('bloodbank');
 var profile = mongoose.model('profile');
 var hospitals = mongoose.model('hospital');
+var notification = mongoose.model('notification_token');
+var bb_req = mongoose.model('requests');
 
 const firebaseConfig = {
   apiKey: "AIzaSyARrRzk-qumZ7fAHD6y9NpTrEaT2q8lD5k",
@@ -16,11 +20,53 @@ const firebaseConfig = {
   messagingSenderId: "715930854454",
   appId: "1:715930854454:web:b4f14841505dee51"
 };
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+});
 firebase.initializeApp(firebaseConfig);
-
 var auth = firebase.auth();
 
+module.exports.tokenregister = function(req,res){
+    notification
+        .findOne({client_name : req.body.name})
+        .exec(function(err, noti){
+            if(err){
+                res
+                    .status(400)
+                    .json(err)
+            }
+            else{
+                if(noti == null){
+                    notification
+                        .create({
+                            client_name: req.body.name,
+                            token : req.body.toke
+                        },function(err,noti){
+                            if(err){
+                                res
+                                    .status(400)
+                                    .json(err)
+                            }
+                            else{
+                                res
+                                    .status(201)
+                                    .json(noti)
+                            }
 
+                        })
+
+                }
+                else{
+                    console.log('exists');
+                    res
+                        .status(200)
+                        .json({"Message":"Already Exists"})
+                }
+            }
+        })
+
+
+};
 module.exports.bloodbankGetOne = function(req,res) {
   auth.signInWithEmailAndPassword(req.body.email, req.body.password)
       .then(function(){
@@ -417,52 +463,23 @@ module.exports.test_1 = function(req,res){
         console.log(body);
     });
 };
-
-module.exports.test_2=function(req,res){
-    const msg = firebase.messaging();
-    msg.usePublicVapidKey('BDnKskUcVoeK8-w_mMStz6Dx5L2Yye1vN-J1sQZvecgb6cKIJjunsjjOjaBwybzI8BrT8r4ZLdI8-j1o6XIVDaU');
-    Notification.requestPermission()
-        .then(function(permission){
-            if(permission == 'granted'){
-                console.log('Permission granted')
-
+module.exports.requests = function(req,res){
+    bb_req
+        .findOne({"to":req.body.to})
+        .exec(function(err,bb){
+            if(err){
+                res
+                    .status(400)
+                    .json(err)
             }
             else{
-                console.log('unable to get permission');
+                res
+                    .status(200)
+                    .json(bb)
             }
         })
-        .catch(function(){
-            console.log('error');
-        })
-    /*msg.getToken()
-        .then(function(curToken){
-            if(curToken) {
-                sendTokenToServer(curToken);
-                updateUIForPushEnabled(currentToken);
-            }
-            else{
-                console.log('no ID token Available, Request permission to generate one');
-                updateUIForPushPermissionRequired();
-                setTokenSentToServer(false);
-            }
+};
+module.exports.test_t=function(req,res){
+    console.log('heyy');
 
-        })
-        .catch(function(err){
-            console.log('An error occurred while retrieving token. ', err);
-            showToken('Error retrieving Instance ID token. ', err);
-            setTokenSentToServer(false);
-        });
-
-    msg.onTokenRefresh(function(){
-        msg.getToken()
-            .then(function(refreshToken){
-                console.log('Token refreshed.');
-                setTokenSentToServer(false);
-                sendTokenToServer(refreshedToken);
-            })
-            .catch(function (err) {
-                console.log('Unable to retrieve refreshed token ', err);
-                showToken('Unable to retrieve refreshed token ', err);
-            })
-    });*/
-}
+};

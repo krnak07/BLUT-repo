@@ -22,4 +22,7 @@ function hospbbcontroller($http,$routeParams,$location,$route){
     vm.refres = function () {
         console.log('refresh');
     };
+    vm.request = function(){
+        $location.path('/hospital/request');
+    }
 }

@@ -1,8 +1,11 @@
 var mongoose = require('mongoose');
 var firebase = require('firebase');
+var admin = require('firebase-admin');
 var hospitals = mongoose.model('hospital');
 var bloodbank = mongoose.model('bloodbank');
 var profile = mongoose.model('profile');
+var notification = mongoose.model('notification_token');
+var hosp_req = mongoose.model('requests');
 auth = firebase.auth();
 
 
@@ -33,7 +36,7 @@ module.exports.hospitalSignup = function(req,res){
                                         .create({
                                             name : req.body.name,
                                             address : req.body.addr,
-                                            city : req.body.city,
+                                            city : req.body.city.toUpperCase(),
                                             state : req.body.state,
                                             phoneNo : req.body.phoneNo,
                                             email : req.body.email,
@@ -328,5 +331,57 @@ module.exports.test_2 = function(req,res){
 
         }
       })
+
+};
+
+module.exports.requests = function (req,res) {
+    var d = new Date();
+    notification
+        .findOne({client_name : req.body.toname})
+        .exec(function (err,noti) {
+            if(err){
+                console.log(err);
+            }
+            else{
+                hosp_req
+                    .create({
+                        from : req.body.fromname,
+                        to : req.body.toname,
+                        bloodgroup : req.body.bg,
+                        units : req.body.unit,
+                        createdOn : d,
+                        reacted : 'no',
+                        donated : 'no'
+                    },function (err,re) {
+                        if(err){
+                            res
+                                .status(400)
+                                .json(err)
+                        }
+                        else{
+                            var msg = {
+                                data: {
+                                    title: noti.client_name,
+                                    content:'Requested "'+req.body.bg+'" blood - UNITS : '+req.body.unit
+                                },
+                                token: noti.token
+                            };
+                            admin.messaging().send(msg)
+                                .then(function(response){
+                                    res
+                                        .status(201)
+                                        .json(re)
+                                })
+                                .catch(function (error) {
+                                    console.log(error);
+
+                                });
+                        }
+
+                    })
+
+            }
+
+        })
 
 };

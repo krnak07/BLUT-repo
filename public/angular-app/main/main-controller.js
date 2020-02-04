@@ -3,6 +3,10 @@ angular.module('bbApp')
 
 function maincontroller($location){
   var vm = this;
+  const msg = firebase.messaging();
+  msg.onMessage(function(payload){
+    console.log("onMessage",payload);
+  });
   vm.bloodbank = function(){
     $location.path('/bloodbank');
   };

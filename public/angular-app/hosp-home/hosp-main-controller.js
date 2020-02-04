@@ -30,6 +30,9 @@ function mainhospcontroller($http,$routeParams,$location) {
     vm.donor = function () {
        $location.path('/hospital/donor');
     };
+    vm.request = function(){
+        $location.path('/hospital/request');
+    };
     vm.goHome = function () {
         $location.path('/hospital/home');
     };

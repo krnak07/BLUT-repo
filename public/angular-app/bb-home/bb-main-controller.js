@@ -6,6 +6,12 @@ function mainbbcontroller($http,$routeParams,$location) {
   var id = sessionStorage.getItem('id');
   vm.name = sessionStorage.getItem('bank_name');
   if(!id==''){
+    var postdata = {
+      name : vm.name,
+      toke : sessionStorage.getItem('toke')
+    };
+    $http.post('/api/bloodbank/tokenregister',postdata).then(function(){});
+
     $http.get('/api/bloodbank/'+id).then(function(response) {
     })
         .catch(function(error){

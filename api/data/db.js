@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var dburl = 'mongodb://localhost:27017/bloodbank_test1';
 var retry = null;
-mongoose.connect(dburl, { useNewUrlParser: true });
+mongoose.connect(dburl, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // CONNECTION EVENTS
 mongoose.connection.on('connected', function() {
@@ -47,4 +47,6 @@ require('./bloodbank.model');
 require('./profile.model');
 require('./hospitals.model');
 require('./camp.model');
-require('./organisation.model')
+require('./organisation.model');
+require('./notification_token.model');
+require('./requests.model');

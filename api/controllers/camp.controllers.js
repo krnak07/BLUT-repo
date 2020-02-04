@@ -58,7 +58,7 @@ module.exports.addNewCamp = function(req, res) {
         camp
             .create({
                 name : req.body.name,
-                location : req.body.location,
+                location : req.body.location.toUpperCase(),
                 dateofhost: dof,
                 phoneNo : req.body.phoneNo,
                 hosting: id,

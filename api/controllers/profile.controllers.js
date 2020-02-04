@@ -12,28 +12,6 @@ auth = firebase.auth();
 module.exports.profilesignup = function(req,res){
 
     var d =new Date();
-    /*var options = {
-        method: 'POST',
-        url: 'https://aadhaarnumber-verify.p.rapidapi.com/Uidverify',
-        qs: {
-            uidnumber: '368116792609',
-            clientid: '111',
-            method: 'uidverify',
-            txn_id: '123456'
-        },
-        headers: {
-            'x-rapidapi-host': 'aadhaarnumber-verify.p.rapidapi.com',
-            'x-rapidapi-key': '99a0ac0e75msh71c954386d154c5p1e3512jsn5ba9fc4e38ab',
-            'content-type': 'application/x-www-form-urlencoded'
-        },
-        form: {}
-    };
-
-    request(options, function (error, response, body) {
-        if (error) throw new Error(error);
-
-        console.log(body);
-    });*/
 
     profile
         .findOne({email : req.body.email})
@@ -148,6 +126,7 @@ module.exports.profilelogin = function(req,res) {
 
 
 module.exports.checkprofile = function(req,res) {
+
 
   var d = new Date();
 
