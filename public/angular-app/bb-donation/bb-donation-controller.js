@@ -68,6 +68,7 @@ function bbdonationcontroller($http,$routeParams,$location,$route) {
             };
             $http.post('/api/bloodbank/'+id+'/donor_donate',postdata)
                 .then(function(response){
+                    console.log(response);
                     if(response.status == 200){
                         dt = vm.phoneNo+" : Donated "+vm.dunits+" units of Blood";
                         alert(dt);

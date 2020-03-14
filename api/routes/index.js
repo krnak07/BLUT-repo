@@ -5,6 +5,7 @@ var ctrlbloodbank = require('../controllers/bloodbank.controllers.js');
 var ctrlprofile = require('../controllers/profile.controllers.js');
 var ctrlcamp = require('../controllers/camp.controllers.js');
 var ctrlhosp = require('../controllers/hospitals.controllers');
+var ctrltest = require('../controllers/test-controller');
 
 
 //Donor
@@ -87,7 +88,7 @@ router
     .route('/hospitals/:hospID/donors')
     .get(ctrlhosp.getAlldonors);
 router
-    .route('/hospitals/request')
+    .route('/hospitals/:hospID/request')
     .post(ctrlhosp.requests);
 
 
@@ -100,10 +101,10 @@ router
     .route('/hospital/:hospID/test')
     .get(ctrlhosp.test_1);
 router
-    .route('/bloodbank/test')
-    .get(ctrlbloodbank.test_1);
-router
     .route('/hospitals/:hospID/test')
     .post(ctrlhosp.test_2);
+router
+    .route('/test')
+    .get(ctrltest.wr);
 
 module.exports = router;

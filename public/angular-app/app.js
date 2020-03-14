@@ -84,6 +84,11 @@ function config($routeProvider) {
           controller : hospreqcontroller,
           controllerAs: 'vm'
       })
+      .when('/hospital/request/new', {
+          templateUrl : 'angular-app/hosp-req-s/web_req.html',
+          controller : hospreqnewcontroller,
+          controllerAs: 'vm'
+      })
 
       .when('/camp', {
           templateUrl : 'angular-app/camp-login/web_bb_camp_login.html',

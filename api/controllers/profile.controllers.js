@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
 var firebase = require('firebase');
 var profile = mongoose.model('profile');
+var Barc = require('node-barc-c')
+    ,barc = new Barc
+    ,fs = require('fs');
 
 var err_profile;
 var new_profile;
@@ -56,10 +59,16 @@ module.exports.profilesignup = function(req,res){
                                               });
                                                 user.sendEmailVerification()
                                                     .then(function () {
+                                                        var buf = barc.code128(pro.bloodgroup + '-' +pro.firstname, 1400, 400);
+                                                        var filename = 'barcode/' + pro.bloodgroup + '-' +pro.firstname + '.png';
+                                                        fs.writeFile(filename, buf, function(){
+                                                            console.log('wrote it');
+                                                        });
                                                         res
                                                             .status(201)
                                                             .json(pro);
                                                     });
+
 
                                             }
                                         });

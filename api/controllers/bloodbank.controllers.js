@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var request = require("request");
 var firebase = require('firebase');
+var nodemailer = require('nodemailer');
 var serviceAccount = require('C:\\Users\\admin\\Downloads\\blut-110799-firebase-adminsdk-h7frz-7d77f4b9e4.json');
 require('firebase/storage');
 require('firebase/messaging');
@@ -10,6 +11,7 @@ var profile = mongoose.model('profile');
 var hospitals = mongoose.model('hospital');
 var notification = mongoose.model('notification_token');
 var bb_req = mongoose.model('requests');
+var cors = require('cors')({origin: true});
 
 const firebaseConfig = {
   apiKey: "AIzaSyARrRzk-qumZ7fAHD6y9NpTrEaT2q8lD5k",
@@ -227,7 +229,33 @@ function updatebloodunits(req,res,bank,bg,unit) {
 
 
 
-}
+};
+function send_mail_blooddonate(email) {
+    var transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+            user: 'codered.blut@gmail.com',
+            pass: 'qwe123rty456'
+        }
+    });
+    var k = 0;
+    var mailoptions = {
+        from: 'BLUT <codered.blut@gmail.com>',
+            to: email,
+            subject: 'Blood Donation', // email subject
+            html: `test`
+    };
+    transporter.sendMail(mailoptions,function(err,info){
+        if(err){
+            console.log(err);
+
+        }
+    });
+
+};
+
 
 module.exports.donordonate = function(req,res){
   var bId = req.params.bankID;
@@ -300,7 +328,8 @@ module.exports.donordonate = function(req,res){
                                     else{
                                         res
                                             .status(200)
-                                            .json(updatedbank)
+                                            .json(updatedbank);
+                                        send_mail_blooddonate(pro.email);
                                     }
                                 });
 
@@ -478,8 +507,4 @@ module.exports.requests = function(req,res){
                     .json(bb)
             }
         })
-};
-module.exports.test_t=function(req,res){
-    console.log('heyy');
-
 };
