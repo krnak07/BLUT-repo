@@ -38,15 +38,16 @@ module.exports.hospitalSignup = function(req,res){
                                             address : req.body.addr,
                                             city : req.body.city.toUpperCase(),
                                             state : req.body.state,
+                                            pincode : req.body.pincode,
                                             phoneNo : req.body.phoneNo,
                                             email : req.body.email,
-                                            liscense : req.body.liscense,
                                             createdOn : d,
                                         },function(err,hosp) {
                                             if(err){
+                                                console.log(err)
                                                 res
                                                     .status(400)
-                                                    .json({"msg" : "ce"});
+                                                    .json({"msg" : "es"});
                                             }
                                             else {
                                                 user.updateProfile({
@@ -65,9 +66,17 @@ module.exports.hospitalSignup = function(req,res){
                                 });
                         })
                         .catch(function (error) {
-                            res
-                                .status(400)
-                                .json({"msg" : "snr"});
+                            if(error.code == 'auth/weak-password'){
+                                res
+                                    .status(400)
+                                    .json({"msg":"wp"});
+                            }
+                            else if(error.code == 'auth/email-already-in-use'){
+                                res
+                                    .status(400)
+                                    .json({"msg":"ue"});
+                            }
+                            console.log(error)
                         });
                 }
 

@@ -2,8 +2,11 @@ angular.module('bbApp')
     .controller('webbblogincontroller',webbblogincontroller);
 
 function webbblogincontroller($location,$http){
-
     var vm = this;
+    document.getElementById('web_bb_login').style.visibility = 'hidden';
+    angular.element(document).ready(function () {
+        document.getElementById('web_bb_login').style.visibility = 'visible';
+    });
     vm.isloading = false;
     vm.is_ip = false;
     vm.is_ie = false;

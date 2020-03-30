@@ -17,8 +17,8 @@ function webuserdetailscontroller($location,$http) {
         vm.is_es = false;
     }
 
-    if(sessionStorage.getItem('bbemail') == null){
-        $location.path('/signup/bloodbank/user/male')
+    if(sessionStorage.getItem('typeemail') == null){
+        $location.path('/signup/'+sessionStorage.getItem('type')+'/user/male')
     }
     vm.signupdetails = function(){
         vm.isloading = true;
@@ -41,21 +41,23 @@ function webuserdetailscontroller($location,$http) {
                     city : vm.city_inp,
                     state : vm.state_inp,
                     pincode : vm.pincode_inp,
-                    bbemail : sessionStorage.getItem('bbemail'),
-                    bbname : sessionStorage.getItem('bbname'),
+                    typeemail : sessionStorage.getItem('typeemail'),
+                    typename : sessionStorage.getItem('typename'),
                     gender : sessionStorage.getItem('gender'),
                 };
-                $http.post('/api/signup/bbuser',postdata)
+                $http.post('/api/signup/'+sessionStorage.getItem('type')+'/user',postdata)
                     .then(function(response){
-                        sessionStorage.removeItem('bbemail');
+                        sessionStorage.removeItem('typeemail');
                         sessionStorage.removeItem('usergender');
                         sessionStorage.removeItem('userlname');
                         sessionStorage.removeItem('userphone');
+                        sessionStorage.setItem('email',vm.email_inp);
                         vm.isloading = false;
-                        $location.path('/signup/bloodbank/user/upload')
+                        $location.path('/signup/user/upload')
                     })
                     .catch(function(error){
                         vm.isloading = false;
+                        console.log(error);
                         vm.addr1_inp='';
                         if(error.data.msg == 'wp'){
                             alert("Weak PASWWORD !")
@@ -77,6 +79,10 @@ function webuserdetailscontroller($location,$http) {
                 vm.pass_inp=vm.cpass_inp='';
                 alert('Password Do Not Match !');
             }
+        }
+        else{
+            vm.isloading=false;
+            alert('Pincode Max size is 6');
         }
     }
 }

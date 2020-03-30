@@ -40,8 +40,8 @@ module.exports.bbusersignup = function(req,res){
                                             pincode : req.body.pincode,
                                             bloodgroup: req.body.bg,
                                             gender : req.body.gender.toUpperCase(),
-                                            bloodbankname : req.body.bbname,
-                                            bloodbankemail : req.body.bbemail,
+                                            bloodbankname : req.body.typename,
+                                            bloodbankemail : req.body.typeemail,
                                             createdOn : d,
                                         },function(err,pro) {
                                             if(err){
@@ -55,8 +55,6 @@ module.exports.bbusersignup = function(req,res){
                                                 });
                                                 user.sendEmailVerification()
                                                     .then(function () {
-                                                        var d =new Date(pro.dateofbirth);
-                                                        console.log(d.toLocaleDateString());
                                                         res
                                                             .status(201)
                                                             .json({"msg":"created"});
@@ -88,7 +86,7 @@ module.exports.bbusersignup = function(req,res){
                 {
                     res
                         .status(400)
-                        .json({"msg": "exists"});
+                        .json({"msg": "ue"});
                 }
 
             }

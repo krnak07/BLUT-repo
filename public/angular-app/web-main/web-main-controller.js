@@ -3,6 +3,10 @@ angular.module('bbApp')
 
 function webmaincontroller($location){
     var vm = this;
+    document.getElementById('web_main').style.visibility = 'hidden';
+    angular.element(document).ready(function () {
+        document.getElementById('web_main').style.visibility = 'visible';
+    });
     const msg = firebase.messaging();
     msg.onMessage(function(payload){
         console.log("onMessage",payload);

@@ -164,7 +164,7 @@ module.exports.blooadbankAddOne = function(req,res){
     var d = new Date();
 
     bloodbank
-        .findOne({name : req.body.name})
+        .findOne({email : req.body.email})
         .exec(function(err,bank){
             if(err){
                 res
@@ -186,16 +186,15 @@ module.exports.blooadbankAddOne = function(req,res){
                                           address : req.body.addr,
                                           city : req.body.city,
                                           state : req.body.state,
+                                          pincode : req.body.pincode,
                                           phoneNo : req.body.phoneNo,
                                           email : req.body.email,
-                                          password  : req.body.password,
-                                          liscense : req.body.liscense,
                                           createdOn : d,
                                         },function(err,bank) {
                                             if(err){
                                                 res
                                                     .status(400)
-                                                    .json({"msg":"ce"});
+                                                    .json({"msg":"es"});
                                             }
                                             else {
                                               user.updateProfile({
@@ -215,16 +214,24 @@ module.exports.blooadbankAddOne = function(req,res){
                                 });
                         })
                         .catch(function (error) {
-                            res
-                                .status(400)
-                                .json({"msg":"ce"});
+                            if(error.code == 'auth/weak-password'){
+                                res
+                                    .status(400)
+                                    .json({"msg":"wp"});
+                            }
+                            else if(error.code == 'auth/email-already-in-use'){
+                                res
+                                    .status(400)
+                                    .json({"msg":"ue"});
+                            }
+                            console.log(error)
                         });
                 }
 
                 else
                 {
                     res
-                        .status(200)
+                        .status(400)
                         .json({"msg":"ue"});
                 }
 

@@ -1,0 +1,310 @@
+.mediaViewInfo {
+	--web-view-name: web-emailverify;
+	--web-view-id: web_emailverify;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_emailverify;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_emailverify {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(225,83,83,1);
+	overflow: hidden;
+	--web-view-name: web-emailverify;
+	--web-view-id: web_emailverify;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#bottom_img {
+	position: absolute;
+	width: 2304.121px;
+	height: 432px;
+	left: -226px;
+	top: 543px;
+	overflow: visible;
+}
+#background_logo {
+	opacity: 0.5;
+	position: absolute;
+	width: 2304px;
+	height: 432px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#cardiogram {
+	position: absolute;
+	width: 2303.809px;
+	height: 176.998px;
+	left: 0.312px;
+	top: 60.444px;
+	overflow: visible;
+}
+.Path_18 {
+	overflow: visible;
+	position: absolute;
+	width: 580.809px;
+	height: 181.998px;
+	left: 576px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_19 {
+	overflow: visible;
+	position: absolute;
+	width: 580.81px;
+	height: 181.998px;
+	left: 1152px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_20 {
+	overflow: visible;
+	position: absolute;
+	width: 580.809px;
+	height: 181.998px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_21 {
+	overflow: visible;
+	position: absolute;
+	width: 580.81px;
+	height: 181.998px;
+	left: 1728px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Made_with___ {
+	position: absolute;
+	left: 843.5px;
+	top: 902px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#LOGO {
+	position: absolute;
+	width: 400px;
+	height: 98.851px;
+	left: 760px;
+	top: 803px;
+	overflow: visible;
+}
+#EMAIL_VERIFICATION {
+	position: absolute;
+	left: 584.5px;
+	top: 6px;
+	overflow: visible;
+	width: 752px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(49,49,49,1);
+}
+#Group_92 {
+	position: absolute;
+	width: 426px;
+	height: 288px;
+	left: 747px;
+	top: 195px;
+	overflow: visible;
+}
+#Almost_there___ {
+	position: absolute;
+	left: 131px;
+	top: 0px;
+	overflow: visible;
+	width: 165px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 26px;
+	color: rgba(49,49,49,1);
+}
+#If_you_still_didn_t_receive_th {
+	position: absolute;
+	left: 21px;
+	top: 218px;
+	overflow: visible;
+	width: 385px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 26px;
+	color: rgba(49,49,49,1);
+}
+#Group_91 {
+	position: absolute;
+	width: 281px;
+	height: 105px;
+	left: 72.5px;
+	top: 61px;
+	overflow: visible;
+}
+#Please_check_your_email {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 273px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 26px;
+	color: rgba(49,49,49,1);
+}
+#xyz_abc_com {
+	position: absolute;
+	left: 0px;
+	top: 42px;
+	overflow: visible;
+	width: 107px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#to_confirm_your_account_ {
+	position: absolute;
+	left: 0px;
+	top: 70px;
+	overflow: visible;
+	width: 282px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 26px;
+	color: rgba(49,49,49,1);
+}
+#Line_8 {
+	opacity: 0.75;
+}
+.Line_8 {
+	overflow: visible;
+	position: absolute;
+	width: 431px;
+	height: 5px;
+	left: 0px;
+	top: 192px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Group_31 {
+	position: absolute;
+	width: 248px;
+	height: 36px;
+	left: 1647px;
+	top: 38px;
+	overflow: visible;
+}
+#signup_btn {
+	position: absolute;
+	width: 118px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 118px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#LOGIN {
+	position: absolute;
+	left: 13.746px;
+	top: 7px;
+	overflow: visible;
+	width: 53px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#id_card {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 82px;
+	top: 6px;
+	overflow: visible;
+}
+#login_btn {
+	position: absolute;
+	width: 123px;
+	left: 125px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_4_db {
+	position: absolute;
+	overflow: visible;
+	width: 123px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#SIGNUP {
+	position: absolute;
+	left: 13.746px;
+	top: 7px;
+	overflow: visible;
+	width: 64px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#edit {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 87px;
+	top: 6px;
+	overflow: visible;
+}
+button {
+	outline: none;
+}

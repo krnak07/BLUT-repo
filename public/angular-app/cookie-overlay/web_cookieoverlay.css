@@ -1,0 +1,89 @@
+.mediaViewInfo {
+	--web-view-name: web-cookieoverlay;
+	--web-view-id: web_cookieoverlay;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_cookieoverlay;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_cookieoverlay {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-cookieoverlay;
+	--web-view-id: web_cookieoverlay;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#cookie_overlay {
+	position: absolute;
+	width: 1920px;
+	height: 88px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#cookie_bag {
+	opacity: 0.26;
+}
+.cookie_bag {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 88px;
+	left: 0px;
+	top: 0px;
+}
+#ok_btn {
+	position: absolute;
+	width: 54px;
+	height: 36px;
+	left: 1840px;
+	top: 26px;
+	overflow: visible;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 54px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#Ok {
+	position: absolute;
+	left: 15.746px;
+	top: 7px;
+	overflow: visible;
+	width: 24px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#We_use_cookies_to_make_interac {
+	position: absolute;
+	left: 26px;
+	top: 18px;
+	overflow: visible;
+	width: 882px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}

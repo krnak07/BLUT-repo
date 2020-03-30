@@ -3,14 +3,20 @@ angular.module('bbApp')
 
 function webgendercontroller($location){
     var vm = this;
-
+    document.getElementById('web_gender').style.visibility = 'hidden';
+    angular.element(document).ready(function () {
+        document.getElementById('web_gender').style.visibility = 'visible';
+    });
+    if(sessionStorage.getItem('type')==null){
+        $location.path('/signup');
+    }
     vm.male = function(){
         sessionStorage.setItem('gender','M');
-        $location.path('/signup/bloodbank/user/male');
+        $location.path('/signup/'+sessionStorage.getItem('type')+'/user/male');
     };
     vm.female = function(){
         sessionStorage.setItem('gender','F');
-        $location.path('/signup/bloodbank/user/female');
+        $location.path('/signup/'+sessionStorage.getItem('type')+'/user/female');
     };
     vm.bac = function(){
         $location.path('/signup');

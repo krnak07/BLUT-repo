@@ -94,21 +94,24 @@ router
 //users
 
 router
-    .route('/signup/bbuser')
+    .route('/signup/bloodbank/user')
     .post(ctrlbbuser.bbusersignup);
 router
-    .route('/login/bbuser')
+    .route('/login/bloodbank/user')
     .post(ctrlbbuser.bbuserlogin);
 router
     .route('/bloodbank/usercheck')
     .post(ctrlbbuser.usercheck);
 
 router
-    .route('/signup/hospuser')
+    .route('/signup/hospital/user')
     .post(ctrlhospuser.hospusersignup);
 router
-    .route('/login/hospuser')
+    .route('/login/hospital/user')
     .post(ctrlhospuser.hospuserlogin);
+router
+    .route('/hospital/usercheck')
+    .post(ctrlhospuser.usercheck);
 
 
 

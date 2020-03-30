@@ -1,19 +1,40 @@
 angular.module('bbApp',['ngRoute'])
 .config(config);
 
-function config($routeProvider) {
-  $routeProvider
+function config($routeProvider,$locationProvider) {
+    $locationProvider.html5Mode(true);
+    $routeProvider
       .when('/',{
           templateUrl : 'angular-app/web-main/web_main.html',
           controller : webmaincontroller,
           controllerAs : 'vm'
       })
-      // .when('/signup',{
-      //     templateUrl : 'angular-app/web-signup/web_signup.html',
-      //     controller : websignupcontroller,
-      //     controllerAs : 'vm'
-      // })
+      .when('/signup',{
+          templateUrl : 'angular-app/web-signup/web_signup.html',
+          controller : websignupcontroller,
+          controllerAs : 'vm'
+      })
+      .when('/signup/bloodbank',{
+          templateUrl : 'angular-app/web-bb-signup/web_bb_signup.html',
+          controller : webbbsignupcontroller,
+          controllerAs : 'vm'
+      })
+      .when('/signup/hospital',{
+          templateUrl : 'angular-app/web-hosp-signup/web_hosp_signup.html',
+          controller : webhospsignupcontroller,
+          controllerAs : 'vm'
+      })
+      .when('/signup/liscenseupload',{
+          templateUrl : 'angular-app/web-liscense-upload/web_liscense_upload.html',
+          controller : weblisuploadcontroller   ,
+          controllerAs : 'vm'
+      })
       .when('/signup/bloodbank/user',{
+          templateUrl : 'angular-app/web-gender/web_gender.html',
+          controller : webgendercontroller,
+          controllerAs : 'vm'
+      })
+      .when('/signup/hospital/user',{
           templateUrl : 'angular-app/web-gender/web_gender.html',
           controller : webgendercontroller,
           controllerAs : 'vm'
@@ -28,14 +49,29 @@ function config($routeProvider) {
           controller : webbbusersignupcontroller,
           controllerAs : 'vm'
       })
-      .when('/signup/bloodbank/user/details',{
+      .when('/signup/hospital/user/male',{
+          templateUrl : 'angular-app/web-hosp-user-signup/web_hosp_user_signup.html',
+          controller : webhospusersignupcontroller,
+          controllerAs : 'vm'
+      })
+      .when('/signup/hospital/user/female',{
+          templateUrl : 'angular-app/web-hosp-user-signup/web_hosp_user_signup.html',
+          controller : webhospusersignupcontroller,
+          controllerAs : 'vm'
+      })
+      .when('/signup/user/details',{
           templateUrl : 'angular-app/web-user-details/web_user_details.html',
           controller : webuserdetailscontroller,
           controllerAs : 'vm'
       })
-      .when('/signup/bloodbank/user/upload',{
+      .when('/signup/user/upload',{
           templateUrl : 'angular-app/web-user-upload/web_user_upload.html',
           controller : webuseruploadcontroller,
+          controllerAs : 'vm'
+      })
+      .when('/signup/emailverify',{
+          templateUrl : 'angular-app/emailverify/web_emailverify.html',
+          controller : emailverifycontroller,
           controllerAs : 'vm'
       })
       .when('/login',{

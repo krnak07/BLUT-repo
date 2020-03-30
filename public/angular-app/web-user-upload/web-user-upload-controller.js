@@ -4,10 +4,14 @@ angular.module('bbApp')
 function webuseruploadcontroller($location,$http){
     var vm = this;
     vm.isloading=false;
-    var k=-1;
+    document.getElementById('web_user_upload').style.visibility = 'hidden';
+    angular.element(document).ready(function () {
+        document.getElementById('web_user_upload').style.visibility = 'visible';
+    });
+
 
     if(sessionStorage.getItem('gender') == null){
-        $location.path('/signup/bloodbank/user');
+        $location.path('/signup/'+sessionStorage.getItem('type')+'/user');
     }
 
 
@@ -15,14 +19,17 @@ function webuseruploadcontroller($location,$http){
         vm.isloading=true;
         var id_file = document.getElementById('id_upload').files[0];
         var propic_file = document.getElementById('propic_upload').files[0];
-        var IDstorageref = firebase.storage().ref('/bloodbank-user-ID/'+sessionStorage.getItem('bbname')+'/'+sessionStorage.getItem('userfname')+'.jpg');
-        var proPICstorageref = firebase.storage().ref('/bloodbank-user-PIC/'+sessionStorage.getItem('bbname')+'/'+sessionStorage.getItem('userfname')+'.jpg');
+        var IDstorageref = firebase.storage().ref('/'+sessionStorage.getItem('type')+'/'+sessionStorage.getItem('typename')+'/USER-IDs/'+sessionStorage.getItem('userfname')+'.jpg');
+        var proPICstorageref = firebase.storage().ref('/'+sessionStorage.getItem('type')+'/'+sessionStorage.getItem('typename')+'/USER-PHOTO/'+sessionStorage.getItem('userfname')+'.jpg');
+
 
         IDstorageref.put(id_file)
             .then(function(snapshot){
                 proPICstorageref.put(propic_file)
                     .then(function(snapshot){
-                        window.location.href = '/';
+                        sessionStorage.removeItem('userfname');
+                        sessionStorage.removeItem('typename');
+                        window.location.href = '/signup/emailverify';
                     })
                     .catch(function (error) {
 
@@ -32,11 +39,5 @@ function webuseruploadcontroller($location,$http){
             .catch(function (error) {
                 console.log(error);
             });
-
-
-
-
-
-
     }
 }

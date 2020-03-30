@@ -373,3 +373,6 @@ button {
 	100% {
 		left: 107%;
 		right: -8%; } }
+input {
+	outline: none;
+}

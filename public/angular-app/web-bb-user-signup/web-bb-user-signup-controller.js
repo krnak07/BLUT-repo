@@ -43,12 +43,12 @@ function webbbusersignupcontroller($location,$http){
             $http.post('/api/bloodbank/usercheck',postdata)
                 .then(function(response){
                     vm.isloading=false;
-                    sessionStorage.setItem('bbemail',postdata.bbemail);
-                    sessionStorage.setItem('bbname',response.data.bbname);
+                    sessionStorage.setItem('typeemail',postdata.bbemail);
+                    sessionStorage.setItem('typename',response.data.bbname);
                     sessionStorage.setItem('userfname',postdata.userfname);
                     sessionStorage.setItem('userlname',postdata.userlname);
                     sessionStorage.setItem('userphone',postdata.userphone);
-                    $location.path('/signup/bloodbank/user/details');
+                    $location.path('/signup/user/details');
                 })
                 .catch(function(err){
                     vm.isloading=false;
@@ -69,6 +69,10 @@ function webbbusersignupcontroller($location,$http){
                         window.setTimeout(hideerror,1000);
                     }
                 })
+        }
+        else{
+            vm.isloading=false;
+            alert('Phone Number can contain a maximum of 10 digits');
         }
     }
 }

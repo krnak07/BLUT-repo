@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var firebase = require('firebase');
 var hospuser = mongoose.model('hospitaluser');
+var hospital = mongoose.model('hospital');
 
 auth = firebase.auth();
 
@@ -39,12 +40,14 @@ module.exports.hospusersignup = function(req,res){
                                             pincode : req.body.pincode,
                                             bloodgroup: req.body.bg.toUpperCase(),
                                             gender : req.body.gender.toUpperCase(),
+                                            hospitalname : req.body.typename,
+                                            hospitalemail : req.body.typeemail,
                                             createdOn : d,
                                         },function(err,pro) {
                                             if(err){
                                                 res
                                                     .status(400)
-                                                    .json(err)
+                                                    .json({"msg":"es"})
                                             }
                                             else {
                                                 user.updateProfile({
@@ -54,7 +57,7 @@ module.exports.hospusersignup = function(req,res){
                                                     .then(function () {
                                                         res
                                                             .status(201)
-                                                            .json(pro);
+                                                            .json({"msg":"created"});
                                                     });
 
 
@@ -64,17 +67,25 @@ module.exports.hospusersignup = function(req,res){
                                 });
                         })
                         .catch(function (error) {
-                            res
-                                .status(400)
-                                .json(error);
+                            if(error.code == 'auth/weak-password'){
+                                res
+                                    .status(400)
+                                    .json({"msg":"wp"});
+                            }
+                            else if(error.code == 'auth/email-already-in-use'){
+                                res
+                                    .status(400)
+                                    .json({"msg":"ue"});
+                            }
+                            console.log(error)
                         });
                 }
 
                 else
                 {
                     res
-                        .status(200)
-                        .json({"Message": "User Already Exists"});
+                        .status(400)
+                        .json({"msg": "ue"});
                 }
 
             }
@@ -146,5 +157,54 @@ module.exports.hospuserlogin = function(req,res) {
                 .status(404)
                 .json(error);
         });
+};
+
+module.exports.usercheck = function(req,res){
+    hospital
+        .findOne({email:req.body.hospemail})
+        .exec(function(err,bank){
+            if(err){
+                res
+                    .status(400)
+                    .json({"msg":"snr"});
+            }
+            else{
+                if(bank==null){
+                    res
+                        .status(400)
+                        .json({"msg":"bnf"});
+                }
+                else{
+                    hospuser
+                        .findOne({phoneNo: req.body.userphone})
+                        .exec(function(err,pro){
+                            if(err){
+                                res
+                                    .status(400)
+                                    .json({"msg":"snr"})
+                            }
+                            else{
+                                if(pro==null){
+                                    res
+                                        .status(200)
+                                        .json({"msg":"unf","hospname":bank.name})
+                                }
+                                else{
+                                    if(pro.hospitalemail == req.body.hospemail){
+                                        res
+                                            .status(400)
+                                            .json({"msg":"exists"})
+                                    }
+                                    else{
+                                        res
+                                            .status(400)
+                                            .json({"msg":"not associated"})
+                                    }
+                                }
+                            }
+                        })
+                }
+            }
+        })
 };
 

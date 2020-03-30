@@ -109,16 +109,13 @@ var bloodbankSchema = new mongoose.Schema({
     type: Number,
     required : true
   },
+  pincode : {
+    type: Number,
+    required : true
+  },
   email : {
     type : String,
     required : true
-  },
-  password : {
-    type : String,
-    required : true
-  },
-  liscense : {
-    type : String,
   },
   createdOn :{
     type :Date,

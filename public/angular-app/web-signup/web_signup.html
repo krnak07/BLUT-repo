@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>web-signup</title>
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="web_signup.css"/>
-<script id="applicationScript" type="text/javascript" src="web_signup.js"></script>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-signup/web_signup.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/web-signup/web_signup.js"></script>
 </head>
 <body>
 <div id="web_signup">
@@ -14,7 +14,7 @@
 		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
 	</div>
 	<div id="btn">
-		<div id="hosp_btn" class="hosp_btn">
+		<button id="hosp_btn" class="hosp_btn" ng-click="vm.hosp()" ng-mouseover="vm.hospchange()" ng-mouseleave="vm.hospori()">
 			<svg class="Rectangle_46">
 				<rect fill="rgba(245,245,245,1)" id="Rectangle_46" rx="40" ry="40" x="0" y="0" width="440" height="340">
 				</rect>
@@ -23,10 +23,10 @@
 				<div id="HOSPITALS">
 					<span>HOSPITALS</span>
 				</div>
-				<img id="cardiogram" src="cardiogram.png" srcset="cardiogram.png 1x, cardiogram@2x.png 2x">
+				<img id="cardiogram" src="angular-app/web-signup/cardiogram.png" srcset="angular-app/web-signup/cardiogram.png 1x, angular-app/web-signup/cardiogram@2x.png 2x">
 			</div>
-		</div>
-		<div id="bb_btn" class="bb_btn">
+		</button>
+		<button id="bb_btn" class="bb_btn" ng-click="vm.bb()" ng-mouseover="vm.bbchange()" ng-mouseleave="vm.bbori()">
 			<svg class="Rectangle_47">
 				<rect fill="rgba(245,245,245,1)" id="Rectangle_47" rx="40" ry="40" x="0" y="0" width="440" height="340">
 				</rect>
@@ -35,16 +35,16 @@
 				<div id="BLOODBANK">
 					<span>BLOODBANK</span>
 				</div>
-				<img id="blood" src="blood.png" srcset="blood.png 1x, blood@2x.png 2x">
+				<img id="blood" src="angular-app/web-signup/blood.png" srcset="angular-app/web-signup/blood.png 1x, angular-app/web-signup/blood@2x.png 2x">
 			</div>
-		</div>
+		</button>
 	</div>
-	<img id="LOGO" src="LOGO.png" srcset="LOGO.png 1x, LOGO@2x.png 2x">
+	<img id="LOGO" src=angular-app/web-signup/"LOGO.png" srcset="angular-app/web-signup/LOGO.png 1x, angular-app/web-signup/LOGO@2x.png 2x">
 	<div id="Group_80">
 		<div id="SIGNUP">
 			<span>SIGNUP</span>
 		</div>
-		<img id="edit" src="edit.png" srcset="edit.png 1x, edit@2x.png 2x">
+		<img id="angular-app/web-signup/edit" src="angular-app/web-signup/edit.png" srcset="angular-app/web-signup/edit.png 1x, angular-app/web-signup/edit@2x.png 2x">
 	</div>
 </div>
 </body>

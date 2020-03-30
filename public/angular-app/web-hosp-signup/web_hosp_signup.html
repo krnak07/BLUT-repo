@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-hosp-signup</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-hosp-signup/web_hosp_signup.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/web-hosp-signup/web_hosp_signup.js"></script>
+</head>
+<body>
+<div id="web_hosp_signup">
+	<img id="LOGO" src="angular-app/web-hosp-signup/LOGO.png" srcset="angular-app/web-hosp-signup/LOGO.png 1x, angular-app/web-hosp-signup/LOGO@2x.png 2x">
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<div id="back_btn" class="back_btn">
+		<img id="back" src="angular-app/web-hosp-signup/back.png" srcset="angular-app/web-hosp-signup/back.png 1x, angular-app/web-hosp-signup/back@2x.png 2x">
+	</div>
+	<div id="bb_signup_details">
+		<div id="title">
+			<div id="HOSPITAL">
+				<span>HOSPITAL</span>
+			</div>
+			<div id="SIGNUP">
+				<span>SIGNUP</span>
+			</div>
+		</div>
+		<form name="vm.signupForm" ng-submit="vm.signup()" >
+		<div id="name" class="name">
+			<svg class="Rectangle_2">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input class="name_inp" ng-model="vm.name_inp" required placeholder="Hospital's Name">
+				<rect fill="rgba(255,255,255,1)" id="name_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="cardiogram" src="angular-app/web-hosp-signup/cardiogram.png" srcset="angular-app/web-hosp-signup/cardiogram.png 1x, angular-app/web-hosp-signup/cardiogram@2x.png 2x">
+		</div>
+		<div id="phone" class="phone">
+			<svg class="Rectangle_2_c">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_c" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="number" class="phone_inp" ng-model="vm.phone_inp" maxlength="10" minlength="10" required placeholder="Phone Number">
+				<rect fill="rgba(255,255,255,1)" id="phone_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="phone_call" src="angular-app/web-hosp-signup/phone_call.png" srcset="angular-app/web-hosp-signup/phone_call.png 1x, angular-app/web-hosp-signup/phone_call@2x.png 2x">
+		</div>
+		<div id="email" class="email">
+			<svg class="Rectangle_2_da">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_da" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="email" class="pass_inp" ng-model="vm.email_inp" required placeholder="Bloodbank's Email">
+				<rect fill="rgba(255,255,255,1)" id="pass_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="email__3_" src="angular-app/web-hosp-signup/email__3_.png" srcset="angular-app/web-hosp-signup/email__3_.png 1x, angular-app/web-hosp-signup/email__3_@2x.png 2x">
+		</div>
+		<div id="pass" class="pass">
+			<svg class="Rectangle_2_db">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_db" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="password" class="pass_inp_c" ng-model="vm.pass_inp" required placeholder="Password">
+				<rect fill="rgba(255,255,255,1)" id="pass_inp_c" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="lock" src="angular-app/web-hosp-signup/lock.png" srcset="angular-app/web-hosp-signup/lock.png 1x, angular-app/web-hosp-signup/lock@2x.png 2x">
+		</div>
+		<div id="cpass" class="cpass">
+			<svg class="Rectangle_2_dc">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dc" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="password" class="cpass_inp" ng-model="vm.cpass_inp" required placeholder="Confirm Password">
+				<rect fill="rgba(255,255,255,1)" id="cpass_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="lock_de" src="angular-app/web-hosp-signup/lock_de.png" srcset="angular-app/web-hosp-signup/lock_de.png 1x, angular-app/web-hosp-signup/lock_de@2x.png 2x">
+		</div>
+		<div id="addr" class="addr">
+			<svg class="Rectangle_2_dg">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dg" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input class="addr_inp" ng-model="vm.addr_inp" required placeholder="Address Line 1">
+				<rect fill="rgba(255,255,255,1)" id="addr_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="placeholder" src="angular-app/web-hosp-signup/placeholder.png" srcset="angular-app/web-hosp-signup/placeholder.png 1x, angular-app/web-hosp-signup/placeholder@2x.png 2x">
+		</div>
+		<div id="addr_1" class="addr_1">
+			<svg class="Rectangle_2_dk">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dk" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<input class="addr1_inp" ng-model="vm.addr1_inp" placeholder="Address Line 2">
+				<rect fill="rgba(255,255,255,1)" id="addr1_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+		</div>
+		<div id="pincode" class="pincode">
+			<svg class="Rectangle_2_dn">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dn" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<input type="number" class="pincode_inp" ng-model="vm.pincode_inp" required placeholder="Pincode">
+				<rect fill="rgba(255,255,255,1)" id="pincode_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+		</div>
+		<div id="city" class="city">
+			<svg class="Rectangle_2_dq">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dq" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<input class="city_inp" ng-model="vm.city_inp" required placeholder="City">
+				<rect fill="rgba(255,255,255,1)" id="city_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+		</div>
+		<div id="state" class="state">
+			<svg class="Rectangle_2_dt">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dt" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<input class="state_inp" ng-model="vm.state_inp" required placeholder="State">
+				<rect fill="rgba(255,255,255,1)" id="state_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+		</div>
+		<button type="submit" id="signup_btn" class="signup_btn">
+			<svg class="Rectangle_4">
+				<rect fill="rgba(225,83,83,1)" id="Rectangle_4" rx="18" ry="18" x="0" y="0" width="276" height="36">
+				</rect>
+			</svg>
+			<div id="SIGNUP_dx">
+				<span>SIGNUP</span>
+			</div>
+		</button>
+		</form>
+	</div>
+	<div id="load_content" ng-if="vm.isloading">
+		<svg class="dim_background">
+			<rect fill="rgba(49,49,49,1)" id="dim_background" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+			</rect>
+		</svg>
+		<div id="loading_info" >
+			<svg class="loading_background">
+				<rect fill="rgba(255,255,255,1)" id="loading_background" rx="26" ry="26" x="0" y="0" width="327" height="197">
+				</rect>
+			</svg>
+			<img id="LOGO_dn" src="angular-app/loading-screen/LOGO_dn.png" srcset="angular-app/loading-screen/LOGO_dn.png 1x, angular-app/loading-screen/LOGO_dn@2x.png 2x">
+			<div id="Loading">
+				<span>Loading</span>
+			</div>
+			<div class="progress">
+				<div class="indeterminate"></div>
+			</div>
+		</div>
+	</div>
+	<div id="server_not_responding" ng-if="vm.snr">
+		<svg class="snr_rect">
+			<rect fill="rgba(255,255,255,1)" id="snr_rect" rx="26" ry="26" x="0" y="0" width="479" height="92">
+			</rect>
+		</svg>
+		<div id="snr_text">
+			<span>SERVER NOT RESPONDING</span>
+		</div>
+		<img id="snr_warning" src="angular-app/error/snr_warning.png" srcset="angular-app/error/snr_warning.png 1x, angular-app/error/snr_warning@2x.png 2x">
+	</div>
+	<div id="user_exists" ng-if="vm.is_ue">
+		<svg class="ue_rect">
+			<rect fill="rgba(255,255,255,1)" id="ue_rect" rx="26" ry="26" x="0" y="0" width="277" height="92">
+			</rect>
+		</svg>
+		<div id="ue_text">
+			<span>USER EXISTS</span>
+		</div>
+		<img id="ue_waring" src="angular-app/error/ue_waring.png" srcset="angular-app/error/ue_waring.png 1x, angular-app/error/ue_waring@2x.png 2x">
+	</div>
+	<div id="error_saving" ng-if="vm.is_es">
+		<svg class="es_rect">
+			<rect fill="rgba(255,255,255,1)" id="es_rect" rx="26" ry="26" x="0" y="0" width="314" height="92">
+			</rect>
+		</svg>
+		<div id="es_text">
+			<span>ERROR SAVING</span>
+		</div>
+		<img id="es_warning" src="angular-app/error/es_warning.png" srcset="angular-app/error/es_warning.png 1x, angular-app/error/es_warning@2x.png 2x">
+	</div>
+</div>
+</body>
+</html>

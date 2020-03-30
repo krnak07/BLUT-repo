@@ -63,13 +63,13 @@ var hospitalSchema = new mongoose.Schema({
         type: Number,
         required : true
     },
+    pincode : {
+        type: Number,
+        required : true
+    },
     email : {
         type : String,
         required : true
-    },
-    liscense : {
-        type : String,
-        required : true,
     },
     createdOn :{
       type :Date,
