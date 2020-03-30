@@ -1,0 +1,555 @@
+.mediaViewInfo {
+	--web-view-name: web-bb-user-signup;
+	--web-view-id: web_bb_user_signup;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_bb_user_signup;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_bb_user_signup {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-bb-user-signup;
+	--web-view-id: web_bb_user_signup;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#LOGO {
+	position: absolute;
+	width: 1165px;
+	height: 288px;
+	left: 130px;
+	top: 332px;
+	overflow: visible;
+}
+#Made_with___ {
+	position: absolute;
+	left: 596.5px;
+	top: 902px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#check_details {
+	position: absolute;
+	width: 394px;
+	height: 440px;
+	left: 1410px;
+	top: 268px;
+	overflow: visible;
+}
+#BLOODBANK {
+	position: absolute;
+	left: 42px;
+	top: 0px;
+	overflow: visible;
+	width: 310px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#bb {
+	position: absolute;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 82px;
+	overflow: visible;
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.bb_inp {
+	position: absolute;
+	overflow: visible;
+	width: 334px;
+	height: 32px;
+	left: 39px;
+	top: 5px;
+}
+#blood {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 10px;
+	top: 9px;
+	overflow: visible;
+}
+#firstname {
+	position: absolute;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 232px;
+	overflow: visible;
+}
+.Rectangle_2_cu {
+	position: absolute;
+	overflow: visible;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.fname_inp {
+	position: absolute;
+	overflow: visible;
+	width: 334px;
+	height: 32px;
+	left: 39px;
+	top: 5px;
+}
+#man {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 10px;
+	top: 9px;
+	overflow: visible;
+}
+#woman {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 10px;
+	top: 9px;
+	overflow: visible;
+}
+#lastname {
+	position: absolute;
+	width: 372px;
+	height: 42px;
+	left: 22px;
+	top: 284px;
+	overflow: visible;
+}
+.Rectangle_2_cz {
+	position: absolute;
+	overflow: visible;
+	width: 372px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.lname_inp {
+	position: absolute;
+	overflow: visible;
+	width: 334px;
+	height: 32px;
+	left: 17px;
+	top: 5px;
+}
+#phone {
+	position: absolute;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 336px;
+	overflow: visible;
+}
+.Rectangle_2_c {
+	position: absolute;
+	overflow: visible;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.phone_inp {
+	position: absolute;
+	overflow: visible;
+	width: 334px;
+	height: 32px;
+	left: 39px;
+	top: 5px;
+}
+#phone_call {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 10px;
+	top: 9px;
+	overflow: visible;
+}
+#USER_DETAILS {
+	position: absolute;
+	left: 31px;
+	top: 150px;
+	overflow: visible;
+	width: 333px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#next_btn {
+	position: absolute;
+	width: 276px;
+	left: 59px;
+	top: 404px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 276px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#next_content {
+	position: absolute;
+	width: 246px;
+	height: 27px;
+	left: 15px;
+	top: 5px;
+	overflow: visible;
+}
+#NEXT {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 53px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#arrow_pointing_to_right_GREY {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 221px;
+	top: 1px;
+	overflow: visible;
+}
+#no_bb_found {
+	position: absolute;
+	width: 458px;
+	height: 92px;
+	left: 732px;
+	top: 26px;
+	overflow: visible;
+}
+.nbf_rect {
+	position: absolute;
+	overflow: visible;
+	width: 458px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#nbf_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 355px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#nbf_close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#user_not_found {
+	position: absolute;
+	width: 357px;
+	height: 92px;
+	left: 782px;
+	top: 26px;
+	overflow: visible;
+}
+.unf__rect {
+	position: absolute;
+	overflow: visible;
+	width: 357px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#unf_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 260px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#unf_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#server_not_responding {
+	position: absolute;
+	width: 479px;
+	height: 92px;
+	left: 721px;
+	top: 26px;
+	overflow: visible;
+}
+.snr_rect {
+	position: absolute;
+	overflow: visible;
+	width: 479px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#snr_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 382px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#snr_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#user_exists {
+	position: absolute;
+	width: 277px;
+	height: 92px;
+	left: 822px;
+	top: 26px;
+	overflow: visible;
+}
+.ue_rect {
+	position: absolute;
+	overflow: visible;
+	width: 277px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ue_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 180px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#ue_waring {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+button {
+	outline: none;
+}
+input {
+	outline-color: #E15353;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+#load_content {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#dim_background {
+	opacity: 0.26;
+}
+.dim_background {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+}
+#loading_info {
+	position: absolute;
+	width: 327px;
+	height: 197px;
+	left: 797px;
+	top: 389px;
+	overflow: visible;
+}
+.loading_background {
+	position: absolute;
+	overflow: visible;
+	width: 327px;
+	height: 197px;
+	left: 0px;
+	top: 0px;
+}
+#LOGO_dn {
+	position: absolute;
+	width: 242.791px;
+	height: 60px;
+	left: 42px;
+	top: 23px;
+	overflow: visible;
+}
+#Loading {
+	position: absolute;
+	left: 87.5px;
+	top: 137px;
+	overflow: visible;
+	width: 152px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(49,49,49,1);
+}
+.progress {
+	position: absolute;
+	height: 20px;
+	display: inline-block;
+	width: 100%;
+	top : 106px;
+	background-color: #b5b5b5;
+	border-radius: 2px;
+	background-clip: padding-box;
+	overflow: hidden; }
+.progress .indeterminate {
+	background-color: #313131; }
+.progress .indeterminate:before {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+	animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+.progress .indeterminate:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	-webkit-animation-delay: 1.3s;
+	animation-delay: 1.3s; }
+
+@-webkit-keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@-webkit-keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }
+@keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }

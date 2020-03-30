@@ -23,3 +23,6 @@ module.exports.wr=function(req,res) {
         console.log('wrote it');
     });
 };*/
+
+
+

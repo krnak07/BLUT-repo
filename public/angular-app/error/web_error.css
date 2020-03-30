@@ -1,0 +1,634 @@
+.mediaViewInfo {
+	--web-view-name: web-error;
+	--web-view-id: web_error;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_error;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_error {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-error;
+	--web-view-id: web_error;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#no_bb_found {
+	position: absolute;
+	width: 458px;
+	height: 92px;
+	left: 732px;
+	top: 26px;
+	overflow: visible;
+}
+.nbf_rect {
+	position: absolute;
+	overflow: visible;
+	width: 458px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#nbf_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 355px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#nbf_close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#no_camp_found {
+	position: absolute;
+	width: 458px;
+	height: 92px;
+	left: 732px;
+	top: 26px;
+	overflow: visible;
+}
+.ncf_rect {
+	position: absolute;
+	overflow: visible;
+	width: 458px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ncf_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 257px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#ncf_close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#no_hosp_found {
+	position: absolute;
+	width: 458px;
+	height: 92px;
+	left: 732px;
+	top: 26px;
+	overflow: visible;
+}
+.nhf_rect {
+	position: absolute;
+	overflow: visible;
+	width: 458px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#nhf_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 312px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#nhf_close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#user_not_verified {
+	position: absolute;
+	width: 380px;
+	height: 92px;
+	left: 771px;
+	top: 26px;
+	overflow: visible;
+}
+.unv_rect {
+	position: absolute;
+	overflow: visible;
+	width: 380px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#unv_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 283px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#unv_waring {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#user_not_found {
+	position: absolute;
+	width: 357px;
+	height: 92px;
+	left: 782px;
+	top: 26px;
+	overflow: visible;
+}
+.unf__rect {
+	position: absolute;
+	overflow: visible;
+	width: 357px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#unf_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 260px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#unf_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#server_not_responding {
+	position: absolute;
+	width: 479px;
+	height: 92px;
+	left: 721px;
+	top: 26px;
+	overflow: visible;
+}
+.snr_rect {
+	position: absolute;
+	overflow: visible;
+	width: 479px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#snr_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 382px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#snr_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#invalid_email {
+	position: absolute;
+	width: 317px;
+	height: 92px;
+	left: 802px;
+	top: 26px;
+	overflow: visible;
+}
+.ie_rect {
+	position: absolute;
+	overflow: visible;
+	width: 317px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ie_cross {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#ie_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 220px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#connection_error {
+	position: absolute;
+	width: 401px;
+	height: 92px;
+	left: 760px;
+	top: 26px;
+	overflow: visible;
+}
+.ce_rect {
+	position: absolute;
+	overflow: visible;
+	width: 401px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ce_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 304px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#ce_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#invalid_password {
+	position: absolute;
+	width: 392px;
+	height: 92px;
+	left: 765px;
+	top: 26px;
+	overflow: visible;
+}
+.ip_rect {
+	position: absolute;
+	overflow: visible;
+	width: 392px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ip_cross {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#ip_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 295px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#user_exists {
+	position: absolute;
+	width: 277px;
+	height: 92px;
+	left: 822px;
+	top: 26px;
+	overflow: visible;
+}
+.ue_rect {
+	position: absolute;
+	overflow: visible;
+	width: 277px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ue_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 180px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#ue_waring {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#donation_successful {
+	position: absolute;
+	width: 445px;
+	height: 92px;
+	left: 738px;
+	top: 26px;
+	overflow: visible;
+}
+.ds_rect {
+	position: absolute;
+	overflow: visible;
+	width: 445px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ds_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 348px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#ds_positive {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#not_enough_blood {
+	position: absolute;
+	width: 407px;
+	height: 92px;
+	left: 757px;
+	top: 26px;
+	overflow: visible;
+}
+.neb_rect {
+	position: absolute;
+	overflow: visible;
+	width: 407px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#neb_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 310px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#neb_error {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#error_saving {
+	position: absolute;
+	width: 314px;
+	height: 92px;
+	left: 804px;
+	top: 26px;
+	overflow: visible;
+}
+.es_rect {
+	position: absolute;
+	overflow: visible;
+	width: 314px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#es_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 217px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#es_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#camp_close {
+	position: absolute;
+	width: 304px;
+	height: 92px;
+	left: 809px;
+	top: 26px;
+	overflow: visible;
+}
+.cc_rect {
+	position: absolute;
+	overflow: visible;
+	width: 304px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#cc_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 207px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#cc_positive {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#connection_error_d {
+	position: absolute;
+	width: 351px;
+	height: 92px;
+	left: 785px;
+	top: 26px;
+	overflow: visible;
+}
+.ce_rect_d {
+	position: absolute;
+	overflow: visible;
+	width: 351px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ce_text_d {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 254px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#ce_warning_d {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#cannot_donate {
+	position: absolute;
+	width: 354px;
+	height: 92px;
+	left: 784px;
+	top: 26px;
+	overflow: visible;
+}
+.cd_rect {
+	position: absolute;
+	overflow: visible;
+	width: 354px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#cd_cross {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#cd_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 257px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-gender</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-gender/web_gender.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/web-gender/web_gender.js"></script>
+</head>
+<body>
+<div id="web_gender">
+	<img id="background_logo" src="angular-app/web-gender/background_logo.png" srcset="angular-app/web-gender/background_logo.png 1x, angular-app/web-gender/background_logo@2x.png 2x">
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<div id="dash_title">
+		<svg class="Rectangle_52">
+			<rect fill="rgba(255,255,255,1)" id="Rectangle_52" rx="40" ry="40" x="0" y="0" width="896" height="106">
+			</rect>
+		</svg>
+		<div id="title">
+			<div id="GENDER">
+				<span>GENDER</span>
+			</div>
+			<img id="LOGO" src="angular-app/web-gender/LOGO.png" srcset="angular-app/web-gender/LOGO.png 1x, angular-app/web-gender/LOGO@2x.png 2x">
+			<div id="_">
+				<span>|</span>
+			</div>
+		</div>
+	</div>
+	<div id="back_btn" class="back_btn" ng-click="vm.bac()">
+		<img id="back" src="angular-app/web-gender/back.png" srcset="angular-app/web-gender/back.png 1x, angular-app/web-gender/back@2x.png 2x">
+	</div>
+	<div id="gender_btn">
+		<div id="male_btn" class="male_btn" ng-click="vm.male()" ng-mouseover="vm.malechange()" ng-mouseleave="vm.maleori()">
+			<svg class="Rectangle_46">
+				<rect fill="rgba(255,255,255,1)" id="Rectangle_46" rx="40" ry="40" x="0" y="0" width="440" height="340">
+				</rect>
+			</svg>
+			<div id="male_details">
+				<img id="man" src="angular-app/web-gender/man.png" srcset="angular-app/web-gender/man.png 1x, angular-app/web-gender/man@2x.png 2x">
+				<div id="MALE">
+					<span>MALE</span>
+				</div>
+			</div>
+		</div>
+		<div id="female_btn" class="female_btn" ng-click="vm.female()" ng-mouseover="vm.femalechange()" ng-mouseleave="vm.femaleori()">
+			<svg class="Rectangle_47">
+				<rect fill="rgba(255,255,255,1)" id="Rectangle_47" rx="40" ry="40" x="0" y="0" width="440" height="340">
+				</rect>
+			</svg>
+			<div id="female_details">
+				<img id="woman" src="angular-app/web-gender/woman.png" srcset="angular-app/web-gender/woman.png 1x, angular-app/web-gender/woman@2x.png 2x">
+				<div id="FEMALE">
+					<span>FEMALE</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

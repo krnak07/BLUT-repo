@@ -1,0 +1,375 @@
+.mediaViewInfo {
+	--web-view-name: web-user-upload;
+	--web-view-id: web_user_upload;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_user_upload;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_user_upload {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-user-upload;
+	--web-view-id: web_user_upload;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#LOGO {
+	position: absolute;
+	width: 1165px;
+	height: 288px;
+	left: 130px;
+	top: 332px;
+	overflow: visible;
+}
+#Made_with___ {
+	position: absolute;
+	left: 596.5px;
+	top: 902px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#Group_90 {
+	position: absolute;
+	width: 394px;
+	height: 412px;
+	left: 1410px;
+	top: 282px;
+	overflow: visible;
+}
+#ID_CARD {
+	position: absolute;
+	left: 96px;
+	top: 0px;
+	overflow: visible;
+	width: 203px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#PROFILE_PHOTO {
+	position: absolute;
+	left: 7px;
+	top: 150px;
+	overflow: visible;
+	width: 380px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#male_id_card {
+	position: absolute;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 82px;
+	overflow: visible;
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.id_inp {
+	position: absolute;
+	overflow: visible;
+	width: 334px;
+	height: 32px;
+	left: 39px;
+	top: 11px;
+}
+#clip {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 10px;
+	top: 9px;
+	overflow: visible;
+}
+#profile_pic {
+	position: absolute;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 232px;
+	overflow: visible;
+}
+.Rectangle_2_cv {
+	position: absolute;
+	overflow: visible;
+	width: 394px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.propic_inp {
+	position: absolute;
+	overflow: visible;
+	width: 334px;
+	height: 32px;
+	left: 39px;
+	top: 11px;
+}
+#clip_cx {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 10px;
+	top: 9px;
+	overflow: visible;
+}
+#termsandcondi {
+	position: absolute;
+	width: 262px;
+	height: 22px;
+	left: 7px;
+	top: 300px;
+	overflow: visible;
+}
+.Ellipse_4 {
+	position: absolute;
+	overflow: visible;
+	width: 17px;
+	height: 17px;
+	left: 0px;
+	top: 3px;
+}
+#Agree_to_Terms_and_Conditions {
+	position: absolute;
+	left: 23px;
+	top: 0px;
+	overflow: visible;
+	width: 240px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(53,49,49,1);
+}
+#getemails {
+	position: absolute;
+	width: 244px;
+	height: 22px;
+	left: 7px;
+	top: 328px;
+	overflow: visible;
+}
+.Ellipse_4_c {
+	position: absolute;
+	overflow: visible;
+	width: 17px;
+	height: 17px;
+	left: 0px;
+	top: 3px;
+}
+#Get_emails_regarding_BLOOD {
+	position: absolute;
+	left: 23px;
+	top: 0px;
+	overflow: visible;
+	width: 222px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(53,49,49,1);
+}
+#signup_btn {
+	position: absolute;
+	width: 276px;
+	left: 59px;
+	top: 376px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 276px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#UPLOAD {
+	position: absolute;
+	left: 98px;
+	top: 5px;
+	overflow: visible;
+	width: 81px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+button {
+	outline: none;
+}
+#load_content {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#dim_background {
+	opacity: 0.26;
+}
+.dim_background {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+}
+#loading_info {
+	position: absolute;
+	width: 327px;
+	height: 197px;
+	left: 797px;
+	top: 389px;
+	overflow: visible;
+}
+.loading_background {
+	position: absolute;
+	overflow: visible;
+	width: 327px;
+	height: 197px;
+	left: 0px;
+	top: 0px;
+}
+#LOGO_dn {
+	position: absolute;
+	width: 242.791px;
+	height: 60px;
+	left: 42px;
+	top: 23px;
+	overflow: visible;
+}
+#Loading {
+	position: absolute;
+	left: 87.5px;
+	top: 137px;
+	overflow: visible;
+	width: 152px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(49,49,49,1);
+}
+.progress {
+	position: absolute;
+	height: 20px;
+	display: inline-block;
+	width: 100%;
+	top : 106px;
+	background-color: #b5b5b5;
+	border-radius: 2px;
+	background-clip: padding-box;
+	overflow: hidden; }
+.progress .indeterminate {
+	background-color: #313131; }
+.progress .indeterminate:before {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+	animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+.progress .indeterminate:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	-webkit-animation-delay: 1.3s;
+	animation-delay: 1.3s; }
+
+@-webkit-keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@-webkit-keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }
+@keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }

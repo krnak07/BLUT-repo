@@ -6,7 +6,11 @@ var donated = new mongoose.Schema({
     type: String,
     required: true
   },
-  venue_id : {
+  venue_email : {
+    type : String,
+    required : true
+  },
+  user_name : {
     type : String,
     required : true
   },
@@ -71,7 +75,10 @@ var profileSchema = new mongoose.Schema({
     type :Date,
     required : true
   },
-
+  gender : {
+    type : String,
+    required : true
+  },
   lastdonatedDate : {
     type : Date,
     required : false

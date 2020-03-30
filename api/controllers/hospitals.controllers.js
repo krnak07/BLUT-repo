@@ -4,6 +4,7 @@ var admin = require('firebase-admin');
 var hospitals = mongoose.model('hospital');
 var bloodbank = mongoose.model('bloodbank');
 var profile = mongoose.model('profile');
+var hospuser = mongoose.model('hospitaluser');
 var notification = mongoose.model('notification_token');
 var hosp_req = mongoose.model('requests');
 auth = firebase.auth();
@@ -20,7 +21,7 @@ module.exports.hospitalSignup = function(req,res){
             if(err){
                 res
                     .status(400)
-                    .json(err)
+                    .json({"msg" : "snr"});
             }
             else
             {
@@ -31,7 +32,6 @@ module.exports.hospitalSignup = function(req,res){
                             auth.signInWithEmailAndPassword(req.body.email, req.body.password)
                                 .then(function () {
                                     var user = auth.currentUser;
-                                    console.log("User created : ",req.body.name);
                                     hospitals
                                         .create({
                                             name : req.body.name,
@@ -46,7 +46,7 @@ module.exports.hospitalSignup = function(req,res){
                                             if(err){
                                                 res
                                                     .status(400)
-                                                    .json(err)
+                                                    .json({"msg" : "ce"});
                                             }
                                             else {
                                                 user.updateProfile({
@@ -55,8 +55,8 @@ module.exports.hospitalSignup = function(req,res){
                                                 user.sendEmailVerification()
                                                     .then(function () {
                                                         res
-                                                            .status(200)
-                                                            .json(hosp);
+                                                            .status(201)
+                                                            .json({"msg" : "created"});
                                                     });
 
                                             }
@@ -67,7 +67,7 @@ module.exports.hospitalSignup = function(req,res){
                         .catch(function (error) {
                             res
                                 .status(400)
-                                .json(error);
+                                .json({"msg" : "snr"});
                         });
                 }
 
@@ -75,7 +75,7 @@ module.exports.hospitalSignup = function(req,res){
                 {
                     res
                         .status(200)
-                        .json({"Message": "User Already Exists"});
+                        .json({"msg": "ue"});
                 }
 
             }
@@ -83,215 +83,300 @@ module.exports.hospitalSignup = function(req,res){
 
 
 };
-module.exports.hospitallogin = function(req,res){
-    auth.signInWithEmailAndPassword(req.body.email,req.body.password)
+module.exports.updatePass = function(req,res){
+    var user = auth.currentUser;
+    user.updatePassword(req.body.newpassword)
+        .then(function(us){
+            res
+                .status(200)
+                .json({"update":"success"});
+        })
+        .catch(function(err){
+
+        })
+};
+module.exports.resetPass = function(req,res){
+    auth.sendPasswordResetEmail(req.body.email)
         .then(function() {
+            // Email sent.
+            res
+                .status(200)
+                .json({"Message" : "Sent"});
+
+        })
+        .catch(function(error) {
+            // An error happened.
+            res
+                .status(400)
+                .json(error)
+        });
+};
+
+module.exports.hospitallogin = function(req,res){
+    auth.signInWithEmailAndPassword(req.body.email, req.body.password)
+        .then(function(){
             var user = auth.currentUser;
-            if(user.emailVerified)
-            {
+            if(user.emailVerified){
                 hospitals
                     .findById(user.displayName)
                     .exec(function(err,hosp){
-                        if(err)
-                        {
+                        if(err){
                             res
-                                .status(400)
-                                .json(err);
+                                .status(404)
+                                .json({"msg":"snr"});
                         }
-                        else
-                        {
-                            res
-                                .status(200)
-                                .json(hosp);
+                        else{
+                            if(hosp == null){
+                                res
+                                    .status(404)
+                                    .json({"msg":"hnf"});
+                            }
+                            else{
+                                res
+                                    .status(200)
+                                    .json({"id":hosp._id,"name":hosp.name});
+                            }
                         }
-            });
+
+                    });
             }
             else
             {
                 res
                     .status(400)
-                    .json({'message' : 'user not verified'});
+                    .json({"msg" : "nv"});
             }
         })
-        .catch(function(error){
-            res
-                .status(404)
-                .json(error)
+        .catch(function(error) {
+            if(error.code == "auth/user-not-found"){
+                res
+                    .status(400)
+                    .json({"msg":"ie"});
+            }
+            else if(error.code == "auth/wrong-password"){
+                res
+                    .status(400)
+                    .json({"msg":"wp"});
+            }
+            else if(error.code == "auth/too-many-requests"){
+                res
+                    .status(404)
+                    .json({"msg":"tmr"});
+            }
+
         });
+
 
 };
 
 module.exports.hospitalGetnearbyBB = function(req,res){
-  hid = req.params.hospID;
-  hospitals
-  .findById(hid)
-  .exec(function(err,hosp){
-    if(err){
-      res
-      .status(400)
-      .json(err);
-    }
+    hospitals
+        .findById(req.body.hospid)
+        .exec(function(err,hosp){
+            if(err){
+                res
+                    .status(400)
+                    .json({"msg" : "snr"});
+            }
 
-    else{
-      bloodbank
-      .find({city : hosp.city})
-      .exec(function(err,bank){
-        if(err){
-          res
-          .status(400)
-          .json(err)
-        }
-        else {
-          res
-          .status(200)
-          .json(bank)
-        }
+            else{
+                if(hosp == null){
+                    res
+                        .status(400)
+                        .json({"msg":"hnf"})
+                }
+                else{
+                    bloodbank
+                        .find({city : hosp.city})
+                        .exec(function(err,bank){
+                            if(err){
+                                res
+                                    .status(400)
+                                    .json({"msg" : "snr"});
+                            }
+                            else {
+                                res
+                                    .status(200)
+                                    .json(bank)
+                            }
 
-      })
-    }
-  });
+                        })
+                }
+
+            }
+        });
+
+
 };
 
 module.exports.hospitalGetnearbyDonors = function(req,res){
-  hid = req.params.hospID;
-  hospitals
-  .findById(hid)
-  .exec(function(err,hosp){
-    if(err){
-      res
-      .status(400)
-      .json(err);
-    }
+    hospitals
+        .findById(req.body.hospid)
+        .exec(function(err,hosp){
+            if(err){
+                res
+                    .status(400)
+                    .json({"msg" : "snr"});
+            }
 
-    else{
-      profile
-      .find({city : hosp.city})
-      .exec(function(err,pro){
-        if(err){
-          res
-          .status(400)
-          .json(err)
-        }
-        else {
-          res
-          .status(200)
-          .json(pro)
-        }
+            else{
+                if(hosp == null){
+                    res
+                        .status(400)
+                        .json({"msg":"hnf"})
+                }
+                else{
+                    profile
+                        .find({city : hosp.city})
+                        .exec(function(err,pro){
+                            if(err){
+                                res
+                                    .status(400)
+                                    .json({"msg" : "snr"});
+                            }
+                            else {
+                                res
+                                    .status(200)
+                                    .json(pro)
+                            }
 
-      })
-    }
-  });
+                        })
+                }
+
+            }
+        });
 };
 
+
 module.exports.donation = function(req,res){
-  var hid = req.params.hospID;
-  var d = new Date();
+    var d = new Date();
 
-
-  hospitals
-      .findById(hid)
-      .exec(function(err,hosp){
-        if(err){
-          res
-              .status(400)
-              .json(err)
-        }
-        else{
-          profile
-              .findOne({phoneNo : req.body.phoneNo})
-              .exec(function(err,pro){
-                if(err){
-                  res
-                      .status(400)
-                      .json(err)
-
+    hospuser
+        .findOne({email:req.bodu.useremail})
+        .exec(function(err,hu){
+            if(err){
+                res
+                    .status(400)
+                    .json({"msg":"snr"})
+            }
+            else{
+                if(hu==null){
+                    res
+                        .status(400)
+                        .json({"msg":"unf"})
                 }
-                else
-                {
-                    var nd = new Date(pro.nextdonationDate);
-                    if(d<nd){
-                        res
-                            .status(206)
-                            .json({"Message" : "Cannot Donate as next donation date is not reached"});
-                    }
-                    else {
-                        var nd = new Date(d);
-                        nd.setDate(d.getDate() + 56);
-                        pro.lastdonatedDate = d;
-                        pro.lastdonatedVenue = hosp.name;
-                        pro.nextdonationDate = nd;
-                        pro.donationhistory.push({
-                            venue_id : hid,
-                            venue_name : hosp.name,
-                            dateofdonation : d,
-                            quantity : parseInt(req.body.units)
-                        });
-
-                        pro.totalunits += parseInt(req.body.units);
-                        //updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
-
-                        pro.save(function(err,proupdated) {
+                else{
+                    hospitals
+                        .findOne({email:hu.hospitalemail})
+                        .exec(function(err,hosp){
                             if(err){
                                 res
                                     .status(400)
                                     .json(err)
-
                             }
                             else{
-                                hosp.donationhistory.push({
-                                    donor_name : pro.firstname,
-                                    phoneNo : pro.phoneNo,
-                                    dateofdonation : d,
-                                    bloodgroup : pro.bloodgroup,
-                                    unitsofblood : parseInt(req.body.units)
+                                if(hosp == null){
+                                    res
+                                        .status(400)
+                                        .json({"msg":"hnf"})
+                                }
+                                else{
+                                    profile
+                                        .findOne({phoneNo : req.body.phoneNo})
+                                        .exec(function(err,pro){
+                                            if(err){
+                                                res
+                                                    .status(400)
+                                                    .json(err)
 
-                                });
-                                hosp.save(function(err,updatedhosp){
-                                    if(err){
-                                        res
-                                            .status(400)
-                                            .json(err)
-                                    }
-                                    else{
-                                        res
-                                            .status(200)
-                                            .json(updatedhosp)
-                                    }
-                                });
+                                            }
+                                            else
+                                            {
+                                                var nd = new Date(pro.nextdonationDate);
+                                                if(d<nd && req.body.superdonation == 'false'){
+                                                    res
+                                                        .status(206)
+                                                        .json({"msg" : "cannot"});
+                                                }
+                                                else {
 
+                                                    var nd = new Date(d);
+                                                    nd.setDate(d.getDate() + 56);
+                                                    pro.lastdonatedDate = d;
+                                                    pro.lastdonatedVenue = hosp.name;
+                                                    pro.nextdonationDate = nd;
+                                                    pro.donationhistory.push({
+                                                        venue_email : bank.email,
+                                                        venue_name : bank.name,
+                                                        user_name : req.body.username,
+                                                        dateofdonation : d,
+                                                        quantity : parseInt(req.body.units)
+                                                    });
+
+                                                    pro.totalunits += parseInt(req.body.units);
+                                                    hosp.donationhistory.push({
+                                                        user_name : req.body.username,
+                                                        user_email : req.body.useremail,
+                                                        donor_name : pro.firstname,
+                                                        phoneNo : pro.phoneNo,
+                                                        dateofdonation : d,
+                                                        bloodgroup : pro.bloodgroup,
+                                                        unitsofblood : parseInt(req.body.units)
+
+                                                    });
+
+                                                    pro.save(function(err,proupdated) {
+                                                        if(err){
+                                                            res
+                                                                .status(400)
+                                                                .json({"msg": "es"});
+
+                                                        }
+
+                                                    });
+                                                    hosp.save(function(err,updatedhosp){
+                                                        if(err){
+                                                            res
+                                                                .status(400)
+                                                                .json({"msg": "es"});
+                                                        }
+                                                        else{
+                                                            res
+                                                                .status(200)
+                                                                .json({"msg": "done"})
+                                                        }
+                                                    });
+                                                }
+
+                                            }
+                                        })
+                                }
                             }
-
-                        });
-                    }
-
+                        })
                 }
-              })
-        }
-      })
-
+            }
+        })
 };
 
 module.exports.getAlldonors = function(req,res){
-    hid = req.params.hospID;
     hospitals
-        .findById(hid)
+        .findOne({email:req.body.email})
         .select('donationhistory')
         .exec(function(err,hosp){
             if(err){
                 res
                     .status(400)
-                    .json(err);
+                    .json({"msg": "snr"});
             }
 
             else{
                 res
                     .status(200)
                     .json(hosp);
-
-
             }
         });
 };
+
 module.exports.test_1 = function(req,res){
   bId = req.params.hospID;
 
@@ -340,7 +425,9 @@ module.exports.requests = function (req,res) {
         .findOne({client_name : req.body.toname})
         .exec(function (err,noti) {
             if(err){
-                console.log(err);
+                res
+                    .status(400)
+                    .json({"msg": "snr"});
             }
             else{
                 hosp_req
@@ -356,9 +443,13 @@ module.exports.requests = function (req,res) {
                         if(err){
                             res
                                 .status(400)
-                                .json(err)
+                                .json({"msg": "ce"});
                         }
                         else{
+                            res
+                                .status(201)
+                                .json({"msg": "created"});
+
                             var msg = {
                                 data: {
                                     title: noti.client_name,
@@ -368,13 +459,10 @@ module.exports.requests = function (req,res) {
                             };
                             admin.messaging().send(msg)
                                 .then(function(response){
-                                    res
-                                        .status(201)
-                                        .json(re)
+
                                 })
                                 .catch(function (error) {
-                                    console.log(error);
-
+                                    console.log(error)
                                 });
                         }
 

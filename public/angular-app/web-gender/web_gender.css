@@ -1,0 +1,231 @@
+.mediaViewInfo {
+	--web-view-name: web-gender;
+	--web-view-id: web_gender;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_gender;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_gender {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-gender;
+	--web-view-id: web_gender;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#background_logo {
+	opacity: 0.45;
+	position: absolute;
+	width: 4497.208px;
+	height: 3441.797px;
+	left: -1288.604px;
+	top: -1232.898px;
+	overflow: visible;
+}
+#Made_with___ {
+	position: absolute;
+	left: 843.5px;
+	top: 902px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#dash_title {
+	position: absolute;
+	width: 896px;
+	height: 113px;
+	left: 512px;
+	top: 100px;
+	overflow: visible;
+}
+.Rectangle_52 {
+	filter: drop-shadow(0px 0px 20px rgba(245, 245, 245, 1));
+	position: absolute;
+	overflow: visible;
+	width: 956px;
+	height: 166px;
+	left: 0px;
+	top: 7px;
+}
+#title {
+	position: absolute;
+	width: 605px;
+	height: 106px;
+	left: 146px;
+	top: 0px;
+	overflow: visible;
+}
+#GENDER {
+	position: absolute;
+	left: 307px;
+	top: 6px;
+	overflow: visible;
+	width: 299px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(49,49,49,1);
+}
+#LOGO {
+	position: absolute;
+	width: 242.791px;
+	height: 60px;
+	left: 0px;
+	top: 30px;
+	overflow: visible;
+}
+#_ {
+	position: absolute;
+	left: 263px;
+	top: 0px;
+	overflow: visible;
+	width: 25px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(49,49,49,1);
+}
+#back_btn {
+	position: absolute;
+	width: 25px;
+	left: 25px;
+	top: 25px;
+	overflow: visible;
+	cursor: pointer;
+}
+#back {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#gender_btn {
+	position: absolute;
+	width: 944px;
+	height: 340px;
+	left: 488px;
+	top: 318px;
+	overflow: visible;
+}
+#male_btn {
+	position: absolute;
+	width: 440px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_46 {
+	filter: drop-shadow(0px 0px 20px rgba(245, 245, 245, 1));
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+}
+#male_details {
+	position: absolute;
+	width: 135px;
+	height: 167px;
+	left: 153px;
+	top: 87px;
+	overflow: visible;
+}
+#man {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 18px;
+	top: 0px;
+	overflow: visible;
+}
+#MALE {
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	overflow: visible;
+	width: 136px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#female_btn {
+	position: absolute;
+	width: 440px;
+	left: 504px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_47 {
+	filter: drop-shadow(0px 0px 20px rgba(245, 245, 245, 1));
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+}
+#female_details {
+	position: absolute;
+	width: 188px;
+	height: 167px;
+	left: 126px;
+	top: 87px;
+	overflow: visible;
+}
+#woman {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 44px;
+	top: 0px;
+	overflow: visible;
+}
+#FEMALE {
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	overflow: visible;
+	width: 189px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+button {
+	outline: none;
+}

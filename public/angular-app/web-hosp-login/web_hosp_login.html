@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-hosp-login</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-hosp-login/web_hosp_login.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/web-hosp-login/web_hosp_login.js"></script>
+</head>
+<body>
+<div id="web_hosp_login">
+	<svg class="Rectangle_56">
+		<rect fill="rgba(245,245,245,1)" id="Rectangle_56" rx="0" ry="0" x="0" y="0" width="513" height="975">
+		</rect>
+	</svg>
+	<img id="background_logo" src="angular-app/web-hosp-login/background_logo.png" srcset="angular-app/web-hosp-login/background_logo.png 1x, angular-app/web-hosp-login/background_logo@2x.png 2x">
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<img id="LOGO" src="angular-app/web-hosp-login/LOGO.png" srcset="angular-app/web-hosp-login/LOGO.png 1x, angular-app/web-hosp-login/LOGO@2x.png 2x">
+	<div id="hosp_login_form">
+		<form name="vm.loginForm" ng-submit="vm.login()" >
+		<svg class="Rectangle_1">
+			<rect fill="rgba(225,83,83,1)" stroke="rgba(225,83,83,1)" stroke-width="1px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_1" rx="44" ry="44" x="0" y="0" width="327" height="446">
+			</rect>
+		</svg>
+		<div id="hosp_title">
+			<div id="Hospitals">
+				<span>Hospitals</span>
+			</div>
+			<img id="hospital_4" src="angular-app/web-hosp-login/hospital_4.png" srcset="angular-app/web-hosp-login/hospital_4.png 1x, angular-app/web-hosp-login/hospital_4@2x.png 2x">
+		</div>
+		<div id="email_content">
+			<svg class="Rectangle_2">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="21" ry="21" x="0" y="0" width="277" height="42">
+				</rect>
+			</svg>
+			<input type="email" required class="email_input" ng-model="vm.email_input" placeholder="Email" class="email_input">
+				<rect fill="rgba(255,255,255,1)" id="email_input" rx="0" ry="0" x="0" y="0" width="210" height="32">
+				</rect>
+			</input>
+			<img id="email__3_" src="angular-app/web-hosp-login/email__3_.png" srcset="angular-app/web-hosp-login/email__3_.png 1x, angular-app/web-hosp-login/email__3_@2x.png 2x">
+		</div>
+		<div id="password_content">
+			<svg class="Rectangle_3">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_3" rx="21" ry="21" x="0" y="0" width="277" height="42">
+				</rect>
+			</svg>
+			<input type="password" required class="pass_input" ng-model="vm.pass_input" placeholder="Password">
+				<rect fill="rgba(255,255,255,1)" id="pass_input" rx="0" ry="0" x="0" y="0" width="210" height="32">
+				</rect>
+			</input>
+			<img id="key1" src="angular-app/web-hosp-login/key1.png" srcset="angular-app/web-hosp-login/key1.png 1x, angular-app/web-hosp-login/key1@2x.png 2x">
+		</div>
+		<div id="cookies_options">
+			<input type="checkbox" class="Ellipse_4" ng-model="vm.coption">
+				<ellipse fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Ellipse_4" rx="8.5" ry="8.5" cx="8.5" cy="8.5">
+				</ellipse>
+			</input>
+			<div id="Keep_me_Signed_in">
+				<span>Keep me Signed in</span>
+			</div>
+		</div>
+		<button type="submit" id="login_btn" class="login_btn" ng-mouseover="vm.btnchange()" ng-mouseleave="vm.btnori()">
+			<svg class="Rectangle_40">
+				<rect fill="rgba(112,112,112,1)" id="Rectangle_40" rx="21" ry="21" x="0" y="0" width="277" height="42">
+				</rect>
+			</svg>
+			<div id="login">
+				<span>login</span>
+			</div>
+		</button>
+		</form>
+	</div>
+	<div id="load_content" ng-if="vm.isloading">
+		<svg class="dim_background">
+			<rect fill="rgba(49,49,49,1)" id="dim_background" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+			</rect>
+		</svg>
+		<div id="loading_info">
+			<svg class="loading_background">
+				<rect fill="rgba(255,255,255,1)" id="loading_background" rx="26" ry="26" x="0" y="0" width="327" height="197">
+				</rect>
+			</svg>
+			<img id="LOGO_dn" src="angular-app/loading-screen/LOGO_dn.png" srcset="angular-app/loading-screen/LOGO_dn.png 1x, angular-app/loading-screen/LOGO_dn@2x.png 2x">
+			<div id="Loading">
+				<span>Loading</span>
+			</div>
+			<div class="progress">
+				<div class="indeterminate"></div>
+			</div>
+		</div>
+	</div>
+	<div id="invalid_password" ng-if="vm.is_ip">
+		<svg class="ip_rect">
+			<rect fill="rgba(255,255,255,1)" id="ip_rect" rx="26" ry="26" x="0" y="0" width="392" height="92">
+			</rect>
+		</svg>
+		<img id="ip_cross" src="angular-app/error/ip_cross.png" srcset="angular-app/error/ip_cross.png 1x, angular-app/error/ip_cross@2x.png 2x">
+		<div id="ip_text">
+			<span>INVALID PASSWORD</span>
+		</div>
+	</div>
+	<div id="connection_error" ng-if="vm.is_ce">
+		<svg class="ce_rect">
+			<rect fill="rgba(255,255,255,1)" id="ce_rect" rx="26" ry="26" x="0" y="0" width="401" height="92">
+			</rect>
+		</svg>
+		<div id="ce_text">
+			<span>CONNECTION ERROR</span>
+		</div>
+		<img id="ce_waring" src="angular-app/error/ce_waring.png" srcset="angular-app/error/ce_waring.png 1x, angular-app/error/ce_waring@2x.png 2x">
+	</div>
+	<div id="invalid_email" ng-if="vm.is_ie">
+		<svg class="ie_rect">
+			<rect fill="rgba(255,255,255,1)" id="ie_rect" rx="26" ry="26" x="0" y="0" width="317" height="92">
+			</rect>
+		</svg>
+		<img id="ie_cross" src="angular-app/error/ie_cross.png" srcset="angular-app/error/ie_cross.png 1x, angular-app/error/ie_cross@2x.png 2x">
+		<div id="ie_text">
+			<span>INVALID EMAIL</span>
+		</div>
+	</div>
+	<div id="server_not_responding" ng-if="vm.is_snr">
+		<svg class="snr_rect">
+			<rect fill="rgba(255,255,255,1)" id="snr_rect" rx="26" ry="26" x="0" y="0" width="479" height="92">
+			</rect>
+		</svg>
+		<div id="snr_text">
+			<span>SERVER NOT RESPONDING</span>
+		</div>
+		<img id="snr_warning" src="angular-app/error/snr_warning.png" srcset="angular-app/error/snr_warning.png 1x, angular-app/error/snr_warning@2x.png 2x">
+	</div>
+	<div id="user_not_found" ng-if="vm.is_unf">
+		<svg class="unf__rect">
+			<rect fill="rgba(255,255,255,1)" id="unf__rect" rx="26" ry="26" x="0" y="0" width="357" height="92">
+			</rect>
+		</svg>
+		<div id="unf_text">
+			<span>USER NOT FOUND</span>
+		</div>
+		<img id="unf_warning" src="angular-app/error/unf_warning.png" srcset="angular-app/error/unf_warning.png 1x, angular-app/error/unf_warning@2x.png 2x">
+	</div>
+	<div id="user_not_verified" ng-if="vm.is_unv">
+		<svg class="unv_rect">
+			<rect fill="rgba(255,255,255,1)" id="unv_rect" rx="26" ry="26" x="0" y="0" width="380" height="92">
+			</rect>
+		</svg>
+		<div id="unv_text">
+			<span>USER NOT VERIFIED</span>
+		</div>
+		<img id="unv_warning" src="angular-app/error/unv_warning.png" srcset="angular-app/error/unv_warning.png 1x, angular-app/error/unv_warning@2x.png 2x">
+	</div>
+</div>
+</body>
+</html>

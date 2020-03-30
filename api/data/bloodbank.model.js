@@ -33,7 +33,16 @@ var bankdonor = new mongoose.Schema({
   donor_name : {
     type : String,
     required : true
+  },
+  user_name : {
+    type : String,
+    required : true
+  },
+  user_email : {
+    type: String,
+    required: true
   }
+
 });
 
 var campdonor = new mongoose.Schema({
@@ -50,6 +59,18 @@ var campdonor = new mongoose.Schema({
 
 var donation = new mongoose.Schema({
   name : {
+    type : String,
+    required : true
+  },
+  email : {
+    type : String,
+    required : true
+  },
+  user_name : {
+    type : String,
+    required : true
+  },
+  user_email : {
     type : String,
     required : true
   },

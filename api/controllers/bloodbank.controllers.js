@@ -2,16 +2,18 @@ var mongoose = require('mongoose');
 var request = require("request");
 var firebase = require('firebase');
 var nodemailer = require('nodemailer');
-var serviceAccount = require('C:\\Users\\admin\\Downloads\\blut-110799-firebase-adminsdk-h7frz-7d77f4b9e4.json');
+var serviceAccount = require('F:\\BLUT\\BLUT-v1.0.0\\blut-110799-firebase-adminsdk-h7frz-7d77f4b9e4.json');
 require('firebase/storage');
 require('firebase/messaging');
 var admin = require('firebase-admin');
 var bloodbank = mongoose.model('bloodbank');
 var profile = mongoose.model('profile');
+var bbuser = mongoose.model('bloodbankuser');
 var hospitals = mongoose.model('hospital');
 var notification = mongoose.model('notification_token');
 var bb_req = mongoose.model('requests');
 var cors = require('cors')({origin: true});
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyARrRzk-qumZ7fAHD6y9NpTrEaT2q8lD5k",
@@ -35,7 +37,7 @@ module.exports.tokenregister = function(req,res){
             if(err){
                 res
                     .status(400)
-                    .json(err)
+                    .json({"msg":"snr"});
             }
             else{
                 if(noti == null){
@@ -47,78 +49,97 @@ module.exports.tokenregister = function(req,res){
                             if(err){
                                 res
                                     .status(400)
-                                    .json(err)
+                                    .json({"msg":"ce"});
                             }
                             else{
                                 res
                                     .status(201)
-                                    .json(noti)
+                                    .json({"msg":"created"});
                             }
 
                         })
 
                 }
                 else{
-                    console.log('exists');
                     res
                         .status(200)
-                        .json({"Message":"Already Exists"})
+                        .json({"msg":"ue"})
                 }
             }
         })
 
 
 };
-module.exports.bloodbankGetOne = function(req,res) {
+module.exports.bloodbankLogin = function(req,res) {
   auth.signInWithEmailAndPassword(req.body.email, req.body.password)
       .then(function(){
         var user = auth.currentUser;
-        if(user.emailVerified)
-        {
+        if(user.emailVerified){
           bloodbank
               .findById(user.displayName)
               .exec(function(err,bank){
                 if(err){
                   res
-                      .status(400)
-                      .json(err);
+                      .status(404)
+                      .json({"msg":"snr"});
                 }
-                res
-                    .status(200)
-                    .json(bank); //logged in bank details
-              });
+                else{
+                    if(bank == null){
+                        res
+                            .status(404)
+                            .json({"msg":"unf"});
+                    }
+                    else{
+                        res
+                            .status(200)
+                            .json({"id":bank._id,"name":bank.name});
+                    }
+                }
 
+              });
         }
         else
         {
           res
               .status(400)
-              .json({"message" : "bank not verified"});
+              .json({"msg" : "nv"});
         }
       })
       .catch(function(error) {
-        res
-            .status(404)
-            .json(error);
+          if(error.code == "auth/user-not-found"){
+              res
+                  .status(400)
+                  .json({"msg":"ie"});
+          }
+          else if(error.code == "auth/wrong-password"){
+              res
+                  .status(400)
+                  .json({"msg":"wp"});
+          }
+          else if(error.code == "auth/too-many-requests"){
+              res
+                  .status(404)
+                  .json({"msg":"tmr"});
+          }
+
       });
 
 };
 
 module.exports.bloodbankGetAll = function(req,res) {
-  bloodbank
-  .find()
-  .exec(function(err,banks){
-    if(err){
-      res
-      .status(500)
-      .json(err);
-    }
-    else
-    res
-    .status(200)
-    .json(banks);
-    });
-
+    bloodbank
+        .find()
+        .exec(function(err,banks){
+            if(err){
+                res
+                    .status(500)
+                    .json(err);
+            }
+            else
+                res
+                    .status(200)
+                    .json(banks);
+        });
 };
 
 function addbloodgroups(bank) {
@@ -138,7 +159,6 @@ function addbloodgroups(bank) {
         i+=1;
     }
 };
-
 module.exports.blooadbankAddOne = function(req,res){
 
     var d = new Date();
@@ -149,7 +169,7 @@ module.exports.blooadbankAddOne = function(req,res){
             if(err){
                 res
                     .status(400)
-                    .json(err)
+                    .json({"msg":"snr"});
             }
             else
             {
@@ -160,7 +180,6 @@ module.exports.blooadbankAddOne = function(req,res){
                             auth.signInWithEmailAndPassword(req.body.email, req.body.password)
                                 .then(function () {
                                     var user = auth.currentUser;
-                                    console.log("User created : ",req.body.name);
                                     bloodbank
                                         .create({
                                           name : req.body.name,
@@ -176,7 +195,7 @@ module.exports.blooadbankAddOne = function(req,res){
                                             if(err){
                                                 res
                                                     .status(400)
-                                                    .json(err)
+                                                    .json({"msg":"ce"});
                                             }
                                             else {
                                               user.updateProfile({
@@ -186,7 +205,7 @@ module.exports.blooadbankAddOne = function(req,res){
                                                     .then(function () {
                                                         res
                                                             .status(201)
-                                                            .json(bank);
+                                                            .json({"msg":"created"});
                                                     });
                                                     addbloodgroups(bank);
 
@@ -198,7 +217,7 @@ module.exports.blooadbankAddOne = function(req,res){
                         .catch(function (error) {
                             res
                                 .status(400)
-                                .json(error);
+                                .json({"msg":"ce"});
                         });
                 }
 
@@ -206,7 +225,7 @@ module.exports.blooadbankAddOne = function(req,res){
                 {
                     res
                         .status(200)
-                        .json({"Message": "User Already Exists"});
+                        .json({"msg":"ue"});
                 }
 
             }
@@ -215,6 +234,34 @@ module.exports.blooadbankAddOne = function(req,res){
 
 };
 
+module.exports.updatePass = function(req,res){
+    var user = auth.currentUser;
+    user.updatePassword(req.body.newpassword)
+        .then(function(us){
+            res
+                .status(200)
+                .json({"update":"success"});
+        })
+        .catch(function(err){
+
+        })
+};
+module.exports.resetPass = function(req,res){
+    auth.sendPasswordResetEmail(req.body.email)
+        .then(function() {
+            // Email sent.
+            res
+                .status(200)
+                .json({"Message" : "Sent"});
+
+        })
+        .catch(function(error) {
+            // An error happened.
+            res
+                .status(400)
+                .json(error)
+        });
+};
 
 function updatebloodunits(req,res,bank,bg,unit) {
     var i = 0;
@@ -226,8 +273,6 @@ function updatebloodunits(req,res,bank,bg,unit) {
         }
         i+=1;
     }
-
-
 
 };
 function send_mail_blooddonate(email) {
@@ -253,116 +298,143 @@ function send_mail_blooddonate(email) {
 
         }
     });
-
 };
 
 
 module.exports.donordonate = function(req,res){
-  var bId = req.params.bankID;
-  var d = new Date();
 
-  bloodbank
-      .findById(bId)
-      .exec(function(err,bank){
-        if(err){
-          res
-              .status(400)
-              .json(err)
-        }
-        else{
-          profile
-              .findOne({phoneNo : req.body.phoneNo})
-              .exec(function(err,pro){
-                if(err){
-                  res
-                      .status(400)
-                      .json(err)
-
+    var d = new Date();
+    bbuser
+        .findOne({email:req.body.useremail})
+        .exec(function(err,bu) {
+            if (err) {
+                res
+                    .status(400)
+                    .json({"msg": "ce"})
+            }
+            else{
+                if(bu == null){
+                    res
+                        .status(400)
+                        .json({"msg":"unf"});
                 }
-                else
-                {
-                    var nd = new Date(pro.nextdonationDate);
-                    if(d<nd){
-                        res
-                            .status(206)
-                            .json({"Message" : "Cannot Donate as next donation date is not reached"});
-                    }
-                    else {
-                        var nd = new Date(d);
-                        nd.setDate(d.getDate() + 56);
-                        pro.lastdonatedDate = d;
-                        pro.lastdonatedVenue = bank.name;
-                        pro.nextdonationDate = nd;
-                        pro.donationhistory.push({
-                            venue_id : bId,
-                            venue_name : bank.name,
-                            dateofdonation : d,
-                            quantity : parseInt(req.body.units)
-                        });
-
-                        pro.totalunits += parseInt(req.body.units);
-                        updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
-
-                        pro.save(function(err,proupdated) {
+                else{
+                    bloodbank
+                        .findOne({email:bu.bloodbankemail})
+                        .exec(function(err,bank){
                             if(err){
                                 res
                                     .status(400)
-                                    .json(err)
-
+                                    .json({"msg":"snr"});
                             }
                             else{
-                                bank.donordonationhistory.push({
-                                    donor_name : pro.firstname,
-                                    phoneNo : pro.phoneNo,
-                                    dateofdonation : d,
-                                    bloodgroup : pro.bloodgroup,
-                                    unitsofblood : parseInt(req.body.units)
+                                if(bank == null){
+                                    res
+                                        .status(400)
+                                        .json({"msg":"bnf"})
+                                }
+                                else{
+                                    profile
+                                        .findOne({phoneNo : req.body.phoneNo})
+                                        .exec(function(err,pro) {
+                                            if (err) {
+                                                res
+                                                    .status(400)
+                                                    .json({"msg": "snr"});
 
-                                });
-                                bank.save(function(err,updatedbank){
-                                    if(err){
-                                        res
-                                            .status(400)
-                                            .json(err)
-                                    }
-                                    else{
-                                        res
-                                            .status(200)
-                                            .json(updatedbank);
-                                        send_mail_blooddonate(pro.email);
-                                    }
-                                });
+                                            } else {
+                                                var nd = new Date(pro.nextdonationDate);
+                                                if (d < nd && req.body.superdontaion == 'false') {
+                                                    res
+                                                        .status(206)
+                                                        .json({"msg": "cannot"});
+                                                }
+                                                else {
+                                                    var nd = new Date(d);
+                                                    nd.setDate(d.getDate() + 56);
+                                                    pro.lastdonatedDate = d;
+                                                    pro.lastdonatedVenue = bank.name;
+                                                    pro.nextdonationDate = nd;
+                                                    pro.donationhistory.push({
+                                                        venue_email : bank.email,
+                                                        venue_name : bank.name,
+                                                        user_name : req.body.username,
+                                                        dateofdonation : d,
+                                                        quantity : parseInt(req.body.units)
+                                                    });
+
+                                                    pro.totalunits += parseInt(req.body.units);
+                                                    updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
+
+                                                    bank.donordonationhistory.push({
+                                                        user_name : req.body.username,
+                                                        user_email : req.body.useremail,
+                                                        donor_name : pro.firstname,
+                                                        phoneNo : pro.phoneNo,
+                                                        dateofdonation : d,
+                                                        bloodgroup : pro.bloodgroup,
+                                                        unitsofblood : parseInt(req.body.units)
+
+                                                    });
+
+                                                    pro.save(function(err,proupdated) {
+                                                        if(err){
+                                                            res
+                                                                .status(400)
+                                                                .json({"msg":"es"});
+
+                                                        }
+                                                    });
+                                                    bank.save(function(err,updatedbank){
+                                                        if(err){
+                                                            res
+                                                                .status(400)
+                                                                .json({"msg":"es"});
+                                                        }
+                                                        else{
+                                                            res
+                                                                .status(200)
+                                                                .json({"msg":"done"});
+                                                            send_mail_blooddonate(pro.email);
+                                                        }
+                                                    });
+                                                }
+                                            }
+                                        })
+                                }
 
                             }
-
-                        });
-                    }
-
+                        })
                 }
-              })
-        }
-      })
+            }
+        });
+
 
 };
 
 module.exports.getAllDonorDonations = function(req,res) {
-  bId = req.params.bankID;
-
-  bloodbank
-      .findById(bId)
-      .select('donordonationhistory')
-      .exec(function(err,bank){
-        if(err){
-          res
-              .status(400)
-              .json(err)
-        }
-        else{
-          res
-              .status(200)
-              .json(bank)
-        }
-      })
+    bloodbank
+        .findOne({email:req.body.email})
+        .select('donordonationhistory')
+        .exec(function(err,bank){
+            if(err){
+                res
+                    .status(400)
+                    .json({"msg":"snr"});
+            }
+            else{
+                if(bank == null){
+                    res
+                        .status(400)
+                        .json({"msg":"bnk"})
+                }
+                else{
+                    res
+                        .status(200)
+                        .json(bank)
+                }
+            }
+        })
 };
 
 function checkbloodavailablity(bank,bg,units) {
@@ -383,81 +455,116 @@ function checkbloodavailablity(bank,bg,units) {
     }
 }
 module.exports.hospitaldonate = function(req,res){
-    var bId = req.params.bankID;
     var d = new Date();
-
-    bloodbank
-        .findById(bId)
-        .exec(function(err,bank){
+    bbuser
+        .findOne({email:req.body.useremail})
+        .exec(function(err,bu){
             if(err){
                 res
                     .status(400)
-                    .json(err)
+                    .json({"msg":"snr"})
             }
             else{
-                hospitals
-                    .findById(req.body.hosp_id)
-                    .exec(function(err,hosp){
-                        if(err){
-                            res
-                                .status(400)
-                                .json(err)
-                        }
-                        else{
-                            if(checkbloodavailablity(bank,req.body.bg,parseInt(req.body.units))){
-                                hosp.bloodbankdonationhistory.push({
-                                    name : bank.name,
-                                    dateofdonation : d,
-                                    bloodgroup : req.body.bg,
-                                    unitsofblood : parseInt(req.body.units)
-                                });
-                                hosp.save(function(err,uphosp){
-                                    if(err){
-                                        res
-                                            .status(400)
-                                            .json(err)
-                                    }
-                                    else{
-                                        bank.donatedhistory.push({
-                                            name : hosp.name,
-                                            dateofdonation : d,
-                                            bloodgroup : req.body.bg,
-                                            unitsofblood : parseInt(req.body.units)
-                                        });
-                                        bank.save(function(err,upbank){
+                if(bu==null){
+                    res
+                        .status(400)
+                        .json({"msg":"unf"})
+                }
+                else{
+                    bloodbank
+                        .findOne({email:bu.bloodbankemail})
+                        .exec(function(err,bank){
+                            if(err){
+                                res
+                                    .status(400)
+                                    .json({"msg":"snr"});
+                            }
+                            else{
+                                if (bank == null ){
+                                    res
+                                        .status(400)
+                                        .json({"msg":"bnf"})
+                                }
+                                else{
+                                    hospitals
+                                        .findById(req.body.hospid)
+                                        .exec(function(err,hosp){
                                             if(err){
                                                 res
                                                     .status(400)
-                                                    .json(err)
+                                                    .json({"msg":"ce"});
                                             }
                                             else{
-                                                res
-                                                    .status(200)
-                                                    .json(upbank)
+                                                if(hosp == null){
+                                                    res
+                                                        .status(400)
+                                                        .json({"msg":"hnf"});
+                                                }
+                                                else{
+                                                    if(checkbloodavailablity(bank,req.body.bg,parseInt(req.body.units))){
+                                                        hosp.bloodbankdonationhistory.push({
+                                                            name : bank.name,
+                                                            email : bank.email,
+                                                            user_name : req.body.username,
+                                                            dateofdonation : d,
+                                                            bloodgroup : req.body.bg,
+                                                            unitsofblood : parseInt(req.body.units)
+                                                        });
+                                                        bank.donatedhistory.push({
+                                                            user_name : req.body.username,
+                                                            user_email : req.body.useremail,
+                                                            name : hosp.name,
+                                                            email : hosp.email,
+                                                            dateofdonation : d,
+                                                            bloodgroup : req.body.bg,
+                                                            unitsofblood : parseInt(req.body.units)
+                                                        });
+                                                        hosp.save(function(err,uphosp){
+                                                            if(err){
+                                                                res
+                                                                    .status(400)
+                                                                    .json({"msg":"es"});
+                                                            }
+                                                        });
+                                                        bank.save(function(err,upbank){
+                                                            if(err){
+                                                                res
+                                                                    .status(400)
+                                                                    .json({"msg":"es"});
+                                                            }
+                                                            else{
+                                                                res
+                                                                    .status(200)
+                                                                    .json({"msg":"done"});
+                                                            }
+                                                        });
+
+                                                    }
+                                                    else{
+                                                        res
+                                                            .status(400)
+                                                            .json({"Message" : "neb"})
+                                                    }
+                                                }
                                             }
-                                        });
-                                    }
-                                });
+                                        })
+                                }
                             }
-                            else{
-                                res
-                                    .status(400)
-                                    .json({"Message" : "Not Enough Blood"})
-                            }
-
-
-                        }
-                    })
+                        })
+                }
             }
-        })
+        });
+
+
 };
-module.exports.bb = function(req,res){
-    var bid = req.params.bankID;
-    bloodbank
-        .findById(bid)
+module.exports.requests = function(req,res){
+    bb_req
+        .findOne({"to":req.body.to})
         .exec(function(err,bb){
             if(err){
-
+                res
+                    .status(400)
+                    .json({"Message" : "snr"})
             }
             else{
                 res
@@ -467,6 +574,17 @@ module.exports.bb = function(req,res){
         })
 };
 
+
+
+
+
+
+
+
+
+
+
+//test
 module.exports.test_1 = function(req,res){
 
     var options = {
@@ -492,19 +610,4 @@ module.exports.test_1 = function(req,res){
         console.log(body);
     });
 };
-module.exports.requests = function(req,res){
-    bb_req
-        .findOne({"to":req.body.to})
-        .exec(function(err,bb){
-            if(err){
-                res
-                    .status(400)
-                    .json(err)
-            }
-            else{
-                res
-                    .status(200)
-                    .json(bb)
-            }
-        })
-};
+

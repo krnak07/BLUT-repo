@@ -1,0 +1,620 @@
+.mediaViewInfo {
+	--web-view-name: web-bb-dashboard;
+	--web-view-id: web_bb_dashboard;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_bb_dashboard;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_bb_dashboard {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-bb-dashboard;
+	--web-view-id: web_bb_dashboard;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#background_logo {
+	opacity: 0.45;
+	position: absolute;
+	width: 4497.208px;
+	height: 3441.797px;
+	left: -1288.604px;
+	top: -1232.898px;
+	overflow: visible;
+}
+#Made_with___ {
+	position: absolute;
+	left: 843.5px;
+	top: 902px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#bb_buttons {
+	position: absolute;
+	width: 1449px;
+	height: 712px;
+	left: 236px;
+	top: 167px;
+	overflow: visible;
+}
+#bloodbank_details {
+	position: absolute;
+	width: 440px;
+	height: 340px;
+	left: 756px;
+	top: 372px;
+	overflow: visible;
+}
+.Rectangle_50 {
+	filter: drop-shadow(0px 0px 20px rgba(245, 245, 245, 1));
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+}
+#bloodbank_name {
+	position: absolute;
+	width: 260.5px;
+	height: 100px;
+	left: 50px;
+	top: 120px;
+	overflow: visible;
+}
+#Bloodbank {
+	position: absolute;
+	left: 107.5px;
+	top: 30px;
+	overflow: visible;
+	width: 154px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(245,245,245,1);
+}
+#blood {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#camp_btn {
+	position: absolute;
+	width: 440px;
+	height: 340px;
+	left: 252px;
+	top: 372px;
+	overflow: visible;
+}
+.Rectangle_49 {
+	filter: drop-shadow(0px 0px 20px rgba(245, 245, 245, 1));
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+}
+#camp_content {
+	position: absolute;
+	width: 157px;
+	height: 167px;
+	left: 142px;
+	top: 87px;
+	overflow: visible;
+}
+#Camps {
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	overflow: visible;
+	width: 158px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#blood_co {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 28px;
+	top: 0px;
+	overflow: visible;
+}
+#donatin_btn {
+	position: absolute;
+	width: 440px;
+	height: 340px;
+	left: 1009px;
+	top: 1px;
+	overflow: visible;
+}
+.Rectangle_53 {
+	filter: drop-shadow(0px 0px 20px rgba(245, 245, 245, 1));
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+}
+#donation_content {
+	position: absolute;
+	width: 241px;
+	height: 167px;
+	left: 99px;
+	top: 86px;
+	overflow: visible;
+}
+#Donations {
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	overflow: visible;
+	width: 242px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#ID008_donor_1 {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 71px;
+	top: 0px;
+	overflow: visible;
+}
+#req_btn {
+	position: absolute;
+	width: 440px;
+	height: 340px;
+	left: 504px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_47 {
+	filter: drop-shadow(0px 0px 20px rgba(245, 245, 245, 1));
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+}
+#req_content {
+	position: absolute;
+	width: 210px;
+	height: 167px;
+	left: 115px;
+	top: 87px;
+	overflow: visible;
+}
+#Requests {
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	overflow: visible;
+	width: 211px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#important {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 55px;
+	top: 0px;
+	overflow: visible;
+}
+#ba_btn {
+	position: absolute;
+	width: 440px;
+	height: 340px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_46 {
+	filter: drop-shadow(0px 0px 20px rgba(245, 245, 245, 1));
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+}
+#ba_content {
+	position: absolute;
+	width: 249px;
+	height: 234px;
+	left: 96px;
+	top: 53px;
+	overflow: visible;
+}
+#Blood_c {
+	position: absolute;
+	left: 56px;
+	top: 100px;
+	overflow: visible;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#ID018_flask {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 75px;
+	top: 0px;
+	overflow: visible;
+}
+#Availablity {
+	position: absolute;
+	left: 0px;
+	top: 167px;
+	overflow: visible;
+	width: 250px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+#dash_title {
+	position: absolute;
+	width: 896px;
+	height: 113px;
+	left: 512px;
+	top: 18px;
+	overflow: visible;
+}
+.Rectangle_52 {
+	filter: drop-shadow(0px 0px 20px rgba(245, 245, 245, 1));
+	position: absolute;
+	overflow: visible;
+	width: 956px;
+	height: 166px;
+	left: 0px;
+	top: 7px;
+}
+#title {
+	position: absolute;
+	width: 774px;
+	height: 106px;
+	left: 61px;
+	top: 0px;
+	overflow: visible;
+}
+#DASHBOARD {
+	position: absolute;
+	left: 307px;
+	top: 6px;
+	overflow: visible;
+	width: 468px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(49,49,49,1);
+}
+#LOGO {
+	position: absolute;
+	width: 242.791px;
+	height: 60px;
+	left: 0px;
+	top: 30px;
+	overflow: visible;
+}
+#_ {
+	position: absolute;
+	left: 263px;
+	top: 0px;
+	overflow: visible;
+	width: 25px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(49,49,49,1);
+}
+#user_info_disp {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 1786px;
+	top: 25px;
+	overflow: visible;
+}
+.sha_back {
+	filter: drop-shadow(0px 3px 6px rgba(49, 49, 49, 0.502));
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	height: 68px;
+	left: 0px;
+	top: 0px;
+}
+#pro_pic {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	border-radius: 50%;
+}
+#home_btn {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 1845px;
+	top: 25px;
+	overflow: visible;
+}
+.Ellipse_5 {
+	filter: drop-shadow(0px 3px 6px rgba(49, 49, 49, 0.502));
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	height: 68px;
+	left: 0px;
+	top: 0px;
+}
+#home_grey {
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	left: 8px;
+	top: 8px;
+	overflow: visible;
+}
+#user_overlay {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: -1px;
+	overflow: visible;
+}
+#dim_back {
+	opacity: 0.26;
+}
+.dim_back {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+}
+.white_back {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 220px;
+	left: 1667px;
+	top: 26px;
+}
+#about_btn {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 175px;
+	overflow: visible;
+}
+.about_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#about_content {
+	position: absolute;
+	width: 146.5px;
+	height: 27px;
+	left: 10.5px;
+	top: 10.5px;
+	overflow: visible;
+}
+#About_us {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#programming_GREY {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 121.5px;
+	top: 0.5px;
+	overflow: visible;
+}
+.l2 {
+	overflow: visible;
+	position: absolute;
+	width: 143px;
+	height: 1px;
+	left: 1678.5px;
+	top: 128.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#setting_btn {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 128px;
+	overflow: visible;
+}
+.setting_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#setting_content {
+	position: absolute;
+	width: 146.5px;
+	height: 27px;
+	left: 10.5px;
+	top: 10px;
+	overflow: visible;
+}
+#Settings {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 78px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#settings_grey {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 121.5px;
+	top: 0.5px;
+	overflow: visible;
+}
+.l3 {
+	overflow: visible;
+	position: absolute;
+	width: 143px;
+	height: 1px;
+	left: 1678.5px;
+	top: 175.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#user_status {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 81px;
+	overflow: visible;
+}
+.user_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#user_text {
+	position: absolute;
+	left: 10.5px;
+	top: 12.5px;
+	overflow: visible;
+	width: 106px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#user_bb {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 132px;
+	top: 11px;
+	overflow: visible;
+}
+.l1 {
+	overflow: visible;
+	position: absolute;
+	width: 103px;
+	height: 1px;
+	left: 1678.5px;
+	top: 81.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#bb_user {
+	position: absolute;
+	left: 1679px;
+	top: 43px;
+	overflow: visible;
+	width: 54px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}

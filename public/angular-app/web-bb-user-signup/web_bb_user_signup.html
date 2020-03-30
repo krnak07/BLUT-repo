@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-bb-user-signup</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-bb-user-signup/web_bb_user_signup.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/web-bb-user-signup/web_bb_user_signup.js"></script>
+</head>
+<body>
+<div id="web_bb_user_signup">
+	<img id="LOGO" src="angular-app/web-bb-user-signup/LOGO.png" srcset="angular-app/web-bb-user-signup/LOGO.png 1x, angular-app/web-bb-user-signup/LOGO@2x.png 2x">
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<div id="check_details">
+		<div id="BLOODBANK">
+			<span>BLOODBANK</span>
+		</div>
+		<form name="vm.signupcheckForm" ng-submit="vm.signupcheck()" >
+		<div id="bb" class="bb">
+			<svg class="Rectangle_2">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="email" class="bb_inp" required placeholder="Bloodbank's Email" ng-model="vm.bbemail_inp">
+				<rect fill="rgba(255,255,255,1)" id="bb_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="blood" src="angular-app/web-bb-user-signup/blood.png" srcset="angular-app/web-bb-user-signup/blood.png 1x, angular-app/web-bb-user-signup/blood@2x.png 2x">
+		</div>
+		<div id="firstname" class="firstname">
+			<svg class="Rectangle_2_cu">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_cu" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="text" class="fname_inp" required placeholder="First Name" ng-model="vm.userfname_inp">
+				<rect fill="rgba(255,255,255,1)" id="fname_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="man" ng-if="vm.is_M" src="angular-app/web-bb-user-signup/man.png" srcset="angular-app/web-bb-user-signup/man.png 1x, angular-app/web-bb-user-signup/man@2x.png 2x">
+			<img id="woman" ng-if="vm.is_F" src="angular-app/web-bb-user-signup/woman.png" srcset="angular-app/web-bb-user-signup/woman.png 1x, angular-app/web-bb-user-signup/woman@2x.png 2x">
+		</div>
+		<div id="lastname" class="lastname">
+			<svg class="Rectangle_2_cz">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_cz" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<input type="text" class="lname_inp" required placeholder="Last Name" ng-model="vm.userlname_inp">
+				<rect fill="rgba(255,255,255,1)" id="lname_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</svg>
+		</div>
+		<div id="phone" class="phone">
+			<svg class="Rectangle_2_c">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_c" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="number" class="phone_inp" required ng-model="vm.userphone_inp" placeholder="Phone Number">
+				<rect fill="rgba(255,255,255,1)" id="phone_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</svg>
+			<img id="phone_call" src="angular-app/web-bb-user-signup/phone_call.png" srcset="angular-app/web-bb-user-signup/phone_call.png 1x, angular-app/web-bb-user-signup/phone_call@2x.png 2x">
+		</div>
+		<div id="USER_DETAILS">
+			<span>USER DETAILS</span>
+		</div>
+		<button type="submit" id="next_btn" class="next_btn">
+			<svg class="Rectangle_4">
+				<rect fill="rgba(225,83,83,1)" id="Rectangle_4" rx="18" ry="18" x="0" y="0" width="276" height="36">
+				</rect>
+			</svg>
+			<div id="next_content">
+				<div id="NEXT">
+					<span>NEXT</span>
+				</div>
+				<img id="arrow_pointing_to_right_GREY" src="angular-app/web-bb-user-signup/arrow_pointing_to_right_GREY.png" srcset="angular-app/web-bb-user-signup/arrow_pointing_to_right_GREY.png 1x, angular-app/web-bb-user-signup/arrow_pointing_to_right_GREY@2x.png 2x">
+			</div>
+		</button>
+		</form>
+	</div>
+	<div id="load_content" ng-if="vm.isloading">
+		<svg class="dim_background">
+			<rect fill="rgba(49,49,49,1)" id="dim_background" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+			</rect>
+		</svg>
+		<div id="loading_info" >
+			<svg class="loading_background">
+				<rect fill="rgba(255,255,255,1)" id="loading_background" rx="26" ry="26" x="0" y="0" width="327" height="197">
+				</rect>
+			</svg>
+			<img id="LOGO_dn" src="angular-app/loading-screen/LOGO_dn.png" srcset="angular-app/loading-screen/LOGO_dn.png 1x, angular-app/loading-screen/LOGO_dn@2x.png 2x">
+			<div id="Loading">
+				<span>Loading</span>
+			</div>
+			<div class="progress">
+				<div class="indeterminate"></div>
+			</div>
+		</div>
+	</div>
+	<div id="server_not_responding" ng-if="vm.snr">
+		<svg class="snr_rect">
+			<rect fill="rgba(255,255,255,1)" id="snr_rect" rx="26" ry="26" x="0" y="0" width="479" height="92">
+			</rect>
+		</svg>
+		<div id="snr_text">
+			<span>SERVER NOT RESPONDING</span>
+		</div>
+		<img id="snr_warning" src="angular-app/error/snr_warning.png" srcset="angular-app/error/snr_warning.png 1x, angular-app/error/snr_warning@2x.png 2x">
+	</div>
+	<div id="user_exists" ng-if="vm.exists">
+		<svg class="ue_rect">
+			<rect fill="rgba(255,255,255,1)" id="ue_rect" rx="26" ry="26" x="0" y="0" width="277" height="92">
+			</rect>
+		</svg>
+		<div id="ue_text">
+			<span>USER EXISTS</span>
+		</div>
+		<img id="ue_waring" src="angular-app/error/ue_waring.png" srcset="angular-app/error/ue_waring.png 1x, angular-app/error/ue_waring@2x.png 2x">
+	</div>
+	<div id="no_bb_found" ng-if="vm.bnf">
+		<svg class="nbf_rect">
+			<rect fill="rgba(255,255,255,1)" id="nbf_rect" rx="26" ry="26" x="0" y="0" width="458" height="92">
+			</rect>
+		</svg>
+		<div id="nbf_text">
+			<span>NO BLOODBANK FOUND</span>
+		</div>
+		<img id="nbf_close" src="angular-app/error/nbf_close.png" srcset="angular-app/error/nbf_close.png 1x, angular-app/error/nbf_close@2x.png 2x">
+	</div>
+	<div id="user_not_found" ng-if="vm.not_associated">
+		<svg class="unf__rect">
+			<rect fill="rgba(255,255,255,1)" id="unf__rect" rx="26" ry="26" x="0" y="0" width="357" height="92">
+			</rect>
+		</svg>
+		<div id="unf_text">
+			<span>USER NOT FOUND</span>
+		</div>
+		<img id="unf_warning" src="angular-app/error/unf_warning.png" srcset="angular-app/error/unf_warning.png 1x, angular-app/error/unf_warning@2x.png 2x">
+	</div>
+</div>
+</body>
+</html>

@@ -45,6 +45,7 @@ module.exports.profilesignup = function(req,res){
                                           city : req.body.city.toUpperCase(),
                                           state : req.body.state,
                                           bloodgroup: req.body.bg.toUpperCase(),
+                                            gender : req.body.gender.toUpperCase(),
                                           totalunits : 0,
                                           createdOn : d,
                                         },function(err,pro) {
@@ -95,6 +96,34 @@ module.exports.profilesignup = function(req,res){
 
 };
 
+module.exports.updatePass = function(req,res){
+    var user = auth.currentUser;
+    user.updatePassword(req.body.newpassword)
+        .then(function(us){
+            res
+                .status(200)
+                .json({"update":"success"});
+        })
+        .catch(function(err){
+
+        })
+};
+module.exports.resetPass = function(req,res){
+    auth.sendPasswordResetEmail(req.body.email)
+        .then(function() {
+            // Email sent.
+            res
+                .status(200)
+                .json({"Message" : "Sent"});
+
+        })
+        .catch(function(error) {
+            // An error happened.
+            res
+                .status(400)
+                .json(error)
+        });
+};
 
 
 module.exports.profilelogin = function(req,res) {

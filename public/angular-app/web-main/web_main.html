@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-main</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-main/web_main.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/web-main/web_main.js"></script>
+</head>
+<body>
+<div id="web_main">
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<div id="Group_31">
+		<button id="signup_btn" class="signup_btn" ng-click="vm.logins()" ng-mouseover="vm.login_change()" ng-mouseleave="vm.login_ori()">
+			<svg class="Rectangle_4">
+				<rect fill="rgba(255,255,255,1)" id="Rectangle_4" rx="18" ry="18" x="0" y="0" width="118" height="36">
+				</rect>
+			</svg>
+			<div id="LOGIN">
+				<span>LOGIN</span>
+			</div>
+			<img id="id_card" src="angular-app/web-main/id_card.png" srcset="angular-app/web-main/id_card.png 1x, angular-app/web-main/id_card@2x.png 2x">
+		</button>
+		<button id="login_btn" class="login_btn" ng-click="vm.signup()" ng-mouseover="vm.signup_change()" ng-mouseleave="vm.signup_ori()">
+			<svg class="Rectangle_4_cf">
+				<rect fill="rgba(248,223,0,1)" id="Rectangle_4_cf" rx="18" ry="18" x="0" y="0" width="123" height="36">
+				</rect>
+			</svg>
+			<div id="SIGNUP">
+				<span>SIGNUP</span>
+			</div>
+			<img id="edit" src="angular-app/web-main/edit.png" srcset="angular-app/web-main/edit.png 1x, angular-app/web-main/edit@2x.png 2x">
+		</button>
+	</div>
+	<img id="LOGO" src="angular-app/web-main/LOGO.png" srcset="angular-app/web-main/LOGO.png 1x, angular-app/web-main/LOGO@2x.png 2x">
+</div>
+</body>
+</html>

@@ -6,6 +6,8 @@ var ctrlprofile = require('../controllers/profile.controllers.js');
 var ctrlcamp = require('../controllers/camp.controllers.js');
 var ctrlhosp = require('../controllers/hospitals.controllers');
 var ctrltest = require('../controllers/test-controller');
+var ctrlbbuser = require('../controllers/bloodbank-user.controllers');
+var ctrlhospuser = require('../controllers/hospital-user.controllers');
 
 
 //Donor
@@ -28,18 +30,15 @@ router
     .get(ctrlbloodbank.bloodbankGetAll);
 router
     .route('/bloodbank/login')
-    .post(ctrlbloodbank.bloodbankGetOne);
+    .post(ctrlbloodbank.bloodbankLogin);
 router
-    .route('/bloodbank/:bankID')
-    .get(ctrlbloodbank.bb);
-router
-    .route('/bloodbank/:bankID/donor_donate')
+    .route('/bloodbank/donor_donate')
     .post(ctrlbloodbank.donordonate);
 router
-    .route('/bloodbank/:bankID/hospital_donate')
+    .route('/bloodbank/hospital_donate')
     .post(ctrlbloodbank.hospitaldonate);
 router
-    .route('/bloodbank/:bankID/alldonations')
+    .route('/bloodbank/alldonations')
     .get(ctrlbloodbank.getAllDonorDonations);
 router
     .route('/bloodbank/tokenregister')
@@ -50,22 +49,22 @@ router
 
 //Camps
 router
-    .route('/bloodbank/:bankID/camp_new')
+    .route('/bloodbank/camp_new')
     .post(ctrlcamp.addNewCamp);
 router
-    .route('/bloodbank/:bankID/allcamps')
+    .route('/bloodbank/allcamps')
     .get(ctrlcamp.getAllcamps);
 router
-    .route('/bloodbank/:bankID/camps/:campID')
+    .route('/bloodbank/camps/:campID')
     .get(ctrlcamp.getOnecamp);
 router
-    .route('/bloodbank/:bankID/camps/:campID/donors')
+    .route('/bloodbank/camps/:campID/donors')
     .get(ctrlcamp.getAllDonors);
 router
-    .route('/bloodbank/:bankID/camps/:campID/donation')
+    .route('/bloodbank/camps/:campID/donation')
     .post(ctrlcamp.addNewcampdonor);
 router
-    .route('/bloodbank/:bankID/camps/:campID/close')
+    .route('/bloodbank/camps/:campID/close')
     .post(ctrlcamp.closecamp);
 
 //Hospitals
@@ -76,23 +75,40 @@ router
     .route('/hospitals/login')
     .post(ctrlhosp.hospitallogin);
 router
-    .route('/hospitals/:hospID/get_nearbyBB')
+    .route('/hospitals/get_nearbyBB')
     .get(ctrlhosp.hospitalGetnearbyBB);
 router
-    .route('/hospitals/:hospID/get_nearbyDonors')
+    .route('/hospitals/get_nearbyDonors')
     .get(ctrlhosp.hospitalGetnearbyDonors);
 router
-    .route('/hospitals/:hospID/donate')
+    .route('/hospitals/donate')
     .post(ctrlhosp.donation);
 router
-    .route('/hospitals/:hospID/donors')
+    .route('/hospitals/donors')
     .get(ctrlhosp.getAlldonors);
 router
-    .route('/hospitals/:hospID/request')
+    .route('/hospitals/request')
     .post(ctrlhosp.requests);
 
 
+//users
 
+router
+    .route('/signup/bbuser')
+    .post(ctrlbbuser.bbusersignup);
+router
+    .route('/login/bbuser')
+    .post(ctrlbbuser.bbuserlogin);
+router
+    .route('/bloodbank/usercheck')
+    .post(ctrlbbuser.usercheck);
+
+router
+    .route('/signup/hospuser')
+    .post(ctrlhospuser.hospusersignup);
+router
+    .route('/login/hospuser')
+    .post(ctrlhospuser.hospuserlogin);
 
 
 

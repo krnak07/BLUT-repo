@@ -1,41 +1,39 @@
 angular.module('bbApp')
     .controller('testc',testc);
 
-
-function testc($http,$location,$routeParams) {
+function testc(){
     var vm = this;
-    vm.login = function(){
-        /*
-       var file = document.getElementById('myfile').files[0];
-        var storageref = firebase.storage().ref('/bloodbank-lis/kiran.jpg');
+    vm.userShow=false;
+    var storage = firebase.storage();
+    var pathReference = storage.ref('bb-profile-pic/2.JPG');
 
-                storageref.put(file)
-                    .then(function(snapshot){
-                        console.log(snapshot);
-
-                    })
-                    .catch(function(error){
-                        console.log(error);
-                    })*/
-
-        /*$http.get('/api/bloodbank/test')
-            .then(function(response){
-                console.log(response.data);
-            })
-            .catch(function(err){
-                console.log(err)
-            })*/
+    pathReference.getDownloadURL().then(function(url) {
+        document.getElementById("user_info_disp").innerHTML+= '<img id="pro_pic" src="'+url+'">';
+    })
+        .catch(function(error) {
+            console.log('error');
+        });
 
 
-
-
-
-
+    //user animation
+    vm.showuser = function(){
+        vm.userShow = true;
+    };
+    vm.hideuser = function(){
+        vm.userShow = false;
+    };
+    vm.setting = function () {
+        console.log('settings');
+    };
+    vm.about = function () {
+        console.log('about');
+    };
+    vm.setchange = function(){
+        document.getElementById("setting_rect").style.fill='rgba(225,83,83,1)';
+    };
+    vm.setori = function(){
+        document.getElementById("setting_rect").style.fill='rgba(255,255,255,1)';
     };
 
 
-
-
-
-    //$http.post
-}
+};

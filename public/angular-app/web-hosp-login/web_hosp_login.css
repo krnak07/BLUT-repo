@@ -1,0 +1,602 @@
+.mediaViewInfo {
+	--web-view-name: web-hosp-login;
+	--web-view-id: web_hosp_login;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_hosp_login;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_hosp_login {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(225,83,83,1);
+	overflow: hidden;
+	--web-view-name: web-hosp-login;
+	--web-view-id: web_hosp_login;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+.Rectangle_56 {
+	position: absolute;
+	overflow: visible;
+	width: 513px;
+	height: 975px;
+	left: 1407px;
+	top: 0px;
+}
+#background_logo {
+	opacity: 0.45;
+	position: absolute;
+	width: 513px;
+	height: 975px;
+	left: 1407px;
+	top: 0px;
+	overflow: visible;
+}
+#Made_with___ {
+	position: absolute;
+	left: 586.5px;
+	top: 902px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#LOGO {
+	position: absolute;
+	width: 1331px;
+	height: 329px;
+	left: 38px;
+	top: 323px;
+	overflow: visible;
+}
+#hosp_login_form {
+	position: absolute;
+	width: 327px;
+	height: 446px;
+	left: 1499px;
+	top: 264px;
+	overflow: visible;
+}
+.Rectangle_1 {
+	filter: drop-shadow(0px 3px 6px rgba(225, 83, 83, 1));
+	position: absolute;
+	overflow: visible;
+	width: 345px;
+	height: 464px;
+	left: 0px;
+	top: 0px;
+}
+#hosp_title {
+	position: absolute;
+	width: 277.5px;
+	height: 69.5px;
+	left: 26px;
+	top: 35px;
+	overflow: visible;
+}
+#Hospitals {
+	position: absolute;
+	left: 74.5px;
+	top: 2.5px;
+	overflow: visible;
+	width: 204px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(53,49,49,1);
+}
+#hospital_4 {
+	position: absolute;
+	width: 68px;
+	height: 68px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#email_content {
+	position: absolute;
+	width: 277px;
+	height: 42px;
+	left: 27px;
+	top: 159px;
+	overflow: visible;
+}
+.email_input {
+	position: absolute;
+	overflow: visible;
+	width: 210px;
+	height: 32px;
+	left: 50px;
+	top: 5px;
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 277px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+#email__3_ {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	left: 14px;
+	top: 4px;
+	overflow: visible;
+}
+#password_content {
+	position: absolute;
+	width: 277px;
+	height: 42px;
+	left: 27px;
+	top: 235px;
+	overflow: visible;
+}
+.pass_input {
+	position: absolute;
+	overflow: visible;
+	width: 210px;
+	height: 32px;
+	left: 50px;
+	top: 5px;
+}
+.Rectangle_3 {
+	position: absolute;
+	overflow: visible;
+	width: 277px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+#key1 {
+	position: absolute;
+	width: 31px;
+	height: 31px;
+	left: 13px;
+	top: 6px;
+	overflow: visible;
+}
+#cookies_options {
+	position: absolute;
+	width: 167px;
+	height: 22px;
+	left: 81px;
+	top: 370px;
+	overflow: visible;
+}
+.Ellipse_4 {
+	position: absolute;
+	overflow: visible;
+	width: 17px;
+	height: 17px;
+	left: 0px;
+	top: 3px;
+}
+#Keep_me_Signed_in {
+	position: absolute;
+	left: 23px;
+	top: 0px;
+	overflow: visible;
+	width: 145px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(53,49,49,1);
+}
+#login_btn {
+	position: absolute;
+	width: 277px;
+	left: 27px;
+	top: 322px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_40 {
+	position: absolute;
+	overflow: visible;
+	width: 277px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+#login {
+	position: absolute;
+	left: 109px;
+	top: 1px;
+	overflow: visible;
+	width: 61px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(245,245,245,1);
+}
+button {
+	outline: none;
+}
+input {
+	outline-color: #E15353;
+}
+#load_content {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#dim_background {
+	opacity: 0.26;
+}
+.dim_background {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+}
+#loading_info {
+	position: absolute;
+	width: 327px;
+	height: 197px;
+	left: 797px;
+	top: 389px;
+	overflow: visible;
+}
+.loading_background {
+	position: absolute;
+	overflow: visible;
+	width: 327px;
+	height: 197px;
+	left: 0px;
+	top: 0px;
+}
+#LOGO_dn {
+	position: absolute;
+	width: 242.791px;
+	height: 60px;
+	left: 42px;
+	top: 23px;
+	overflow: visible;
+}
+#Loading {
+	position: absolute;
+	left: 87.5px;
+	top: 137px;
+	overflow: visible;
+	width: 152px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(49,49,49,1);
+}
+.progress {
+	position: absolute;
+	height: 20px;
+	display: inline-block;
+	width: 100%;
+	top : 106px;
+	background-color: #b5b5b5;
+	border-radius: 2px;
+	background-clip: padding-box;
+	overflow: hidden; }
+.progress .indeterminate {
+	background-color: #313131; }
+.progress .indeterminate:before {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+	animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+.progress .indeterminate:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	-webkit-animation-delay: 1.3s;
+	animation-delay: 1.3s; }
+
+@-webkit-keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@-webkit-keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }
+@keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }
+#invalid_password {
+	position: absolute;
+	width: 392px;
+	height: 92px;
+	left: 765px;
+	top: 26px;
+	overflow: visible;
+}
+.ip_rect {
+	position: absolute;
+	overflow: visible;
+	width: 392px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ip_cross {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#ip_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 295px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#connection_error {
+	position: absolute;
+	width: 401px;
+	height: 92px;
+	left: 760px;
+	top: 26px;
+	overflow: visible;
+}
+.ce_rect {
+	position: absolute;
+	overflow: visible;
+	width: 401px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ce_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 304px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#ce_waring {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 27px;
+	overflow: visible;
+}
+#invalid_email {
+	position: absolute;
+	width: 317px;
+	height: 92px;
+	left: 802px;
+	top: 26px;
+	overflow: visible;
+}
+.ie_rect {
+	position: absolute;
+	overflow: visible;
+	width: 317px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ie_cross {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#ie_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 220px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#server_not_responding {
+	position: absolute;
+	width: 479px;
+	height: 92px;
+	left: 721px;
+	top: 26px;
+	overflow: visible;
+}
+.snr_rect {
+	position: absolute;
+	overflow: visible;
+	width: 479px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#snr_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 382px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#snr_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#user_not_found {
+	position: absolute;
+	width: 357px;
+	height: 92px;
+	left: 782px;
+	top: 26px;
+	overflow: visible;
+}
+.unf__rect {
+	position: absolute;
+	overflow: visible;
+	width: 357px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#unf_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 260px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#unf_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#user_not_verified {
+	position: absolute;
+	width: 380px;
+	height: 92px;
+	left: 770px;
+	top: 26px;
+	overflow: visible;
+}
+.unv_rect {
+	position: absolute;
+	overflow: visible;
+	width: 380px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#unv_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 283px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#unv_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}

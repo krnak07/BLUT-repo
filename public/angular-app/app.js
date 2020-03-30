@@ -3,127 +3,73 @@ angular.module('bbApp',['ngRoute'])
 
 function config($routeProvider) {
   $routeProvider
-      .when('/', {
-    templateUrl : 'angular-app/main/web_main.html',
-    controller : maincontroller,
-    controllerAs: 'vm'
-  })
-      .when('/donor/signup', {
-          templateUrl : 'angular-app/donor-signup/web_donor_signup.html',
-          controller : donorsignupcontroller,
+      .when('/',{
+          templateUrl : 'angular-app/web-main/web_main.html',
+          controller : webmaincontroller,
           controllerAs : 'vm'
       })
-      .when('/bloodbank', {
-    templateUrl : 'angular-app/bb-login/web_bb_login.html',
-    controller : logincontroller,
-    controllerAs : 'vm'
-  })
-      .when('/bloodbank/signup', {
-          templateUrl : 'angular-app/bb-signup/web_bb_signup.html',
-          controller : bbsignupcontroller,
+      // .when('/signup',{
+      //     templateUrl : 'angular-app/web-signup/web_signup.html',
+      //     controller : websignupcontroller,
+      //     controllerAs : 'vm'
+      // })
+      .when('/signup/bloodbank/user',{
+          templateUrl : 'angular-app/web-gender/web_gender.html',
+          controller : webgendercontroller,
           controllerAs : 'vm'
       })
-
-      .when('/bloodbank/camp', {
-          templateUrl : 'angular-app/bb-camp/web_bb_camp.html',
-          controller : bbcampcontroller,
+      .when('/signup/bloodbank/user/male',{
+          templateUrl : 'angular-app/web-bb-user-signup/web_bb_user_signup.html',
+          controller : webbbusersignupcontroller,
           controllerAs : 'vm'
       })
-      .when('/bloodbank/camp/create', {
-              templateUrl : 'angular-app/camp-create/web_camp_create.html',
-              controller : campcreatecontroller,
-              controllerAs : 'vm'
-          })
-  .when('/bloodbank/home',{
-    templateUrl : 'angular-app/bb-home/web_bb_home.html',
-    controller : mainbbcontroller,
-    controllerAs: 'vm'
-  })
-  .when('/bloodbank/list', {
-    templateUrl : 'angular-app/bb-list/bb-list.html',
-    controller : listcontroller,
-    controllerAs: 'vm'
-  })
-      .when('/bloodbank/donation', {
-        templateUrl : 'angular-app/bb-donation/web_bb_Donation.html',
-        controller : bbdonationcontroller,
-        controllerAs: 'vm'
-      })
-      .when('/bloodbank/blood_availability', {
-        templateUrl : 'angular-app/bb-BA/web_bb_BA.html',
-        controller : bbBAcontroller,
-        controllerAs: 'vm'
-      })
-  .when('/hospital', {
-    templateUrl : 'angular-app/hosp-login/web_hosp_login.html',
-    controller : hosplogincontroller,
-    controllerAs : 'vm'
-  })
-  .when('/hospital/home', {
-    templateUrl : 'angular-app/hosp-home/web_hosp_home.html',
-    controller : mainhospcontroller,
-    controllerAs: 'vm'
-  })
-      .when('/hospital/donation', {
-          templateUrl : 'angular-app/hosp-donation/web_hosp_Donation.html',
-          controller : hospdonationcontroller,
-          controllerAs: 'vm'
-      })
-      .when('/hospital/bloodbanks', {
-          templateUrl : 'angular-app/hosp-bb/web_hosp_bb.html',
-          controller : hospbbcontroller,
-          controllerAs: 'vm'
-      })
-      .when('/hospital/donor', {
-          templateUrl : 'angular-app/hosp-donor/web_hosp_donor.html',
-          controller : hospdonorscontroller,
-          controllerAs: 'vm'
-      })
-      .when('/hospital/request', {
-          templateUrl : 'angular-app/hosp-req/web_hosp_req.html',
-          controller : hospreqcontroller,
-          controllerAs: 'vm'
-      })
-      .when('/hospital/request/new', {
-          templateUrl : 'angular-app/hosp-req-s/web_req.html',
-          controller : hospreqnewcontroller,
-          controllerAs: 'vm'
-      })
-
-      .when('/camp', {
-          templateUrl : 'angular-app/camp-login/web_bb_camp_login.html',
-          controller : camplogincontroller,
-          controllerAs: 'vm'
-      })
-
-      .when('/camp/selection', {
-        templateUrl : 'angular-app/camp-selection/web_camp_selection.html',
-        controller : campselectioncontroller,
-        controllerAs: 'vm'
-      })
-      .when('/camp/:id',{
-          templateUrl : 'angular-app/camp-home/web_camp_home.html',
-          controller : campmainconntroller,
+      .when('/signup/bloodbank/user/female',{
+          templateUrl : 'angular-app/web-bb-user-signup/web_bb_user_signup.html',
+          controller : webbbusersignupcontroller,
           controllerAs : 'vm'
       })
-          .when('/camp/:id/blood_availability',{
-          templateUrl : 'angular-app/camp-BA/web_camp_BA.html',
-          controller : campBAcontroller,
+      .when('/signup/bloodbank/user/details',{
+          templateUrl : 'angular-app/web-user-details/web_user_details.html',
+          controller : webuserdetailscontroller,
           controllerAs : 'vm'
       })
-      .when('/camp/:id/donation',{
-          templateUrl : 'angular-app/camp-donation/web_camp_Donation.html',
-          controller : campdonationcontroller,
+      .when('/signup/bloodbank/user/upload',{
+          templateUrl : 'angular-app/web-user-upload/web_user_upload.html',
+          controller : webuseruploadcontroller,
+          controllerAs : 'vm'
+      })
+      .when('/login',{
+          templateUrl : 'angular-app/web-login/web_login.html',
+          controller : weblogincontroller,
+          controllerAs : 'vm'
+      })
+      .when('/login/bloodbank',{
+          templateUrl : 'angular-app/web-bb-login/web_bb_login.html',
+          controller : webbblogincontroller,
+          controllerAs : 'vm'
+      })
+      /*.when('/bloodbank/dashboard',{
+          templateUrl : 'angular-app/web-bb-dashboard/web_bb_dashboard.html',
+          controller : webbbdashboardcontroller,
+          controllerAs : 'vm'
+      })*/
+      .when('/login/hospital',{
+          templateUrl : 'angular-app/web-hosp-login/web_hosp_login.html',
+          controller : webhosplogincontroller,
+          controllerAs : 'vm'
+      })
+      .when('/login/camps',{
+          templateUrl : 'angular-app/web-camp-login/web_camp_login.html',
+          controller : webcamplogincontroller,
           controllerAs : 'vm'
       })
 
-
-
-      .when('/test',{
-          templateUrl : 'angular-app/test/asd.html',
-          controller : testc,
-          controllerAs : 'vm'
+      .when('/test', {
+          templateUrl: 'angular-app/test/web_bb_dashboard.html',
+          controller: testc,
+          controllerAs: 'vm'
       });
+
 
     const firebaseConfig = {
         apiKey: "AIzaSyARrRzk-qumZ7fAHD6y9NpTrEaT2q8lD5k",
@@ -161,6 +107,7 @@ function config($routeProvider) {
             registration.showNotification(notificationTitle, notificationOptions);
         });
     });
+
 
 
 

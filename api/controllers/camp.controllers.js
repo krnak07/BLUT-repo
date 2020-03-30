@@ -1,8 +1,9 @@
 var mongoose = require('mongoose');
 
-var camp = mongoose.model('camp')
+var camp = mongoose.model('camp');
 var bloodbank = mongoose.model('bloodbank');
 var profile = mongoose.model('profile');
+var bbuser = mongoose.model('bloodbankuser');
 
 
 function addbloodgroups(cam) {
@@ -37,157 +38,182 @@ function updatebloodunits(req,res,cam,bg,unit) {
 
 }
 module.exports.addNewCamp = function(req, res) {
-
-  var id = req.params.bankID;
-  var d = new Date();
-  var dof = new Date(req.body.dof);
-
-
-
-  bloodbank
-  .findById(id)
-  .exec(function(error,bankk) {
-    if(error)
-    {
-      res
-      .status(400)
-      .json(error)
-    }
-    else {
-      {
-        camp
-            .create({
-                name : req.body.name,
-                location : req.body.location.toUpperCase(),
-                dateofhost: dof,
-                phoneNo : req.body.phoneNo,
-                hosting: id,
-                bloodbank : bankk.name,
-                createdOn : d
-            },function(err,cam) {
-                if(err)
-                {
-                    res
-                        .status(400)
-                        .json(err)
-                }
-                else
-                {
-                  console.log('Camp Created to Bank : ', id);
-                    addbloodgroups(cam);
-                    res
-                        .status(200)
-                        .json(cam)
-                }
-            });
-      }
-    }
-
-  })
-};
-
-module.exports.addNewcampdonor = function(req, res) {
-
-  var bId = req.params.bankID;
-  var cId = req.params.campID;
-  var d = new Date();
+    var id = req.params.bankID;
+    var d = new Date();
+    var dof = new Date(req.body.dof);
 
     bloodbank
-        .findById(bId)
-        .exec(function(err,bb){
-            if(err)
+        .findById(id)
+        .exec(function(error,bankk) {
+            if(error)
             {
                 res
                     .status(400)
-                    .json(err)
+                    .json({"msg":"snr"});
             }
-            else
-            {
-                camp
-                    .findById(cId)
-                    .exec(function(err,cam){
-                        if(err)
-                        {
-                            res
-                                .status(400)
-                                .json(err)
-                        }
-                        else if(cam.hosting != bId)
-                        {
-                            res
-                                .status(400)
-                                .json({"INVALID" : "Bloodbank Not associated with camp"})
-                        }
-                        else
-                        {
-                            profile
-                                .findOne({phoneNo : req.body.phoneNo})
-                                .exec(function(err,pro){
-                                    if(err)
-                                    {
-                                        res
-                                            .status(400)
-                                            .json(err)
-                                    }
-                                    else
-                                    {
-                                        var nd = new Date(pro.nextdonationDate);
-                                        if(d<nd){
-                                            res
-                                                .status(206)
-                                                .json({"Message" : "Cannot Donate as next donation date is not reached"});
-                                        }
-                                        else {
-                                            cam.donationhistory.push({
-                                                donor_name : pro.firstname,
-                                                phoneNo : pro.phoneNo,
-                                                dateofdonation : d,
-                                                bloodgroup : pro.bloodgroup,
-                                                unitsofblood : parseInt(req.body.units)
+            else {
+                {
+                    camp
+                        .create({
+                            name : req.body.name,
+                            location : req.body.location.toUpperCase(),
+                            dateofhost: dof,
+                            phoneNo : req.body.phoneNo,
+                            hosting: id,
+                            bloodbank : bankk.name,
+                            createdOn : d
+                        },function(err,cam) {
+                            if(err)
+                            {
+                                res
+                                    .status(400)
+                                    .json({"msg":"ce"});
+                            }
+                            else
+                            {
+                                addbloodgroups(cam);
+                                res
+                                    .status(201)
+                                    .json({"msg":"created"});
+                            }
+                        });
+                }
+            }
 
-                                            });
-                                            var nd = new Date(d);
-                                            nd.setDate(d.getDate() + 56);
-                                            pro.lastdonatedDate = d;
-                                            pro.lastdonatedVenue = cam.name;
-                                            pro.nextdonationDate = nd;
-                                            pro.donationhistory.push({
-                                                venue_id : cam._id,
-                                                venue_name : cam.name,
-                                                dateofdonation : d,
-                                                quantity : parseInt(req.body.units)
-                                            });
+        })
+};
 
-                                            pro.totalunits += parseInt(req.body.units);
-                                            updatebloodunits(req,res,cam,pro.bloodgroup,parseInt(req.body.units));
+module.exports.addNewcampdonor = function(req, res) {
+    var cId = req.params.campID;
+    var d = new Date();
+    bbuser
+        .findOne({email:req.body.useremail})
+        .exec(function(err,bu) {
+            if (err) {
+                res
+                    .status(400)
+                    .json({"msg": "ce"})
+            }
+            else{
+                if(bu==null){
+                    res
+                        .status(400)
+                        .json({"msg":"unf"});
+                }
+                else{
+                    bloodbank
+                        .findOne({email:bu.bloodbankemail})
+                        .exec(function(err,bank){
+                            if(err){
+                                res
+                                    .status(400)
+                                    .json({"msg":"snr"});
+                            }
+                            else{
+                                if(bank==null){
+                                    res
+                                        .status(400)
+                                        .json({"msg":"unf"});
+                                }
+                                else{
+                                    camp
+                                        .findById(cId)
+                                        .exec(function(err,cam){
+                                            if(err)
+                                            {
+                                                res
+                                                    .status(400)
+                                                    .json({"msg":"snr"});
+                                            }
+                                            else if(cam.hosting != bank._id)
+                                            {
+                                                res
+                                                    .status(400)
+                                                    .json({"msg" : "invalid"})
+                                            }
+                                            else
+                                            {
+                                                profile
+                                                    .findOne({phoneNo : req.body.phoneNo})
+                                                    .exec(function(err,pro){
+                                                        if(err)
+                                                        {
+                                                            res
+                                                                .status(400)
+                                                                .json({"msg" : "snr"});
+                                                        }
+                                                        else
+                                                        {
+                                                            var nd = new Date(pro.nextdonationDate);
+                                                            if(d<nd && req.body.superdonation == 'false'){
+                                                                res
+                                                                    .status(206)
+                                                                    .json({"msg" : "cannot"});
+                                                            }
+                                                            else {
+                                                                if (pro == null) {
+                                                                    res
+                                                                        .status(400)
+                                                                        .json({"msg": "unf"})
+                                                                } else {
+                                                                    cam.donationhistory.push({
+                                                                        user_name : req.body.username,
+                                                                        user_email : req.body.useremail,
+                                                                        donor_name : pro.firstname,
+                                                                        phoneNo : pro.phoneNo,
+                                                                        dateofdonation : d,
+                                                                        bloodgroup : pro.bloodgroup,
+                                                                        unitsofblood : parseInt(req.body.units)
 
-                                            pro.save(function(err,proupdated) {
+                                                                    });
 
-                                            });
+                                                                    var nd = new Date(d);
+                                                                    nd.setDate(d.getDate() + 56);
+                                                                    pro.lastdonatedDate = d;
+                                                                    pro.lastdonatedVenue = cam.name;
+                                                                    pro.nextdonationDate = nd;
+                                                                    pro.donationhistory.push({
+                                                                        venue_email : bank.email,
+                                                                        venue_name : bank.name,
+                                                                        user_name : req.body.username,
+                                                                        dateofdonation : d,
+                                                                        quantity : parseInt(req.body.units)
+                                                                    });
 
-                                            cam.save(function(err,camupdated){
-                                                if(err)
-                                                {
-                                                    res
-                                                        .status(400)
-                                                        .json(err)
-                                                }
-                                                else
-                                                {
-                                                    res
-                                                        .status(200)
-                                                        .json(camupdated)
-                                                }
+                                                                    pro.totalunits += parseInt(req.body.units);
+                                                                    updatebloodunits(req,res,cam,pro.bloodgroup,parseInt(req.body.units));
 
-                                            });
-                                        }
+                                                                    pro.save(function(err,proupdated) {
 
+                                                                    });
 
+                                                                    cam.save(function(err,camupdated){
+                                                                        if(err)
+                                                                        {
+                                                                            res
+                                                                                .status(400)
+                                                                                .json({"msg" : "snr"});
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            res
+                                                                                .status(200)
+                                                                                .json({"msg" : "done"});
+                                                                        }
 
-                                    }
-                                });
-                        }
-                    });
+                                                                    });
+                                                                }
+                                                            }
+                                                        }
+                                                    });
+                                            }
+                                        });
+
+                                }
+                            }
+                        })
+
+                }
             }
         });
 
@@ -195,7 +221,6 @@ module.exports.addNewcampdonor = function(req, res) {
 };
 
 module.exports.getAllDonors = function(req, res) {
-    var bId = req.params.bankID;
     var cId = req.params.campID;
 
     camp
@@ -229,7 +254,7 @@ function updatecampblooddetails(bank,cam,res){
             if(err){
                 res
                     .status(400)
-                    .json(err)
+                    .json({"msg" : "snr"});
             }
             else{
                 while(i<bloodgroup.length)
@@ -245,7 +270,7 @@ function updatecampblooddetails(bank,cam,res){
                     if(err){
                         res
                             .status(400)
-                            .json(err)
+                            .json({"msg" : "es"});
                     }
                     else{ }
                 });
@@ -254,64 +279,91 @@ function updatecampblooddetails(bank,cam,res){
 }
 
 module.exports.closecamp = function(req,res){
-    var bId = req.params.bankID;
     var cId = req.params.campID;
     var d = new Date();
-    bloodbank
-        .findById(bId)
-        .exec(function(err,bb){
-            if(err)
-            {
+    bbuser
+        .findOne({email:req.body.useremail})
+        .exec(function(err,bu){
+            if(err){
                 res
                     .status(400)
-                    .json(err)
+                    .json({"msg":"snr"})
+
             }
-            else
-            {
-                camp
-                    .findById(cId)
-                    .exec(function(err,cam){
-                        if(err)
-                        {
-                            res
-                                .status(400)
-                                .json(err)
-                        }
-                        else if(cam.hosting != bId)
-                        {
-                            res
-                                .status(400)
-                                .json({"INVALID" : "Bloodbank Not associated with camp"})
-                        }
-                        else
-                        {
-
-                            bb.campdonationhistory.push({
-                                name : cam.name,
-                                dateofdonation : d
-                            });
-
-                            var i = 0;
-                            while(i<bb.BloodAvailability.length)
+            else{
+                if(bu == null){
+                    res
+                        .status(400)
+                        .json({"msg":"unf"})
+                }
+                else{
+                    bloodbank
+                        .findOne({email:bu.bloodbankemail})
+                        .exec(function(err,bank){
+                            if(err)
                             {
-                                bb.BloodAvailability[i].quantity += cam.BloodAvailability[i].quantity;
-                                i+=1;
+                                res
+                                    .status(400)
+                                    .json({"msg" : "snr"});
                             }
-                            bb.save(function(err,upbb){
-                                if(err){
+                            else
+                            {
+                                if(bank==null){
                                     res
                                         .status(400)
-                                        .json(err)
+                                        .json({"msg":"bnf"})
                                 }
-                                else{ updatecampblooddetails(upbb,cam,res); }
-                            });
+                                else{
 
-                            res
-                                .status(200)
-                                .json(bb)
+                                    camp
+                                        .findById(cId)
+                                        .exec(function(err,cam){
+                                            if(err)
+                                            {
+                                                res
+                                                    .status(400)
+                                                    .json({"msg" : "snr"});
+                                            }
+                                            else if(cam.hosting != bank._id)
+                                            {
+                                                res
+                                                    .status(400)
+                                                    .json({"msg" : "invalid"})
+                                            }
+                                            else
+                                            {
 
-                        }
-                    });
+                                                bank.campdonationhistory.push({
+                                                    name : cam.name,
+                                                    dateofdonation : d
+                                                });
+
+                                                var i = 0;
+                                                while(i<bank.BloodAvailability.length)
+                                                {
+                                                    bank.BloodAvailability[i].quantity += cam.BloodAvailability[i].quantity;
+                                                    i+=1;
+                                                }
+
+                                                bank.save(function(err,upbb){
+                                                    if(err){
+                                                        res
+                                                            .status(400)
+                                                            .json({"msg" : "es"});
+                                                    }
+                                                    else{ updatecampblooddetails(upbb,cam,res);
+                                                        res
+                                                            .status(200)
+                                                            .json({"msg" : "done"});
+                                                    }
+                                                });
+                                            }
+                                        });
+                                }
+                            }
+                        });
+
+                }
             }
         });
 
@@ -322,12 +374,12 @@ module.exports.getOneCamp = function(req, res) {
 
   bloodbank
       .findById(bId)
-      .exec(function(err,bb){
+      .exec(function(err,bank){
           if(err)
           {
               res
                   .status(400)
-                  .json(err)
+                  .json({"msg" : "snr"});
           }
           else
           {
@@ -338,13 +390,13 @@ module.exports.getOneCamp = function(req, res) {
                       {
                           res
                               .status(400)
-                              .json(err)
+                              .json({"msg" : "done"});
                       }
                       else if(cam.hosting != bId)
                       {
                           res
                               .status(400)
-                              .json({"INVALID" : "Bloodbank Not associated with camp"})
+                              .json({"msg" : "invalid"})
                       }
                       else
                       {
@@ -367,7 +419,7 @@ module.exports.getAllcamps = function(req,res) {
            if(err){
                res
                    .status(400)
-                   .json(err)
+                   .json({"msg" : "snr"});
            }
            else{
                camp
@@ -376,8 +428,7 @@ module.exports.getAllcamps = function(req,res) {
                        if(err){
                            res
                                .status(400)
-                               .json(err)
-
+                               .json({"msg" : "snr"});
                        }
                        else{
                            res

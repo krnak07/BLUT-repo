@@ -50,3 +50,5 @@ require('./camp.model');
 require('./organisation.model');
 require('./notification_token.model');
 require('./requests.model');
+require('./bloodbank-user.model');
+require('./hospitals-user.model');

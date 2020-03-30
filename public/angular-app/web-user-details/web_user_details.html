@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-user-details</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-user-details/web_user_details.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/web-user-details/web_user_details.js"></script>
+</head>
+<body>
+<div id="web_user_details">
+	<div id="back_btn" class="back_btn">
+		<img id="back" src="angular-app/web-user-details/back.png" srcset="angular-app/web-user-details/back.png 1x, angular-app/web-user-details/back@2x.png 2x">
+	</div>
+	<img id="LOGO" src="angular-app/web-user-details/LOGO.png" srcset="angular-app/web-user-details/LOGO.png 1x, angular-app/web-user-details/LOGO@2x.png 2x">
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<div id="user_signup_details">
+		<div id="title">
+			<div id="USER_SIGNUP">
+				<span>USER SIGNUP</span>
+			</div>
+		</div>
+		<form name="vm.signupdetailsForm" ng-submit="vm.signupdetails()" >
+		<div id="bg" class="bg">
+			<svg class="Rectangle_2">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<select class="bg_inp" required ng-model="vm.bg_inp">
+				<rect fill="rgba(255,255,255,1)" id="bg_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+				<option value="A+">A+</option>
+				<option value="A-">A-</option>
+				<option value="B+">B+</option>
+				<option value="B-">B-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+				<option value="AB+">AB+</option>
+				<option value="AB-">AB-</option>
+			</select>
+			<img id="ID025_immune_system" src="angular-app/web-user-details/ID025_immune_system.png" srcset="angular-app/web-user-details/ID025_immune_system.png 1x, angular-app/web-user-details/ID025_immune_system@2x.png 2x">
+		</div>
+		<div id="dob" class="dob">
+			<svg class="Rectangle_2_cx">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_cx" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="date" class="dob_inp" required ng-model="vm.dob_inp">
+				<rect fill="rgba(255,255,255,1)" id="dob_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="time_and_date" src="angular-app/web-user-details/time_and_date.png" srcset="angular-app/web-user-details/time_and_date.png 1x, angular-app/web-user-details/time_and_date@2x.png 2x">
+		</div>
+		<div id="email" class="email">
+			<svg class="Rectangle_2_c">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_c" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="email" class="email_inp" required ng-model="vm.email_inp" placeholder="User Email">
+				<rect fill="rgba(255,255,255,1)" id="email_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="email__3_" src="angular-app/web-user-details/email__3_.png" srcset="angular-app/web-user-details/email__3_.png 1x, angular-app/web-user-details/email__3_@2x.png 2x">
+		</div>
+		<div id="password" class="password">
+			<svg class="Rectangle_2_da">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_da" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="password" class="pass_inp" required ng-model="vm.pass_inp" placeholder="Password">
+				<rect fill="rgba(255,255,255,1)" id="pass_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="lock" src="angular-app/web-user-details/lock.png" srcset="angular-app/web-user-details/lock.png 1x, angular-app/web-user-details/lock@2x.png 2x">
+		</div>
+		<div id="cpassword" class="cpassword">
+			<svg class="Rectangle_2_db">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_db" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="password" class="cpass_inp" required ng-model="vm.cpass_inp" placeholder="Confirm Password">
+				<rect fill="rgba(255,255,255,1)" id="cpass_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="lock_db" src="angular-app/web-user-details/lock_db.png" srcset="angular-app/web-user-details/lock_db.png 1x, angular-app/web-user-details/lock_db@2x.png 2x">
+		</div>
+		<div id="addr" class="addr">
+			<svg class="Rectangle_2_dd">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dd" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input class="adr_inp" required ng-model="vm.addr_inp" placeholder="Address Line 1">
+				<rect fill="rgba(255,255,255,1)" id="adr_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+			<img id="placeholder" src="angular-app/web-user-details/placeholder.png" srcset="angular-app/web-user-details/placeholder.png 1x, angular-app/web-user-details/placeholder@2x.png 2x">
+		</div>
+		<div id="addr1" class="addr1">
+			<svg class="Rectangle_2_dh">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dh" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<input type="text" class="addr1_inp" ng-model="vm.addr1_inp" placeholder="Address Line 2">
+				<rect fill="rgba(255,255,255,1)" id="addr1_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+		</div>
+		<div id="pincode" class="pincode">
+			<svg class="Rectangle_108">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_108" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<input type="number" class="pincode_inp" required minlength="6" maxlength="6" ng-model="vm.pincode_inp" placeholder="Pincode">
+			<rect fill="rgba(255,255,255,1)" id="pincode_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+			</rect>
+			</input>
+		</div>
+		<div id="city" class="city">
+			<svg class="Rectangle_2_dk">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dk" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<input class="city_inp" required ng-model="vm.city_inp" placeholder="City">
+				<rect fill="rgba(255,255,255,1)" id="city_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</input>
+		</div>
+		<div id="state" class="state">
+			<svg class="Rectangle_2_dn">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dn" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<input class="state_inp" required ng-model="vm.state_inp" placeholder="State">
+				<rect fill="rgba(255,255,255,1)" id="state_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</svg>
+		</div>
+		<button type="submit" id="signup_btn" class="signup_btn">
+			<svg class="Rectangle_4">
+				<rect fill="rgba(225,83,83,1)" id="Rectangle_4" rx="18" ry="18" x="0" y="0" width="276" height="36">
+				</rect>
+			</svg>
+			<div id="SIGNUP">
+				<span>SIGNUP</span>
+			</div>
+		</button>
+		</form>
+	</div>
+	<div id="load_content" ng-if="vm.isloading">
+		<svg class="dim_background">
+			<rect fill="rgba(49,49,49,1)" id="dim_background" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+			</rect>
+		</svg>
+		<div id="loading_info" >
+			<svg class="loading_background">
+				<rect fill="rgba(255,255,255,1)" id="loading_background" rx="26" ry="26" x="0" y="0" width="327" height="197">
+				</rect>
+			</svg>
+			<img id="LOGO_dn" src="angular-app/loading-screen/LOGO_dn.png" srcset="angular-app/loading-screen/LOGO_dn.png 1x, angular-app/loading-screen/LOGO_dn@2x.png 2x">
+			<div id="Loading">
+				<span>Loading</span>
+			</div>
+			<div class="progress">
+				<div class="indeterminate"></div>
+			</div>
+		</div>
+	</div>
+	<div id="server_not_responding" ng-if="vm.is_snr">
+		<svg class="snr_rect">
+			<rect fill="rgba(255,255,255,1)" id="snr_rect" rx="26" ry="26" x="0" y="0" width="479" height="92">
+			</rect>
+		</svg>
+		<div id="snr_text">
+			<span>SERVER NOT RESPONDING</span>
+		</div>
+		<img id="snr_warning" src="angular-app/error/snr_warning.png" srcset="angular-app/error/snr_warning.png 1x, angular-app/error/snr_warning@2x.png 2x">
+	</div>
+	<div id="user_exists" ng-if="vm.is_ue">
+		<svg class="ue_rect">
+			<rect fill="rgba(255,255,255,1)" id="ue_rect" rx="26" ry="26" x="0" y="0" width="277" height="92">
+			</rect>
+		</svg>
+		<div id="ue_text">
+			<span>USER EXISTS</span>
+		</div>
+		<img id="ue_waring" src="angular-app/error/ue_waring.png" srcset="angular-app/error/ue_waring.png 1x, angular-app/error/ue_waring@2x.png 2x">
+	</div>
+	<div id="error_saving" ng-if="vm.is_es">
+		<svg class="es_rect">
+			<rect fill="rgba(255,255,255,1)" id="es_rect" rx="26" ry="26" x="0" y="0" width="314" height="92">
+			</rect>
+		</svg>
+		<div id="es_text">
+			<span>ERROR SAVING</span>
+		</div>
+		<img id="es_warning" src="angular-app/error/es_warning.png" srcset="angular-app/error/es_warning.png 1x, angular-app/error/es_warning@2x.png 2x">
+	</div>
+</div>
+</body>
+</html>

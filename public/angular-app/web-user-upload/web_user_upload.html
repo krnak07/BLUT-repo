@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-user-upload</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-user-upload/web_user_upload.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/web-user-upload/web_user_upload.js"></script>
+</head>
+<body>
+<div id="web_user_upload">
+	<img id="LOGO" src="angular-app/web-user-upload/LOGO.png" srcset="angular-app/web-user-upload/LOGO.png 1x, angular-app/web-user-upload/LOGO@2x.png 2x">
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<div id="Group_90">
+		<div id="ID_CARD">
+			<span>ID CARD</span>
+		</div>
+		<div id="PROFILE_PHOTO">
+			<span>PROFILE PHOTO</span>
+		</div>
+		<form name="vm.uploaddForm" ng-submit="vm.uploadd()" >
+		<div id="male_id_card" class="male_id_card">
+			<svg class="Rectangle_2">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="file" required class="id_inp" id="id_upload">
+				<rect fill="rgba(255,255,255,1)" id="id_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</svg>
+			<img id="clip" src="angular-app/web-user-upload/clip.png" srcset="angular-app/web-user-upload/clip.png 1x, angular-app/web-user-upload/clip@2x.png 2x">
+		</div>
+		<div id="profile_pic" class="profile_pic">
+			<svg class="Rectangle_2_cv">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_cv" rx="21" ry="21" x="0" y="0" width="394" height="42">
+				</rect>
+			</svg>
+			<input type="file" required class="propic_inp" id="propic_upload">
+				<rect fill="rgba(255,255,255,1)" id="propic_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+				</rect>
+			</svg>
+			<img id="clip_cx" src="angular-app/web-user-upload/clip_cx.png" srcset="angular-app/web-user-upload/clip_cx.png 1x, angular-app/web-user-upload/clip_cx@2x.png 2x">
+		</div>
+		<div id="termsandcondi">
+			<input type="checkbox" required class="Ellipse_4">
+				<ellipse fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Ellipse_4" rx="8.5" ry="8.5" cx="8.5" cy="8.5">
+				</ellipse>
+			</input>
+			<div id="Agree_to_Terms_and_Conditions">
+				<span>Agree to Terms and Conditions</span>
+			</div>
+		</div>
+		<div id="getemails">
+			<input type="checkbox" class="Ellipse_4_c">
+				<ellipse fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Ellipse_4_c" rx="8.5" ry="8.5" cx="8.5" cy="8.5">
+				</ellipse>
+			</input>
+			<div id="Get_emails_regarding_BLOOD">
+				<span>Get emails regarding BLOOD</span>
+			</div>
+		</div>
+		<button type="submit" id="signup_btn" class="signup_btn">
+			<svg class="Rectangle_4">
+				<rect fill="rgba(225,83,83,1)" id="Rectangle_4" rx="18" ry="18" x="0" y="0" width="276" height="36">
+				</rect>
+			</svg>
+			<div id="UPLOAD">
+				<span>UPLOAD</span>
+			</div>
+		</button>
+		</form>
+	</div>
+	<div id="load_content" ng-if="vm.isloading">
+		<svg class="dim_background">
+			<rect fill="rgba(49,49,49,1)" id="dim_background" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+			</rect>
+		</svg>
+		<div id="loading_info" >
+			<svg class="loading_background">
+				<rect fill="rgba(255,255,255,1)" id="loading_background" rx="26" ry="26" x="0" y="0" width="327" height="197">
+				</rect>
+			</svg>
+			<img id="LOGO_dn" src="angular-app/loading-screen/LOGO_dn.png" srcset="angular-app/loading-screen/LOGO_dn.png 1x, angular-app/loading-screen/LOGO_dn@2x.png 2x">
+			<div id="Loading">
+				<span>Loading</span>
+			</div>
+			<div class="progress">
+				<div class="indeterminate"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

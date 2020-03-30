@@ -1,0 +1,138 @@
+.mediaViewInfo {
+	--web-view-name: web-main;
+	--web-view-id: web_main;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_main;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_main {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(225,83,83,1);
+	overflow: hidden;
+	--web-view-name: web-main;
+	--web-view-id: web_main;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Made_with___ {
+	position: absolute;
+	left: 843.5px;
+	top: 902px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#Group_31 {
+	position: absolute;
+	width: 247px;
+	height: 36px;
+	left: 837px;
+	top: 717px;
+	overflow: visible;
+}
+#signup_btn {
+	position: absolute;
+	width: 118px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 118px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#LOGIN {
+	position: absolute;
+	left: 13.746px;
+	top: 7px;
+	overflow: visible;
+	width: 53px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#id_card {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 82px;
+	top: 6px;
+	overflow: visible;
+}
+#login_btn {
+	position: absolute;
+	width: 123px;
+	left: 124px;
+	top: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_4_cf {
+	position: absolute;
+	overflow: visible;
+	width: 123px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#SIGNUP {
+	position: absolute;
+	left: 13.746px;
+	top: 7px;
+	overflow: visible;
+	width: 64px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#edit {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 87px;
+	top: 6px;
+	overflow: visible;
+}
+#LOGO {
+	position: absolute;
+	width: 1884px;
+	height: 466px;
+	left: 18px;
+	top: 147px;
+	overflow: visible;
+}
+
+button {
+	outline: none;
+}
