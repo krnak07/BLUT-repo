@@ -12,7 +12,7 @@ var bbuser = mongoose.model('bloodbankuser');
 var hospitals = mongoose.model('hospital');
 var notification = mongoose.model('notification_token');
 var bb_req = mongoose.model('requests');
-var cors = require('cors')({origin: true});
+
 
 
 const firebaseConfig = {
