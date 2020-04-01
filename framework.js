@@ -1,15 +1,24 @@
 require('./api/data/db.js');
 var express = require('express');
+const https = require('https');
+const fs = require('fs');
+var forceSsl = require('express-force-ssl');
+var cors = require('cors');
+
+const options = {
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem')
+};
+
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 var routes = require('./api/routes');
 
 // Define the port to run on
-app.set('port', 3000);
+//app.set('port', 3000);
 // Add middleware to console log every request
 app.use(function(req, res, next) {
-    console.log(req.method, req.url,req.headers.host);
     next();
 });
 
@@ -24,9 +33,11 @@ app.use(bodyParser.json());
 
 // Add some routing
 app.use('/api',routes);
-
-// Listen for requests
-var server = app.listen(app.get('port'), function() {
-    var port = server.address().port;
-    console.log('port :  ' + port);
+app.use(function(req, res) {
+    res.sendFile(__dirname + '/public/index.html');
 });
+
+app.use(forceSsl);
+app.use(cors);
+// Listen for requests
+https.createServer(options, app).listen(443);

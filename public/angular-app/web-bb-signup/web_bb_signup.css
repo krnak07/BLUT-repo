@@ -683,3 +683,80 @@ input::-webkit-inner-spin-button {
 	top: 26px;
 	overflow: visible;
 }
+
+#weak_pass {
+	position: absolute;
+	width: 359px;
+	height: 92px;
+	left: 781px;
+	top: 26px;
+	overflow: visible;
+}
+.wep_rect {
+	position: absolute;
+	overflow: visible;
+	width: 359px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#wep_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 262px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#wep_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#pass_donnot_match {
+	position: absolute;
+	width: 523px;
+	height: 92px;
+	left: 699px;
+	top: 26px;
+	overflow: visible;
+}
+.pdm_rect {
+	position: absolute;
+	overflow: visible;
+	width: 523px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#pdm_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 426px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#pdm_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}

@@ -136,3 +136,31 @@
 button {
 	outline: none;
 }
+
+#web_waiting {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-waiting;
+	--web-view-id: web_waiting;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+.waiting_rect {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+}
+#waiting_LOGO {
+	position: absolute;
+	width: 1113px;
+	height: 274.851px;
+	left: 404px;
+	top: 350px;
+	overflow: visible;
+}

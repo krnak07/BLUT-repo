@@ -20,15 +20,15 @@ function webbbusersignupcontroller($location,$http){
     }
 
     vm.isloading = false;
-    vm.snr = false;
-    vm.bnf = false;
-    vm.exists = false;
-    vm.not_associated = false;
+    vm.is_snr = false;
+    vm.is_bnf = false;
+    vm.is_ue = false;
+    vm.is_unf = false;
     function hideerror(){
-        vm.snr = false;
-        vm.bnf = false;
-        vm.exists = false;
-        vm.not_associated = false;
+        vm.is_snr = false;
+        vm.is_bnf = false;
+        vm.is_ue = false;
+        vm.is_unf = false;
     }
 
     vm.signupcheck = function(){
@@ -53,19 +53,19 @@ function webbbusersignupcontroller($location,$http){
                 .catch(function(err){
                     vm.isloading=false;
                     if(err.data.msg == 'bnf'){
-                        vm.bnf = true;
+                        vm.is_bnf = true;
                         window.setTimeout(hideerror,1000);
                     }
                     else if(err.data.msg == 'exists'){
-                        vm.exists = true;
+                        vm.is_ue = true;
                         window.setTimeout(hideerror,1000);
                     }
                     else if(err.data.msg == 'snr'){
-                        vm.snr = true;
+                        vm.is_snr = true;
                         window.setTimeout(hideerror,1000);
                     }
                     else if(err.data.msg == 'not associated'){
-                        vm.not_associated = true;
+                        vm.is_unf = true;
                         window.setTimeout(hideerror,1000);
                     }
                 })

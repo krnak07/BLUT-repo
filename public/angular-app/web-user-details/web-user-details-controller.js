@@ -11,11 +11,16 @@ function webuserdetailscontroller($location,$http) {
     vm.is_snr = false;
     vm.is_ue = false;
     vm.is_es = false;
+    vm.is_pdm = false;
+    vm.is_wep = false;
     function hideerror(){
         vm.is_snr = false;
         vm.is_ue = false;
         vm.is_es = false;
+        vm.is_pdm = false;
+        vm.is_wep = false;
     }
+    var adr;
 
     if(sessionStorage.getItem('typeemail') == null){
         $location.path('/signup/'+sessionStorage.getItem('type')+'/user/male')
@@ -25,9 +30,9 @@ function webuserdetailscontroller($location,$http) {
         if (vm.signupdetailsForm.$valid){
             if(vm.pass_inp == vm.cpass_inp){
                 if(vm.addr1_inp == null)
-                    vm.addr1_inp = '';
+                    adr = vm.addr_inp;
                 else
-                    vm.addr1_inp=','+vm.addr1_inp;
+                    adr = vm.addr_inp+','+vm.addr1_inp;
 
                 var postdata = {
                     fname : sessionStorage.getItem('userfname'),
@@ -37,7 +42,7 @@ function webuserdetailscontroller($location,$http) {
                     email : vm.email_inp,
                     password : vm.pass_inp,
                     phoneNo : sessionStorage.getItem('userphone'),
-                    addr : vm.addr_inp + vm.addr1_inp,
+                    addr : adr,
                     city : vm.city_inp,
                     state : vm.state_inp,
                     pincode : vm.pincode_inp,
@@ -57,17 +62,17 @@ function webuserdetailscontroller($location,$http) {
                     })
                     .catch(function(error){
                         vm.isloading = false;
-                        console.log(error);
-                        vm.addr1_inp='';
                         if(error.data.msg == 'wp'){
-                            alert("Weak PASWWORD !")
+                            vm.is_wep = true;
+                            vm.pass_inp=vm.cpass_inp='';
+                            window.setTimeout(hideerror,1000);
                         }
                         else if(error.data.msg == 'ue'){
                             vm.is_ue = true;
                             window.setTimeout(hideerror,1000);
                         }
                         else if(error.data.msg == 'es'){
-                            vm.ie_es = true;
+                            vm.is_es = true;
                             window.setTimeout(hideerror,1000);
                         }
 
@@ -75,9 +80,9 @@ function webuserdetailscontroller($location,$http) {
             }
             else{
                 vm.isloading = false;
-                vm.addr1_inp='';
                 vm.pass_inp=vm.cpass_inp='';
-                alert('Password Do Not Match !');
+                vm.is_pdm = true;
+                window.setTimeout(hideerror,1000);
             }
         }
         else{

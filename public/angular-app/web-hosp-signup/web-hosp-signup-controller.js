@@ -12,11 +12,15 @@ function webhospsignupcontroller($location,$http) {
     vm.is_snr = false;
     vm.is_ue = false;
     vm.is_es = false;
-
+    vm.is_wep = false;
+    vm.is_pdm = false;
+    var adr;
     function hideerror(){
         vm.is_snr = false;
         vm.is_ue = false;
         vm.is_es = false;
+        vm.is_wep = false;
+        vm.is_pdm = false;
     }
 
     vm.signup = function(){
@@ -24,9 +28,9 @@ function webhospsignupcontroller($location,$http) {
         if (vm.signupForm.$valid){
             if(vm.pass_inp == vm.cpass_inp){
                 if(vm.addr1_inp == null)
-                    adr = vm.addr1_inp;
+                    adr = vm.addr_inp;
                 else
-                    adr = vm.addr1_inp+','+vm.addr1_inp;
+                    adr = vm.addr_inp+','+vm.addr1_inp;
 
                 var postdata = {
                     name : vm.name_inp,
@@ -50,7 +54,8 @@ function webhospsignupcontroller($location,$http) {
                         vm.isloading = false;
                         vm.pass_inp=vm.cpass_inp='';
                         if(error.data.msg == 'wp'){
-                            alert("Weak PASWWORD !")
+                            vm.is_wep = true;
+                            window.setTimeout(hideerror,1000);
                         }
                         else if(error.data.msg == 'ue'){
                             vm.is_ue = true;
@@ -66,7 +71,8 @@ function webhospsignupcontroller($location,$http) {
             else{
                 vm.isloading = false;
                 vm.pass_inp=vm.cpass_inp='';
-                alert('Password Do Not Match !');
+                vm.is_pdm = true;
+                window.setTimeout(hideerror,1000);
             }
         }
         else{

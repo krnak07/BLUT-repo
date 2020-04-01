@@ -20,15 +20,15 @@ function webhospusersignupcontroller($location,$http){
     }
 
     vm.isloading = false;
-    vm.snr = false;
-    vm.hnf = false;
-    vm.exists = false;
-    vm.not_associated = false;
+    vm.is_snr = false;
+    vm.is_hnf = false;
+    vm.is_ue = false;
+    vm.is_unf = false;
     function hideerror(){
-        vm.snr = false;
-        vm.hnf = false;
-        vm.exists = false;
-        vm.not_associated = false;
+        vm.is_snr = false;
+        vm.is_hnf = false;
+        vm.is_ue = false;
+        vm.is_unf = false;
     }
 
     vm.signupcheck = function(){
@@ -43,8 +43,8 @@ function webhospusersignupcontroller($location,$http){
             $http.post('/api/hospital/usercheck',postdata)
                 .then(function(response){
                     vm.isloading=false;
-                    sessionStorage.setItem('typeemail',postdata.bbemail);
-                    sessionStorage.setItem('typename',response.data.bbname);
+                    sessionStorage.setItem('typeemail',postdata.hospemail);
+                    sessionStorage.setItem('typename',response.data.hospname);
                     sessionStorage.setItem('userfname',postdata.userfname);
                     sessionStorage.setItem('userlname',postdata.userlname);
                     sessionStorage.setItem('userphone',postdata.userphone);
@@ -53,20 +53,20 @@ function webhospusersignupcontroller($location,$http){
                 .catch(function(err){
                     vm.isloading=false;
                     console.log(err);
-                    if(err.data.msg == 'nnf'){
-                        vm.hnf = true;
+                    if(err.data.msg == 'hnf'){
+                        vm.is_hnf = true;
                         window.setTimeout(hideerror,1000);
                     }
                     else if(err.data.msg == 'exists'){
-                        vm.exists = true;
+                        vm.is_ue = true;
                         window.setTimeout(hideerror,1000);
                     }
                     else if(err.data.msg == 'snr'){
-                        vm.snr = true;
+                        vm.is_snr = true;
                         window.setTimeout(hideerror,1000);
                     }
                     else if(err.data.msg == 'not associated'){
-                        vm.not_associated = true;
+                        vm.is_unf = true;
                         window.setTimeout(hideerror,1000);
                     }
                 })

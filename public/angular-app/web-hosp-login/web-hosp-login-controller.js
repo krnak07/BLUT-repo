@@ -23,12 +23,14 @@ function webhosplogincontroller($location,$http){
 
     var login = function(postdata){
         vm.isloading = true;
-        $http.post('/api/hospitals/login',postdata)
+        $http.post('/api/login/hospital/user',postdata)
             .then(function(response){
                 vm.isloading=false;
-                sessionStorage.setItem('hosp_id',response.data.id);
-                sessionStorage.setItem('hosp_name',response.data.name);
-                $location.path('/hospital/home');
+                sessionStorage.setItem('hospemail',response.data.hospemail);
+                sessionStorage.setItem('hospname',response.data.hospname);
+                sessionStorage.setItem('useremail',response.data.useremail);
+                sessionStorage.setItem('username',response.data.username);
+                $location.path('/hospital/dashboard');
             })
             .catch(function(err){
                 vm.isloading = false;
@@ -61,7 +63,7 @@ function webhosplogincontroller($location,$http){
     };
     var cookieArray;
     var ca= [];
-    var hc=-1,he=-1,hp=-1;
+    var hc=-1,he=-1,hp=-1,hl=-1;
     if(document.cookie != ""){
         cookieArray = document.cookie.split(';');
         ca.push([cookieArray[0].split('=')[0],cookieArray[0].split('=')[1]]);
@@ -69,14 +71,19 @@ function webhosplogincontroller($location,$http){
             ca.push([cookieArray[i].split('=')[0].split(' ')[1],cookieArray[i].split('=')[1]]);
         }
         for (var i=0;i<ca.length;i++){
-            if(ca[i][0] == "hospcookieUse")
+            if(ca[i][0] == "hospusercookieUse")
                 hc=i;
-            if(ca[i][0] == "hosp_email")
+            if(ca[i][0] == "hospuseremail")
                 he=i;
-            if(ca[i][0] == "hosp_pass")
+            if(ca[i][0] == "hospuserpass")
                 hp=i;
+            if(ca[i][0] == "hospuserloggedout")
+                hl=i;
         }
-        if(hc==-1 || he==-1 || hp ==-1){
+        if(hc==-1 || he==-1 || hp ==-1 || hl==-1 ){
+
+        }
+        else if(ca[hl][1]=="1"){
 
         }
         else if(ca[hc][1] == "true"){
@@ -100,16 +107,17 @@ function webhosplogincontroller($location,$http){
 
     vm.login = function(){
         var postdata = {
-            email : vm.email_input,
-            password : vm.pass_input
+            email : vm.email_inp,
+            password : vm.pass_inp
         };
         if (vm.loginForm.$valid){
             if(vm.coption){  //setCookies
                 var now = new Date();
                 now.setMonth( now.getFullYear() + 24 );
-                document.cookie ="hospcookieUse=true"+";expires=" + now.toUTCString() + ";";
-                document.cookie ="hosp_email=" + vm.email_input +";expires=" + now.toUTCString() + ";";
-                document.cookie ="hosp_pass=" + vm.pass_input +";expires=" + now.toUTCString() + ";";
+                document.cookie ="hospusercookieUse=true"+";expires=" + now.toUTCString() + ";";
+                document.cookie ="hospuseremail=" + vm.email_inp +";expires=" + now.toUTCString() + ";";
+                document.cookie ="hospuserpass=" + vm.pass_inp +";expires=" + now.toUTCString() + ";";
+                document.cookie ="hospuserloggedout=0;expires=" + now.toUTCString() + ";";
             }
             login(postdata);
         }

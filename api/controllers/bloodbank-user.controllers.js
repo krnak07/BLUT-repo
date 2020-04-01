@@ -44,6 +44,7 @@ module.exports.bbusersignup = function(req,res){
                                             bloodbankemail : req.body.typeemail,
                                             createdOn : d,
                                         },function(err,pro) {
+                                            console.log(err);
                                             if(err){
                                                 res
                                                     .status(400)
@@ -126,7 +127,6 @@ module.exports.resetPass = function(req,res){
 
 
 module.exports.bbuserlogin = function(req,res) {
-
     auth.signInWithEmailAndPassword(req.body.email, req.body.password)
         .then(function(){
             var user = auth.currentUser;
@@ -136,13 +136,13 @@ module.exports.bbuserlogin = function(req,res) {
                     .exec(function(err,pro){
                         if(err){
                             res
-                                .status(404)
+                                .status(400)
                                 .json({"msg":"snr"});
                         }
                         else{
                             if(pro == null){
                                 res
-                                    .status(404)
+                                    .status(400)
                                     .json({"msg":"unf"});
                             }
                             else{
@@ -162,6 +162,7 @@ module.exports.bbuserlogin = function(req,res) {
             }
         })
         .catch(function(error) {
+            console.log(error);
             if(error.code == "auth/user-not-found"){
                 res
                     .status(400)
@@ -174,8 +175,13 @@ module.exports.bbuserlogin = function(req,res) {
             }
             else if(error.code == "auth/too-many-requests"){
                 res
-                    .status(404)
+                    .status(400)
                     .json({"msg":"tmr"});
+            }
+            else if(error.code == "auth/invalid-email"){
+                res
+                    .status(400)
+                    .json({"msg":"ie"});
             }
 
         });

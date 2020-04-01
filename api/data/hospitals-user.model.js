@@ -11,7 +11,7 @@ var huserSchema = new mongoose.Schema({
         required : true
     },
     dateofbirth : {
-        type : String,
+        type : Date,
         required : true
     },
     email : {

@@ -28,7 +28,7 @@
 	position: absolute;
 	width: 458px;
 	height: 92px;
-	left: 732px;
+	left: 731px;
 	top: 26px;
 	overflow: visible;
 }
@@ -66,7 +66,7 @@
 	position: absolute;
 	width: 458px;
 	height: 92px;
-	left: 732px;
+	left: 731px;
 	top: 26px;
 	overflow: visible;
 }
@@ -104,7 +104,7 @@
 	position: absolute;
 	width: 458px;
 	height: 92px;
-	left: 732px;
+	left: 731px;
 	top: 26px;
 	overflow: visible;
 }
@@ -142,7 +142,7 @@
 	position: absolute;
 	width: 380px;
 	height: 92px;
-	left: 771px;
+	left: 770px;
 	top: 26px;
 	overflow: visible;
 }
@@ -332,7 +332,7 @@
 	position: absolute;
 	width: 392px;
 	height: 92px;
-	left: 765px;
+	left: 764px;
 	top: 26px;
 	overflow: visible;
 }
@@ -396,7 +396,7 @@
 	font-size: 30px;
 	color: rgba(49,49,49,1);
 }
-#ue_waring {
+#ue_warning {
 	position: absolute;
 	width: 40px;
 	height: 40px;
@@ -484,7 +484,7 @@
 	position: absolute;
 	width: 314px;
 	height: 92px;
-	left: 804px;
+	left: 803px;
 	top: 26px;
 	overflow: visible;
 }
@@ -522,7 +522,7 @@
 	position: absolute;
 	width: 304px;
 	height: 92px;
-	left: 809px;
+	left: 808px;
 	top: 26px;
 	overflow: visible;
 }
@@ -556,7 +556,7 @@
 	top: 26px;
 	overflow: visible;
 }
-#connection_error_d {
+#connection_error_ea {
 	position: absolute;
 	width: 351px;
 	height: 92px;
@@ -564,7 +564,7 @@
 	top: 26px;
 	overflow: visible;
 }
-.ce_rect_d {
+.ce_rect_eb {
 	position: absolute;
 	overflow: visible;
 	width: 351px;
@@ -572,7 +572,7 @@
 	left: 0px;
 	top: 0px;
 }
-#ce_text_d {
+#ce_text_ec {
 	position: absolute;
 	left: 72px;
 	top: 26px;
@@ -586,7 +586,7 @@
 	font-size: 30px;
 	color: rgba(49,49,49,1);
 }
-#ce_warning_d {
+#ce_warning_ed {
 	position: absolute;
 	width: 40px;
 	height: 40px;
@@ -598,7 +598,7 @@
 	position: absolute;
 	width: 354px;
 	height: 92px;
-	left: 784px;
+	left: 783px;
 	top: 26px;
 	overflow: visible;
 }
@@ -631,4 +631,118 @@
 	font-weight: bold;
 	font-size: 30px;
 	color: rgba(49,49,49,1);
+}
+#error_uploading {
+	position: absolute;
+	width: 378px;
+	height: 92px;
+	left: 771px;
+	top: 26px;
+	overflow: visible;
+}
+.ep_rect {
+	position: absolute;
+	overflow: visible;
+	width: 378px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ep_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 281px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#ep_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#weak_pass {
+	position: absolute;
+	width: 359px;
+	height: 92px;
+	left: 781px;
+	top: 26px;
+	overflow: visible;
+}
+.wep_rect {
+	position: absolute;
+	overflow: visible;
+	width: 359px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#wep_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 262px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#wep_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#pass_donnot_match {
+	position: absolute;
+	width: 523px;
+	height: 92px;
+	left: 699px;
+	top: 26px;
+	overflow: visible;
+}
+.pdm_rect {
+	position: absolute;
+	overflow: visible;
+	width: 523px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#pdm_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 426px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#pdm_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
 }

@@ -2,7 +2,7 @@ angular.module('bbApp',['ngRoute'])
 .config(config);
 
 function config($routeProvider,$locationProvider) {
-    $locationProvider.html5Mode(true);
+
     $routeProvider
       .when('/',{
           templateUrl : 'angular-app/web-main/web_main.html',
@@ -94,6 +94,11 @@ function config($routeProvider,$locationProvider) {
           controller : webhosplogincontroller,
           controllerAs : 'vm'
       })
+      .when('/hospital/dashboard',{
+          templateUrl : 'angular-app/web-hosp-dashboard/web_hosp_dashboard.html',
+          controller : webhospdashboardcontroller,
+          controllerAs : 'vm'
+      })
       .when('/login/camps',{
           templateUrl : 'angular-app/web-camp-login/web_camp_login.html',
           controller : webcamplogincontroller,
@@ -105,6 +110,8 @@ function config($routeProvider,$locationProvider) {
           controller: testc,
           controllerAs: 'vm'
       });
+
+    $locationProvider.html5Mode(true);
 
 
     const firebaseConfig = {

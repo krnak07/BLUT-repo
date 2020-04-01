@@ -178,3 +178,7 @@
 	top: 0px;
 	overflow: visible;
 }
+
+button {
+	outline : none;
+}

@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>web-bb-user-signup</title>
+<title>Bloodbank User Signup</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-bb-user-signup/web_bb_user_signup.css"/>
 <script id="applicationScript" type="text/javascript" src="angular-app/web-bb-user-signup/web_bb_user_signup.js"></script>
 </head>
@@ -99,7 +99,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="server_not_responding" ng-if="vm.snr">
+	<div id="server_not_responding" ng-if="vm.is_snr">
 		<svg class="snr_rect">
 			<rect fill="rgba(255,255,255,1)" id="snr_rect" rx="26" ry="26" x="0" y="0" width="479" height="92">
 			</rect>
@@ -109,7 +109,7 @@
 		</div>
 		<img id="snr_warning" src="angular-app/error/snr_warning.png" srcset="angular-app/error/snr_warning.png 1x, angular-app/error/snr_warning@2x.png 2x">
 	</div>
-	<div id="user_exists" ng-if="vm.exists">
+	<div id="user_exists" ng-if="vm.is_ue">
 		<svg class="ue_rect">
 			<rect fill="rgba(255,255,255,1)" id="ue_rect" rx="26" ry="26" x="0" y="0" width="277" height="92">
 			</rect>
@@ -119,7 +119,7 @@
 		</div>
 		<img id="ue_waring" src="angular-app/error/ue_waring.png" srcset="angular-app/error/ue_waring.png 1x, angular-app/error/ue_waring@2x.png 2x">
 	</div>
-	<div id="no_bb_found" ng-if="vm.bnf">
+	<div id="no_bb_found" ng-if="vm.is_bnf">
 		<svg class="nbf_rect">
 			<rect fill="rgba(255,255,255,1)" id="nbf_rect" rx="26" ry="26" x="0" y="0" width="458" height="92">
 			</rect>
@@ -129,7 +129,7 @@
 		</div>
 		<img id="nbf_close" src="angular-app/error/nbf_close.png" srcset="angular-app/error/nbf_close.png 1x, angular-app/error/nbf_close@2x.png 2x">
 	</div>
-	<div id="user_not_found" ng-if="vm.not_associated">
+	<div id="user_not_found" ng-if="vm.is_unf">
 		<svg class="unf__rect">
 			<rect fill="rgba(255,255,255,1)" id="unf__rect" rx="26" ry="26" x="0" y="0" width="357" height="92">
 			</rect>
@@ -137,7 +137,7 @@
 		<div id="unf_text">
 			<span>USER NOT FOUND</span>
 		</div>
-		<img id="unf_warning" src="angular-app/error/unf_warning.png" srcset="angular-app/error/unf_warning.png 1x, angular-app/error/unf_warning@2x.png 2x">
+		<img id="unf_warning" src="angular-app/error/unf_warnning.png" srcset="angular-app/error/unf_warnning.png 1x, angular-app/error/unf_warnning@2x.png 2x">
 	</div>
 </div>
 </body>

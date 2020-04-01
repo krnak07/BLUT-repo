@@ -125,7 +125,6 @@ module.exports.resetPass = function(req,res){
 
 
 module.exports.hospuserlogin = function(req,res) {
-
     auth.signInWithEmailAndPassword(req.body.email, req.body.password)
         .then(function(){
             var user = auth.currentUser;
@@ -137,11 +136,18 @@ module.exports.hospuserlogin = function(req,res) {
                         if(err){
                             res
                                 .status(400)
-                                .json(err);
+                                .json({"msg":"snr"});
                         }
-                        res
-                            .status(200)
-                            .json(pro); //logged in user details
+                        if(pro == null){
+                            res
+                                .status(400)
+                                .json({"msg":"unf"});
+                        }
+                        else{
+                            res
+                                .status(200)
+                                .json({"useremail":pro.email,"username":pro.firstname,"hospemail":pro.hospitalemail,"hospname":pro.hospitalname});
+                        }
                     });
 
             }
@@ -149,13 +155,31 @@ module.exports.hospuserlogin = function(req,res) {
             {
                 res
                     .status(400)
-                    .json({"message" : "User not verified"});
+                    .json({"msg" : "nv"});
             }
         })
         .catch(function(error) {
-            res
-                .status(404)
-                .json(error);
+            console.log(error);
+            if(error.code == "auth/user-not-found"){
+                res
+                    .status(400)
+                    .json({"msg":"ie"});
+            }
+            else if(error.code == "auth/wrong-password"){
+                res
+                    .status(400)
+                    .json({"msg":"wp"});
+            }
+            else if(error.code == "auth/too-many-requests"){
+                res
+                    .status(400)
+                    .json({"msg":"tmr"});
+            }
+            else if(error.code == "auth/invalid-email"){
+                res
+                    .status(400)
+                    .json({"msg":"ie"});
+            }
         });
 };
 

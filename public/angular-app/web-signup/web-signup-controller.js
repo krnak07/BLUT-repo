@@ -4,6 +4,7 @@ angular.module('bbApp')
 function websignupcontroller($location) {
     var vm = this;
     document.getElementById('web_signup').style.visibility = 'hidden';
+
     angular.element(document).ready(function () {
         document.getElementById('web_signup').style.visibility = 'visible';
     });

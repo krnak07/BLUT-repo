@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>web-hosp-user-signup</title>
+<title>Hospital User Signup</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-hosp-user-signup/web_hosp_user_signup.css"/>
 <script id="applicationScript" type="text/javascript" src="angular-app/web-hosp-user-signup/web_hosp_user_signup.js"></script>
 </head>
@@ -38,7 +38,7 @@
 				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_cx" rx="21" ry="21" x="0" y="0" width="394" height="42">
 				</rect>
 			</svg>
-			<input class="fname_inp" required placeholder="First Name" ng-model="vm.userfname">
+			<input class="fname_inp" required placeholder="First Name" ng-model="vm.userfname_inp">
 				<rect fill="rgba(255,255,255,1)" id="fname_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
 				</rect>
 			</input>
@@ -50,7 +50,7 @@
 				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_c" rx="21" ry="21" x="0" y="0" width="372" height="42">
 				</rect>
 			</svg>
-			<input class="lname_inp" required placeholder="Last Name" ng-model="vm.userlname">
+			<input class="lname_inp" required placeholder="Last Name" ng-model="vm.userlname_inp">
 				<rect fill="rgba(255,255,255,1)" id="lname_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
 				</rect>
 			</input>
@@ -99,7 +99,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="server_not_responding" ng-if="vm.snr">
+	<div id="server_not_responding" ng-if="vm.is_snr">
 		<svg class="snr_rect">
 			<rect fill="rgba(255,255,255,1)" id="snr_rect" rx="26" ry="26" x="0" y="0" width="479" height="92">
 			</rect>
@@ -109,7 +109,7 @@
 		</div>
 		<img id="snr_warning" src="angular-app/error/snr_warning.png" srcset="angular-app/error/snr_warning.png 1x, angular-app/error/snr_warning@2x.png 2x">
 	</div>
-	<div id="no_hosp_found" ng-if="vm.angular-app/error/hnf">
+	<div id="no_hosp_found" ng-if="vm.is_hnf">
 		<svg class="nhf_rect">
 			<rect fill="rgba(255,255,255,1)" id="nhf_rect" rx="26" ry="26" x="0" y="0" width="458" height="92">
 			</rect>
@@ -119,7 +119,7 @@
 		</div>
 		<img id="nhf_close" src="angular-app/error/nhf_close.png" srcset="angular-app/error/nhf_close.png 1x, angular-app/error/nhf_close@2x.png 2x">
 	</div>
-	<div id="user_exists" ng-if="vm.exists">
+	<div id="user_exists" ng-if="vm.is_ue">
 		<svg class="ue_rect">
 			<rect fill="rgba(255,255,255,1)" id="ue_rect" rx="26" ry="26" x="0" y="0" width="277" height="92">
 			</rect>
@@ -130,7 +130,7 @@
 		<img id="ue_waring" src="angular-app/error/ue_waring.png" srcset="angular-app/error/ue_waring.png 1x, angular-app/error/ue_waring@2x.png 2x">
 	</div>
 
-	<div id="user_not_found" ng-if="vm.not_associated">
+	<div id="user_not_found" ng-if="vm.is_nuf">
 		<svg class="unf__rect">
 			<rect fill="rgba(255,255,255,1)" id="unf__rect" rx="26" ry="26" x="0" y="0" width="357" height="92">
 			</rect>

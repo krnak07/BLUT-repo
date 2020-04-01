@@ -4,11 +4,18 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>web-main</title>
+<title>BLOOD</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-main/web_main.css"/>
 <script id="applicationScript" type="text/javascript" src="angular-app/web-main/web_main.js"></script>
 </head>
 <body>
+<div id="web_waiting" ng-if="vm.waitingg">
+	<svg class="waiting_rect">
+		<rect fill="rgba(245,245,245,1)" id="waiting_rect" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+		</rect>
+	</svg>
+	<img id="waiting_LOGO" src="angular-app/waiting/waiting_LOGO.png" srcset="angular-app/waiting/waiting_LOGO.png 1x, angular-app/waiting/waiting_LOGO@2x.png 2x">
+</div>
 <div id="web_main">
 	<div id="Made_with___">
 		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>

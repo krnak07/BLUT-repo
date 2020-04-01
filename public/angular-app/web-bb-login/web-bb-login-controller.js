@@ -25,7 +25,7 @@ function webbblogincontroller($location,$http){
     
     var login = function(postdata){
         vm.isloading = true;
-        $http.post('/api/login/bbuser',postdata)
+        $http.post('/api/login/bloodbank/user',postdata)
             .then(function(response){
                 vm.isloading=false;
                 sessionStorage.setItem('username',response.data.username);
@@ -111,8 +111,8 @@ function webbblogincontroller($location,$http){
 
     vm.login = function(){
         var postdata = {
-            email : vm.email_input,
-            password : vm.pass_input
+            email : vm.email_inp,
+            password : vm.pass_inp
         };
         if (vm.loginForm.$valid){
             if(vm.coption){  //setCookies

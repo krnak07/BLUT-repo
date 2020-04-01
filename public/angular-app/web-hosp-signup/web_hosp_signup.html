@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>web-hosp-signup</title>
+<title>Hospital Signup</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-hosp-signup/web_hosp_signup.css"/>
 <script id="applicationScript" type="text/javascript" src="angular-app/web-hosp-signup/web_hosp_signup.js"></script>
 </head>
@@ -192,6 +192,26 @@
 			<span>ERROR SAVING</span>
 		</div>
 		<img id="es_warning" src="angular-app/error/es_warning.png" srcset="angular-app/error/es_warning.png 1x, angular-app/error/es_warning@2x.png 2x">
+	</div>
+	<div id="weak_pass" ng-if="vm.is_wep">
+		<svg class="wep_rect">
+			<rect fill="rgba(255,255,255,1)" id="wep_rect" rx="26" ry="26" x="0" y="0" width="359" height="92">
+			</rect>
+		</svg>
+		<div id="wep_text">
+			<span>WEAK PASSWORD</span>
+		</div>
+		<img id="wep_warning" src="angular-app/error/wep_warning.png" srcset="angular-app/error/wep_warning.png 1x, angular-app/error/wep_warning@2x.png 2x">
+	</div>
+	<div id="pass_donnot_match" ng-if="vm.is_pdm">
+		<svg class="pdm_rect">
+			<rect fill="rgba(255,255,255,1)" id="pdm_rect" rx="26" ry="26" x="0" y="0" width="523" height="92">
+			</rect>
+		</svg>
+		<div id="pdm_text">
+			<span>PASSWORD's DO NOT MATCH</span>
+		</div>
+		<img id="pdm_warning" src="angular-app/error/pdm_warning.png" srcset="angular-app/error/pdm_warning.png 1x, angular-app/error/pdm_warning@2x.png 2x">
 	</div>
 </div>
 </body>
