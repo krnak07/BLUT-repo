@@ -20,16 +20,21 @@ function webhosplogincontroller($location,$http){
         vm.is_unv = false;
     };
 
+    if(localStorage.getItem('username')!==null){
+        $location.path('/hospital/dashboard');
+    }
+
+
 
     var login = function(postdata){
         vm.isloading = true;
         $http.post('/api/login/hospital/user',postdata)
             .then(function(response){
                 vm.isloading=false;
-                sessionStorage.setItem('hospemail',response.data.hospemail);
-                sessionStorage.setItem('hospname',response.data.hospname);
-                sessionStorage.setItem('useremail',response.data.useremail);
-                sessionStorage.setItem('username',response.data.username);
+                localStorage.setItem('hospemail',response.data.hospemail);
+                localStorage.setItem('hospname',response.data.hospname);
+                localStorage.setItem('useremail',response.data.useremail);
+                localStorage.setItem('username',response.data.username);
                 $location.path('/hospital/dashboard');
             })
             .catch(function(err){

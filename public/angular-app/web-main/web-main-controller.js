@@ -3,15 +3,14 @@ angular.module('bbApp')
 
 function webmaincontroller($location){
     var vm = this;
-    vm.waitingg=true;
     document.getElementById('web_main').style.visibility = 'hidden';
     angular.element(document).ready(function () {
-        window.setTimeout(showall(),3000);
+        window.setTimeout(showall(),5000);
     });
-
     function showall(){
-        vm.waitingg = false;
-        document.getElementById('web_main').style.visibility = 'visible';
+        if(document.readyState == 'complete'){
+            document.getElementById('web_main').style.visibility = 'visible';
+        }
     }
 
     const msg = firebase.messaging();
