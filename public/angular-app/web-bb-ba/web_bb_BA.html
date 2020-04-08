@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Availability</title>
+</head>
+<body>
+<div id="web_bb_BA">
+	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-bb-ba/web_bb_BA.css"/>
+	<script id="applicationScript" type="text/javascript" src="angular-app/web-bb-ba/web_bb_BA.js"></script>
+	<img id="background_logo" src="angular-app/web-bb-ba/background_logo.png" srcset="angular-app/web-bb-ba/background_logo.png 1x, angular-app/web-bb-ba/background_logo@2x.png 2x">
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<div id="bg_details">
+		<svg class="Rectangle_80">
+			<rect fill="rgba(245,245,245,1)" id="Rectangle_80" rx="40" ry="40" x="0" y="0" width="1850" height="750">
+			</rect>
+		</svg>
+		<div id="BG">
+			<img id="O_" src="angular-app/web-bb-ba/O_.png" srcset="angular-app/web-bb-ba/O_.png 1x, angular-app/web-bb-ba/O_@2x.png 2x">
+			<img id="A_" src="angular-app/web-bb-ba/A_.png" srcset="angular-app/web-bb-ba/A_.png 1x, angular-app/web-bb-ba/A_@2x.png 2x">
+			<img id="A__cy" src="angular-app/web-bb-ba/A__cy.png" srcset="angular-app/web-bb-ba/A__cy.png 1x, angular-app/web-bb-ba/A__cy@2x.png 2x">
+			<img id="B_" src="angular-app/web-bb-ba/B_.png" srcset="angular-app/web-bb-ba/B_.png 1x, angular-app/web-bb-ba/B_@2x.png 2x">
+			<img id="B__c" src="angular-app/web-bb-ba/B__c.png" srcset="angular-app/web-bb-ba/B__c.png 1x, angular-app/web-bb-ba/B__c@2x.png 2x">
+			<img id="O__c" src="angular-app/web-bb-ba/O__c.png" srcset="angular-app/web-bb-ba/O__c.png 1x, angular-app/web-bb-ba/O__c@2x.png 2x">
+			<img id="drug" src="angular-app/web-bb-ba/drug.png" srcset="angular-app/web-bb-ba/drug.png 1x, angular-app/web-bb-ba/drug@2x.png 2x">
+			<img id="drug_c" src="angular-app/web-bb-ba/drug_c.png" srcset="angular-app/web-bb-ba/drug_c.png 1x, angular-app/web-bb-ba/drug_c@2x.png 2x">
+			<img id="drug_da" src="angular-app/web-bb-ba/drug_da.png" srcset="angular-app/web-bb-ba/drug_da.png 1x, angular-app/web-bb-ba/drug_da@2x.png 2x">
+			<img id="drug_db" src="angular-app/web-bb-ba/drug_db.png" srcset="angular-app/web-bb-ba/drug_db.png 1x, angular-app/web-bb-ba/drug_db@2x.png 2x">
+			<img id="drug_dc" src="angular-app/web-bb-ba/drug_dc.png" srcset="angular-app/web-bb-ba/drug_dc.png 1x, angular-app/web-bb-ba/drug_dc@2x.png 2x">
+			<img id="drug_dd" src="angular-app/web-bb-ba/drug_dd.png" srcset="angular-app/web-bb-ba/drug_dd.png 1x, angular-app/web-bb-ba/drug_dd@2x.png 2x">
+			<img id="drug_de" src="angular-app/web-bb-ba/drug_de.png" srcset="angular-app/web-bb-ba/drug_de.png 1x, angular-app/web-bb-ba/drug_de@2x.png 2x">
+			<img id="drug_df" src="angular-app/web-bb-ba/drug_df.png" srcset="angular-app/web-bb-ba/drug_df.png 1x, angular-app/web-bb-ba/drug_df@2x.png 2x">
+			<div id="Aneg_lvl" class="Aneg_lvl">
+				<div id="ID7">
+					<span>{{vm.aneg}}</span>
+				</div>
+				<svg class="Rectangle_29">
+					<rect fill="transparent" id="Rectangle_29" rx="0" ry="0" x="0" y="0" width="92" height="105.4">
+					</rect>
+				</svg>
+				<div id="UNITS">
+					<span>UNITS</span>
+				</div>
+				<div id="ID2450_ml">
+					<span>2450 ml</span>
+				</div>
+			</div>
+			<div id="ABneg_lvl" class="ABneg_lvl">
+				<div id="ID7_dg">
+					<span>{{vm.abneg}}</span>
+				</div>
+				<svg class="Rectangle_29_dh">
+					<rect fill="transparent" id="Rectangle_29_dh" rx="0" ry="0" x="0" y="0" width="92" height="105.4">
+					</rect>
+				</svg>
+				<div id="UNITS_di">
+					<span>UNITS</span>
+				</div>
+				<div id="ID2450_ml_dj">
+					<span>2450 ml</span>
+				</div>
+			</div>
+			<div id="Oneg_lvl" class="Oneg_lvl">
+				<div id="ID7_dl">
+					<span>{{vm.oneg}}</span>
+				</div>
+				<svg class="Rectangle_29_dm">
+					<rect fill="transparent" id="Rectangle_29_dm" rx="0" ry="0" x="0" y="0" width="92" height="105.4">
+					</rect>
+				</svg>
+				<div id="UNITS_dn">
+					<span>UNITS</span>
+				</div>
+				<div id="ID2450_ml_do">
+					<span>2450 ml</span>
+				</div>
+			</div>
+			<div id="Bneg_lvl" class="Bneg_lvl">
+				<div id="ID7_dq">
+					<span>{{vm.bneg}}</span>
+				</div>
+				<svg class="Rectangle_29_dr">
+					<rect fill="transparent" id="Rectangle_29_dr" rx="0" ry="0" x="0" y="0" width="92" height="105.4">
+					</rect>
+				</svg>
+				<div id="UNITS_ds">
+					<span>UNITS</span>
+				</div>
+				<div id="ID2450_ml_dt">
+					<span>2450 ml</span>
+				</div>
+			</div>
+			<div id="Apos_lvl" class="Apos_lvl">
+				<div id="ID7_dv">
+					<span>{{vm.apos}}</span>
+				</div>
+				<svg class="Rectangle_29_dw">
+					<rect fill="transparent" id="Rectangle_29_dw" rx="0" ry="0" x="0" y="0" width="92" height="105.4">
+					</rect>
+				</svg>
+				<div id="UNITS_dx">
+					<span>UNITS</span>
+				</div>
+				<div id="ID2450_ml_dy">
+					<span>2450 ml</span>
+				</div>
+			</div>
+			<div id="ABpos_lvl" class="ABpos_lvl">
+				<div id="ID7_d">
+					<span>{{vm.abpos}}</span>
+				</div>
+				<svg class="Rectangle_29_d">
+					<rect fill="transparent" id="Rectangle_29_d" rx="0" ry="0" x="0" y="0" width="92" height="105.4">
+					</rect>
+				</svg>
+				<div id="UNITS_d">
+					<span>UNITS</span>
+				</div>
+				<div id="ID2450_ml_d">
+					<span>2450 ml</span>
+				</div>
+			</div>
+			<div id="Opos_lvl" class="Opos_lvl">
+				<div id="ID7_ea">
+					<span>{{vm.opos}}</span>
+				</div>
+				<svg class="Rectangle_29_ea">
+					<rect fill="transparent" id="Rectangle_29_ea" rx="0" ry="0" x="0" y="0" width="92" height="105.4">
+					</rect>
+				</svg>
+				<div id="UNITS_ea">
+					<span>UNITS</span>
+				</div>
+				<div id="ID2450_ml_ea">
+					<span>2450 ml</span>
+				</div>
+			</div>
+			<div id="Bpos_lvl" class="Bpos_lvl">
+				<div id="ID7_eb">
+					<span>{{vm.bpos}}</span>
+				</div>
+				<svg class="Rectangle_29_eb">
+					<rect fill="transparent" id="Rectangle_29_eb" rx="0" ry="0" x="0" y="0" width="92" height="105.4">
+					</rect>
+				</svg>
+				<div id="UNITS_ec">
+					<span>UNITS</span>
+				</div>
+				<div id="ID2450_ml_ed">
+					<span>2450 ml</span>
+				</div>
+			</div>
+			<img id="AB_" src="angular-app/web-bb-ba/AB_.png" srcset="angular-app/web-bb-ba/AB_.png 1x, angular-app/web-bb-ba/AB_@2x.png 2x">
+			<img id="AB__ef" src="angular-app/web-bb-ba/AB__ef.png" srcset="angular-app/web-bb-ba/AB__ef.png 1x, angular-app/web-bb-ba/AB__ef@2x.png 2x">
+		</div>
+	</div>
+	<div id="dash_title">
+		<svg class="Rectangle_52">
+			<rect fill="rgba(255,255,255,1)" id="Rectangle_52" rx="40" ry="40" x="0" y="0" width="896" height="106">
+			</rect>
+		</svg>
+		<div id="title">
+			<div id="DASHBOARD">
+				<span>DASHBOARD</span>
+			</div>
+			<img id="LOGO" src="angular-app/web-bb-ba/LOGO.png" srcset="angular-app/web-bb-ba/LOGO.png 1x, angular-app/web-bb-ba/LOGO@2x.png 2x">
+			<div id="_">
+				<span>|</span>
+			</div>
+		</div>
+	</div>
+	<div id="dashboard_bb" ng-if="vm.dashShow">
+		<svg class="dim_back" ng-mouseover="vm.hidedash()">
+			<rect fill="rgba(49,49,49,1)" id="dim_back" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+			</rect>
+		</svg>
+		<svg class="dash_rect">
+			<rect fill="rgba(245,245,245,1)" id="dash_rect" rx="0" ry="0" x="0" y="0" width="274" height="975">
+			</rect>
+		</svg>
+		<button id="dash_ba" class="dash_ba">
+			<svg class="ba_rect">
+				<rect fill="rgba(225,83,83,1)" id="ba_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="ba_content">
+				<div id="Blood">
+					<span>Blood</span>
+				</div>
+				<img id="ID018_flask" src="angular-app/web-bb-ba/ID018_flask.png" srcset="angular-app/web-bb-ba/ID018_flask.png 1x, angular-app/web-bb-ba/ID018_flask@2x.png 2x">
+				<div id="Availablity">
+					<span>Availablity</span>
+				</div>
+			</div>
+		</button>
+		<button id="dash_donation" class="dash_donation" ng-click="vm.bb_donations()">
+			<svg class="donation_rect">
+				<rect fill="rgba(255,255,255,1)" id="donation_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="donor_content">
+				<div id="Donations">
+					<span>Donations</span>
+				</div>
+				<img id="ID008_donor_1" src="angular-app/web-bb-ba/ID008_donor_1.png" srcset="angular-app/web-bb-ba/ID008_donor_1.png 1x, angular-app/web-bb-ba/ID008_donor_1@2x.png 2x">
+			</div>
+		</button>
+		<button id="dash_req" class="dash_req" ng-click="vm.bb_requests()">
+			<svg class="req_rect">
+				<rect fill="rgba(255,255,255,1)" id="req_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="req_content">
+				<div id="Requests">
+					<span>Requests</span>
+				</div>
+				<img id="important" src="angular-app/web-bb-ba/important.png" srcset="angular-app/web-bb-ba/important.png 1x, angular-app/web-bb-ba/important@2x.png 2x">
+			</div>
+		</button>
+		<button id="dash_nd" class="dash_nd" ng-click="vm.bb_ndonation()">
+			<svg class="nd_rect">
+				<rect fill="rgba(248,223,0,1)" id="nd_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="new_donation_content">
+				<img id="ID015_syringe" src="angular-app/web-bb-ba/ID015_syringe.png" srcset="angular-app/web-bb-ba/ID015_syringe.png 1x, angular-app/web-bb-ba/ID015_syringe@2x.png 2x">
+				<div id="NEW">
+					<span>NEW</span>
+				</div>
+				<div id="Donation">
+					<span>Donation</span>
+				</div>
+			</div>
+		</button>
+		<button id="dash_nsd" class="dash_nsd" ng-click="vm.bb_sdonation()">
+			<svg class="nsd_rect">
+				<rect fill="rgba(248,223,0,1)" id="nsd_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="new_donation_content_fi">
+				<img id="ID015_syringe_fj" src="angular-app/web-bb-ba/ID015_syringe_fj.png" srcset="angular-app/web-bb-ba/ID015_syringe_fj.png 1x, angular-app/web-bb-ba/ID015_syringe_fj@2x.png 2x">
+				<div id="NEW_fk">
+					<span>NEW</span>
+				</div>
+				<div id="Donation_fl">
+					<span>Donation</span>
+				</div>
+				<div id="SUPER">
+					<span>SUPER</span>
+				</div>
+			</div>
+		</button>
+	</div>
+	<div id="user_overlay" ng-if="vm.userShow">
+		<svg class="dim_back" ng-mouseover="vm.hideuser()">
+			<rect fill="rgba(49,49,49,1)" id="dim_back" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+			</rect>
+		</svg>
+		<svg class="white_back">
+			<rect fill="rgba(255,255,255,1)" id="white_back" rx="25" ry="25" x="0" y="0" width="169" height="268">
+			</rect>
+		</svg>
+		<div id="BLOOD_v1_0_0">
+			<span>BLOOD v1.0.0</span>
+		</div>
+		<button id="logout_btn" class="logout_btn" ng-mouseover="vm.logoutchange()" ng-mouseleave="vm.logoutori()" ng-click="vm.logout()">
+			<svg class="logout_rect">
+				<rect fill="rgba(255,255,255,1)" id="logout_rect" rx="0" ry="0" x="0" y="0" width="169" height="47">
+				</rect>
+			</svg>
+			<div id="logout_content">
+				<div id="Logout">
+					<span>Logout</span>
+				</div>
+				<img id="logout_grey" src="angular-app/overlay/bb-overlay/logout_grey.png" srcset="angular-app/overlay/bb-overlay/logout_grey.png 1x, angular-app/overlay/bb-overlay/logout_grey@2x.png 2x">
+			</div>
+		</button>
+		<svg class="l4" viewBox="0 0 143 1">
+			<path fill="transparent" stroke="rgba(49,49,49,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="l4" d="M 0 0 L 143 0">
+			</path>
+		</svg>
+		<button id="about_btn" class="about_btn" ng-mouseover="vm.aboutchange()" ng-mouseleave="vm.aboutori()" ng-click="vm.about()">
+			<svg class="about_rect">
+				<rect fill="rgba(255,255,255,1)" id="about_rect" rx="0" ry="0" x="0" y="0" width="169" height="47">
+				</rect>
+			</svg>
+			<div id="about_content">
+				<div id="About_us">
+					<span>About us</span>
+				</div>
+				<img id="programming_GREY" src="angular-app/overlay/bb-overlay/programming_GREY.png" srcset="angular-app/overlay/bb-overlay/programming_GREY.png 1x, angular-app/overlay/bb-overlay/programming_GREY@2x.png 2x">
+			</div>
+		</button>
+		<svg class="l3" viewBox="0 0 143 1">
+			<path fill="transparent" stroke="rgba(49,49,49,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="l3" d="M 0 0 L 143 0">
+			</path>
+		</svg>
+		<button id="setting_btn" class="setting_btn" ng-mouseover="vm.settingchange()" ng-mouseleave="vm.settingori()" ng-click="vm.setting()">
+			<svg class="setting_rect">
+				<rect fill="rgba(255,255,255,1)" id="setting_rect" rx="0" ry="0" x="0" y="0" width="169" height="47">
+				</rect>
+			</svg>
+			<div id="setting_content">
+				<div id="Settings">
+					<span>Settings</span>
+				</div>
+				<img id="settings_grey" src="angular-app/overlay/bb-overlay/settings_grey.png" srcset="angular-app/overlay/bb-overlay/settings_grey.png 1x, angular-app/overlay/bb-overlay/settings_grey@2x.png 2x">
+			</div>
+		</button>
+		<svg class="l2" viewBox="0 0 143 1">
+			<path fill="transparent" stroke="rgba(49,49,49,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="l2" d="M 0 0 L 143 0">
+			</path>
+		</svg>
+		<div id="user_status">
+			<svg class="user_rect">
+				<rect fill="rgba(255,255,255,1)" id="user_rect" rx="0" ry="0" x="0" y="0" width="169" height="47">
+				</rect>
+			</svg>
+			<div id="user_text">
+				<span>BLOODBANK</span>
+			</div>
+			<img id="user_bb" src="angular-app/overlay/bb-overlay/user_bb.png" srcset="angular-app/overlay/bb-overlay/user_bb.png 1x, angular-app/overlay/bb-overlay/user_bb@2x.png 2x">
+		</div>
+		<svg class="l1" viewBox="0 0 103 1">
+			<path fill="transparent" stroke="rgba(49,49,49,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="l1" d="M 0 0 L 103 0">
+			</path>
+		</svg>
+		<div id="bb_user">
+			<span>{{vm.bbusername}}</span>
+		</div>
+	</div>
+	<div id="user_info_disp" class="user_info_disp" ng-mouseover="vm.showuser()">
+		<svg class="sha_back">
+			<ellipse fill="rgba(255,255,255,1)" id="sha_back" rx="25" ry="25" cx="25" cy="25">
+			</ellipse>
+		</svg>
+	</div>
+	<button id="home_btn" class="home_btn" ng-click="vm.goHome()">
+		<svg class="Ellipse_5">
+			<ellipse fill="rgba(255,255,255,1)" id="Ellipse_5" rx="25" ry="25" cx="25" cy="25">
+			</ellipse>
+		</svg>
+		<img id="home_grey" src="angular-app/web-bb-ba/home_grey.png" srcset="angular-app/web-bb-ba/home_grey.png 1x, angular-app/web-bb-ba/home_grey@2x.png 2x">
+	</button>
+	<button id="menu_btn" class="menu_btn" ng-mouseover="vm.showdash()">
+		<svg class="Ellipse_5_fo">
+			<ellipse fill="rgba(255,255,255,1)" id="Ellipse_5_fo" rx="25" ry="25" cx="25" cy="25">
+			</ellipse>
+		</svg>
+		<img id="me__3__grey" src="angular-app/web-bb-ba/me__3__grey.png" srcset="angular-app/web-bb-ba/me__3__grey.png 1x, angular-app/web-bb-ba/me__3__grey@2x.png 2x">
+	</button>
+</div>
+</body>
+</html>

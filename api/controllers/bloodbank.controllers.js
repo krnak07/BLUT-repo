@@ -294,7 +294,7 @@ function send_mail_blooddonate(email) {
     });
     var k = 0;
     var mailoptions = {
-        from: 'BLUT <codered.blut@gmail.com>',
+        from: 'BLOOD <codered.blut@gmail.com>',
             to: email,
             subject: 'Blood Donation', // email subject
             html: `test`
@@ -302,7 +302,6 @@ function send_mail_blooddonate(email) {
     transporter.sendMail(mailoptions,function(err,info){
         if(err){
             console.log(err);
-
         }
     });
 };
@@ -351,7 +350,7 @@ module.exports.donordonate = function(req,res){
 
                                             } else {
                                                 var nd = new Date(pro.nextdonationDate);
-                                                if (d < nd && req.body.superdontaion == 'false') {
+                                                if (d < nd && req.body.superdonation == 'n') {
                                                     res
                                                         .status(206)
                                                         .json({"msg": "cannot"});
@@ -365,7 +364,7 @@ module.exports.donordonate = function(req,res){
                                                     pro.donationhistory.push({
                                                         venue_email : bank.email,
                                                         venue_name : bank.name,
-                                                        user_name : req.body.username,
+                                                        user_name : bu.firstname,
                                                         dateofdonation : d,
                                                         quantity : parseInt(req.body.units)
                                                     });
@@ -374,8 +373,8 @@ module.exports.donordonate = function(req,res){
                                                     updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
 
                                                     bank.donordonationhistory.push({
-                                                        user_name : req.body.username,
-                                                        user_email : req.body.useremail,
+                                                        user_name : bu.firstname,
+                                                        user_email : bu.email,
                                                         donor_name : pro.firstname,
                                                         phoneNo : pro.phoneNo,
                                                         dateofdonation : d,
@@ -386,6 +385,7 @@ module.exports.donordonate = function(req,res){
 
                                                     pro.save(function(err,proupdated) {
                                                         if(err){
+                                                            console.log(err);
                                                             res
                                                                 .status(400)
                                                                 .json({"msg":"es"});
@@ -580,6 +580,39 @@ module.exports.requests = function(req,res){
             }
         })
 };
+
+module.exports.getBA = function(req,res){
+    bloodbank
+        .findOne({email:req.query.email})
+        .exec(function(err,bank){
+            if(err){
+                res
+                    .status(400)
+                    .json({"msg":"snr"})
+            }
+            else{
+                res
+                    .status(200)
+                    .json(bank.BloodAvailability)
+            }
+        })
+}
+module.exports.getDL = function(req,res){
+    bloodbank
+        .findOne({email:req.query.email})
+        .exec(function(err,bank){
+            if(err){
+                res
+                    .status(400)
+                    .json({"msg":"snr"})
+            }
+            else{
+                res
+                    .status(200)
+                    .json(bank.donordonationhistory)
+            }
+        })
+}
 
 
 

@@ -1,0 +1,86 @@
+.mediaViewInfo {
+	--web-view-name: web-error-404;
+	--web-view-id: web_error_404;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_error_404;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_error_404 {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(225,83,83,1);
+	overflow: hidden;
+	--web-view-name: web-error-404;
+	--web-view-id: web_error_404;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+}
+#Made_with___ {
+	position: absolute;
+	left: 843.5px;
+	top: 902px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#LOGO {
+	position: absolute;
+	width: 1113px;
+	height: 274.851px;
+	left: 404px;
+	top: 198px;
+	overflow: visible;
+}
+#Group_106 {
+	position: absolute;
+	width: 560.5px;
+	height: 133px;
+	left: 680px;
+	top: 500px;
+	overflow: visible;
+}
+#Error_404_ {
+	position: absolute;
+	left: 100.5px;
+	top: 0px;
+	overflow: visible;
+	width: 461px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 100px;
+	color: rgba(49,49,49,1);
+}
+#warning__6_ {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 0px;
+	top: 16px;
+	overflow: visible;
+}

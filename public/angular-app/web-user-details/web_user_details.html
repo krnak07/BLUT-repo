@@ -108,6 +108,28 @@
 				</rect>
 			</input>
 		</div>
+		<div id="state" class="state">
+			<svg class="Rectangle_2_dn">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dn" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<select id="state_names" class="state_inp" ng-model="vm.state_inp" required onchange="printcity('state', this.selectedIndex)">
+			<rect fill="rgba(255,255,255,1)" id="state_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+			</rect>
+				<option value="" disabled selected>Select your option</option>
+			</select>
+		</div>
+		<div id="city" class="city">
+			<svg class="Rectangle_2_dk">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dk" rx="21" ry="21" x="0" y="0" width="372" height="42">
+				</rect>
+			</svg>
+			<select id="city_names" class="city_inp" ng-model="vm.city_inp" required>
+			<rect fill="rgba(255,255,255,1)" id="city_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
+			</rect>
+				<option value="" disabled selected>Select your State</option>
+			</select>
+		</div>
 		<div id="pincode" class="pincode">
 			<svg class="Rectangle_108">
 				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_108" rx="21" ry="21" x="0" y="0" width="372" height="42">
@@ -117,26 +139,6 @@
 			<rect fill="rgba(255,255,255,1)" id="pincode_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
 			</rect>
 			</input>
-		</div>
-		<div id="city" class="city">
-			<svg class="Rectangle_2_dk">
-				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dk" rx="21" ry="21" x="0" y="0" width="372" height="42">
-				</rect>
-			</svg>
-			<input class="city_inp" required ng-model="vm.city_inp" placeholder="City">
-				<rect fill="rgba(255,255,255,1)" id="city_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
-				</rect>
-			</input>
-		</div>
-		<div id="state" class="state">
-			<svg class="Rectangle_2_dn">
-				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_dn" rx="21" ry="21" x="0" y="0" width="372" height="42">
-				</rect>
-			</svg>
-			<input class="state_inp" required ng-model="vm.state_inp" placeholder="State">
-				<rect fill="rgba(255,255,255,1)" id="state_inp" rx="0" ry="0" x="0" y="0" width="334" height="32">
-				</rect>
-			</svg>
 		</div>
 		<button type="submit" id="signup_btn" class="signup_btn">
 			<svg class="Rectangle_4">

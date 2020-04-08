@@ -32,11 +32,17 @@ router
     .route('/bloodbank/login')
     .post(ctrlbloodbank.bloodbankLogin);
 router
-    .route('/bloodbank/donor_donate')
+    .route('/bloodbank/donordonate')
     .post(ctrlbloodbank.donordonate);
 router
-    .route('/bloodbank/hospital_donate')
+    .route('/bloodbank/hospitaldonate')
     .post(ctrlbloodbank.hospitaldonate);
+router
+    .route('/bloodbank/getBA')
+    .get(ctrlbloodbank.getBA);
+router
+    .route('/bloodbank/getDL')
+    .get(ctrlbloodbank.getDL);
 router
     .route('/bloodbank/alldonations')
     .get(ctrlbloodbank.getAllDonorDonations);
@@ -75,10 +81,10 @@ router
     .route('/hospitals/login')
     .post(ctrlhosp.hospitallogin);
 router
-    .route('/hospitals/get_nearbyBB')
+    .route('/hospitals/getnearbyBB')
     .get(ctrlhosp.hospitalGetnearbyBB);
 router
-    .route('/hospitals/get_nearbyDonors')
+    .route('/hospitals/getnearbyDonors')
     .get(ctrlhosp.hospitalGetnearbyDonors);
 router
     .route('/hospitals/donate')

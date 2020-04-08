@@ -1,0 +1,1553 @@
+.mediaViewInfo {
+	--web-view-name: web-bb-donate;
+	--web-view-id: web_bb_donate;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_bb_donate;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_bb_donate {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-bb-donate;
+	--web-view-id: web_bb_donate;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+	animation : animate 2s;
+	animation-timing-function: ease;
+}
+@keyframes animate {
+	10% {
+		transform: scale(1, 0.002);
+	}
+	35% {
+		transform: scale(0.2, 0.002);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(0.2, 0.002);
+		opacity: 0;
+	}
+	85% {
+		transform: scale(1, 0.002);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+#bottom_img {
+	position: absolute;
+	width: 2304.121px;
+	height: 432px;
+	left: -226px;
+	top: 543px;
+	overflow: visible;
+}
+#background_logo {
+	opacity: 0.5;
+	position: absolute;
+	width: 2304px;
+	height: 432px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#cardiogram {
+	position: absolute;
+	width: 2303.809px;
+	height: 176.998px;
+	left: 0.312px;
+	top: 60.444px;
+	overflow: visible;
+}
+.Path_18 {
+	overflow: visible;
+	position: absolute;
+	width: 578.81px;
+	height: 179.998px;
+	left: 576px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_19 {
+	overflow: visible;
+	position: absolute;
+	width: 578.81px;
+	height: 179.998px;
+	left: 1152px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_20 {
+	overflow: visible;
+	position: absolute;
+	width: 578.81px;
+	height: 179.998px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_21 {
+	overflow: visible;
+	position: absolute;
+	width: 578.81px;
+	height: 179.998px;
+	left: 1728px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#LOGO {
+	position: absolute;
+	width: 400px;
+	height: 98.851px;
+	left: 760px;
+	top: 803px;
+	overflow: visible;
+}
+#Made_with___ {
+	position: absolute;
+	left: 843.5px;
+	top: 902px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#donor_details {
+	position: absolute;
+	width: 490px;
+	height: 404px;
+	left: 1306px;
+	top: 94px;
+	overflow: visible;
+}
+#name_details {
+	position: absolute;
+	width: 490px;
+	height: 45px;
+	left: 0px;
+	top: 307px;
+	overflow: visible;
+}
+#Rectangle_25 {
+	filter: blur(30px);
+}
+.Rectangle_25 {
+	position: absolute;
+	overflow: visible;
+	width: 490px;
+	height: 45px;
+	left: 0px;
+	top: 0px;
+}
+#NAME___ {
+	position: absolute;
+	left: 14.739px;
+	top: 6.5px;
+	overflow: visible;
+	width: 96px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(50,50,50,1);
+}
+#Kiran_A_K {
+	position: absolute;
+	left: 109.409px;
+	top: 6.5px;
+	overflow: visible;
+	width: 111px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(50,50,50,1);
+}
+#bg_details {
+	position: absolute;
+	width: 369px;
+	height: 45px;
+	left: 61px;
+	top: 359px;
+	overflow: visible;
+}
+#Rectangle_27 {
+	filter: blur(30px);
+}
+.Rectangle_27 {
+	position: absolute;
+	overflow: visible;
+	width: 369px;
+	height: 45px;
+	left: 0px;
+	top: 0px;
+}
+#Blood_Group____ {
+	position: absolute;
+	left: 15px;
+	top: 6.5px;
+	overflow: visible;
+	width: 178px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(50,50,50,1);
+}
+#B_ {
+	position: absolute;
+	left: 185px;
+	top: 2.5px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(50,50,50,1);
+}
+#pic_bag {
+	opacity: 0.5;
+}
+.pic_bag {
+	filter: drop-shadow(0px 0px 10px rgba(224, 83, 83, 1));
+	position: absolute;
+	overflow: visible;
+	width: 330px;
+	height: 330px;
+	left: 95px;
+	top: 0px;
+}
+#donor_pic {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 95px;
+	top: 0px;
+	overflow: visible;
+	border-radius: 7%;
+}
+#check_details {
+	position: absolute;
+	width: 393px;
+	height: 231px;
+	left: 183px;
+	top: 181px;
+	overflow: visible;
+}
+#btn {
+	position: absolute;
+	width: 205px;
+	height: 36px;
+	left: 96px;
+	top: 195px;
+	overflow: visible;
+}
+#cancel_btn {
+	position: absolute;
+	width: 99px;
+	height: 36px;
+	left: 106px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_5 {
+	position: absolute;
+	overflow: visible;
+	width: 99px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#cancel {
+	position: absolute;
+	left: 20.5px;
+	top: 4px;
+	overflow: visible;
+	width: 60px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#okay_btn {
+	position: absolute;
+	width: 99px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 99px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#donate {
+	position: absolute;
+	left: 16.5px;
+	top: 4px;
+	overflow: visible;
+	width: 67px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#unit_inp {
+	position: absolute;
+	width: 277px;
+	height: 42px;
+	left: 60px;
+	top: 131px;
+	overflow: visible;
+}
+.Rectangle_3 {
+	position: absolute;
+	overflow: visible;
+	width: 277px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+#science {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 13px;
+	top: 6px;
+	overflow: visible;
+}
+.usr_input {
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 32px;
+	left: 43px;
+	top: 5px;
+}
+#check {
+	position: absolute;
+	width: 393px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#check_btn {
+	position: absolute;
+	width: 99px;
+	height: 36px;
+	left: 294px;
+	top: 3px;
+	overflow: visible;
+}
+.Rectangle_13 {
+	position: absolute;
+	overflow: visible;
+	width: 99px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#Check_dq {
+	position: absolute;
+	left: 21.5px;
+	top: 4px;
+	overflow: visible;
+	width: 57px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(53,49,49,1);
+}
+#phone_inp {
+	position: absolute;
+	width: 277px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 277px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+#phone_call {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 11px;
+	top: 6px;
+	overflow: visible;
+}
+.usr_input_du {
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 32px;
+	left: 41px;
+	top: 5px;
+}
+#eligible_details {
+	position: absolute;
+	width: 279px;
+	height: 45px;
+	left: 59px;
+	top: 64px;
+	overflow: visible;
+}
+#Rectangle_26 {
+	filter: blur(30px);
+}
+.Rectangle_26 {
+	position: absolute;
+	overflow: visible;
+	width: 279px;
+	height: 45px;
+	left: 0px;
+	top: 0px;
+}
+#Eligible_to_Donate____ {
+	position: absolute;
+	left: 15px;
+	top: 9.5px;
+	overflow: visible;
+	width: 191px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#YES {
+	position: absolute;
+	left: 212px;
+	top: 2.5px;
+	overflow: visible;
+	width: 52px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(50,50,50,1);
+}
+#donate_dz {
+	position: absolute;
+	width: 461px;
+	height: 130px;
+	left: 716px;
+	top: 231px;
+	overflow: visible;
+}
+.Rectangle_58 {
+	filter: drop-shadow(0px 0px 20px rgba(224, 83, 83, 1));
+	position: absolute;
+	overflow: visible;
+	width: 521px;
+	height: 190px;
+	left: 0px;
+	top: 0px;
+}
+#ID015_syringe {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 26px;
+	top: 15px;
+	overflow: visible;
+}
+#DONATE_d {
+	position: absolute;
+	left: 132px;
+	top: 15px;
+	overflow: visible;
+	width: 304px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(49,49,49,1);
+}
+#user_info_disp {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 1786px;
+	top: 25px;
+	overflow: visible;
+}
+.sha_back {
+	filter: drop-shadow(0px 0px 6px rgba(49, 49, 49, 0.502));
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	height: 68px;
+	left: 0px;
+	top: 0px;
+}
+#pro_pic {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	border-radius: 50%;
+}
+#home_btn {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 1845px;
+	top: 25px;
+	overflow: visible;
+}
+.Ellipse_5 {
+	filter: drop-shadow(0px 0px 6px rgba(49, 49, 49, 0.502));
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	height: 68px;
+	left: 0px;
+	top: 0px;
+}
+#home_grey {
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	left: 8px;
+	top: 8px;
+	overflow: visible;
+}
+#dashboard_bb {
+	position: absolute;
+	width: 274px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	animation : mymove 0.75s;
+	animation-timing-function: ease;
+}
+@keyframes mymove {
+	from {left: -300px;}
+	to {left: 0px;}
+}
+.dash_rect {
+	filter: drop-shadow(0px 0px 20px rgba(53, 49, 49, 1));
+	position: absolute;
+	overflow: visible;
+	width: 334px;
+	height: 1035px;
+	left: 0px;
+	top: 0px;
+}
+#dash_ba {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 105px;
+	overflow: visible;
+}
+.ba_rect {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 150px;
+	left: 0px;
+	top: 0px;
+}
+#ba_content {
+	position: absolute;
+	width: 119px;
+	height: 114px;
+	left: 16px;
+	top: 18px;
+	overflow: visible;
+}
+#Blood {
+	position: absolute;
+	left: 27px;
+	top: 50px;
+	overflow: visible;
+	width: 67px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#ID018_flask {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 35px;
+	top: 0px;
+	overflow: visible;
+}
+#Availablity {
+	position: absolute;
+	left: 0px;
+	top: 82px;
+	overflow: visible;
+	width: 120px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#dash_donation {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 445px;
+	overflow: visible;
+}
+.donation_rect {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 150px;
+	left: 0px;
+	top: 0px;
+}
+#donor_content {
+	position: absolute;
+	width: 121px;
+	height: 83px;
+	left: 15px;
+	top: 34px;
+	overflow: visible;
+}
+#Donations {
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	overflow: visible;
+	width: 122px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(49,49,49,1);
+}
+#ID008_donor_1 {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 36px;
+	top: 0px;
+	overflow: visible;
+}
+#dash_req {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 275px;
+	overflow: visible;
+}
+.req_rect {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 150px;
+	left: 0px;
+	top: 0px;
+}
+#req_content {
+	position: absolute;
+	width: 101px;
+	height: 82px;
+	left: 25px;
+	top: 34px;
+	overflow: visible;
+}
+#Requests {
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	overflow: visible;
+	width: 102px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#important {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 26px;
+	top: 0px;
+	overflow: visible;
+}
+#dash_nd {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 615px;
+	overflow: visible;
+}
+.nd_rect {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 150px;
+	left: 0px;
+	top: 0px;
+}
+#new_donation_content {
+	position: absolute;
+	width: 105px;
+	height: 114px;
+	left: 23px;
+	top: 18px;
+	overflow: visible;
+}
+#ID015_syringe_eu {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 27.5px;
+	top: 0px;
+	overflow: visible;
+}
+#NEW {
+	position: absolute;
+	left: 25px;
+	top: 50px;
+	overflow: visible;
+	width: 57px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#Donation {
+	position: absolute;
+	left: 0px;
+	top: 82px;
+	overflow: visible;
+	width: 106px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#dash_nsd {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 785px;
+	overflow: visible;
+}
+.nsd_rect {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 150px;
+	left: 0px;
+	top: 0px;
+}
+#new_donation_content_ez {
+	position: absolute;
+	width: 105px;
+	height: 135px;
+	left: 23px;
+	top: 8px;
+	overflow: visible;
+}
+#ID015_syringe_e {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 27.5px;
+	top: 0px;
+	overflow: visible;
+}
+#NEW_e {
+	position: absolute;
+	left: 25px;
+	top: 50px;
+	overflow: visible;
+	width: 57px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#Donation_e {
+	position: absolute;
+	left: 0px;
+	top: 103px;
+	overflow: visible;
+	width: 106px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#SUPER {
+	position: absolute;
+	left: 16px;
+	top: 76px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#menu_btn {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 25px;
+	top: 25px;
+	overflow: visible;
+}
+.Ellipse_5_e {
+	filter: drop-shadow(0px 0px 10px rgba(49, 49, 49, 0.502));
+	position: absolute;
+	overflow: visible;
+	width: 80px;
+	height: 80px;
+	left: 0px;
+	top: 0px;
+}
+#me__3__grey {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 13px;
+	top: 13px;
+	overflow: visible;
+}
+#SUPER_DONATION {
+	position: absolute;
+	left: 729px;
+	top: 361px;
+	overflow: visible;
+	width: 437px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(49,49,49,1);
+}
+button {
+	border-radius: 50%;
+	outline : none;
+	cursor: pointer;
+}
+input {
+	outline-color: #E15353;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+#user_overlay {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: -1px;
+	overflow: visible;
+	animation : mymove1 0.75s;
+	animation-timing-function: ease;
+}
+@keyframes mymove1 {
+	from {
+		opacity: 0;
+		transform : translateY(-300px);
+	}
+	to {
+		opacity: 1;
+		transform : translateY(0px);
+	}
+
+}
+#dim_back {
+	opacity: 0.26;
+	animation : mymove2 1s;
+	animation-timing-function: ease;
+}
+@keyframes mymove2 {
+	from {
+		opacity: 0;
+		transform : translateZ(-300px);
+	}
+	to {
+		opacity: 0.26;
+		transform : translateY(0px);
+	}
+
+}
+.dim_back {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+}
+.white_back {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 268px;
+	left: 1667px;
+	top: 26px;
+}
+#BLOOD_v1_0_0 {
+	position: absolute;
+	left: 1719px;
+	top: 275px;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(48,48,48,1);
+}
+#logout_btn {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 223px;
+	overflow: visible;
+}
+.logout_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#logout_content {
+	position: absolute;
+	width: 146.5px;
+	height: 27px;
+	left: 10.5px;
+	top: 10px;
+	overflow: visible;
+}
+#Logout {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 68px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#logout_grey {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 121.5px;
+	top: 1px;
+	overflow: visible;
+}
+.l4 {
+	overflow: visible;
+	position: absolute;
+	width: 143px;
+	height: 1px;
+	left: 1678.5px;
+	top: 222.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#about_btn {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 175px;
+	overflow: visible;
+}
+.about_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#about_content {
+	position: absolute;
+	width: 146.5px;
+	height: 27px;
+	left: 10.5px;
+	top: 10.5px;
+	overflow: visible;
+}
+#About_us {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#programming_GREY {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 121.5px;
+	top: 0.5px;
+	overflow: visible;
+}
+.l3 {
+	overflow: visible;
+	position: absolute;
+	width: 143px;
+	height: 1px;
+	left: 1678.5px;
+	top: 174.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#setting_btn {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 127px;
+	overflow: visible;
+}
+.setting_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#setting_content {
+	position: absolute;
+	width: 146.5px;
+	height: 27px;
+	left: 10.5px;
+	top: 10px;
+	overflow: visible;
+}
+#Settings {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 78px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#settings_grey {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 121.5px;
+	top: 0.5px;
+	overflow: visible;
+}
+.l2 {
+	overflow: visible;
+	position: absolute;
+	width: 143px;
+	height: 1px;
+	left: 1678.5px;
+	top: 126.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#user_status {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 79px;
+	overflow: visible;
+}
+.user_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#user_text {
+	position: absolute;
+	left: 10.5px;
+	top: 12.5px;
+	overflow: visible;
+	width: 106px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#user_bb {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 132px;
+	top: 11px;
+	overflow: visible;
+}
+.l1 {
+	overflow: visible;
+	position: absolute;
+	width: 103px;
+	height: 1px;
+	left: 1678.5px;
+	top: 78.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#bb_user {
+	position: absolute;
+	left: 1679px;
+	top: 43px;
+	overflow: visible;
+	width: 54px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#load_content {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#dim_background {
+	opacity: 0.26;
+}
+.dim_background {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+}
+#loading_info {
+	position: absolute;
+	width: 327px;
+	height: 197px;
+	left: 797px;
+	top: 389px;
+	overflow: visible;
+}
+.loading_background {
+	position: absolute;
+	overflow: visible;
+	width: 327px;
+	height: 197px;
+	left: 0px;
+	top: 0px;
+}
+#LOGO_dn {
+	position: absolute;
+	width: 242.791px;
+	height: 60px;
+	left: 42px;
+	top: 23px;
+	overflow: visible;
+}
+#Loading {
+	position: absolute;
+	left: 87.5px;
+	top: 137px;
+	overflow: visible;
+	width: 152px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(49,49,49,1);
+}
+.progress {
+	position: absolute;
+	height: 20px;
+	display: inline-block;
+	width: 100%;
+	top : 106px;
+	background-color: #b5b5b5;
+	border-radius: 2px;
+	background-clip: padding-box;
+	overflow: hidden; }
+.progress .indeterminate {
+	background-color: #313131; }
+.progress .indeterminate:before {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+	animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+.progress .indeterminate:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	-webkit-animation-delay: 1.3s;
+	animation-delay: 1.3s; }
+
+@-webkit-keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@-webkit-keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }
+@keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }
+#user_not_found {
+	position: absolute;
+	width: 357px;
+	height: 92px;
+	left: 782px;
+	top: 26px;
+	overflow: visible;
+}
+.unf__rect {
+	position: absolute;
+	overflow: visible;
+	width: 357px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#unf_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 260px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#unf_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#server_not_responding {
+	position: absolute;
+	width: 479px;
+	height: 92px;
+	left: 721px;
+	top: 26px;
+	overflow: visible;
+}
+.snr_rect {
+	position: absolute;
+	overflow: visible;
+	width: 479px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#snr_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 382px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#snr_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#donation_successful {
+	position: absolute;
+	width: 445px;
+	height: 92px;
+	left: 738px;
+	top: 26px;
+	overflow: visible;
+}
+.ds_rect {
+	position: absolute;
+	overflow: visible;
+	width: 445px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#ds_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 348px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#ds_positive {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#cannot_donate {
+	position: absolute;
+	width: 354px;
+	height: 92px;
+	left: 783px;
+	top: 26px;
+	overflow: visible;
+}
+.cd_rect {
+	position: absolute;
+	overflow: visible;
+	width: 354px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#cd_cross {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}
+#cd_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 257px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#error_saving {
+	position: absolute;
+	width: 314px;
+	height: 92px;
+	left: 803px;
+	top: 26px;
+	overflow: visible;
+}
+.es_rect {
+	position: absolute;
+	overflow: visible;
+	width: 314px;
+	height: 92px;
+	left: 0px;
+	top: 0px;
+}
+#es_text {
+	position: absolute;
+	left: 72px;
+	top: 26px;
+	overflow: visible;
+	width: 217px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(49,49,49,1);
+}
+#es_warning {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 26px;
+	overflow: visible;
+}

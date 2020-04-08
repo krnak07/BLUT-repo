@@ -1,0 +1,184 @@
+.mediaViewInfo {
+	--web-view-name: web-main;
+	--web-view-id: web_main;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_main;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_main {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(225,83,83,1);
+	overflow: hidden;
+	--web-view-name: web-main;
+	--web-view-id: web_main;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Group_1 {
+	position: absolute;
+	width: 1221.3px;
+	height: 446.477px;
+	left: 349px;
+	top: 216px;
+	overflow: visible;
+}
+#bloodbank_btn {
+	position: absolute;
+	width: 140.254px;
+	left: 907px;
+	top: 717px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 140.254px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#Bloodbank {
+	position: absolute;
+	left: 13.746px;
+	top: 6.5px;
+	overflow: visible;
+	width: 87px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#blood {
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	left: 113px;
+	top: 8px;
+	overflow: visible;
+}
+#hospital_btn {
+	position: absolute;
+	width: 141px;
+	left: 739px;
+	top: 717px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_4_ {
+	position: absolute;
+	overflow: visible;
+	width: 141px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#Hospitals {
+	position: absolute;
+	left: 13.746px;
+	top: 6.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#cardiogram {
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	left: 114px;
+	top: 8px;
+	overflow: visible;
+}
+#Camp_btn {
+	position: absolute;
+	width: 106.254px;
+	left: 1074px;
+	top: 717px;
+	overflow: visible;
+	cursor: pointer;
+}
+.Rectangle_4_ba {
+	position: absolute;
+	overflow: visible;
+	width: 106.254px;
+	height: 36px;
+	left: 0px;
+	top: 0px;
+}
+#Camps {
+	position: absolute;
+	left: 13.746px;
+	top: 6.5px;
+	overflow: visible;
+	width: 54px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#blood_bc {
+	position: absolute;
+	width: 19px;
+	height: 20px;
+	left: 81px;
+	top: 8px;
+	overflow: visible;
+}
+#Group_21 {
+	position: absolute;
+	width: 373px;
+	height: 47px;
+	left: 773px;
+	top: 902px;
+	overflow: visible;
+}
+#with____by_FAM_ILY {
+	position: absolute;
+	left: 57px;
+	top: 0px;
+	overflow: visible;
+	width: 317px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#programming_grey {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 0px;
+	top: 2px;
+	overflow: visible;
+}

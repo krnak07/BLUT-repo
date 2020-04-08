@@ -5,17 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hospital Dashboard</title>
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-hosp-dashboard/web_hosp_dashboard.css"/>
-<script id="applicationScript" type="text/javascript" src="angular-app/web-hosp-dashboard/web_hosp_dashboard.js"></script>
 </head>
 <body>
-<div id="web_waiting" ng-if="vm.waitingg">
-	<svg class="waiting_rect">
-		<rect fill="rgba(245,245,245,1)" id="waiting_rect" rx="0" ry="0" x="0" y="0" width="1920" height="975">
-		</rect>
-	</svg>
-	<img id="waiting_LOGO" src="angular-app/waiting/waiting_LOGO.png" srcset="angular-app/waiting/waiting_LOGO.png 1x, angular-app/waiting/waiting_LOGO@2x.png 2x">
-</div>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-hosp-dashboard/web_hosp_dashboard.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/web-hosp-dashboard/web_hosp_dashboard.js"></script>
 <div id="web_hosp_dashboard">
 	<img id="background_logo" src="angular-app/web-hosp-dashboard/background_logo.png" srcset="angular-app/web-hosp-dashboard/background_logo.png 1x, angular-app/web-hosp-dashboard/background_logo@2x.png 2x">
 	<div id="Made_with___">
@@ -173,7 +166,7 @@
 			</path>
 		</svg>
 		<div id="hosp_user">
-			<span>{{vm.username}}</span>
+			<span>{{vm.hospusername}}</span>
 		</div>
 	</div>
 	<div id="user_info_disp" class="user_info_disp" ng-mouseover="vm.showuser()">
@@ -189,9 +182,6 @@
 		</svg>
 		<img id="home_grey" src="angular-app/web-hosp-dashboard/home_grey.png" srcset="angular-app/web-hosp-dashboard/home_grey.png 1x, angular-app/web-hosp-dashboard/home_grey@2x.png 2x">
 	</div>
-
-
-
 </div>
 </body>
 </html>

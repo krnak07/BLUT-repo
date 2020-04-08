@@ -2,6 +2,13 @@ angular.module('bbApp')
     .controller('webhosplogincontroller',webhosplogincontroller);
 
 function webhosplogincontroller($location,$http){
+    if(localStorage.getItem('username')!==null){
+        $location.path('/hospital/dashboard');
+    }
+    document.getElementById('web_hosp_login').style.visibility = 'hidden';
+    angular.element(document).ready(function () {
+        document.getElementById('web_hosp_login').style.visibility = 'visible';
+    });
 
     var vm = this;
     vm.isloading = false;
@@ -20,12 +27,6 @@ function webhosplogincontroller($location,$http){
         vm.is_unv = false;
     };
 
-    if(localStorage.getItem('username')!==null){
-        $location.path('/hospital/dashboard');
-    }
-
-
-
     var login = function(postdata){
         vm.isloading = true;
         $http.post('/api/login/hospital/user',postdata)
@@ -33,8 +34,8 @@ function webhosplogincontroller($location,$http){
                 vm.isloading=false;
                 localStorage.setItem('hospemail',response.data.hospemail);
                 localStorage.setItem('hospname',response.data.hospname);
-                localStorage.setItem('useremail',response.data.useremail);
-                localStorage.setItem('username',response.data.username);
+                localStorage.setItem('hospuseremail',response.data.useremail);
+                localStorage.setItem('hospusername',response.data.username);
                 $location.path('/hospital/dashboard');
             })
             .catch(function(err){

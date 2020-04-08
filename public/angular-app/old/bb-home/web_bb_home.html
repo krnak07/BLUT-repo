@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-bb-home</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/bb-home/web_bb_home.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/bb-home/web_bb_home.js"></script>
+</head>
+<body>
+<div id="web_bb_home">
+	<svg class="Rectangle_15">
+		<rect fill="rgba(225,83,83,1)" id="Rectangle_15" rx="0" ry="0" x="0" y="0" width="220" height="75">
+		</rect>
+	</svg>
+	<img id="Group_1" src="angular-app/bb-home/Group_1.png" srcset="angular-app/bb-home/Group_1.png 1x, angular-app/bb-home/Group_1@2x.png 2x">
+	<div id="Bloodbank__Management_Suite">
+		<span>Bloodbank <br/>Management Suite</span>
+	</div>
+	<div id="bloodbank_name" class="bloodbank_name">
+		<svg class="Rectangle_23">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_23" rx="0" ry="0" x="0" y="0" width="380" height="75">
+			</rect>
+		</svg>
+		<div id="Hospitals">
+			<span>{{vm.name}}</span>
+		</div>
+		<img id="ID019_hospital" src="angular-app/bb-home/ID019_hospital.png" srcset="angular-app/bb-home/ID019_hospital.png 1x, angular-app/bb-home/ID019_hospital@2x.png 2x">
+	</div>
+	<button id="home_btn" class="home_btn" ng-click="vm.goHome()">
+		<img id="home" src="angular-app/bb-home/home.png" srcset="angular-app/bb-home/home.png 1x, angular-app/bb-home/home@2x.png 2x">
+	</button>
+	<button id="refresh_btn" class="refresh_btn" ng-click="vm.refres()">
+		<img id="update_arrows" src="angular-app/bb-home/update_arrows.png" srcset="angular-app/bb-home/update_arrows.png 1x, angular-app/bb-home/update_arrows@2x.png 2x">
+	</button>
+	<button id="BA_btn" class="BA_btn" ng-click="vm.ba()">
+		<svg class="Rectangle_16">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_16" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Blood_Availability">
+			<span>Blood Availability</span>
+		</div>
+		<img id="ID018_flask" src="angular-app/bb-home/ID018_flask.png" srcset="angular-app/bb-home/ID018_flask.png 1x, angular-app/bb-home/ID018_flask@2x.png 2x">
+	</button>
+	<button id="donation_btn" class="donation_btn" ng-click="vm.donation()">
+		<svg class="Rectangle_17">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_17" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Donations">
+			<span>Donations</span>
+		</div>
+		<img id="ID008_donor_1" src="angular-app/bb-home/ID008_donor_1.png" srcset="angular-app/bb-home/ID008_donor_1.png 1x, angular-app/bb-home/ID008_donor_1@2x.png 2x">
+	</button>
+	<button id="camp_btn" class="camp_btn" ng-click="vm.camp()">
+		<svg class="Rectangle_18">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_18" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Camps">
+			<span>Camps</span>
+		</div>
+		<img id="blood" src="angular-app/bb-home/blood.png" srcset="angular-app/bb-home/blood.png 1x, angular-app/bb-home/blood@2x.png 2x">
+	</button>
+	<div id="req_button" class="req_button">
+		<svg class="Rectangle_16_bo">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_16_bo" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Requests">
+			<span>Requests</span>
+		</div>
+		<img id="important" src="angular-app/bb-home/important.png" srcset="angular-app/bb-home/important.png 1x, angular-app/bb-home/important@2x.png 2x">
+	</div>
+	<div id="madeby">
+		<div id="with____by_FAM_ILY">
+			<span>with ❤️ by </span><span style="font-style:normal;font-weight:bold;">FAM-ILY</span>
+		</div>
+		<img id="programming_grey" src="angular-app/bb-home/programming_grey.png" srcset="angular-app/bb-home/programming_grey.png 1x, angular-app/bb-home/programming_grey@2x.png 2x">
+	</div>
+</div>
+</body>
+</html>

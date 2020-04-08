@@ -1,0 +1,2347 @@
+.mediaViewInfo {
+	--web-view-name: web-bb-donation-list;
+	--web-view-id: web_bb_donation_list;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_bb_donation_list;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_bb_donation_list {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-bb-donation-list;
+	--web-view-id: web_bb_donation_list;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+	animation : animate 2s;
+	animation-timing-function: ease;
+}
+@keyframes animate {
+	10% {
+		transform: scale(1, 0.002);
+	}
+	35% {
+		transform: scale(0.2, 0.002);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(0.2, 0.002);
+		opacity: 0;
+	}
+	85% {
+		transform: scale(1, 0.002);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+#background_logo {
+	opacity: 0.45;
+	position: absolute;
+	width: 4497.207px;
+	height: 3441.797px;
+	left: -1288.604px;
+	top: -1232.898px;
+	overflow: visible;
+}
+#Made_with___ {
+	position: absolute;
+	left: 843.5px;
+	top: 925px;
+	overflow: visible;
+	width: 234px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#dash_title {
+	position: absolute;
+	width: 1051px;
+	height: 113px;
+	left: 435px;
+	top: 10px;
+	overflow: visible;
+}
+.Rectangle_52 {
+	filter: drop-shadow(0px 0px 20px rgba(225, 83, 83, 1));
+	position: absolute;
+	overflow: visible;
+	width: 1111px;
+	height: 166px;
+	left: 0px;
+	top: 7px;
+}
+#title {
+	position: absolute;
+	width: 879px;
+	height: 106px;
+	left: 86px;
+	top: 0px;
+	overflow: visible;
+}
+#DONATION_LIST {
+	position: absolute;
+	left: 307px;
+	top: 6px;
+	overflow: visible;
+	width: 573px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(49,49,49,1);
+}
+#LOGO {
+	position: absolute;
+	width: 242.791px;
+	height: 60px;
+	left: 0px;
+	top: 30px;
+	overflow: visible;
+}
+#_ {
+	position: absolute;
+	left: 263px;
+	top: 0px;
+	overflow: visible;
+	width: 25px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: rgba(49,49,49,1);
+}
+#title_cz {
+	position: absolute;
+	width: 1920px;
+	height: 70px;
+	left: 0px;
+	top: 147px;
+	overflow: visible;
+}
+.Rectangle_79 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 70px;
+	left: 0px;
+	top: 0px;
+}
+#holderssss {
+	position: absolute;
+	width: 1920px;
+	height: 700px;
+	left: 0px;
+	top: 217px;
+	overflow: visible;
+}
+.Rectangle_62 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 0px;
+}
+.Rectangle_63 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 50px;
+}
+.Rectangle_110 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 100px;
+}
+.Rectangle_111 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 150px;
+}
+.Rectangle_112 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 200px;
+}
+.Rectangle_113 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 250px;
+}
+.Rectangle_114 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 300px;
+}
+.Rectangle_115 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 350px;
+}
+.Rectangle_116 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 400px;
+}
+.Rectangle_117 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 450px;
+}
+.Rectangle_118 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 500px;
+}
+.Rectangle_119 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 550px;
+}
+.Rectangle_120 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 600px;
+}
+.Rectangle_121 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 650px;
+}
+#title_dg {
+	position: absolute;
+	width: 1601px;
+	height: 53px;
+	left: 20px;
+	top: 156px;
+	overflow: visible;
+}
+#name_title {
+	position: absolute;
+	width: 111px;
+	height: 53px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Name {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 112px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(255,255,255,1);
+}
+#phone_title {
+	position: absolute;
+	width: 186px;
+	height: 53px;
+	left: 453.5px;
+	top: 0px;
+	overflow: visible;
+}
+#Phone_No {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 187px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(255,255,255,1);
+}
+#bg_title {
+	position: absolute;
+	width: 225px;
+	height: 53px;
+	left: 868.5px;
+	top: 0px;
+	overflow: visible;
+}
+#Bloodgroup {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 226px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(255,255,255,1);
+}
+#unit_title {
+	position: absolute;
+	width: 80px;
+	height: 53px;
+	left: 1281px;
+	top: 0px;
+	overflow: visible;
+}
+#Unit {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 81px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(255,255,255,1);
+}
+#date_title {
+	position: absolute;
+	width: 88px;
+	height: 53px;
+	left: 1513px;
+	top: 0px;
+	overflow: visible;
+}
+#Date {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 89px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(255,255,255,1);
+}
+#tr0 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 221px;
+	overflow: visible;
+}
+#name0 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone0 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg0 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units0 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation0 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr1 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 271px;
+	overflow: visible;
+}
+#name1 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone1 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg1 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units1 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation1 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr2 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 321px;
+	overflow: visible;
+}
+#name2 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone2 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg2 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units2 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation2 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr3 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 371px;
+	overflow: visible;
+}
+#name3 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone3 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg3 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units3 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation3 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr4 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 421px;
+	overflow: visible;
+}
+#name4 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone4 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg4 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units4 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation4 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr5 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 471px;
+	overflow: visible;
+}
+#name5 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone5 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg5 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units5 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation5 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr6 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 521px;
+	overflow: visible;
+}
+#name6 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone6 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg6 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units6 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation6 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr7 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 571px;
+	overflow: visible;
+}
+#name7 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone7 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg7 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units7 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation7 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr8 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 621px;
+	overflow: visible;
+}
+#name8 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone8 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg8 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units8 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation8 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr9 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 671px;
+	overflow: visible;
+}
+#name9 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone9 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg9 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units9 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation9 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr10 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 721px;
+	overflow: visible;
+}
+#name10 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone10 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg10 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units10 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation10 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr11 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 771px;
+	overflow: visible;
+}
+#name11 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone11 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg11 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units11 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation11 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr12 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 821px;
+	overflow: visible;
+}
+#name12 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone12 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg12 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units12 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation12 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#tr13 {
+	position: absolute;
+	width: 1680px;
+	height: 42px;
+	left: 20px;
+	top: 871px;
+	overflow: visible;
+}
+#name13 {
+	position: absolute;
+	left: 0px;
+	top: 1.5px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#phone13 {
+	position: absolute;
+	left: 453px;
+	top: 2px;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#bg13 {
+	position: absolute;
+	left: 870px;
+	top: 2px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#units13 {
+	position: absolute;
+	left: 1283px;
+	top: 2px;
+	overflow: visible;
+	width: 44px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#dateofdonation13 {
+	position: absolute;
+	left: 1515px;
+	top: 0px;
+	overflow: visible;
+	width: 166px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(53,49,49,1);
+}
+#navigation_btn {
+	position: absolute;
+	width: 71px;
+	height: 30px;
+	left: 1824px;
+	top: 167px;
+	overflow: visible;
+}
+#next_btn {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 41px;
+	top: 0px;
+	overflow: visible;
+}
+#next {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#return_btn {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#return {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#dashboard_bb {
+	position: absolute;
+	width: 274px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;animation : mymove 0.75s;
+	animation-timing-function: ease;
+}
+@keyframes mymove {
+	from {left: -300px;}
+	to {left: 0px;}
+}
+.dash_rect {
+	filter: drop-shadow(0px 0px 20px rgba(53, 49, 49, 1));
+	position: absolute;
+	overflow: visible;
+	width: 334px;
+	height: 1035px;
+	left: 0px;
+	top: 0px;
+}
+#dash_ba {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 105px;
+	overflow: visible;
+}
+.ba_rect {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 150px;
+	left: 0px;
+	top: 0px;
+}
+#ba_content {
+	position: absolute;
+	width: 119px;
+	height: 114px;
+	left: 16px;
+	top: 18px;
+	overflow: visible;
+}
+#Blood {
+	position: absolute;
+	left: 27px;
+	top: 50px;
+	overflow: visible;
+	width: 67px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#ID018_flask {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 35px;
+	top: 0px;
+	overflow: visible;
+}
+#Availablity {
+	position: absolute;
+	left: 0px;
+	top: 82px;
+	overflow: visible;
+	width: 120px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#dash_donation {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 445px;
+	overflow: visible;
+}
+.donation_rect {
+	filter: drop-shadow(0px 0px 15px rgba(225, 83, 83, 1));
+	position: absolute;
+	overflow: visible;
+	width: 195px;
+	height: 195px;
+	left: 0px;
+	top: 0px;
+}
+#donor_content {
+	position: absolute;
+	width: 121px;
+	height: 83px;
+	left: 15px;
+	top: 34px;
+	overflow: visible;
+}
+#Donations {
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	overflow: visible;
+	width: 122px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(49,49,49,1);
+}
+#ID008_donor_1 {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 36px;
+	top: 0px;
+	overflow: visible;
+}
+#dash_req {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 275px;
+	overflow: visible;
+}
+.req_rect {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 150px;
+	left: 0px;
+	top: 0px;
+}
+#req_content {
+	position: absolute;
+	width: 101px;
+	height: 82px;
+	left: 25px;
+	top: 34px;
+	overflow: visible;
+}
+#Requests {
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	overflow: visible;
+	width: 102px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#important {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 26px;
+	top: 0px;
+	overflow: visible;
+}
+#dash_nd {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 615px;
+	overflow: visible;
+}
+.nd_rect {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 150px;
+	left: 0px;
+	top: 0px;
+}
+#new_donation_content {
+	position: absolute;
+	width: 105px;
+	height: 114px;
+	left: 23px;
+	top: 18px;
+	overflow: visible;
+}
+#ID015_syringe {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 27.5px;
+	top: 0px;
+	overflow: visible;
+}
+#NEW {
+	position: absolute;
+	left: 25px;
+	top: 50px;
+	overflow: visible;
+	width: 57px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#Donation {
+	position: absolute;
+	left: 0px;
+	top: 82px;
+	overflow: visible;
+	width: 106px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#dash_nsd {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 62px;
+	top: 785px;
+	overflow: visible;
+}
+.nsd_rect {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 150px;
+	left: 0px;
+	top: 0px;
+}
+#new_donation_content_gy {
+	position: absolute;
+	width: 105px;
+	height: 135px;
+	left: 23px;
+	top: 8px;
+	overflow: visible;
+}
+#ID015_syringe_gz {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 27.5px;
+	top: 0px;
+	overflow: visible;
+}
+#NEW_g {
+	position: absolute;
+	left: 25px;
+	top: 50px;
+	overflow: visible;
+	width: 57px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#Donation_g {
+	position: absolute;
+	left: 0px;
+	top: 103px;
+	overflow: visible;
+	width: 106px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#SUPER {
+	position: absolute;
+	left: 16px;
+	top: 76px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgba(49,49,49,1);
+}
+#home_btn {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 1845px;
+	top: 25px;
+	overflow: visible;
+}
+.Ellipse_5 {
+	filter: drop-shadow(0px 3px 6px rgba(49, 49, 49, 0.502));
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	height: 68px;
+	left: 0px;
+	top: 0px;
+}
+#home_grey {
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	left: 8px;
+	top: 8px;
+	overflow: visible;
+}
+#user_info_disp {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 1786px;
+	top: 25px;
+	overflow: visible;
+}
+.sha_back {
+	filter: drop-shadow(0px 3px 6px rgba(49, 49, 49, 0.502));
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	height: 68px;
+	left: 0px;
+	top: 0px;
+}
+#pro_pic {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	border-radius: 50%;
+}
+#menu_btn {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 25px;
+	top: 25px;
+	overflow: visible;
+}
+.Ellipse_5_ha {
+	filter: drop-shadow(0px 0px 10px rgba(49, 49, 49, 0.502));
+	position: absolute;
+	overflow: visible;
+	width: 80px;
+	height: 80px;
+	left: 0px;
+	top: 0px;
+}
+#me__3__grey {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 13px;
+	top: 13px;
+	overflow: visible;
+}
+button {
+	border-radius: 50%;
+	outline : none;
+	cursor: pointer;
+}
+input {
+	outline-color: #E15353;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+#user_overlay {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: -1px;
+	overflow: visible;
+	animation : mymove1 0.75s;
+	animation-timing-function: ease;
+}
+@keyframes mymove1 {
+	from {
+		opacity: 0;
+		transform : translateY(-300px);
+	}
+	to {
+		opacity: 1;
+		transform : translateY(0px);
+	}
+
+}
+#dim_back {
+	opacity: 0.26;
+	animation : mymove2 1s;
+	animation-timing-function: ease;
+}
+@keyframes mymove2 {
+	from {
+		opacity: 0;
+		transform : translateZ(-300px);
+	}
+	to {
+		opacity: 0.26;
+		transform : translateY(0px);
+	}
+
+}
+.dim_back {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+}
+.white_back {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 268px;
+	left: 1667px;
+	top: 26px;
+}
+#BLOOD_v1_0_0 {
+	position: absolute;
+	left: 1719px;
+	top: 275px;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(48,48,48,1);
+}
+#logout_btn {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 223px;
+	overflow: visible;
+}
+.logout_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#logout_content {
+	position: absolute;
+	width: 146.5px;
+	height: 27px;
+	left: 10.5px;
+	top: 10px;
+	overflow: visible;
+}
+#Logout {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 68px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#logout_grey {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 121.5px;
+	top: 1px;
+	overflow: visible;
+}
+.l4 {
+	overflow: visible;
+	position: absolute;
+	width: 143px;
+	height: 1px;
+	left: 1678.5px;
+	top: 222.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#about_btn {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 175px;
+	overflow: visible;
+}
+.about_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#about_content {
+	position: absolute;
+	width: 146.5px;
+	height: 27px;
+	left: 10.5px;
+	top: 10.5px;
+	overflow: visible;
+}
+#About_us {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#programming_GREY {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 121.5px;
+	top: 0.5px;
+	overflow: visible;
+}
+.l3 {
+	overflow: visible;
+	position: absolute;
+	width: 143px;
+	height: 1px;
+	left: 1678.5px;
+	top: 174.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#setting_btn {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 127px;
+	overflow: visible;
+}
+.setting_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#setting_content {
+	position: absolute;
+	width: 146.5px;
+	height: 27px;
+	left: 10.5px;
+	top: 10px;
+	overflow: visible;
+}
+#Settings {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 78px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#settings_grey {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 121.5px;
+	top: 0.5px;
+	overflow: visible;
+}
+.l2 {
+	overflow: visible;
+	position: absolute;
+	width: 143px;
+	height: 1px;
+	left: 1678.5px;
+	top: 126.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#user_status {
+	position: absolute;
+	width: 169px;
+	height: 47px;
+	left: 1667px;
+	top: 79px;
+	overflow: visible;
+}
+.user_rect {
+	position: absolute;
+	overflow: visible;
+	width: 169px;
+	height: 47px;
+	left: 0px;
+	top: 0px;
+}
+#user_text {
+	position: absolute;
+	left: 10.5px;
+	top: 12.5px;
+	overflow: visible;
+	width: 106px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#user_bb {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 132px;
+	top: 11px;
+	overflow: visible;
+}
+.l1 {
+	overflow: visible;
+	position: absolute;
+	width: 103px;
+	height: 1px;
+	left: 1678.5px;
+	top: 78.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#bb_user {
+	position: absolute;
+	left: 1679px;
+	top: 43px;
+	overflow: visible;
+	width: 54px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(49,49,49,1);
+}
+#load_content {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#dim_background {
+	opacity: 0.26;
+}
+.dim_background {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 975px;
+	left: 0px;
+	top: 0px;
+}
+#loading_info {
+	position: absolute;
+	width: 327px;
+	height: 197px;
+	left: 797px;
+	top: 389px;
+	overflow: visible;
+}
+.loading_background {
+	position: absolute;
+	overflow: visible;
+	width: 327px;
+	height: 197px;
+	left: 0px;
+	top: 0px;
+}
+#LOGO_dn {
+	position: absolute;
+	width: 242.791px;
+	height: 60px;
+	left: 42px;
+	top: 23px;
+	overflow: visible;
+}
+#Loading {
+	position: absolute;
+	left: 87.5px;
+	top: 137px;
+	overflow: visible;
+	width: 152px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(49,49,49,1);
+}
+.progress {
+	position: absolute;
+	height: 20px;
+	display: inline-block;
+	width: 100%;
+	top : 106px;
+	background-color: #b5b5b5;
+	border-radius: 2px;
+	background-clip: padding-box;
+	overflow: hidden; }
+.progress .indeterminate {
+	background-color: #313131; }
+.progress .indeterminate:before {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+	animation: indeterminate 2.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+.progress .indeterminate:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	will-change: left, right;
+	-webkit-animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	animation: indeterminate-short 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+	-webkit-animation-delay: 1.3s;
+	animation-delay: 1.3s; }
+
+@-webkit-keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@keyframes indeterminate {
+	0% {
+		left: -35%;
+		right: 100%; }
+	60% {
+		left: 100%;
+		right: -90%; }
+	100% {
+		left: 100%;
+		right: -90%; } }
+@-webkit-keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }
+@keyframes indeterminate-short {
+	0% {
+		left: -200%;
+		right: 100%; }
+	60% {
+		left: 107%;
+		right: -8%; }
+	100% {
+		left: 107%;
+		right: -8%; } }

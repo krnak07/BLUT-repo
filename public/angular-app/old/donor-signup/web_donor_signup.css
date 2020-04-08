@@ -1,0 +1,494 @@
+.mediaViewInfo {
+	--web-view-name: web-donor-signup;
+	--web-view-id: web_donor_signup;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: web_donor_signup;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#web_donor_signup {
+	position: absolute;
+	width: 1920px;
+	height: 975px;
+	background-color: rgba(245,245,245,1);
+	overflow: hidden;
+	--web-view-name: web-donor-signup;
+	--web-view-id: web_donor_signup;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Group_23 {
+	position: absolute;
+	width: 1824.3px;
+	height: 666.477px;
+	left: 48px;
+	top: 143px;
+	overflow: visible;
+}
+#Group_1 {
+	opacity: 0.5;
+	position: absolute;
+	width: 1824.3px;
+	height: 666.477px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Group_21 {
+	position: absolute;
+	width: 373px;
+	height: 47px;
+	left: 773px;
+	top: 902px;
+	overflow: visible;
+}
+#with____by_FAM_ILY {
+	position: absolute;
+	left: 57px;
+	top: 0px;
+	overflow: visible;
+	width: 317px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(49,49,49,1);
+}
+#programming_grey {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	left: 0px;
+	top: 2px;
+	overflow: visible;
+}
+#Group_26 {
+	position: absolute;
+	width: 714px;
+	height: 671px;
+	left: 603px;
+	top: 141px;
+	overflow: visible;
+}
+#DOB {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 124px;
+	overflow: visible;
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.DATE_inp {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#password_inp {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 310px;
+	overflow: visible;
+}
+.Rectangle_2_bd {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.name_inp {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#EMAIL {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 186px;
+	overflow: visible;
+}
+.Rectangle_2_bg {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.email_inp {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#ADDRESS {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 372px;
+	overflow: visible;
+}
+.Rectangle_2_bj {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.name_inp_bk {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#CITY {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 434px;
+	overflow: visible;
+}
+.Rectangle_2_bm {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.city_inp {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#PHONE {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 558px;
+	overflow: visible;
+}
+.Rectangle_2_bp {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.phone_inp {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#STATE {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 496px;
+	overflow: visible;
+}
+.Rectangle_2_bs {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.state_inp {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#DATE_OF_BIRTH________ {
+	position: absolute;
+	left: 2px;
+	top: 131.5px;
+	overflow: visible;
+	width: 190px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#E_MAIL______________________ {
+	position: absolute;
+	left: 2px;
+	top: 193.5px;
+	overflow: visible;
+	width: 191px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#PASSWORD______________ {
+	position: absolute;
+	left: 2px;
+	top: 317.5px;
+	overflow: visible;
+	width: 189px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#ADDRESS__________________ {
+	position: absolute;
+	left: 1px;
+	top: 379.5px;
+	overflow: visible;
+	width: 190px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#CITY_TOWN______________ {
+	position: absolute;
+	left: 1px;
+	top: 441.5px;
+	overflow: visible;
+	width: 192px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#STATE________________________ {
+	position: absolute;
+	left: 1px;
+	top: 503.5px;
+	overflow: visible;
+	width: 190px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#PHONE______________________ {
+	position: absolute;
+	left: 0px;
+	top: 565.5px;
+	overflow: visible;
+	width: 192px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#signup_btn {
+	position: absolute;
+	width: 125px;
+	height: 36px;
+	left: 308px;
+	top: 635px;
+	overflow: visible;
+}
+.Rectangle_4 {
+	filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.161));
+	position: absolute;
+	overflow: visible;
+	width: 185px;
+	height: 96px;
+	left: 0px;
+	top: 0px;
+}
+#SIGNUP {
+	position: absolute;
+	left: 25.5px;
+	top: 4px;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(49,49,49,1);
+}
+#NAME {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_2_b {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.fname_inp {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#FIRST_NAME_____________ {
+	position: absolute;
+	left: 2px;
+	top: 7.5px;
+	overflow: visible;
+	width: 191px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#bg_inp {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 248px;
+	overflow: visible;
+}
+.Rectangle_2_ca {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.bloodgroup_inp {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#BLOODGROUP__________ {
+	position: absolute;
+	left: 2px;
+	top: 255.5px;
+	overflow: visible;
+	width: 193px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}
+#NAME_cc {
+	position: absolute;
+	width: 500px;
+	height: 42px;
+	left: 214px;
+	top: 62px;
+	overflow: visible;
+}
+.Rectangle_2_cd {
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.lname_inp {
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	height: 32px;
+	left: 22px;
+	top: 5px;
+}
+#LAST_NAME______________ {
+	position: absolute;
+	left: 2px;
+	top: 69.5px;
+	overflow: visible;
+	width: 191px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(50,50,50,1);
+}

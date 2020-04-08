@@ -3,10 +3,14 @@ angular.module('bbApp')
 
 function webbblogincontroller($location,$http){
     var vm = this;
+    if(localStorage.getItem('bbusername')!==null){
+        $location.path('/bloodbank/dashboard');
+    }
     document.getElementById('web_bb_login').style.visibility = 'hidden';
     angular.element(document).ready(function () {
         document.getElementById('web_bb_login').style.visibility = 'visible';
     });
+
     vm.isloading = false;
     vm.is_ip = false;
     vm.is_ie = false;
@@ -28,10 +32,10 @@ function webbblogincontroller($location,$http){
         $http.post('/api/login/bloodbank/user',postdata)
             .then(function(response){
                 vm.isloading=false;
-                sessionStorage.setItem('username',response.data.username);
-                sessionStorage.setItem('useremail',response.data.useremail);
-                sessionStorage.setItem('bbmail',response.data.bbmail);
-                sessionStorage.setItem('bbname',response.data.bbname);
+                localStorage.setItem('bbusername',response.data.username);
+                localStorage.setItem('bbuseremail',response.data.useremail);
+                localStorage.setItem('bbemail',response.data.bbemail);
+                localStorage.setItem('bbname',response.data.bbname);
                 $location.path('/bloodbank/dashboard');
             })
             .catch(function(err){
@@ -119,8 +123,8 @@ function webbblogincontroller($location,$http){
                 var now = new Date();
                 now.setMonth( now.getFullYear() + 24 );
                 document.cookie ="bbusercookieUse=true"+";expires=" + now.toUTCString() + ";";
-                document.cookie ="bbuseremail=" + vm.email_input +";expires=" + now.toUTCString() + ";";
-                document.cookie ="bbuserpass=" + vm.pass_input +";expires=" + now.toUTCString() + ";";
+                document.cookie ="bbuseremail=" + vm.email_inp +";expires=" + now.toUTCString() + ";";
+                document.cookie ="bbuserpass=" + vm.pass_inp +";expires=" + now.toUTCString() + ";";
                 document.cookie ="bbuserloggedout=0;expires=" + now.toUTCString() + ";";
             }
             login(postdata);

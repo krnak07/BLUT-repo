@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-hosp-home</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/hosp-home/web_hosp_home.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/hosp-home/web_hosp_home.js"></script>
+</head>
+<body>
+<div id="web_hosp_home">
+	<svg class="Rectangle_15">
+		<rect fill="rgba(225,83,83,1)" id="Rectangle_15" rx="0" ry="0" x="0" y="0" width="220" height="75">
+		</rect>
+	</svg>
+	<img id="Group_1" src="angular-app/hosp-home/Group_1.png" srcset="angular-app/hosp-home/Group_1.png 1x, angular-app/hosp-home/Group_1@2x.png 2x">
+	<div id="Hospital__Management_Suite">
+		<span>Hospital <br/>Management Suite</span>
+	</div>
+	<button id="donation_btn" class="donation_btn" ng-click="vm.donation()">
+		<svg class="Rectangle_17">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_17" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Donations">
+			<span>Donations</span>
+		</div>
+		<img id="ID008_donor_1" src="angular-app/hosp-home/ID008_donor_1.png" srcset="angular-app/hosp-home/ID008_donor_1.png 1x, angular-app/hosp-home/ID008_donor_1@2x.png 2x">
+	</button>
+	<button id="BB_btn" class="BB_btn" ng-click="vm.BB()">
+		<svg class="Rectangle_16">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_16" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Bloodbanks">
+			<span>Bloodbanks</span>
+		</div>
+		<img id="blood" src="angular-app/hosp-home/blood.png" srcset="angular-app/hosp-home/blood.png 1x, angular-app/hosp-home/blood@2x.png 2x">
+	</button>
+	<div id="Hospital_NAME" class="Hospital_NAME">
+		<svg class="Rectangle_23">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_23" rx="0" ry="0" x="0" y="0" width="380" height="75">
+			</rect>
+		</svg>
+		<div id="Hospitals">
+			<span>{{vm.hosp_name}}</span>
+		</div>
+		<img id="hospital_4" src="angular-app/hosp-home/hospital_4.png" srcset="angular-app/hosp-home/hospital_4.png 1x, angular-app/hosp-home/hospital_4@2x.png 2x">
+	</div>
+	<button id="home_btn" class="home_btn" ng-click="vm.goHome()">
+		<img id="home" src="angular-app/hosp-home/home.png" srcset="angular-app/hosp-home/home.png 1x, angular-app/hosp-home/home@2x.png 2x">
+	</button>
+	<div id="refresh_btn" class="refresh_btn" ng-clcik="vm.refres()">
+		<img id="update_arrows" src="angular-app/hosp-home/update_arrows.png" srcset="angular-app/hosp-home/update_arrows.png 1x, angular-app/hosp-home/update_arrows@2x.png 2x">
+	</div>
+	<button id="donor_btn" class="donor_btn" ng-click="vm.donor()">
+		<svg class="Rectangle_18">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_18" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Donors">
+			<span>Donors</span>
+		</div>
+		<img id="ID007_donor" src="angular-app/hosp-home/ID007_donor.png" srcset="angular-app/hosp-home/ID007_donor.png 1x, angular-app/hosp-home/ID007_donor@2x.png 2x">
+	</button>
+	<button id="req_btn" class="req_btn" ng-click="vm.request()">
+		<svg class="Rectangle_16_bo">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_16_bo" rx="0" ry="0" x="0" y="0" width="330" height="75">
+			</rect>
+		</svg>
+		<div id="Request">
+			<span>Request</span>
+		</div>
+		<img id="mail" src="angular-app/hosp-home/mail.png" srcset="angular-app/hosp-home/mail.png 1x, angular-app/hosp-home/mail@2x.png 2x">
+	</button>
+	<div id="madeby">
+		<div id="with____by_FAM_ILY">
+			<span>with ❤️ by </span><span style="font-style:normal;font-weight:bold;">FAM-ILY</span>
+		</div>
+		<img id="programming_grey" src="angular-app/hosp-home/programming_grey.png" srcset="angular-app/hosp-home/programming_grey.png 1x, angular-app/hosp-home/programming_grey@2x.png 2x">
+	</div>
+</div>
+</body>
+</html>

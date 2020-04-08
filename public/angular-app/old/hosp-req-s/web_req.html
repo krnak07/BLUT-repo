@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web-req</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/hosp-req-s/web_req.css"/>
+<script id="applicationScript" type="text/javascript" src="angular-app/hosp-req-s/web_req.js"></script>
+</head>
+<body>
+<div id="web_req">
+	<div id="Group_23">
+		<img id="Group_1" src="angular-app/hosp-req-s/Group_1.png" srcset="angular-app/hosp-req-s/Group_1.png 1x, angular-app/hosp-req-s/Group_1@2x.png 2x">
+	</div>
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<div id="Group_28">
+		<button type="submit" id="req_btn" class="req_btn" ng-click="vm.req()">
+			<svg class="Path_6" viewBox="0 0 109.653 36">
+				<path fill="rgba(225,83,83,1)" id="Path_6" d="M 19.93696594238281 0 L 89.71635437011719 0 C 100.7272415161133 0 109.6533203125 8.058874130249023 109.6533203125 18 C 109.6533203125 27.94112586975098 100.7272415161133 36 89.71635437011719 36 L 19.93696594238281 36 C 8.926083564758301 36 0 27.94112586975098 0 18 C 0 8.058874130249023 8.926083564758301 0 19.93696594238281 0 Z">
+				</path>
+			</svg>
+			<div id="Request">
+				<span>Request</span>
+			</div>
+		</button>
+		<div id="unit_inp" class="unit_inp">
+			<svg class="Rectangle_3">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_3" rx="21" ry="21" x="0" y="0" width="116" height="42">
+				</rect>
+			</svg>
+			<img id="science" src="angular-app/hosp-req-s/science.png" srcset="angular-app/hosp-req-s/science.png 1x, angular-app/hosp-req-s/science@2x.png 2x">
+			<input type="number" class="usr_input" required ng-model="vm.units">
+				<rect fill="rgba(255,255,255,1)" id="usr_input" rx="0" ry="0" x="0" y="0" width="53" height="32">
+				</rect>
+			</input>
+		</div>
+		<div id="bb_inp" class="bb_inp">
+			<svg class="Rectangle_2">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="bevel" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="21" ry="21" x="0" y="0" width="500" height="42">
+				</rect>
+			</svg>
+			<select id="sele" class="usr_input_bn" required>
+				<rect fill="rgba(255,255,255,1)" id="usr_input_bn" rx="0" ry="0" x="0" y="0" width="437" height="32">
+				</rect>
+				<option ng-repeat="x in vm.bbdata" value=x.name>{{x.name}}</option>
+			</select>
+			<img id="blood" src="angular-app/hosp-req-s/blood.png" srcset="angular-app/hosp-req-s/blood.png 1x, angular-app/hosp-req-s/blood@2x.png 2x">
+		</div>
+		<div id="bg_inp" class="bg_inp">
+			<svg class="Rectangle_3_bq">
+				<rect fill="rgba(255,255,255,1)" stroke="rgba(225,83,83,1)" stroke-width="3px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_3_bq" rx="21" ry="21" x="0" y="0" width="130" height="42">
+				</rect>
+			</svg>
+			<select id="bg" class="usr_input_br">
+				<rect fill="rgba(255,255,255,1)" id="usr_input_br" rx="0" ry="0" x="0" y="0" width="67" height="32">
+				</rect>
+				<option value="A+">A+</option>
+				<option value="A-">A-</option>
+				<option value="B+">B+</option>
+				<option value="B-">B-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+				<option value="AB+">AB+</option>
+				<option value="AB-">AB-</option>
+			</select>
+			<img id="ID025_immune_system" src="angular-app/hosp-req-s/ID025_immune_system.png" srcset="angular-app/hosp-req-s/ID025_immune_system.png 1x, angular-app/hosp-req-s/ID025_immune_system@2x.png 2x">
+		</div>
+		<div id="Status_txt" class="Status_txt">
+			<div id="STATUS___">
+				<span>STATUS : </span>
+			</div>
+			<div id="Request_made">
+				<span>Request made</span>
+			</div>
+		</div>
+	</div>
+	<div id="Group_33">
+		<button id="back_btn" class="back_btn" ng-click="vm.bac()">
+			<img id="back" src="angular-app/hosp-req-s/back.png" srcset="angular-app/hosp-req-s/back.png 1x, angular-app/hosp-req-s/back@2x.png 2x">
+		</button>
+		<button id="logout_btn" class="logout_btn">
+			<img id="shutdown" src="angular-app/hosp-req-s/shutdown.png" srcset="angular-app/hosp-req-s/shutdown.png 1x, angular-app/hosp-req-s/shutdown@2x.png 2x">
+		</button>
+		<button id="home_btn" class="home_btn">
+			<img id="home" src="angular-app/hosp-req-s/home.png" srcset="angular-app/hosp-req-s/home.png 1x, angular-app/hosp-req-s/home@2x.png 2x">
+		</button>
+		<button id="refresh_btn" class="refresh_btn">
+			<img id="update_arrows" src="angular-app/hosp-req-s/update_arrows.png" srcset="angular-app/hosp-req-s/update_arrows.png 1x, angular-app/hosp-req-s/update_arrows@2x.png 2x">
+		</button>
+	</div>
+</div>
+</body>
+</html>

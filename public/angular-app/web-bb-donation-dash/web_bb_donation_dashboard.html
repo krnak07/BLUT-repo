@@ -1,0 +1,269 @@
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Bloodbank Donations</title>
+</head>
+<body>
+<div id="web_bb_donation_dashboard">
+	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="angular-app/web-bb-donation-dash/web_bb_donation_dashboard.css"/>
+	<script id="applicationScript" type="text/javascript" src="angular-app/web-bb-donation-dash/web_bb_donation_dashboard.js"></script>
+	<img id="background_logo" src="angular-app/web-bb-donation-dash/background_logo.png" srcset="angular-app/web-bb-donation-dash/background_logo.png 1x, angular-app/web-bb-donation-dash/background_logo@2x.png 2x">
+	<div id="Made_with___">
+		<span>Made with</span><span style="font-style:normal;font-weight:normal;"> ❤️</span>
+	</div>
+	<div id="dash_title">
+		<svg class="Rectangle_52">
+			<rect fill="rgba(255,255,255,1)" id="Rectangle_52" rx="40" ry="40" x="0" y="0" width="896" height="106">
+			</rect>
+		</svg>
+		<div id="title">
+			<div id="DONATION">
+				<span>DONATION</span>
+			</div>
+			<img id="LOGO" src="angular-app/web-bb-donation-dash/LOGO.png" srcset="angular-app/web-bb-donation-dash/LOGO.png 1x, angular-app/web-bb-donation-dash/LOGO@2x.png 2x">
+			<div id="_">
+				<span>|</span>
+			</div>
+		</div>
+	</div>
+	<div id="btn">
+		<button id="donatin_btn" class="donatin_btn" ng-click="vm.bb_donations()" ng-mouseover="vm.donationchange()" ng-mouseleave="vm.donationori()">
+			<svg class="Rectangle_53">
+				<rect fill="rgba(255,255,255,1)" id="Rectangle_53" rx="40" ry="40" x="0" y="0" width="440" height="340">
+				</rect>
+			</svg>
+			<div id="donation_content">
+				<div id="Donations">
+					<span>Donations</span>
+				</div>
+				<img id="ID008_donor_1" src="angular-app/web-bb-donation-dash/ID008_donor_1.png" srcset="angular-app/web-bb-donation-dash/ID008_donor_1.png 1x, angular-app/web-bb-donation-dash/ID008_donor_1@2x.png 2x">
+			</div>
+		</button>
+		<button id="n_donation" class="n_donation" ng-click="vm.bb_ndonation()">
+			<svg class="Rectangle_46">
+				<rect fill="rgba(248,223,0,1)" id="Rectangle_46" rx="40" ry="40" x="0" y="0" width="440" height="340">
+				</rect>
+			</svg>
+			<div id="new_donation_content">
+				<img id="ID015_syringe" src="angular-app/web-bb-donation-dash/ID015_syringe.png" srcset="angular-app/web-bb-donation-dash/ID015_syringe.png 1x, angular-app/web-bb-donation-dash/ID015_syringe@2x.png 2x">
+				<div id="NEW">
+					<span>NEW</span>
+				</div>
+				<div id="nDonation">
+					<span>Donation</span>
+				</div>
+			</div>
+		</button>
+		<button id="_s_donation" class="_s_donation" ng-click="vm.bb_sdonation()">
+			<svg class="Rectangle_46_dc">
+				<rect fill="rgba(248,223,0,1)" id="Rectangle_46_dc" rx="40" ry="40" x="0" y="0" width="440" height="340">
+				</rect>
+			</svg>
+			<div id="new_super_donation_content">
+				<img id="ID015_syringe_de" src="angular-app/web-bb-donation-dash/ID015_syringe_de.png" srcset="angular-app/web-bb-donation-dash/ID015_syringe_de.png 1x, angular-app/web-bb-donation-dash/ID015_syringe_de@2x.png 2x">
+				<div id="NEW_df">
+					<span>NEW</span>
+				</div>
+				<div id="sDonation">
+					<span>Donation</span>
+				</div>
+				<div id="SUPER">
+					<span>SUPER</span>
+				</div>
+			</div>
+		</button>
+	</div>
+	<div id="bloodbank_details">
+		<svg class="Rectangle_50">
+			<rect fill="rgba(225,83,83,1)" id="Rectangle_50" rx="40" ry="40" x="0" y="0" width="766" height="113">
+			</rect>
+		</svg>
+		<div id="bloodbank_name">
+			<div id="Bloodbank">
+				<span>{{vm.bbname}}</span>
+			</div>
+			<img id="blood" src="angular-app/web-bb-donation-dash/blood.png" srcset="angular-app/web-bb-donation-dash/blood.png 1x, angular-app/web-bb-donation-dash/blood@2x.png 2x">
+		</div>
+	</div>
+	<div id="dashboard_bb" ng-if="vm.dashShow">
+		<svg class="dim_back" ng-mouseover="vm.hidedash()">
+			<rect fill="rgba(49,49,49,1)" id="dim_back" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+			</rect>
+		</svg>
+		<svg class="dash_rect">
+			<rect fill="rgba(245,245,245,1)" id="dash_rect" rx="0" ry="0" x="0" y="0" width="274" height="975">
+			</rect>
+		</svg>
+		<button id="dash_ba" class="dash_ba" ng-click="vm.bb_ba()">
+			<svg class="ba_rect">
+				<rect fill="rgba(255,255,255,1)" id="ba_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="ba_content">
+				<div id="Blood_dy">
+					<span>Blood</span>
+				</div>
+				<img id="ID018_flask" src="angular-app/web-bb-donation-dash/ID018_flask.png" srcset="angular-app/web-bb-donation-dash/ID018_flask.png 1x, angular-app/web-bb-donation-dash/ID018_flask@2x.png 2x">
+				<div id="Availablity">
+					<span>Availablity</span>
+				</div>
+			</div>
+		</button>
+		<div id="dash_donation" class="dash_donation">
+			<svg class="donation_rect">
+				<rect fill="rgba(225,83,83,1)" id="donation_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="donor_content">
+				<div id="Donations_d">
+					<span>Donations</span>
+				</div>
+				<img id="ID008_donor_1_d" src="angular-app/web-bb-donation-dash/ID008_donor_1_d.png" srcset="angular-app/web-bb-donation-dash/ID008_donor_1_d.png 1x, angular-app/web-bb-donation-dash/ID008_donor_1_d@2x.png 2x">
+			</div>
+		</div>
+		<button id="dash_req" class="dash_req" ng-click="vm.bb_requests()">
+			<svg class="req_rect">
+				<rect fill="rgba(255,255,255,1)" id="req_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="req_content">
+				<div id="Requests">
+					<span>Requests</span>
+				</div>
+				<img id="important" src="angular-app/web-bb-donation-dash/important.png" srcset="angular-app/web-bb-donation-dash/important.png 1x, angular-app/web-bb-donation-dash/important@2x.png 2x">
+			</div>
+		</button>
+		<button id="dash_nd" class="dash_nd" ng-click="vm.bb_ndonation()">
+			<svg class="nd_rect">
+				<rect fill="rgba(248,223,0,1)" id="nd_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="new_donation_content_ed">
+				<img id="ID015_syringe_ee" src="angular-app/web-bb-donation-dash/ID015_syringe_ee.png" srcset="angular-app/web-bb-donation-dash/ID015_syringe_ee.png 1x, angular-app/web-bb-donation-dash/ID015_syringe_ee@2x.png 2x">
+				<div id="NEW_ef">
+					<span>NEW</span>
+				</div>
+				<div id="dn_Donation">
+					<span>Donation</span>
+				</div>
+			</div>
+		</button>
+		<button id="dash_nsd" class="dash_nsd" ng-click="vm.bb_sdonation()">
+			<svg class="nsd_rect">
+				<rect fill="rgba(248,223,0,1)" id="nsd_rect" rx="40" ry="40" x="0" y="0" width="150" height="150">
+				</rect>
+			</svg>
+			<div id="new_donation_content_ej">
+				<img id="ID015_syringe_ek" src="angular-app/web-bb-donation-dash/ID015_syringe_ek.png" srcset="angular-app/web-bb-donation-dash/ID015_syringe_ek.png 1x, angular-app/web-bb-donation-dash/ID015_syringe_ek@2x.png 2x">
+				<div id="NEW_el">
+					<span>NEW</span>
+				</div>
+				<div id="sd_Donation">
+					<span>Donation</span>
+				</div>
+				<div id="SUPER_en">
+					<span>SUPER</span>
+				</div>
+			</div>
+		</button>
+	</div>
+	<div id="user_overlay" ng-if="vm.userShow">
+		<svg class="dim_back" ng-mouseover="vm.hideuser()">
+			<rect fill="rgba(49,49,49,1)" id="dim_back" rx="0" ry="0" x="0" y="0" width="1920" height="975">
+			</rect>
+		</svg>
+		<svg class="white_back">
+			<rect fill="rgba(255,255,255,1)" id="white_back" rx="25" ry="25" x="0" y="0" width="169" height="268">
+			</rect>
+		</svg>
+		<div id="BLOOD_v1_0_0">
+			<span>BLOOD v1.0.0</span>
+		</div>
+		<button id="logout_btn" class="logout_btn" ng-mouseover="vm.logoutchange()" ng-mouseleave="vm.logoutori()" ng-click="vm.logout()">
+			<svg class="logout_rect">
+				<rect fill="rgba(255,255,255,1)" id="logout_rect" rx="0" ry="0" x="0" y="0" width="169" height="47">
+				</rect>
+			</svg>
+			<div id="logout_content">
+				<div id="Logout">
+					<span>Logout</span>
+				</div>
+				<img id="logout_grey" src="angular-app/overlay/bb-overlay/logout_grey.png" srcset="angular-app/overlay/bb-overlay/logout_grey.png 1x, angular-app/overlay/bb-overlay/logout_grey@2x.png 2x">
+			</div>
+		</button>
+		<svg class="l4" viewBox="0 0 143 1">
+			<path fill="transparent" stroke="rgba(49,49,49,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="l4" d="M 0 0 L 143 0">
+			</path>
+		</svg>
+		<button id="about_btn" class="about_btn" ng-mouseover="vm.aboutchange()" ng-mouseleave="vm.aboutori()" ng-click="vm.about()">
+			<svg class="about_rect">
+				<rect fill="rgba(255,255,255,1)" id="about_rect" rx="0" ry="0" x="0" y="0" width="169" height="47">
+				</rect>
+			</svg>
+			<div id="about_content">
+				<div id="About_us">
+					<span>About us</span>
+				</div>
+				<img id="programming_GREY" src="angular-app/overlay/bb-overlay/programming_GREY.png" srcset="angular-app/overlay/bb-overlay/programming_GREY.png 1x, angular-app/overlay/bb-overlay/programming_GREY@2x.png 2x">
+			</div>
+		</button>
+		<svg class="l3" viewBox="0 0 143 1">
+			<path fill="transparent" stroke="rgba(49,49,49,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="l3" d="M 0 0 L 143 0">
+			</path>
+		</svg>
+		<button id="setting_btn" class="setting_btn" ng-mouseover="vm.settingchange()" ng-mouseleave="vm.settingori()" ng-click="vm.setting()">
+			<svg class="setting_rect">
+				<rect fill="rgba(255,255,255,1)" id="setting_rect" rx="0" ry="0" x="0" y="0" width="169" height="47">
+				</rect>
+			</svg>
+			<div id="setting_content">
+				<div id="Settings">
+					<span>Settings</span>
+				</div>
+				<img id="settings_grey" src="angular-app/overlay/bb-overlay/settings_grey.png" srcset="angular-app/overlay/bb-overlay/settings_grey.png 1x, angular-app/overlay/bb-overlay/settings_grey@2x.png 2x">
+			</div>
+		</button>
+		<svg class="l2" viewBox="0 0 143 1">
+			<path fill="transparent" stroke="rgba(49,49,49,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="l2" d="M 0 0 L 143 0">
+			</path>
+		</svg>
+		<div id="user_status">
+			<svg class="user_rect">
+				<rect fill="rgba(255,255,255,1)" id="user_rect" rx="0" ry="0" x="0" y="0" width="169" height="47">
+				</rect>
+			</svg>
+			<div id="user_text">
+				<span>BLOODBANK</span>
+			</div>
+			<img id="user_bb" src="angular-app/overlay/bb-overlay/user_bb.png" srcset="angular-app/overlay/bb-overlay/user_bb.png 1x, angular-app/overlay/bb-overlay/user_bb@2x.png 2x">
+		</div>
+		<svg class="l1" viewBox="0 0 103 1">
+			<path fill="transparent" stroke="rgba(49,49,49,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="l1" d="M 0 0 L 103 0">
+			</path>
+		</svg>
+		<div id="bb_user">
+			<span>{{vm.bbusername}}</span>
+		</div>
+	</div>
+	<div id="menu_btn" class="menu_btn" ng-mouseover="vm.showdash()">
+		<svg class="Ellipse_5_ep">
+			<ellipse fill="rgba(255,255,255,1)" id="Ellipse_5_ep" rx="25" ry="25" cx="25" cy="25">
+			</ellipse>
+		</svg>
+		<img id="me__3__grey" src="angular-app/web-bb-donation-dash/me__3__grey.png" srcset="angular-app/web-bb-donation-dash/me__3__grey.png 1x, angular-app/web-bb-donation-dash/me__3__grey@2x.png 2x">
+	</div>
+	<div id="user_info_disp" class="user_info_disp" ng-mouseover="vm.showuser()">
+		<svg class="sha_back">
+			<ellipse fill="rgba(255,255,255,1)" id="sha_back" rx="25" ry="25" cx="25" cy="25">
+			</ellipse>
+		</svg>
+	</div>
+	<button id="home_btn" class="home_btn" ng-click="vm.goHome()">
+		<svg class="Ellipse_5">
+			<ellipse fill="rgba(255,255,255,1)" id="Ellipse_5" rx="25" ry="25" cx="25" cy="25">
+			</ellipse>
+		</svg>
+		<img id="home_grey" src="angular-app/web-bb-donation-dash/home_grey.png" srcset="angular-app/web-bb-donation-dash/home_grey.png 1x, angular-app/web-bb-donation-dash/home_grey@2x.png 2x">
+	</button>
+</div>
+</body>
