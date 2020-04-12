@@ -2,14 +2,10 @@ angular.module('bbApp')
     .controller('webbbdonationdashcontroller',webbbdonationdashcontroller);
 function webbbdonationdashcontroller($location,$scope) {
     var vm = this;
-    if (localStorage.getItem('bbusername') == null) {
-        $location.path('/login/bloodbank');
-    }
     document.getElementById('web_bb_donation_dashboard').style.visibility = 'hidden';
     angular.element(document).ready(function () {
-        window.setTimeout(showall, 250);
+        window.setTimeout(showall, 1000);
     });
-
     function showall() {
         if (document.readyState == 'complete') {
             document.getElementById('web_bb_donation_dashboard').style.visibility = 'visible';
@@ -74,8 +70,8 @@ function webbbdonationdashcontroller($location,$scope) {
     vm.logout = function () {
         var now = new Date();
         now.setMonth(now.getFullYear() + 24);
-        document.cookie = "hospuserloggedout=1" + ";expires=" + now.toUTCString() + ";";
-        localStorage.removeItem('bbemail');
+        document.cookie = "bbuserloggedout=1" + ";expires=" + now.toUTCString() + "; path=/";
+        localStorage.removeItem('token');
         localStorage.removeItem('bbname');
         localStorage.removeItem('bbuseremail');
         localStorage.removeItem('bbusername');

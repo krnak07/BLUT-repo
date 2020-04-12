@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var firebase = require('firebase');
 var bbuser = mongoose.model('bloodbankuser');
 var bloodbank = mongoose.model('bloodbank');
+var jwt = require('jsonwebtoken');
 
 auth = firebase.auth();
 
@@ -146,9 +147,10 @@ module.exports.bbuserlogin = function(req,res) {
                                     .json({"msg":"unf"});
                             }
                             else{
+                                var token = jwt.sign({email: pro.bloodbankemail,useremail : pro.email},'cptn3m0',{expiresIn : 604800})
                                 res
                                     .status(200)
-                                    .json({"useremail":pro.email,"username":pro.firstname,"bbemail":pro.bloodbankemail,"bbname":pro.bloodbankname});
+                                    .json({"username":pro.firstname,"bbname":pro.bloodbankname,"token" : token});
                             }
                         }
 
@@ -166,7 +168,7 @@ module.exports.bbuserlogin = function(req,res) {
             if(error.code == "auth/user-not-found"){
                 res
                     .status(400)
-                    .json({"msg":"ie"});
+                    .json({"msg":"unf"});
             }
             else if(error.code == "auth/wrong-password"){
                 res
@@ -236,3 +238,27 @@ module.exports.usercheck = function(req,res){
             }
         })
 };
+
+module.exports.authenticate = function(req,res,next){
+    var headerExists = req.headers.authorization;
+    if(headerExists){
+        var token = req.headers.authorization.split(' ')[1];
+        jwt.verify(token,'cptn3m0',function(err,decoded){
+            if(err){
+                res
+                    .status(401)
+                    .json({"msg":"Unauthorized"})
+            }
+            else{
+                req.email = decoded.email;
+                req.useremail = decoded.useremail;
+                next();
+            }
+        })
+    }
+    else{
+        res
+            .status(403)
+            .json({"msg":"token missing"})
+    }
+}

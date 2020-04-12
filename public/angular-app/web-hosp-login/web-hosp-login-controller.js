@@ -120,10 +120,10 @@ function webhosplogincontroller($location,$http){
             if(vm.coption){  //setCookies
                 var now = new Date();
                 now.setMonth( now.getFullYear() + 24 );
-                document.cookie ="hospusercookieUse=true"+";expires=" + now.toUTCString() + ";";
-                document.cookie ="hospuseremail=" + vm.email_inp +";expires=" + now.toUTCString() + ";";
-                document.cookie ="hospuserpass=" + vm.pass_inp +";expires=" + now.toUTCString() + ";";
-                document.cookie ="hospuserloggedout=0;expires=" + now.toUTCString() + ";";
+                document.cookie ="hospusercookieUse=true"+";expires=" + now.toUTCString() + "; path=/";
+                document.cookie ="hospuseremail=" + vm.email_inp +";expires=" + now.toUTCString() + "; path=/";
+                document.cookie ="hospuserpass=" + vm.pass_inp +";expires=" + now.toUTCString() + "; path=/";
+                document.cookie ="hospuserloggedout=0;expires=" + now.toUTCString() + "; path=/";
             }
             login(postdata);
         }

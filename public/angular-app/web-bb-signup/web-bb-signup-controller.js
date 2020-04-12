@@ -45,6 +45,21 @@ function webbbsignupcontroller($location,$http) {
                 };
                 $http.post('/api/bloodbank/signup',postdata)
                     .then(function(response){
+                        if(response.data.msg == 'wp'){
+                            vm.is_wep = true;
+                            vm.pass_inp=vm.cpass_inp='';
+                            window.setTimeout(hideerror,1000);
+                        }
+                        else if(response.data.msg == 'ue'){
+                            vm.is_ue = true;
+                            vm.pass_inp=vm.cpass_inp='';
+                            window.setTimeout(hideerror,1000);
+                        }
+                        else if(response.data.msg == 'es'){
+                            vm.is_es = true;
+                            vm.pass_inp=vm.cpass_inp='';
+                            window.setTimeout(hideerror,1000);
+                        }
                         sessionStorage.setItem('email',vm.email_inp);
                         sessionStorage.setItem('name',vm.name_inp);
                         sessionStorage.setItem('type','bloodbank');
@@ -53,20 +68,7 @@ function webbbsignupcontroller($location,$http) {
                     })
                     .catch(function(error){
                         vm.isloading = false;
-                        vm.pass_inp=vm.cpass_inp='';
-                        if(error.data.msg == 'wp'){
-                            vm.is_wep = true;
-                            window.setTimeout(hideerror,1000);
-                        }
-                        else if(error.data.msg == 'ue'){
-                            vm.is_ue = true;
-                            window.setTimeout(hideerror,1000);
-                        }
-                        else if(error.data.msg == 'es'){
-                            vm.is_es = true;
-                            window.setTimeout(hideerror,1000);
-                        }
-
+                        console.log(error)
                     })
             }
             else{
@@ -77,6 +79,7 @@ function webbbsignupcontroller($location,$http) {
             }
         }
         else{
+            console.log(vm.signupForm)
             vm.isloading=false;
             alert("check pincode and phone number")
         }

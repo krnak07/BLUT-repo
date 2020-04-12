@@ -1,6 +1,6 @@
 angular.module('bbApp')
     .controller('webbbdashboardcontroller',webbbdashboardcontroller);
-function webbbdashboardcontroller($location,$scope) {
+function webbbdashboardcontroller($location,$scope,$window) {
     var vm = this;
     vm.iswaiting = true;
     if (localStorage.getItem('bbusername') == null) {
@@ -70,7 +70,7 @@ function webbbdashboardcontroller($location,$scope) {
     vm.logout = function () {
         var now = new Date();
         now.setMonth(now.getFullYear() + 24);
-        document.cookie = "hospuserloggedout=1" + ";expires=" + now.toUTCString() + ";";
+        document.cookie = "bbuserloggedout=1" + ";expires=" + now.toUTCString() + "; path=/";
         localStorage.removeItem('bbemail');
         localStorage.removeItem('bbname');
         localStorage.removeItem('bbuseremail');

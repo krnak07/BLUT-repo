@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: email-template;
+		--web-view-id: email_template;
+		--web-scale-on-resize: true;
+		--web-application: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: email_template;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#email_template {
+		position: absolute;
+		width: 400px;
+		height: 450px;
+		overflow: hidden;
+		--web-view-name: email-template;
+		--web-view-id: email_template;
+		--web-scale-on-resize: true;
+		--web-application: true;
+		--web-enable-deep-linking: true;
+	}
+	.Rectangle_122 {
+		position: absolute;
+		overflow: visible;
+		width: 400px;
+		height: 450px;
+		left: 0px;
+		top: 0px;
+	}
+	#LOGO {
+		position: absolute;
+		width: 131px;
+		height: 32.851px;
+		left: 25px;
+		top: 25px;
+		overflow: visible;
+	}
+	#date_inp {
+		position: absolute;
+		left: 297px;
+		top: 32px;
+		overflow: visible;
+		width: 92px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(49,49,49,1);
+	}
+	.Rectangle_123 {
+		position: absolute;
+		overflow: visible;
+		width: 350px;
+		height: 166px;
+		left: 20px;
+		top: 83px;
+	}
+	#Donation {
+		position: absolute;
+		left: 35px;
+		top: 93px;
+		overflow: visible;
+		width: 69px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#STATUS {
+		position: absolute;
+		left: 32px;
+		top: 129px;
+		overflow: visible;
+		width: 58px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#UNITS {
+		position: absolute;
+		left: 32px;
+		top: 160px;
+		overflow: visible;
+		width: 46px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#Line_12 {
+		opacity: 0.26;
+	}
+	.Line_12 {
+		overflow: visible;
+		position: absolute;
+		width: 336px;
+		height: 1px;
+		left: 32px;
+		top: 122px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_13 {
+		opacity: 0.26;
+	}
+	.Line_13 {
+		overflow: visible;
+		position: absolute;
+		width: 336px;
+		height: 1px;
+		left: 32px;
+		top: 153px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_14 {
+		opacity: 0.26;
+	}
+	.Line_14 {
+		overflow: visible;
+		position: absolute;
+		width: 336px;
+		height: 1px;
+		left: 32px;
+		top: 184px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_15 {
+		opacity: 0.26;
+	}
+	.Line_15 {
+		overflow: visible;
+		position: absolute;
+		width: 336px;
+		height: 1px;
+		left: 32px;
+		top: 215px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#PLACE {
+		position: absolute;
+		left: 32px;
+		top: 222px;
+		overflow: visible;
+		width: 50px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#TIME {
+		position: absolute;
+		left: 32px;
+		top: 191px;
+		overflow: visible;
+		width: 37px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#_ {
+		position: absolute;
+		left: 174px;
+		top: 129px;
+		overflow: visible;
+		width: 5px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#__c {
+		position: absolute;
+		left: 174px;
+		top: 160px;
+		overflow: visible;
+		width: 5px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#__da {
+		position: absolute;
+		left: 174px;
+		top: 191px;
+		overflow: visible;
+		width: 5px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#__db {
+		position: absolute;
+		left: 174px;
+		top: 222px;
+		overflow: visible;
+		width: 5px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#status_inp {
+		position: absolute;
+		left: 188px;
+		top: 129px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#units_inp {
+		position: absolute;
+		left: 188px;
+		top: 160px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#time_inp {
+		position: absolute;
+		left: 188px;
+		top: 191px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#place_inp {
+		position: absolute;
+		left: 188px;
+		top: 222px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#Hi_Kiran_A_K__If_you_have_not_ {
+		position: absolute;
+		left: 20px;
+		top: 294px;
+		overflow: visible;
+		width: 351px;
+		height: 122px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+</style>
+</head>
+<body>
+<div id="email_template">
+	<svg class="Rectangle_122">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(49,49,49,1)" stroke-width="5px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_122" rx="25" ry="25" x="0" y="0" width="400" height="450">
+		</rect>
+	</svg>
+	<table>
+		<thead>
+		<tr>
+			<th>
+		<img id="LOGO" src="LOGO.png" srcset="LOGO.png 1x, LOGO@2x.png 2x">
+			</th>
+	<th id="date_inp">
+		<span>Jul, 11 1999</span>
+	</th>
+		</tr>
+		</thead>
+	<svg class="Rectangle_123">
+		<rect fill="rgba(245,245,245,1)" id="Rectangle_123" rx="5" ry="5" x="0" y="0" width="350" height="166">
+		</rect>
+	</svg>
+	<tbody>
+	<tr>
+		<td id="Donation">
+			<span>Donation</span>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<svg class="Line_12" viewBox="0 0 336 1">
+				<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_12" d="M 0 0 L 336 0">
+				</path>
+			</svg>
+		</td>
+	</tr>
+	<tr>
+		<td id="STATUS">
+			<span>STATUS</span>
+		</td>
+		<td id="_">
+			<span>:</span>
+		</td>
+		<td id="status_inp">
+			<span>text</span>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<svg class="Line_13" viewBox="0 0 336 1">
+				<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_13" d="M 0 0 L 336 0">
+				</path>
+			</svg>
+		</td>
+	</tr>
+	<tr>
+		<td id="UNITS">
+			<span>UNITS</span>
+		</td>
+		<td id="__c">
+			<span>:</span>
+		</td>
+		<td id="units_inp">
+			<span>text</span>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<svg class="Line_14" viewBox="0 0 336 1">
+				<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_14" d="M 0 0 L 336 0">
+				</path>
+			</svg>
+		</td>
+	</tr>
+	<tr>
+		<td id="TIME">
+			<span>TIME</span>
+		</td>
+		<td id="__da">
+			<span>:</span>
+		</td>
+		<td id="time_inp">
+			<span>text</span>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<svg class="Line_15" viewBox="0 0 336 1">
+				<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_15" d="M 0 0 L 336 0">
+				</path>
+			</svg>
+		</td>
+	</tr>
+	<tr>
+		<td id="PLACE">
+			<span>PLACE</span>
+		</td>
+		<td id="__db">
+			<span>:</span>
+		</td>
+		<td id="place_inp">
+			<span>text</span>
+		</td>
+	</tr>
+	<tr id="Hi_Kiran_A_K__If_you_have_not_">
+		<td>Hi Kiran A K<br/><br/>If you have not made this donation or notice any error please contact us.<br/><br/>Cheers!<br/>Team BLOOD</td>
+	</tr>
+	</table>
+</div>
+</body>
+</html>

@@ -1,11 +1,17 @@
 angular.module('bbApp')
     .controller('webbblogincontroller',webbblogincontroller);
 
-function webbblogincontroller($location,$http){
+function webbblogincontroller($location,$http,$window, AuthFactory){
     var vm = this;
-    if(localStorage.getItem('bbusername')!==null){
-        $location.path('/bloodbank/dashboard');
-    }
+    vm.isLoggedIn = function(){
+        if(AuthFactory.isLoggedIn){
+            return true;
+        }
+        else{
+            return false;
+        }
+    };
+
     document.getElementById('web_bb_login').style.visibility = 'hidden';
     angular.element(document).ready(function () {
         document.getElementById('web_bb_login').style.visibility = 'visible';
@@ -32,39 +38,41 @@ function webbblogincontroller($location,$http){
         $http.post('/api/login/bloodbank/user',postdata)
             .then(function(response){
                 vm.isloading=false;
-                localStorage.setItem('bbusername',response.data.username);
-                localStorage.setItem('bbuseremail',response.data.useremail);
-                localStorage.setItem('bbemail',response.data.bbemail);
-                localStorage.setItem('bbname',response.data.bbname);
-                $location.path('/bloodbank/dashboard');
-            })
-            .catch(function(err){
-                vm.isloading = false;
-                if(err.data.msg == "wp"){
+                if(response.data.msg == "wp"){
                     vm.is_ip = true;
                     window.setTimeout(hideerror,1000);
                 }
-                else if(err.data.msg == "ie"){
+                else if(response.data.msg == "ie"){
                     vm.is_ie = true;
                     window.setTimeout(hideerror,1000);
                 }
-                else if(err.data.msg == "tmr"){
+                else if(response.data.msg == "tmr"){
                     vm.is_snr = true;
                     window.setTimeout(hideerror,1000);
                 }
-                else if(err.data.msg == "nv"){
+                else if(response.data.msg == "nv"){
                     vm.is_unv = true;
                     window.setTimeout(hideerror,1000);
                 }
-                else if(err.data.msg == "unf"){
+                else if(response.data.msg == "unf"){
                     vm.is_unf = true;
                     window.setTimeout(hideerror,1000);
                 }
-                else if(err.data.msg == "snr"){
+                else if(response.data.msg == "snr"){
                     vm.is_snr = true;
                     window.setTimeout(hideerror,1000);
                 }
-
+                else{
+                    AuthFactory.isLoggedIn = true;
+                    localStorage.setItem('token',response.data.token);
+                    localStorage.setItem('bbusername',response.data.username);
+                    localStorage.setItem('bbname',response.data.bbname);
+                    $location.path('/bloodbank/dashboard');
+                }
+            })
+            .catch(function(err){
+                vm.isloading = false;
+                console.log(err)
             });
     };
 
@@ -122,10 +130,10 @@ function webbblogincontroller($location,$http){
             if(vm.coption){  //setCookies
                 var now = new Date();
                 now.setMonth( now.getFullYear() + 24 );
-                document.cookie ="bbusercookieUse=true"+";expires=" + now.toUTCString() + ";";
-                document.cookie ="bbuseremail=" + vm.email_inp +";expires=" + now.toUTCString() + ";";
-                document.cookie ="bbuserpass=" + vm.pass_inp +";expires=" + now.toUTCString() + ";";
-                document.cookie ="bbuserloggedout=0;expires=" + now.toUTCString() + ";";
+                document.cookie ="bbusercookieUse=true"+";expires=" + now.toUTCString() + "; path=/";
+                document.cookie ="bbuseremail=" + vm.email_inp +";expires=" + now.toUTCString() + "; path=/";
+                document.cookie ="bbuserpass=" + vm.pass_inp +";expires=" + now.toUTCString() + "; path=/";
+                document.cookie ="bbuserloggedout=0;expires=" + now.toUTCString() + "; path=/";
             }
             login(postdata);
         }

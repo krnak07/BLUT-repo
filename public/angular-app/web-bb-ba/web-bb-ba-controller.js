@@ -1,11 +1,10 @@
 angular.module('bbApp')
     .controller('webbbbacontroller',webbbbacontroller);
-function webbbbacontroller($location,$http) {
+function webbbbacontroller($location,$http,AuthFactory) {
     var vm = this;
-    vm.isloading=true;
     document.getElementById('web_bb_BA').style.visibility = 'hidden';
     angular.element(document).ready(function () {
-        window.setTimeout(showall, 250);
+        window.setTimeout(showall, 1000);
     });
 
     function showall() {
@@ -17,26 +16,21 @@ function webbbbacontroller($location,$http) {
     vm.dashShow = false;
     vm.bbname = localStorage.getItem('bbname');
     vm.bbusername = localStorage.getItem('bbusername');
-    if (localStorage.getItem('bbemail') == null) {
-        $location.path('/login/bloodbank');
-    }
-    else{
-        $http.get('/api/bloodbank/getBA?email='+localStorage.getItem('bbemail'))
-            .then(function(response){
-                vm.apos = response.data[0].quantity;
-                vm.bpos = response.data[2].quantity;
-                vm.opos = response.data[4].quantity;
-                vm.abpos = response.data[6].quantity;
-                vm.aneg = response.data[1].quantity;
-                vm.bneg = response.data[3].quantity;
-                vm.oneg = response.data[5].quantity;
-                vm.abneg = response.data[7].quantity;
-                vm.isloading=false;
-            })
-            .catch(function(err){
+    $http.get('/api/bloodbank/getBA')
+        .then(function(response){
+            vm.apos = response.data[0].quantity;
+            vm.bpos = response.data[2].quantity;
+            vm.opos = response.data[4].quantity;
+            vm.abpos = response.data[6].quantity;
+            vm.aneg = response.data[1].quantity;
+            vm.bneg = response.data[3].quantity;
+            vm.oneg = response.data[5].quantity;
+            vm.abneg = response.data[7].quantity;
+            vm.isloading=false;
+        })
+        .catch(function(err){
 
-            });
-    }
+        });
     var IDstorageref = firebase.storage().ref('/bloodbank/' + vm.bbname + '/USER-PHOTO/' + vm.bbusername + '.jpg');
     IDstorageref.getDownloadURL()
         .then(function (url) {
@@ -85,8 +79,9 @@ function webbbbacontroller($location,$http) {
     vm.logout = function () {
         var now = new Date();
         now.setMonth(now.getFullYear() + 24);
-        document.cookie = "hospuserloggedout=1" + ";expires=" + now.toUTCString() + ";";
-        localStorage.removeItem('bbemail');
+        document.cookie = "bbuserloggedout=1" + ";expires=" + now.toUTCString() + "; path=/;";
+        AuthFactory.isLoggedIn = false;
+        localStorage.removeItem('token');
         localStorage.removeItem('bbname');
         localStorage.removeItem('bbuseremail');
         localStorage.removeItem('bbusername');

@@ -20,7 +20,7 @@ function webbbdonatecontroller($location,$scope,$http) {
     }
     document.getElementById('web_bb_donate').style.visibility = 'hidden';
     angular.element(document).ready(function () {
-        window.setTimeout(showall, 250);
+        window.setTimeout(showall, 1000);
     });
     function showall() {
         if (document.readyState == 'complete') {
@@ -122,11 +122,10 @@ function webbbdonatecontroller($location,$scope,$http) {
         else{
             var postdata = {
                 phoneNo : vm.phone_inp,
-                useremail : localStorage.getItem('bbuseremail'),
                 units : vm.unit_inp,
                 superdonation : sessionStorage.getItem('donate')
             }
-            $http.post('api/bloodbank/donordonate',postdata)
+            $http.post('/api/bloodbank/donordonate',postdata)
                 .then(function(response){
                     sessionStorage.setItem('donation','s');
                     window.location.reload()
@@ -181,7 +180,7 @@ function webbbdonatecontroller($location,$scope,$http) {
     vm.logout = function () {
         var now = new Date();
         now.setMonth(now.getFullYear() + 24);
-        document.cookie = "hospuserloggedout=1" + ";expires=" + now.toUTCString() + ";";
+        document.cookie = "bbuserloggedout=1" + ";expires=" + now.toUTCString() + "; path=/";
         localStorage.removeItem('bbemail');
         localStorage.removeItem('bbname');
         localStorage.removeItem('bbuseremail');

@@ -43,31 +43,34 @@ function webbbusersignupcontroller($location,$http){
             $http.post('/api/bloodbank/usercheck',postdata)
                 .then(function(response){
                     vm.isloading=false;
-                    sessionStorage.setItem('typeemail',postdata.bbemail);
-                    sessionStorage.setItem('typename',response.data.bbname);
-                    sessionStorage.setItem('userfname',postdata.userfname);
-                    sessionStorage.setItem('userlname',postdata.userlname);
-                    sessionStorage.setItem('userphone',postdata.userphone);
-                    $location.path('/signup/user/details');
-                })
-                .catch(function(err){
-                    vm.isloading=false;
-                    if(err.data.msg == 'bnf'){
+                    if(response.data.msg == 'bnf'){
                         vm.is_bnf = true;
                         window.setTimeout(hideerror,1000);
                     }
-                    else if(err.data.msg == 'exists'){
+                    else if(response.data.msg == 'exists'){
                         vm.is_ue = true;
                         window.setTimeout(hideerror,1000);
                     }
-                    else if(err.data.msg == 'snr'){
+                    else if(response.data.msg == 'snr'){
                         vm.is_snr = true;
                         window.setTimeout(hideerror,1000);
                     }
-                    else if(err.data.msg == 'not associated'){
+                    else if(response.data.msg == 'not associated'){
                         vm.is_unf = true;
                         window.setTimeout(hideerror,1000);
                     }
+                    else{
+                        sessionStorage.setItem('typeemail',postdata.bbemail);
+                        sessionStorage.setItem('typename',response.data.bbname);
+                        sessionStorage.setItem('userfname',postdata.userfname);
+                        sessionStorage.setItem('userlname',postdata.userlname);
+                        sessionStorage.setItem('userphone',postdata.userphone);
+                        $location.path('/signup/user/details');
+                    }
+                })
+                .catch(function(err){
+                    vm.isloading=false;
+                    console.log(err);
                 })
         }
         else{

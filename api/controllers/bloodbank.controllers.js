@@ -2,7 +2,9 @@ var mongoose = require('mongoose');
 var request = require("request");
 var firebase = require('firebase');
 var nodemailer = require('nodemailer');
-var serviceAccount = require('F:\\BLUT\\BLUT-v1.0.0\\blut-110799-firebase-adminsdk-h7frz-7d77f4b9e4.json');
+var path = require('path');
+var cpath = path.dirname('credentials/blut-110799-firebase-adminsdk-h7frz-7d77f4b9e4');
+var serviceAccount = cpath+'/blut-110799-firebase-adminsdk-h7frz-7d77f4b9e4.json';
 require('firebase/storage');
 require('firebase/messaging');
 var admin = require('firebase-admin');
@@ -10,10 +12,11 @@ var bloodbank = mongoose.model('bloodbank');
 var profile = mongoose.model('profile');
 var bbuser = mongoose.model('bloodbankuser');
 var hospitals = mongoose.model('hospital');
+var jwt = require('jsonwebtoken');
 var notification = mongoose.model('notification_token');
 var bb_req = mongoose.model('requests');
-
-
+var email 	= require("emailjs");
+var jade = require('jade');
 
 const firebaseConfig = {
   apiKey: "AIzaSyARrRzk-qumZ7fAHD6y9NpTrEaT2q8lD5k",
@@ -29,6 +32,29 @@ admin.initializeApp({
 });
 firebase.initializeApp(firebaseConfig);
 var auth = firebase.auth();
+
+module.exports.authenticate = function(req,res,next){
+    var headerExists = req.headers.authorization;
+    if(headerExists){
+        var token = req.headers.authorization.split(' ')[1];
+        jwt.verify(token,'cptn3m0',function(err,decoded){
+            if(err){
+                res
+                    .status(401)
+                    .json({"msg":"Unauthorized"})
+            }
+            else{
+                req.email = decoded.email;
+                next();
+            }
+        })
+    }
+    else{
+        res
+            .status(403)
+            .json({"msg":"token missing"})
+    }
+}
 
 module.exports.tokenregister = function(req,res){
     notification
@@ -282,28 +308,29 @@ function updatebloodunits(req,res,bank,bg,unit) {
     }
 
 };
-function send_mail_blooddonate(email) {
-    var transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        auth: {
-            user: 'codered.blut@gmail.com',
-            pass: 'qwe123rty456'
-        }
+function send_mail_blooddonate(uemail,username,bbname,units,Dtime,Ddate) {
+    username = 'Hi '+username+',';
+    var TestTemplate = jade.renderFile(__dirname+'\\email-template\\test-template.jade',{name:username,place:bbname,Ddate:Ddate,Dtime:Dtime,units:units});
+    var server 	= email.server.connect({
+        user:	"codered.blut@gmail.com",
+        password:"daokcdcgniytuzkk",
+        host:	"smtp.gmail.com",
+        ssl : true,
     });
-    var k = 0;
-    var mailoptions = {
-        from: 'BLOOD <codered.blut@gmail.com>',
-            to: email,
-            subject: 'Blood Donation', // email subject
-            html: `test`
+
+    var message	= {
+        from:	"BLOOD <codered.blut@gmail.com>",
+        to:		uemail,
+        subject:	"Blood Donation",
+        attachment:
+            [
+                {data : TestTemplate, alternative: true},
+                {path:__dirname+"\\email-template\\LOGO.png", type:"image/jpg",  headers:{"Content-ID":"<krnak110799>"}}
+            ]
     };
-    transporter.sendMail(mailoptions,function(err,info){
-        if(err){
-            console.log(err);
-        }
-    });
+
+// send the message and get a callback with an error or details of the message that was sent
+    server.send(message, function(err, message) { console.log(err);});
 };
 
 
@@ -311,7 +338,7 @@ module.exports.donordonate = function(req,res){
 
     var d = new Date();
     bbuser
-        .findOne({email:req.body.useremail})
+        .findOne({email:req.useremail})
         .exec(function(err,bu) {
             if (err) {
                 res
@@ -325,93 +352,101 @@ module.exports.donordonate = function(req,res){
                         .json({"msg":"unf"});
                 }
                 else{
-                    bloodbank
-                        .findOne({email:bu.bloodbankemail})
-                        .exec(function(err,bank){
-                            if(err){
-                                res
-                                    .status(400)
-                                    .json({"msg":"snr"});
-                            }
-                            else{
-                                if(bank == null){
+                    if(req.email == bu.bloodbankemail){
+                        bloodbank
+                            .findOne({email:bu.bloodbankemail})
+                            .exec(function(err,bank){
+                                if(err){
                                     res
                                         .status(400)
-                                        .json({"msg":"bnf"})
+                                        .json({"msg":"snr"});
                                 }
                                 else{
-                                    profile
-                                        .findOne({phoneNo : req.body.phoneNo})
-                                        .exec(function(err,pro) {
-                                            if (err) {
-                                                res
-                                                    .status(400)
-                                                    .json({"msg": "snr"});
-
-                                            } else {
-                                                var nd = new Date(pro.nextdonationDate);
-                                                if (d < nd && req.body.superdonation == 'n') {
+                                    if(bank == null){
+                                        res
+                                            .status(400)
+                                            .json({"msg":"bnf"})
+                                    }
+                                    else{
+                                        profile
+                                            .findOne({phoneNo : req.body.phoneNo})
+                                            .exec(function(err,pro) {
+                                                if (err) {
                                                     res
-                                                        .status(206)
-                                                        .json({"msg": "cannot"});
+                                                        .status(400)
+                                                        .json({"msg": "snr"});
+
+                                                } else {
+                                                    var nd = new Date(pro.nextdonationDate);
+                                                    if (d < nd && req.body.superdonation == 'n') {
+                                                        res
+                                                            .status(206)
+                                                            .json({"msg": "cannot"});
+                                                    }
+                                                    else {
+                                                        var nd = new Date(d);
+                                                        nd.setDate(d.getDate() + 56);
+                                                        pro.lastdonatedDate = d;
+                                                        pro.lastdonatedVenue = bank.name;
+                                                        pro.nextdonationDate = nd;
+                                                        pro.donationhistory.push({
+                                                            venue_email : bank.email,
+                                                            venue_name : bank.name,
+                                                            user_name : bu.firstname,
+                                                            dateofdonation : d,
+                                                            quantity : parseInt(req.body.units)
+                                                        });
+
+                                                        pro.totalunits += parseInt(req.body.units);
+                                                        updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
+
+                                                        bank.donordonationhistory.push({
+                                                            user_name : bu.firstname,
+                                                            user_email : bu.email,
+                                                            donor_name : pro.firstname,
+                                                            phoneNo : pro.phoneNo,
+                                                            dateofdonation : d,
+                                                            bloodgroup : pro.bloodgroup,
+                                                            unitsofblood : parseInt(req.body.units)
+
+                                                        });
+
+                                                        pro.save(function(err,proupdated) {
+                                                            if(err){
+                                                                console.log(err);
+                                                                res
+                                                                    .status(400)
+                                                                    .json({"msg":"es"});
+
+                                                            }
+                                                        });
+                                                        bank.save(function(err,updatedbank){
+                                                            if(err){
+                                                                res
+                                                                    .status(400)
+                                                                    .json({"msg":"es"});
+                                                            }
+                                                            else{
+                                                                res
+                                                                    .status(200)
+                                                                    .json({"msg":"done"});
+                                                                send_mail_blooddonate(pro.email,pro.firstname,bank.name,req.body.units,d.toLocaleTimeString(),d.toLocaleDateString());
+                                                            }
+                                                        });
+                                                    }
                                                 }
-                                                else {
-                                                    var nd = new Date(d);
-                                                    nd.setDate(d.getDate() + 56);
-                                                    pro.lastdonatedDate = d;
-                                                    pro.lastdonatedVenue = bank.name;
-                                                    pro.nextdonationDate = nd;
-                                                    pro.donationhistory.push({
-                                                        venue_email : bank.email,
-                                                        venue_name : bank.name,
-                                                        user_name : bu.firstname,
-                                                        dateofdonation : d,
-                                                        quantity : parseInt(req.body.units)
-                                                    });
+                                            })
+                                    }
 
-                                                    pro.totalunits += parseInt(req.body.units);
-                                                    updatebloodunits(req,res,bank,pro.bloodgroup,parseInt(req.body.units));
-
-                                                    bank.donordonationhistory.push({
-                                                        user_name : bu.firstname,
-                                                        user_email : bu.email,
-                                                        donor_name : pro.firstname,
-                                                        phoneNo : pro.phoneNo,
-                                                        dateofdonation : d,
-                                                        bloodgroup : pro.bloodgroup,
-                                                        unitsofblood : parseInt(req.body.units)
-
-                                                    });
-
-                                                    pro.save(function(err,proupdated) {
-                                                        if(err){
-                                                            console.log(err);
-                                                            res
-                                                                .status(400)
-                                                                .json({"msg":"es"});
-
-                                                        }
-                                                    });
-                                                    bank.save(function(err,updatedbank){
-                                                        if(err){
-                                                            res
-                                                                .status(400)
-                                                                .json({"msg":"es"});
-                                                        }
-                                                        else{
-                                                            res
-                                                                .status(200)
-                                                                .json({"msg":"done"});
-                                                            send_mail_blooddonate(pro.email);
-                                                        }
-                                                    });
-                                                }
-                                            }
-                                        })
                                 }
+                            })
+                    }
 
-                            }
-                        })
+                    else{
+                        res
+                            .status(401)
+                            .json({"msg":"Unauthorized"})
+                    }
                 }
             }
         });
@@ -464,7 +499,7 @@ function checkbloodavailablity(bank,bg,units) {
 module.exports.hospitaldonate = function(req,res){
     var d = new Date();
     bbuser
-        .findOne({email:req.body.useremail})
+        .findOne({email:req.useremail})
         .exec(function(err,bu){
             if(err){
                 res
@@ -512,14 +547,14 @@ module.exports.hospitaldonate = function(req,res){
                                                         hosp.bloodbankdonationhistory.push({
                                                             name : bank.name,
                                                             email : bank.email,
-                                                            user_name : req.body.username,
+                                                            user_name : bu.firstname,
                                                             dateofdonation : d,
                                                             bloodgroup : req.body.bg,
                                                             unitsofblood : parseInt(req.body.units)
                                                         });
                                                         bank.donatedhistory.push({
-                                                            user_name : req.body.username,
-                                                            user_email : req.body.useremail,
+                                                            user_name : bu.firstname,
+                                                            user_email : req.useremail,
                                                             name : hosp.name,
                                                             email : hosp.email,
                                                             dateofdonation : d,
@@ -583,7 +618,7 @@ module.exports.requests = function(req,res){
 
 module.exports.getBA = function(req,res){
     bloodbank
-        .findOne({email:req.query.email})
+        .findOne({email:req.email})
         .exec(function(err,bank){
             if(err){
                 res
@@ -599,7 +634,7 @@ module.exports.getBA = function(req,res){
 }
 module.exports.getDL = function(req,res){
     bloodbank
-        .findOne({email:req.query.email})
+        .findOne({email:req.email})
         .exec(function(err,bank){
             if(err){
                 res
@@ -650,4 +685,396 @@ module.exports.test_1 = function(req,res){
         console.log(body);
     });
 };
+
+module.exports.sendemail1 = function(req,res){
+    var transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+            user: 'codered.blut@gmail.com',
+            pass: 'daokcdcgniytuzkk'
+        },
+    });
+    const output = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="email_template" style="position: absolute;
+width: 400px;
+height: 450px;
+overflow: hidden;"> 
+<svg class="Rectangle_122" style="position: absolute;
+overflow: visible;
+width: 400px;
+height: 450px;
+left: 0px;
+top: 0px;">
+<rect fill="rgba(255,255,255,1)" stroke="rgba(49,49,49,1)" stroke-width="5px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_122" rx="25" ry="25" x="0" y="0" width="400" height="450">
+</rect>
+</svg>
+<table>
+<thead>
+<tr>
+<th>
+<img id="LOGO" src="cid:krnak110799@blood.in" style="position: absolute;
+width: 131px;
+height: 32.851px;
+left: 25px;
+top: 25px;
+overflow: visible;">
+</th>
+<th id="date_inp" style="position: absolute;
+left: 297px;
+top: 32px;
+overflow: visible;
+width: 92px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+color: rgba(49,49,49,1);">
+<span>Jul, 11 1999</span>
+</th>
+</tr>
+</thead>
+<svg class="Rectangle_123" style="position: absolute;
+overflow: visible;
+width: 350px;
+height: 166px;
+left: 20px;
+top: 83px;">
+<rect fill="rgba(245,245,245,1)" id="Rectangle_123" rx="5" ry="5" x="0" y="0" width="350" height="166">
+</rect>
+</svg>
+<tbody>
+<tr>
+<td id="Donation" style="position: absolute;
+left: 35px;
+top: 93px;
+overflow: visible;
+width: 69px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+color: rgba(0,0,0,1);">
+<span>Donation</span>
+</td>
+</tr>
+<tr>
+<td>
+<svg class="Line_12" viewBox="0 0 336 1" style="overflow: visible;
+position: absolute;
+width: 336px;
+height: 1px;
+left: 32px;
+top: 122px;
+transform: matrix(1,0,0,1,0,0);
+opacity: 0.26;">
+<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_12" d="M 0 0 L 336 0">
+</path>
+</svg>
+</td>
+</tr>
+<tr>
+<td id="STATUS" style="position: absolute;
+left: 32px;
+top: 129px;
+overflow: visible;
+width: 58px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>STATUS</span>
+</td>
+<td id="_" style="position: absolute;
+left: 174px;
+top: 129px;
+overflow: visible;
+width: 5px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>:</span>
+</td>
+<td id="status_inp" style="position: absolute;
+left: 188px;
+top: 129px;
+overflow: visible;
+width: 25px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>text</span>
+</td>
+</tr>
+<tr>
+<td>
+<svg class="Line_13" viewBox="0 0 336 1" style="overflow: visible;
+position: absolute;
+width: 336px;
+height: 1px;
+left: 32px;
+top: 153px;
+transform: matrix(1,0,0,1,0,0);.
+opacity: 0.26;">
+<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_13" d="M 0 0 L 336 0">
+</path>
+</svg>
+</td>
+</tr>
+<tr>
+<td id="UNITS" style="position: absolute;
+left: 32px;
+top: 160px;
+overflow: visible;
+width: 46px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>UNITS</span>
+</td>
+<td id="__c" style="position: absolute;
+left: 174px;
+top: 160px;
+overflow: visible;
+width: 5px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>:</span>
+</td>
+<td id="units_inp" style="position: absolute;
+left: 188px;
+top: 160px;
+overflow: visible;
+width: 25px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>text</span>
+</td>
+</tr>
+<tr>
+<td>
+<svg class="Line_14" viewBox="0 0 336 1" style="overflow: visible;
+position: absolute;
+width: 336px;
+height: 1px;
+left: 32px;
+top: 184px;
+transform: matrix(1,0,0,1,0,0); opacity: 0.26;">
+<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_14" d="M 0 0 L 336 0">
+</path>
+</svg>
+</td>
+</tr>
+<tr>
+<td id="TIME" style="position: absolute;
+left: 32px;
+top: 191px;
+overflow: visible;
+width: 37px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>TIME</span>
+</td>
+<td id="__da" style="
+position: absolute;
+left: 174px;
+top: 191px;
+overflow: visible;
+width: 5px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>:</span>
+</td>
+<td id="time_inp" style="
+position: absolute;
+left: 188px;
+top: 191px;
+overflow: visible;
+width: 25px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>text</span>
+</td>
+</tr>
+<tr>
+<td>
+<svg class="Line_15" viewBox="0 0 336 1" 
+overflow: visible;
+position: absolute;
+width: 336px;
+height: 1px;
+left: 32px;
+top: 215px;
+transform: matrix(1,0,0,1,0,0);>
+<path fill="transparent" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_15" d="M 0 0 L 336 0">
+</path>
+</svg>
+</td>
+</tr>
+<tr>
+<td id="PLACE" style="position: absolute;
+left: 188px;
+top: 222px;
+overflow: visible;
+width: 25px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>PLACE</span>
+</td>
+<td id="__db" style="position: absolute;
+left: 174px;
+top: 222px;
+overflow: visible;
+width: 5px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>:</span>
+</td>
+<td id="place_inp" style="position: absolute;
+left: 188px;
+top: 222px;
+overflow: visible;
+width: 25px;
+white-space: nowrap;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<span>text</span>
+</td>
+</tr>
+<tr id="Hi_Kiran_A_K__If_you_have_not_" style="position: absolute;
+left: 20px;
+top: 294px;
+overflow: visible;
+width: 351px;
+height: 122px;
+text-align: left;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: rgba(0,0,0,1);">
+<td><br/>Hi Kiran A K<br/>If you have not made this donation or notice any error please contact us.<br/><br/>Cheers!<br/>Team BLOOD</td>
+</tr>
+</table>
+</div>
+</body>
+</html>`;
+    var mailoptions = {
+        from: 'BLOOD <codered.blut@gmail.com>',
+        to: 'krnak526@gmail.com',
+        subject: 'Blood Donation',
+        attachments : [
+            {
+                filename : 'sample.png',
+                pathname : __dirname+'/sample.png',
+            }
+        ],
+        html : output ,
+    };
+    transporter.sendMail(mailoptions,function(err,info){
+        if(err){
+            res
+                .json(err)
+            console.log(err);
+        }
+        else{
+            res
+                .json(info)
+            console.log(info);
+        }
+    });
+}
+
+module.exports.sendemail = function(req,res){
+    var email 	= require("emailjs");
+    var jade = require('jade');
+    var TestTemplate = jade.renderFile(__dirname+'\\email-template\\test-template.jade',{name:dname,place:place,Ddate:ddate,Dtime:dtime,units:units});
+    var server 	= email.server.connect({
+        user:	"codered.blut@gmail.com",
+        password:"daokcdcgniytuzkk",
+        host:	"smtp.gmail.com",
+        ssl : true,
+    });
+
+    var message	= {
+        from:	"BLOOD <codered.blut@gmail.com>",
+        to:		"krnak526@gmail.com",
+        subject:	"Blood Donation",
+        attachment:
+            [
+                {data : TestTemplate, alternative: true},
+                {path:__dirname+"\\email-template\\LOGO.png", type:"image/jpg",  headers:{"Content-ID":"<krnak110799>"}}
+            ]
+    };
+
+// send the message and get a callback with an error or details of the message that was sent
+    server.send(message, function(err, message) { console.log(err || message);});
+}
+
 

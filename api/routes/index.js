@@ -33,19 +33,19 @@ router
     .post(ctrlbloodbank.bloodbankLogin);
 router
     .route('/bloodbank/donordonate')
-    .post(ctrlbloodbank.donordonate);
+    .post(ctrlbbuser.authenticate,ctrlbloodbank.donordonate);
 router
     .route('/bloodbank/hospitaldonate')
-    .post(ctrlbloodbank.hospitaldonate);
+    .post(ctrlbbuser.authenticate,ctrlbloodbank.hospitaldonate);
 router
     .route('/bloodbank/getBA')
-    .get(ctrlbloodbank.getBA);
+    .get(ctrlbloodbank.authenticate,ctrlbloodbank.getBA);
 router
     .route('/bloodbank/getDL')
-    .get(ctrlbloodbank.getDL);
+    .get(ctrlbloodbank.authenticate,ctrlbloodbank.getDL);
 router
     .route('/bloodbank/alldonations')
-    .get(ctrlbloodbank.getAllDonorDonations);
+    .get(ctrlbloodbank.authenticate,ctrlbloodbank.getAllDonorDonations);
 router
     .route('/bloodbank/tokenregister')
     .post(ctrlbloodbank.tokenregister);
@@ -129,7 +129,7 @@ router
     .route('/hospitals/:hospID/test')
     .post(ctrlhosp.test_2);
 router
-    .route('/test')
-    .get(ctrltest.wr);
+    .route('/Emailtest')
+    .get(ctrlbloodbank.sendemail);
 
 module.exports = router;

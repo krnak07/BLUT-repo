@@ -54,30 +54,30 @@ function webuserdetailscontroller($location,$http) {
                 };
                 $http.post('/api/signup/'+sessionStorage.getItem('type')+'/user',postdata)
                     .then(function(response){
+                        vm.isloading = false;
+                        if(response .data.msg == 'wp'){
+                            vm.is_wep = true;
+                            vm.pass_inp=vm.cpass_inp='';
+                            window.setTimeout(hideerror,1000);
+                        }
+                        else if(response .data.msg == 'ue'){
+                            vm.is_ue = true;
+                            window.setTimeout(hideerror,1000);
+                        }
+                        else if(response .data.msg == 'es'){
+                            vm.is_es = true;
+                            window.setTimeout(hideerror,1000);
+                        }
                         sessionStorage.removeItem('typeemail');
                         sessionStorage.removeItem('usergender');
                         sessionStorage.removeItem('userlname');
                         sessionStorage.removeItem('userphone');
                         sessionStorage.setItem('email',vm.email_inp);
-                        vm.isloading = false;
                         $location.path('/signup/user/upload')
                     })
                     .catch(function(error){
                         vm.isloading = false;
-                        if(error.data.msg == 'wp'){
-                            vm.is_wep = true;
-                            vm.pass_inp=vm.cpass_inp='';
-                            window.setTimeout(hideerror,1000);
-                        }
-                        else if(error.data.msg == 'ue'){
-                            vm.is_ue = true;
-                            window.setTimeout(hideerror,1000);
-                        }
-                        else if(error.data.msg == 'es'){
-                            vm.is_es = true;
-                            window.setTimeout(hideerror,1000);
-                        }
-
+                        console.log(error);
                     })
             }
             else{

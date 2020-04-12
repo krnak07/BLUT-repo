@@ -6,8 +6,8 @@ var forceSsl = require('express-force-ssl');
 var cors = require('cors');
 
 const options = {
-    key: fs.readFileSync('key.pem'),
-    cert: fs.readFileSync('cert.pem')
+    key: fs.readFileSync('credentials/key.pem'),
+    cert: fs.readFileSync('credentials/cert.pem')
 };
 
 var app = express();

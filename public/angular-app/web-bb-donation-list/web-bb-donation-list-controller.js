@@ -6,7 +6,7 @@ function webbbdonationlistcontroller($location,$http){
     var ld;
     document.getElementById('web_bb_donation_list').style.visibility = 'hidden';
     angular.element(document).ready(function () {
-        window.setTimeout(showall, 250);
+        window.setTimeout(showall, 1000);
     });
     function showall() {
         if (document.readyState == 'complete') {
@@ -17,9 +17,6 @@ function webbbdonationlistcontroller($location,$http){
     vm.dashShow = false;
     vm.bbname = localStorage.getItem('bbname');
     vm.bbusername = localStorage.getItem('bbusername');
-    if (localStorage.getItem('bbemail') == null) {
-        $location.path('/login/bloodbank');
-    }
     var IDstorageref = firebase.storage().ref('/bloodbank/' + vm.bbname + '/USER-PHOTO/' + vm.bbusername + '.jpg');
     IDstorageref.getDownloadURL()
         .then(function (url) {
@@ -39,7 +36,7 @@ function webbbdonationlistcontroller($location,$http){
     }
     var table = document.getElementById('donationtable');
     //table.rows[2].getElementsByTagName('td')[3].getElementsByTagName('span')[0].innerText='Sanjay Bhardwaj'
-    $http.get('/api/bloodbank/getDL?email='+localStorage.getItem('bbemail'))
+    $http.get('/api/bloodbank/getDL')
         .then(function(response){
             var l = response.data.length-1-ld;
             for(var i=0;i<14;i++){
@@ -121,7 +118,7 @@ function webbbdonationlistcontroller($location,$http){
     vm.logout = function () {
         var now = new Date();
         now.setMonth(now.getFullYear() + 24);
-        document.cookie = "hospuserloggedout=1" + ";expires=" + now.toUTCString() + ";";
+        document.cookie = "bbuserloggedout=1" + ";expires=" + now.toUTCString() + "; path=/";
         localStorage.removeItem('bbemail');
         localStorage.removeItem('bbname');
         localStorage.removeItem('bbuseremail');
