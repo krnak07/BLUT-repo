@@ -207,44 +207,6 @@ function config($routeProvider,$locationProvider,$httpProvider) {
     // window.addEventListener("unload", function(event) {
     //     localStorage.clear();
     // });
-
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyARrRzk-qumZ7fAHD6y9NpTrEaT2q8lD5k",
-        authDomain: "blut-110799.firebaseapp.com",
-        databaseURL: "https://blut-110799.firebaseio.com",
-        projectId: "blut-110799",
-        storageBucket: "blut-110799.appspot.com",
-        messagingSenderId: "715930854454",
-        appId: "1:715930854454:web:b4f14841505dee51"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const messaging = firebase.messaging();
-    messaging.usePublicVapidKey('BDnKskUcVoeK8-w_mMStz6Dx5L2Yye1vN-J1sQZvecgb6cKIJjunsjjOjaBwybzI8BrT8r4ZLdI8-j1o6XIVDaU');
-    Notification.requestPermission()
-        .then(function(permission){
-            if(permission == 'granted'){
-                return messaging.getToken();
-            }
-            else{
-                console.log('unable to get permission');
-            }
-        })
-        .then(function(token){
-            sessionStorage.setItem('toke',token);
-        });
-    messaging.onMessage(function(payload) {
-        alert('msg received');
-        console.log(payload);
-        const notificationTitle = payload.data.title;
-        const notificationOptions = {
-            body: payload.data.content,
-        };
-        navigator.serviceWorker.ready
-            .then(function(registration){
-            registration.showNotification(notificationTitle, notificationOptions);
-        });
-    });
 }
 
 function run($rootScope,$location,AuthFactory){
