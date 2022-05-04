@@ -9,7 +9,7 @@
   "author": "codered",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.9",
+    "angular": "^1.8.3",
     "angular-route": "^1.7.9",
     "barcode-generator": "^0.1.0",
     "body-parser": "^1.19.0",
